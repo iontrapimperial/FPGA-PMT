@@ -35,6 +35,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8)(line_width 1))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 392 328 440 344))
 )
 (pin
 	(input)
@@ -51,6 +52,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8)(line_width 1))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 664 664 720 680))
 )
 (pin
 	(output)
@@ -67,28 +69,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
 	)
-)
-(symbol
-	(rect 952 288 1120 384)
-	(text "simple_counter" (rect 5 0 79 12)(font "Arial" ))
-	(text "inst" (rect 8 80 25 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clock" (rect 0 0 25 12)(font "Arial" ))
-		(text "clock" (rect 21 27 46 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 1))
-	)
-	(port
-		(pt 168 32)
-		(output)
-		(text "counter_out[31..0]" (rect 0 0 89 12)(font "Arial" ))
-		(text "counter_out[31..0]" (rect 58 27 147 39)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 152 80)(line_width 1))
-	)
+	(annotation_block (location)(rect 1240 576 1296 632))
 )
 (symbol
 	(rect 616 256 856 416)
@@ -177,13 +158,27 @@ applicable agreement for further details.
 		(line (pt 64 72)(pt 80 64)(line_width 1))
 	)
 )
-(connector
-	(pt 856 320)
-	(pt 952 320)
-)
-(connector
-	(pt 952 320)
-	(pt 952 328)
+(symbol
+	(rect 960 288 1136 384)
+	(text "simple_counter2" (rect 5 0 85 12)(font "Arial" ))
+	(text "inst" (rect 8 80 25 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 27 46 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "counter_out[127..0]" (rect 0 0 95 12)(font "Arial" ))
+		(text "counter_out[127..0]" (rect 60 27 155 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 80)(line_width 1))
+	)
 )
 (connector
 	(pt 608 320)
@@ -194,31 +189,39 @@ applicable agreement for further details.
 	(pt 624 320)
 )
 (connector
-	(text "counter[31..0]" (rect 1130 304 1198 316)(font "Arial" ))
-	(pt 1120 320)
-	(pt 1184 320)
-	(bus)
-)
-(connector
 	(pt 952 568)
 	(pt 1064 568)
-	(bus)
-)
-(connector
-	(text "counter[26..23]" (rect 730 544 804 556)(font "Arial" ))
-	(pt 816 560)
-	(pt 720 560)
-	(bus)
-)
-(connector
-	(text "counter[24..21]" (rect 730 560 804 572)(font "Arial" ))
-	(pt 816 576)
-	(pt 720 576)
 	(bus)
 )
 (connector
 	(pt 888 600)
 	(pt 888 656)
 )
-(junction (pt 952 320))
+(connector
+	(pt 856 320)
+	(pt 848 320)
+)
+(connector
+	(pt 856 320)
+	(pt 960 320)
+)
+(connector
+	(text "counter[27..24]" (rect 730 560 804 572)(font "Arial" ))
+	(pt 816 576)
+	(pt 720 576)
+	(bus)
+)
+(connector
+	(text "counter[31..28]" (rect 730 544 804 556)(font "Arial" ))
+	(pt 816 560)
+	(pt 720 560)
+	(bus)
+)
+(connector
+	(text "counter[127..0]" (rect 1146 304 1220 316)(font "Arial" ))
+	(pt 1136 320)
+	(pt 1240 320)
+	(bus)
+)
 (junction (pt 616 320))
+(junction (pt 856 320))
