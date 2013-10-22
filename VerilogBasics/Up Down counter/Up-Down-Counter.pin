@@ -446,7 +446,7 @@ GND*                         : R18       :        :                   :         
 GND*                         : R19       :        :                   :         : 6         :                
 GND*                         : R20       :        :                   :         : 6         :                
 reset                        : R21       : input  : 3.3-V LVTTL       :         : 6         : Y              
-enable                       : R22       : input  : 3.3-V LVTTL       :         : 6         : Y              
+up                           : R22       : input  : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : T1        :        :                   :         : 1         :                
 GND*                         : T2        :        :                   :         : 1         :                
 GND*                         : T3        :        :                   :         : 1         :                
@@ -468,7 +468,7 @@ GND*                         : T18       :        :                   :         
 VCCIO6                       : T19       : power  :                   : 3.3V    : 6         :                
 GND                          : T20       : gnd    :                   :         :           :                
 GND*                         : T21       :        :                   :         : 6         :                
-GND*                         : T22       :        :                   :         : 6         :                
+down                         : T22       : input  : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : U1        :        :                   :         : 1         :                
 GND*                         : U2        :        :                   :         : 1         :                
 GND*                         : U3        :        :                   :         : 1         :                

@@ -33,16 +33,9 @@ applicable agreement for further details.
 	(port
 		(pt 160 32)
 		(output)
-		(text "ssOut1[6..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "ssOut1[6..0]" (rect 78 27 139 39)(font "Arial" ))
+		(text "ssOut[13..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "ssOut[13..0]" (rect 78 27 139 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
-	)
-	(port
-		(pt 160 48)
-		(output)
-		(text "ssOut2[6..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "ssOut2[6..0]" (rect 78 43 139 55)(font "Arial" ))
-		(line (pt 160 48)(pt 144 48)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 144 80)(line_width 1))

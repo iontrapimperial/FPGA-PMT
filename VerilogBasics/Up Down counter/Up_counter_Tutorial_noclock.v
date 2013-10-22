@@ -15,12 +15,13 @@ reset      // reset Input
 //------------Input Ports--------------
      input enable, reset;
 //------------Internal Variables--------
+
    
 //-------------Code Starts Here-------
 always @(posedge enable or posedge reset)
 begin
 if (reset) 
-  nIn <= 4'b0 ;
+  nIn <= 4'b0;
  
 else if (enable) 
   nIn <= nIn + 1;

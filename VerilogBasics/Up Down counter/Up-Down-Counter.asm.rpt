@@ -1,5 +1,5 @@
 Assembler report for Up-Down-Counter
-Tue Oct 22 15:50:41 2013
+Tue Oct 22 17:51:20 2013
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/localadmin/Desktop/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.sof
-  6. Assembler Device Options: C:/Users/localadmin/Desktop/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.pof
+  5. Assembler Device Options: C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.sof
+  6. Assembler Device Options: C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Oct 22 15:50:41 2013 ;
+; Assembler Status      ; Successful - Tue Oct 22 17:51:20 2013 ;
 ; Revision Name         ; Up-Down-Counter                       ;
 ; Top-level Entity Name ; Block1                                ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                              ;
-+----------------------------------------------------------------------------------------+
-; File Name                                                                              ;
-+----------------------------------------------------------------------------------------+
-; C:/Users/localadmin/Desktop/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.sof ;
-; C:/Users/localadmin/Desktop/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.pof ;
-+----------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                             ;
++-------------------------------------------------------------------------------------------------------+
+; File Name                                                                                             ;
++-------------------------------------------------------------------------------------------------------+
+; C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.sof ;
+; C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.pof ;
++-------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/localadmin/Desktop/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.sof ;
-+----------------+-------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                         ;
-+----------------+-------------------------------------------------------------------------------------------------+
-; Device         ; EP2C20F484C7                                                                                    ;
-; JTAG usercode  ; 0xFFFFFFFF                                                                                      ;
-; Checksum       ; 0x001B6371                                                                                      ;
-+----------------+-------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.sof ;
++----------------+----------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                        ;
++----------------+----------------------------------------------------------------------------------------------------------------+
+; Device         ; EP2C20F484C7                                                                                                   ;
+; JTAG usercode  ; 0xFFFFFFFF                                                                                                     ;
+; Checksum       ; 0x001B8E28                                                                                                     ;
++----------------+----------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/localadmin/Desktop/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.pof ;
-+--------------------+---------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                     ;
-+--------------------+---------------------------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                                      ;
-; JTAG usercode      ; 0x00000000                                                                                  ;
-; Checksum           ; 0x1DD99335                                                                                  ;
-; Compression Ratio  ; 3                                                                                           ;
-+--------------------+---------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.pof ;
++--------------------+------------------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                                    ;
++--------------------+------------------------------------------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                                                     ;
+; JTAG usercode      ; 0x00000000                                                                                                 ;
+; Checksum           ; 0x1DD8B7CF                                                                                                 ;
+; Compression Ratio  ; 3                                                                                                          ;
++--------------------+------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Tue Oct 22 15:50:37 2013
+    Info: Processing started: Tue Oct 22 17:51:15 2013
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Up-Down-Counter -c Up-Down-Counter
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Allocated 211 megabytes of memory during processing
-    Info: Processing ended: Tue Oct 22 15:50:41 2013
-    Info: Elapsed time: 00:00:04
+    Info: Processing ended: Tue Oct 22 17:51:20 2013
+    Info: Elapsed time: 00:00:05
 
 
