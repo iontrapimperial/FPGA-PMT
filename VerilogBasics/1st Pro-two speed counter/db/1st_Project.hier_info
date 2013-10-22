@@ -1,0 +1,182 @@
+|1st_Project
+LED[0] <= counter_bus_mux:inst1.result[0]
+LED[1] <= counter_bus_mux:inst1.result[1]
+LED[2] <= counter_bus_mux:inst1.result[2]
+LED[3] <= counter_bus_mux:inst1.result[3]
+switch => counter_bus_mux:inst1.sel
+osc_clock => PLL:inst.inclk0
+
+
+|1st_Project|counter_bus_mux:inst1
+data0x[0] => sub_wire4[0].IN1
+data0x[1] => sub_wire4[1].IN1
+data0x[2] => sub_wire4[2].IN1
+data0x[3] => sub_wire4[3].IN1
+data1x[0] => sub_wire4[4].IN1
+data1x[1] => sub_wire4[5].IN1
+data1x[2] => sub_wire4[6].IN1
+data1x[3] => sub_wire4[7].IN1
+sel => sub_wire2.IN1
+result[0] <= lpm_mux:lpm_mux_component.result
+result[1] <= lpm_mux:lpm_mux_component.result
+result[2] <= lpm_mux:lpm_mux_component.result
+result[3] <= lpm_mux:lpm_mux_component.result
+
+
+|1st_Project|counter_bus_mux:inst1|lpm_mux:lpm_mux_component
+data[0][0] => mux_omc:auto_generated.data[0]
+data[0][1] => mux_omc:auto_generated.data[1]
+data[0][2] => mux_omc:auto_generated.data[2]
+data[0][3] => mux_omc:auto_generated.data[3]
+data[1][0] => mux_omc:auto_generated.data[4]
+data[1][1] => mux_omc:auto_generated.data[5]
+data[1][2] => mux_omc:auto_generated.data[6]
+data[1][3] => mux_omc:auto_generated.data[7]
+sel[0] => mux_omc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_omc:auto_generated.result[0]
+result[1] <= mux_omc:auto_generated.result[1]
+result[2] <= mux_omc:auto_generated.result[2]
+result[3] <= mux_omc:auto_generated.result[3]
+
+
+|1st_Project|counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|1st_Project|simple_counter:inst4
+clock => counter_out[31]~reg0.CLK
+clock => counter_out[30]~reg0.CLK
+clock => counter_out[29]~reg0.CLK
+clock => counter_out[28]~reg0.CLK
+clock => counter_out[27]~reg0.CLK
+clock => counter_out[26]~reg0.CLK
+clock => counter_out[25]~reg0.CLK
+clock => counter_out[24]~reg0.CLK
+clock => counter_out[23]~reg0.CLK
+clock => counter_out[22]~reg0.CLK
+clock => counter_out[21]~reg0.CLK
+clock => counter_out[20]~reg0.CLK
+clock => counter_out[19]~reg0.CLK
+clock => counter_out[18]~reg0.CLK
+clock => counter_out[17]~reg0.CLK
+clock => counter_out[16]~reg0.CLK
+clock => counter_out[15]~reg0.CLK
+clock => counter_out[14]~reg0.CLK
+clock => counter_out[13]~reg0.CLK
+clock => counter_out[12]~reg0.CLK
+clock => counter_out[11]~reg0.CLK
+clock => counter_out[10]~reg0.CLK
+clock => counter_out[9]~reg0.CLK
+clock => counter_out[8]~reg0.CLK
+clock => counter_out[7]~reg0.CLK
+clock => counter_out[6]~reg0.CLK
+clock => counter_out[5]~reg0.CLK
+clock => counter_out[4]~reg0.CLK
+clock => counter_out[3]~reg0.CLK
+clock => counter_out[2]~reg0.CLK
+clock => counter_out[1]~reg0.CLK
+clock => counter_out[0]~reg0.CLK
+counter_out[0] <= counter_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[1] <= counter_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[2] <= counter_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[3] <= counter_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[4] <= counter_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[5] <= counter_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[6] <= counter_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[7] <= counter_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[8] <= counter_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[9] <= counter_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[10] <= counter_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[11] <= counter_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[12] <= counter_out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[13] <= counter_out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[14] <= counter_out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[15] <= counter_out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[16] <= counter_out[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[17] <= counter_out[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[18] <= counter_out[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[19] <= counter_out[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[20] <= counter_out[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[21] <= counter_out[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[22] <= counter_out[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[23] <= counter_out[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[24] <= counter_out[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[25] <= counter_out[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[26] <= counter_out[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[27] <= counter_out[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[28] <= counter_out[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[29] <= counter_out[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[30] <= counter_out[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[31] <= counter_out[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|1st_Project|PLL:inst
+inclk0 => sub_wire3[0].IN1
+c0 <= altpll:altpll_component.clk
+
+
+|1st_Project|PLL:inst|altpll:altpll_component
+inclk[0] => pll.CLK
+inclk[1] => ~NO_FANOUT~
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <= <GND>
+clk[0] <= clk[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= <GND>
+clk[2] <= <GND>
+clk[3] <= <GND>
+clk[4] <= <GND>
+clk[5] <= <GND>
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= sclkout1~0.DB_MAX_OUTPUT_PORT_TYPE
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+
+
