@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.148 ns
+From           : sevenseg:inst24|ones[2]
+To             : ssOut1[2]
+From Clock     : enable
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'enable'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 405.02 MHz ( period = 2.469 ns )
+From           : up_counter_tut_noclock:inst|nIn[2]
+To             : up_counter_tut_noclock:inst|nIn[3]
+From Clock     : enable
+To Clock       : enable
+Failed Paths   : 0
+
+Type           : Clock Hold: 'enable'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : up_counter_tut_noclock:inst|nIn[0]
+To             : sevenseg:inst24|ones[2]
+From Clock     : enable
+To Clock       : enable
+Failed Paths   : 28
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 28
+
+--------------------------------------------------------------------------------------
+

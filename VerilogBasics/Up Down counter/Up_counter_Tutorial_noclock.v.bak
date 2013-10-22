@@ -1,0 +1,30 @@
+//-----------------------------------------------------
+// Design Name : up_counter
+// File Name   : up_counter.v
+// Function    : Up counter
+// Coder      : Deepak
+//-----------------------------------------------------
+module up_counter_tut_noclock    (
+nIn     ,  // Output of the counter
+enable  ,  // enable for counter
+  // clock Input
+reset      // reset Input
+);
+//----------Output Ports--------------
+    output wire [3:0] nIn;
+//------------Input Ports--------------
+     input enable, reset;
+//------------Internal Variables--------
+   
+//-------------Code Starts Here-------
+always @(posedge enable or posedge reset)
+begin
+if (reset) 
+  nIn <= 4'b0 ;
+ 
+else if (enable) 
+  nIn <= nIn + 1;
+end
+
+
+endmodule

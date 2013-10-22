@@ -1,0 +1,59 @@
+|Block1
+ssOut1[0] <= sevenseg:inst24.ones[0]
+ssOut1[1] <= sevenseg:inst24.ones[1]
+ssOut1[2] <= sevenseg:inst24.ones[2]
+ssOut1[3] <= sevenseg:inst24.ones[3]
+ssOut1[4] <= sevenseg:inst24.ones[4]
+ssOut1[5] <= sevenseg:inst24.ones[5]
+ssOut1[6] <= sevenseg:inst24.ones[6]
+enable => inst4.IN0
+reset => inst5.IN0
+ssOut2[0] <= sevenseg:inst24.tens[0]
+ssOut2[1] <= sevenseg:inst24.tens[1]
+ssOut2[2] <= sevenseg:inst24.tens[2]
+ssOut2[3] <= sevenseg:inst24.tens[3]
+ssOut2[4] <= sevenseg:inst24.tens[4]
+ssOut2[5] <= sevenseg:inst24.tens[5]
+ssOut2[6] <= sevenseg:inst24.tens[6]
+
+
+|Block1|sevenseg:inst24
+s1[0] => Div0.IN7
+s1[0] => Mod0.IN7
+s1[1] => Div0.IN6
+s1[1] => Mod0.IN6
+s1[2] => Div0.IN5
+s1[2] => Mod0.IN5
+s1[3] => Div0.IN4
+s1[3] => Mod0.IN4
+tens[0] <= tens[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[1] <= tens[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= tens[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= tens[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[4] <= tens[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[5] <= tens[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+tens[6] <= tens[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[0] <= ones[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= ones[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= ones[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= ones[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[4] <= ones[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[5] <= ones[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+ones[6] <= ones[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|up_counter_tut_noclock:inst
+nIn[0] <= nIn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[1] <= nIn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[2] <= nIn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[3] <= nIn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+enable => nIn[3]~reg0.CLK
+enable => nIn[2]~reg0.CLK
+enable => nIn[1]~reg0.CLK
+enable => nIn[0]~reg0.CLK
+reset => nIn[3]~reg0.ACLR
+reset => nIn[2]~reg0.ACLR
+reset => nIn[1]~reg0.ACLR
+reset => nIn[0]~reg0.ACLR
+
+

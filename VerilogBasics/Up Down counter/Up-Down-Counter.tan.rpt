@@ -1,0 +1,289 @@
+Classic Timing Analyzer report for Up-Down-Counter
+Tue Oct 22 15:50:43 2013
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'enable'
+  6. Clock Hold: 'enable'
+  7. tco
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                   ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+------------------------------------+------------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                                    ; From                               ; To                                 ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+------------------------------------+------------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A                                      ; None          ; 16.148 ns                                      ; sevenseg:inst24|ones[2]            ; ssOut1[2]                          ; enable     ; --       ; 0            ;
+; Clock Setup: 'enable'        ; N/A                                      ; None          ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; up_counter_tut_noclock:inst|nIn[3] ; enable     ; enable   ; 0            ;
+; Clock Hold: 'enable'         ; Not operational: Clock Skew > Data Delay ; None          ; N/A                                            ; up_counter_tut_noclock:inst|nIn[0] ; sevenseg:inst24|ones[2]            ; enable     ; enable   ; 28           ;
+; Total number of failed paths ;                                          ;               ;                                                ;                                    ;                                    ;            ;          ; 28           ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+------------------------------------+------------------------------------+------------+----------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                      ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                         ; Setting            ; From ; To ; Entity Name ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                    ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                  ; Final              ;      ;    ;             ;
+; Default hold multicycle                                        ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                      ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                         ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                 ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                               ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                          ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                        ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                               ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                           ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node          ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                          ; 10                 ;      ;    ;             ;
+; Number of paths to report                                      ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                   ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                         ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                     ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                   ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis ; Off                ;      ;    ;             ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; enable          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'enable'                                                                                                                                                                                                                        ;
++-------+------------------------------------------------+------------------------------------+------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                               ; To                                 ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+------------------------------------+------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; up_counter_tut_noclock:inst|nIn[3] ; enable     ; enable   ; None                        ; None                      ; 1.514 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; up_counter_tut_noclock:inst|nIn[3] ; enable     ; enable   ; None                        ; None                      ; 1.020 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; up_counter_tut_noclock:inst|nIn[2] ; enable     ; enable   ; None                        ; None                      ; 1.019 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[0] ; up_counter_tut_noclock:inst|nIn[3] ; enable     ; enable   ; None                        ; None                      ; 0.863 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[0] ; up_counter_tut_noclock:inst|nIn[2] ; enable     ; enable   ; None                        ; None                      ; 0.862 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[0] ; up_counter_tut_noclock:inst|nIn[1] ; enable     ; enable   ; None                        ; None                      ; 0.860 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; up_counter_tut_noclock:inst|nIn[1] ; enable     ; enable   ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[0] ; up_counter_tut_noclock:inst|nIn[0] ; enable     ; enable   ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; up_counter_tut_noclock:inst|nIn[2] ; enable     ; enable   ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[3] ; up_counter_tut_noclock:inst|nIn[3] ; enable     ; enable   ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[0]            ; enable     ; enable   ; None                        ; None                      ; 3.997 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[0]            ; enable     ; enable   ; None                        ; None                      ; 3.944 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[0]            ; enable     ; enable   ; None                        ; None                      ; 3.886 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[5]            ; enable     ; enable   ; None                        ; None                      ; 3.769 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[6]            ; enable     ; enable   ; None                        ; None                      ; 3.959 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[5]            ; enable     ; enable   ; None                        ; None                      ; 3.716 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[6]            ; enable     ; enable   ; None                        ; None                      ; 3.906 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[5]            ; enable     ; enable   ; None                        ; None                      ; 3.658 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[6]            ; enable     ; enable   ; None                        ; None                      ; 3.848 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[4]            ; enable     ; enable   ; None                        ; None                      ; 3.633 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[2]            ; enable     ; enable   ; None                        ; None                      ; 3.631 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[1]            ; enable     ; enable   ; None                        ; None                      ; 3.632 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[3]            ; enable     ; enable   ; None                        ; None                      ; 3.623 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[4]            ; enable     ; enable   ; None                        ; None                      ; 3.580 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[2]            ; enable     ; enable   ; None                        ; None                      ; 3.578 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[1]            ; enable     ; enable   ; None                        ; None                      ; 3.579 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[3]            ; enable     ; enable   ; None                        ; None                      ; 3.570 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[4]            ; enable     ; enable   ; None                        ; None                      ; 3.522 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[2]            ; enable     ; enable   ; None                        ; None                      ; 3.520 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[1]            ; enable     ; enable   ; None                        ; None                      ; 3.521 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[3]            ; enable     ; enable   ; None                        ; None                      ; 3.512 ns                ;
++-------+------------------------------------------------+------------------------------------+------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'enable'                                                                                                                                                                                                 ;
++------------------------------------------+------------------------------------+-------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                               ; To                      ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+------------------------------------+-------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[0] ; sevenseg:inst24|ones[2] ; enable     ; enable   ; None                       ; None                       ; 1.287 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[0] ; sevenseg:inst24|ones[3] ; enable     ; enable   ; None                       ; None                       ; 1.380 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[0] ; sevenseg:inst24|ones[1] ; enable     ; enable   ; None                       ; None                       ; 1.388 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[0] ; sevenseg:inst24|ones[4] ; enable     ; enable   ; None                       ; None                       ; 1.389 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[0] ; sevenseg:inst24|ones[5] ; enable     ; enable   ; None                       ; None                       ; 1.769 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[3] ; enable     ; enable   ; None                       ; None                       ; 2.073 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[1] ; enable     ; enable   ; None                       ; None                       ; 2.080 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[2] ; enable     ; enable   ; None                       ; None                       ; 2.078 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[4] ; enable     ; enable   ; None                       ; None                       ; 2.082 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[0] ; sevenseg:inst24|ones[6] ; enable     ; enable   ; None                       ; None                       ; 1.962 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[5] ; enable     ; enable   ; None                       ; None                       ; 2.038 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[6] ; enable     ; enable   ; None                       ; None                       ; 2.239 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[0] ; sevenseg:inst24|ones[0] ; enable     ; enable   ; None                       ; None                       ; 2.292 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[0] ; enable     ; enable   ; None                       ; None                       ; 2.268 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[5] ; enable     ; enable   ; None                       ; None                       ; 2.399 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[0] ; enable     ; enable   ; None                       ; None                       ; 2.564 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[1] ; sevenseg:inst24|ones[6] ; enable     ; enable   ; None                       ; None                       ; 2.596 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[3] ; enable     ; enable   ; None                       ; None                       ; 2.772 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[1] ; enable     ; enable   ; None                       ; None                       ; 2.781 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[2] ; enable     ; enable   ; None                       ; None                       ; 2.780 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[4] ; enable     ; enable   ; None                       ; None                       ; 2.782 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[5] ; enable     ; enable   ; None                       ; None                       ; 2.918 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[6] ; enable     ; enable   ; None                       ; None                       ; 3.108 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[2] ; sevenseg:inst24|ones[0] ; enable     ; enable   ; None                       ; None                       ; 3.146 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[3] ; enable     ; enable   ; None                       ; None                       ; 3.368 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[1] ; enable     ; enable   ; None                       ; None                       ; 3.375 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[2] ; enable     ; enable   ; None                       ; None                       ; 3.373 ns                 ;
+; Not operational: Clock Skew > Data Delay ; up_counter_tut_noclock:inst|nIn[3] ; sevenseg:inst24|ones[4] ; enable     ; enable   ; None                       ; None                       ; 3.377 ns                 ;
++------------------------------------------+------------------------------------+-------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; tco                                                                                             ;
++-------+--------------+------------+------------------------------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From                               ; To        ; From Clock ;
++-------+--------------+------------+------------------------------------+-----------+------------+
+; N/A   ; None         ; 16.148 ns  ; sevenseg:inst24|ones[2]            ; ssOut1[2] ; enable     ;
+; N/A   ; None         ; 15.974 ns  ; sevenseg:inst24|ones[5]            ; ssOut1[5] ; enable     ;
+; N/A   ; None         ; 15.808 ns  ; sevenseg:inst24|ones[3]            ; ssOut1[3] ; enable     ;
+; N/A   ; None         ; 15.665 ns  ; sevenseg:inst24|ones[4]            ; ssOut1[4] ; enable     ;
+; N/A   ; None         ; 15.615 ns  ; sevenseg:inst24|ones[6]            ; ssOut1[6] ; enable     ;
+; N/A   ; None         ; 15.327 ns  ; sevenseg:inst24|ones[1]            ; ssOut1[1] ; enable     ;
+; N/A   ; None         ; 14.699 ns  ; sevenseg:inst24|ones[0]            ; ssOut1[0] ; enable     ;
+; N/A   ; None         ; 11.305 ns  ; up_counter_tut_noclock:inst|nIn[3] ; ssOut2[0] ; enable     ;
+; N/A   ; None         ; 11.273 ns  ; up_counter_tut_noclock:inst|nIn[3] ; ssOut2[4] ; enable     ;
+; N/A   ; None         ; 11.263 ns  ; up_counter_tut_noclock:inst|nIn[3] ; ssOut2[3] ; enable     ;
+; N/A   ; None         ; 11.200 ns  ; up_counter_tut_noclock:inst|nIn[1] ; ssOut2[0] ; enable     ;
+; N/A   ; None         ; 11.168 ns  ; up_counter_tut_noclock:inst|nIn[1] ; ssOut2[4] ; enable     ;
+; N/A   ; None         ; 11.158 ns  ; up_counter_tut_noclock:inst|nIn[1] ; ssOut2[3] ; enable     ;
+; N/A   ; None         ; 11.118 ns  ; up_counter_tut_noclock:inst|nIn[2] ; ssOut2[0] ; enable     ;
+; N/A   ; None         ; 11.086 ns  ; up_counter_tut_noclock:inst|nIn[2] ; ssOut2[4] ; enable     ;
+; N/A   ; None         ; 11.076 ns  ; up_counter_tut_noclock:inst|nIn[2] ; ssOut2[3] ; enable     ;
+; N/A   ; None         ; 10.955 ns  ; up_counter_tut_noclock:inst|nIn[3] ; ssOut2[5] ; enable     ;
+; N/A   ; None         ; 10.850 ns  ; up_counter_tut_noclock:inst|nIn[1] ; ssOut2[5] ; enable     ;
+; N/A   ; None         ; 10.768 ns  ; up_counter_tut_noclock:inst|nIn[2] ; ssOut2[5] ; enable     ;
++-------+--------------+------------+------------------------------------+-----------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
+    Info: Processing started: Tue Oct 22 15:50:42 2013
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Up-Down-Counter -c Up-Down-Counter --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "sevenseg:inst24|ones[6]" is a latch
+    Warning: Node "sevenseg:inst24|ones[5]" is a latch
+    Warning: Node "sevenseg:inst24|ones[4]" is a latch
+    Warning: Node "sevenseg:inst24|ones[3]" is a latch
+    Warning: Node "sevenseg:inst24|ones[2]" is a latch
+    Warning: Node "sevenseg:inst24|ones[1]" is a latch
+    Warning: Node "sevenseg:inst24|ones[0]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "enable" is an undefined clock
+Warning: Found 9 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "sevenseg:inst24|Mux15~68" as buffer
+    Info: Detected gated clock "sevenseg:inst24|Mux15~67" as buffer
+    Info: Detected gated clock "sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15" as buffer
+    Info: Detected gated clock "sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~14" as buffer
+    Info: Detected gated clock "sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[2]~13" as buffer
+    Info: Detected gated clock "sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[2]~12" as buffer
+    Info: Detected ripple clock "up_counter_tut_noclock:inst|nIn[3]" as buffer
+    Info: Detected ripple clock "up_counter_tut_noclock:inst|nIn[2]" as buffer
+    Info: Detected ripple clock "up_counter_tut_noclock:inst|nIn[1]" as buffer
+Info: Clock "enable" Internal fmax is restricted to 405.02 MHz between source register "up_counter_tut_noclock:inst|nIn[2]" and destination register "up_counter_tut_noclock:inst|nIn[3]"
+    Info: fmax restricted to clock pin edge rate 2.469 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.514 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X48_Y14_N25; Fanout = 7; REG Node = 'up_counter_tut_noclock:inst|nIn[2]'
+            Info: 2: + IC(0.873 ns) + CELL(0.545 ns) = 1.418 ns; Loc. = LCCOMB_X48_Y14_N16; Fanout = 1; COMB Node = 'up_counter_tut_noclock:inst|nIn[3]~55'
+            Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 1.514 ns; Loc. = LCFF_X48_Y14_N17; Fanout = 6; REG Node = 'up_counter_tut_noclock:inst|nIn[3]'
+            Info: Total cell delay = 0.641 ns ( 42.34 % )
+            Info: Total interconnect delay = 0.873 ns ( 57.66 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "enable" to destination register is 2.916 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 4; CLK Node = 'enable'
+                Info: 2: + IC(1.450 ns) + CELL(0.602 ns) = 2.916 ns; Loc. = LCFF_X48_Y14_N17; Fanout = 6; REG Node = 'up_counter_tut_noclock:inst|nIn[3]'
+                Info: Total cell delay = 1.466 ns ( 50.27 % )
+                Info: Total interconnect delay = 1.450 ns ( 49.73 % )
+            Info: - Longest clock path from clock "enable" to source register is 2.916 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 4; CLK Node = 'enable'
+                Info: 2: + IC(1.450 ns) + CELL(0.602 ns) = 2.916 ns; Loc. = LCFF_X48_Y14_N25; Fanout = 7; REG Node = 'up_counter_tut_noclock:inst|nIn[2]'
+                Info: Total cell delay = 1.466 ns ( 50.27 % )
+                Info: Total interconnect delay = 1.450 ns ( 49.73 % )
+        Info: + Micro clock to output delay of source is 0.277 ns
+        Info: + Micro setup delay of destination is -0.038 ns
+Warning: Circuit may not operate. Detected 28 non-operational path(s) clocked by clock "enable" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "up_counter_tut_noclock:inst|nIn[0]" and destination pin or register "sevenseg:inst24|ones[2]" for clock "enable" (Hold time is 3.793 ns)
+    Info: + Largest clock skew is 5.357 ns
+        Info: + Longest clock path from clock "enable" to destination register is 8.240 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 4; CLK Node = 'enable'
+            Info: 2: + IC(1.450 ns) + CELL(0.879 ns) = 3.193 ns; Loc. = LCFF_X48_Y14_N25; Fanout = 7; REG Node = 'up_counter_tut_noclock:inst|nIn[2]'
+            Info: 3: + IC(0.596 ns) + CELL(0.495 ns) = 4.284 ns; Loc. = LCCOMB_X48_Y14_N4; Fanout = 2; COMB Node = 'sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[2]~13'
+            Info: 4: + IC(0.000 ns) + CELL(0.080 ns) = 4.364 ns; Loc. = LCCOMB_X48_Y14_N6; Fanout = 1; COMB Node = 'sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15'
+            Info: 5: + IC(0.000 ns) + CELL(0.458 ns) = 4.822 ns; Loc. = LCCOMB_X48_Y14_N8; Fanout = 4; COMB Node = 'sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[4]~16'
+            Info: 6: + IC(0.543 ns) + CELL(0.545 ns) = 5.910 ns; Loc. = LCCOMB_X49_Y14_N6; Fanout = 1; COMB Node = 'sevenseg:inst24|Mux15~69'
+            Info: 7: + IC(0.594 ns) + CELL(0.000 ns) = 6.504 ns; Loc. = CLKCTRL_G7; Fanout = 7; COMB Node = 'sevenseg:inst24|Mux15~69clkctrl'
+            Info: 8: + IC(1.417 ns) + CELL(0.319 ns) = 8.240 ns; Loc. = LCCOMB_X47_Y14_N26; Fanout = 1; REG Node = 'sevenseg:inst24|ones[2]'
+            Info: Total cell delay = 3.640 ns ( 44.17 % )
+            Info: Total interconnect delay = 4.600 ns ( 55.83 % )
+        Info: - Shortest clock path from clock "enable" to source register is 2.883 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 4; CLK Node = 'enable'
+            Info: 2: + IC(1.417 ns) + CELL(0.602 ns) = 2.883 ns; Loc. = LCFF_X47_Y14_N15; Fanout = 11; REG Node = 'up_counter_tut_noclock:inst|nIn[0]'
+            Info: Total cell delay = 1.466 ns ( 50.85 % )
+            Info: Total interconnect delay = 1.417 ns ( 49.15 % )
+    Info: - Micro clock to output delay of source is 0.277 ns
+    Info: - Shortest register to register delay is 1.287 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X47_Y14_N15; Fanout = 11; REG Node = 'up_counter_tut_noclock:inst|nIn[0]'
+        Info: 2: + IC(0.392 ns) + CELL(0.422 ns) = 0.814 ns; Loc. = LCCOMB_X47_Y14_N12; Fanout = 1; COMB Node = 'sevenseg:inst24|Mux10~41'
+        Info: 3: + IC(0.295 ns) + CELL(0.178 ns) = 1.287 ns; Loc. = LCCOMB_X47_Y14_N26; Fanout = 1; REG Node = 'sevenseg:inst24|ones[2]'
+        Info: Total cell delay = 0.600 ns ( 46.62 % )
+        Info: Total interconnect delay = 0.687 ns ( 53.38 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+Info: tco from clock "enable" to destination pin "ssOut1[2]" through register "sevenseg:inst24|ones[2]" is 16.148 ns
+    Info: + Longest clock path from clock "enable" to source register is 8.240 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 4; CLK Node = 'enable'
+        Info: 2: + IC(1.450 ns) + CELL(0.879 ns) = 3.193 ns; Loc. = LCFF_X48_Y14_N25; Fanout = 7; REG Node = 'up_counter_tut_noclock:inst|nIn[2]'
+        Info: 3: + IC(0.596 ns) + CELL(0.495 ns) = 4.284 ns; Loc. = LCCOMB_X48_Y14_N4; Fanout = 2; COMB Node = 'sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[2]~13'
+        Info: 4: + IC(0.000 ns) + CELL(0.080 ns) = 4.364 ns; Loc. = LCCOMB_X48_Y14_N6; Fanout = 1; COMB Node = 'sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15'
+        Info: 5: + IC(0.000 ns) + CELL(0.458 ns) = 4.822 ns; Loc. = LCCOMB_X48_Y14_N8; Fanout = 4; COMB Node = 'sevenseg:inst24|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[4]~16'
+        Info: 6: + IC(0.543 ns) + CELL(0.545 ns) = 5.910 ns; Loc. = LCCOMB_X49_Y14_N6; Fanout = 1; COMB Node = 'sevenseg:inst24|Mux15~69'
+        Info: 7: + IC(0.594 ns) + CELL(0.000 ns) = 6.504 ns; Loc. = CLKCTRL_G7; Fanout = 7; COMB Node = 'sevenseg:inst24|Mux15~69clkctrl'
+        Info: 8: + IC(1.417 ns) + CELL(0.319 ns) = 8.240 ns; Loc. = LCCOMB_X47_Y14_N26; Fanout = 1; REG Node = 'sevenseg:inst24|ones[2]'
+        Info: Total cell delay = 3.640 ns ( 44.17 % )
+        Info: Total interconnect delay = 4.600 ns ( 55.83 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Longest register to pin delay is 7.908 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X47_Y14_N26; Fanout = 1; REG Node = 'sevenseg:inst24|ones[2]'
+        Info: 2: + IC(5.068 ns) + CELL(2.840 ns) = 7.908 ns; Loc. = PIN_H2; Fanout = 0; PIN Node = 'ssOut1[2]'
+        Info: Total cell delay = 2.840 ns ( 35.91 % )
+        Info: Total interconnect delay = 5.068 ns ( 64.09 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 11 warnings
+    Info: Allocated 160 megabytes of memory during processing
+    Info: Processing ended: Tue Oct 22 15:50:43 2013
+    Info: Elapsed time: 00:00:01
+
+
