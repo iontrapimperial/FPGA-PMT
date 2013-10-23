@@ -1,5 +1,5 @@
 Fitter report for 1st_Project
-Tue Oct 22 10:09:07 2013
+Wed Oct 23 10:26:31 2013
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +------------------------------------+-----------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 22 10:09:07 2013   ;
+; Fitter Status                      ; Successful - Wed Oct 23 10:26:31 2013   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; 1st_Project                             ;
 ; Top-level Entity Name              ; 1st_Project                             ;
@@ -127,54 +127,54 @@ applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/localadmin/Desktop/FPGA-PMT/VerilogBasics/1st Pro-two speed counter/1st_Project.pin.
+The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/1st Pro-two speed counter/1st_Project.pin.
 
 
-+----------------------------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                                                ;
-+---------------------------------------------+------------------------------------------------+
-; Resource                                    ; Usage                                          ;
-+---------------------------------------------+------------------------------------------------+
-; Total logic elements                        ; 29 / 18,752 ( < 1 % )                          ;
-;     -- Combinational with no register       ; 4                                              ;
-;     -- Register only                        ; 0                                              ;
-;     -- Combinational with a register        ; 25                                             ;
-;                                             ;                                                ;
-; Logic element usage by number of LUT inputs ;                                                ;
-;     -- 4 input functions                    ; 0                                              ;
-;     -- 3 input functions                    ; 5                                              ;
-;     -- <=2 input functions                  ; 24                                             ;
-;     -- Register only                        ; 0                                              ;
-;                                             ;                                                ;
-; Logic elements by mode                      ;                                                ;
-;     -- normal mode                          ; 6                                              ;
-;     -- arithmetic mode                      ; 23                                             ;
-;                                             ;                                                ;
-; Total registers*                            ; 25 / 19,649 ( < 1 % )                          ;
-;     -- Dedicated logic registers            ; 25 / 18,752 ( < 1 % )                          ;
-;     -- I/O registers                        ; 0 / 897 ( 0 % )                                ;
-;                                             ;                                                ;
-; Total LABs:  partially or completely used   ; 2 / 1,172 ( < 1 % )                            ;
-; User inserted logic elements                ; 0                                              ;
-; Virtual pins                                ; 0                                              ;
-; I/O pins                                    ; 6 / 315 ( 2 % )                                ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )                                 ;
-; Global signals                              ; 1                                              ;
-; M4Ks                                        ; 0 / 52 ( 0 % )                                 ;
-; Total memory bits                           ; 0 / 239,616 ( 0 % )                            ;
-; Total RAM block bits                        ; 0 / 239,616 ( 0 % )                            ;
-; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )                                 ;
-; PLLs                                        ; 1 / 4 ( 25 % )                                 ;
-; Global clocks                               ; 1 / 16 ( 6 % )                                 ;
-; Average interconnect usage                  ; 0%                                             ;
-; Peak interconnect usage                     ; 0%                                             ;
-; Maximum fan-out node                        ; PLL:inst|altpll:altpll_component|_clk0~clkctrl ;
-; Maximum fan-out                             ; 25                                             ;
-; Highest non-global fan-out signal           ; switch                                         ;
-; Highest non-global fan-out                  ; 4                                              ;
-; Total fan-out                               ; 117                                            ;
-; Average fan-out                             ; 1.80                                           ;
-+---------------------------------------------+------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                                 ;
++---------------------------------------------+-------------------------------------------------+
+; Resource                                    ; Usage                                           ;
++---------------------------------------------+-------------------------------------------------+
+; Total logic elements                        ; 29 / 18,752 ( < 1 % )                           ;
+;     -- Combinational with no register       ; 4                                               ;
+;     -- Register only                        ; 0                                               ;
+;     -- Combinational with a register        ; 25                                              ;
+;                                             ;                                                 ;
+; Logic element usage by number of LUT inputs ;                                                 ;
+;     -- 4 input functions                    ; 0                                               ;
+;     -- 3 input functions                    ; 5                                               ;
+;     -- <=2 input functions                  ; 24                                              ;
+;     -- Register only                        ; 0                                               ;
+;                                             ;                                                 ;
+; Logic elements by mode                      ;                                                 ;
+;     -- normal mode                          ; 6                                               ;
+;     -- arithmetic mode                      ; 23                                              ;
+;                                             ;                                                 ;
+; Total registers*                            ; 25 / 19,649 ( < 1 % )                           ;
+;     -- Dedicated logic registers            ; 25 / 18,752 ( < 1 % )                           ;
+;     -- I/O registers                        ; 0 / 897 ( 0 % )                                 ;
+;                                             ;                                                 ;
+; Total LABs:  partially or completely used   ; 2 / 1,172 ( < 1 % )                             ;
+; User inserted logic elements                ; 0                                               ;
+; Virtual pins                                ; 0                                               ;
+; I/O pins                                    ; 6 / 315 ( 2 % )                                 ;
+;     -- Clock pins                           ; 1 / 8 ( 13 % )                                  ;
+; Global signals                              ; 1                                               ;
+; M4Ks                                        ; 0 / 52 ( 0 % )                                  ;
+; Total memory bits                           ; 0 / 239,616 ( 0 % )                             ;
+; Total RAM block bits                        ; 0 / 239,616 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )                                  ;
+; PLLs                                        ; 1 / 4 ( 25 % )                                  ;
+; Global clocks                               ; 1 / 16 ( 6 % )                                  ;
+; Average interconnect usage                  ; 0%                                              ;
+; Peak interconnect usage                     ; 0%                                              ;
+; Maximum fan-out node                        ; PLL:inst3|altpll:altpll_component|_clk0~clkctrl ;
+; Maximum fan-out                             ; 25                                              ;
+; Highest non-global fan-out signal           ; switch                                          ;
+; Highest non-global fan-out                  ; 4                                               ;
+; Total fan-out                               ; 117                                             ;
+; Average fan-out                             ; 1.80                                            ;
++---------------------------------------------+-------------------------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
@@ -710,44 +710,44 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGA-PMT/VerilogBas
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+-------------------------------------------------------------------------+
-; PLL Summary                                                             ;
-+----------------------------------+--------------------------------------+
-; Name                             ; PLL:inst|altpll:altpll_component|pll ;
-+----------------------------------+--------------------------------------+
-; PLL mode                         ; Normal                               ;
-; Compensate clock                 ; clock0                               ;
-; Self reset on gated loss of lock ; Off                                  ;
-; Gate lock counter                ; --                                   ;
-; Input frequency 0                ; 50.0 MHz                             ;
-; Input frequency 1                ; --                                   ;
-; Nominal PFD frequency            ; 50.0 MHz                             ;
-; Nominal VCO frequency            ; 300.0 MHz                            ;
-; VCO post scale                   ; 2                                    ;
-; VCO multiply                     ; --                                   ;
-; VCO divide                       ; --                                   ;
-; Freq min lock                    ; 50.01 MHz                            ;
-; Freq max lock                    ; 83.33 MHz                            ;
-; M VCO Tap                        ; 0                                    ;
-; M Initial                        ; 1                                    ;
-; M value                          ; 6                                    ;
-; N value                          ; 1                                    ;
-; Preserve counter order           ; Off                                  ;
-; PLL location                     ; PLL_1                                ;
-; Inclk0 signal                    ; osc_clock                            ;
-; Inclk1 signal                    ; --                                   ;
-; Inclk0 signal type               ; Dedicated Pin                        ;
-; Inclk1 signal type               ; --                                   ;
-+----------------------------------+--------------------------------------+
++--------------------------------------------------------------------------+
+; PLL Summary                                                              ;
++----------------------------------+---------------------------------------+
+; Name                             ; PLL:inst3|altpll:altpll_component|pll ;
++----------------------------------+---------------------------------------+
+; PLL mode                         ; Normal                                ;
+; Compensate clock                 ; clock0                                ;
+; Self reset on gated loss of lock ; Off                                   ;
+; Gate lock counter                ; --                                    ;
+; Input frequency 0                ; 50.0 MHz                              ;
+; Input frequency 1                ; --                                    ;
+; Nominal PFD frequency            ; 50.0 MHz                              ;
+; Nominal VCO frequency            ; 300.0 MHz                             ;
+; VCO post scale                   ; 2                                     ;
+; VCO multiply                     ; --                                    ;
+; VCO divide                       ; --                                    ;
+; Freq min lock                    ; 50.01 MHz                             ;
+; Freq max lock                    ; 83.33 MHz                             ;
+; M VCO Tap                        ; 0                                     ;
+; M Initial                        ; 1                                     ;
+; M value                          ; 6                                     ;
+; N value                          ; 1                                     ;
+; Preserve counter order           ; Off                                   ;
+; PLL location                     ; PLL_1                                 ;
+; Inclk0 signal                    ; osc_clock                             ;
+; Inclk1 signal                    ; --                                    ;
+; Inclk0 signal type               ; Dedicated Pin                         ;
+; Inclk1 signal type               ; --                                    ;
++----------------------------------+---------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; PLL Usage                                                                                                                                                                   ;
-+----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+
-; Name                                   ; Output Clock ; Mult ; Div ; Output Frequency ; Phase Shift ; Duty Cycle ; Counter ; Counter Value ; High / Low ; Initial ; VCO Tap ;
-+----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+
-; PLL:inst|altpll:altpll_component|_clk0 ; clock0       ; 1    ; 5   ; 10.0 MHz         ; 0 (0 ps)    ; 50/50      ; C0      ; 30            ; 15/15 Even ; 1       ; 0       ;
-+----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; PLL Usage                                                                                                                                                                    ;
++-----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+
+; Name                                    ; Output Clock ; Mult ; Div ; Output Frequency ; Phase Shift ; Duty Cycle ; Counter ; Counter Value ; High / Low ; Initial ; VCO Tap ;
++-----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+
+; PLL:inst3|altpll:altpll_component|_clk0 ; clock0       ; 1    ; 5   ; 10.0 MHz         ; 0 (0 ps)    ; 50/50      ; C0      ; 30            ; 15/15 Even ; 1       ; 0       ;
++-----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+
 
 
 +-------------------------------------------------------------------------------+
@@ -787,19 +787,19 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                  ;
-+-----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node        ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                 ; Library Name ;
-+-----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
-; |1st_Project                      ; 29 (0)      ; 25 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 6    ; 0            ; 4 (0)        ; 0 (0)             ; 25 (0)           ; |1st_Project                                                                        ; work         ;
-;    |PLL:inst|                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |1st_Project|PLL:inst                                                               ; work         ;
-;       |altpll:altpll_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |1st_Project|PLL:inst|altpll:altpll_component                                       ; work         ;
-;    |counter_bus_mux:inst1|        ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |1st_Project|counter_bus_mux:inst1                                                  ; work         ;
-;       |lpm_mux:lpm_mux_component| ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |1st_Project|counter_bus_mux:inst1|lpm_mux:lpm_mux_component                        ; work         ;
-;          |mux_omc:auto_generated| ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |1st_Project|counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated ; work         ;
-;    |simple_counter:inst4|         ; 25 (25)     ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 25 (25)          ; |1st_Project|simple_counter:inst4                                                   ; work         ;
-+-----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                ;
++-----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node        ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                               ; Library Name ;
++-----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
+; |1st_Project                      ; 29 (0)      ; 25 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 6    ; 0            ; 4 (0)        ; 0 (0)             ; 25 (0)           ; |1st_Project                                                                      ; work         ;
+;    |PLL:inst3|                    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |1st_Project|PLL:inst3                                                            ; work         ;
+;       |altpll:altpll_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |1st_Project|PLL:inst3|altpll:altpll_component                                    ; work         ;
+;    |counterbusmux:inst2|          ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |1st_Project|counterbusmux:inst2                                                  ; work         ;
+;       |lpm_mux:lpm_mux_component| ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |1st_Project|counterbusmux:inst2|lpm_mux:lpm_mux_component                        ; work         ;
+;          |mux_omc:auto_generated| ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |1st_Project|counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated ; work         ;
+;    |simple_counter:inst4|         ; 25 (25)     ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 25 (25)          ; |1st_Project|simple_counter:inst4                                                 ; work         ;
++-----------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -817,95 +817,95 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+---------------+---------------+-----------------------+-----+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                                                ;
-+-------------------------------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                                             ; Pad To Core Index ; Setting ;
-+-------------------------------------------------------------------------------------------------+-------------------+---------+
-; switch                                                                                          ;                   ;         ;
-;      - counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[3]~48 ; 1                 ; 6       ;
-;      - counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[2]~49 ; 1                 ; 6       ;
-;      - counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[1]~50 ; 1                 ; 6       ;
-;      - counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[0]~51 ; 1                 ; 6       ;
-; osc_clock                                                                                       ;                   ;         ;
-+-------------------------------------------------------------------------------------------------+-------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                              ;
++-----------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                           ; Pad To Core Index ; Setting ;
++-----------------------------------------------------------------------------------------------+-------------------+---------+
+; switch                                                                                        ;                   ;         ;
+;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[3]~48 ; 1                 ; 6       ;
+;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[2]~49 ; 1                 ; 6       ;
+;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[1]~50 ; 1                 ; 6       ;
+;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[0]~51 ; 1                 ; 6       ;
+; osc_clock                                                                                     ;                   ;         ;
++-----------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                    ;
-+----------------------------------------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
-; Name                                   ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
-; PLL:inst|altpll:altpll_component|_clk0 ; PLL_1    ; 25      ; Clock ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; osc_clock                              ; PIN_L1   ; 1       ; Clock ; no     ; --                   ; --               ; --                        ;
-+----------------------------------------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                     ;
++-----------------------------------------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Name                                    ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; PLL:inst3|altpll:altpll_component|_clk0 ; PLL_1    ; 25      ; Clock ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; osc_clock                               ; PIN_L1   ; 1       ; Clock ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                       ;
-+----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
-; Name                                   ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
-; PLL:inst|altpll:altpll_component|_clk0 ; PLL_1    ; 25      ; Global Clock         ; GCLK3            ; --                        ;
-+----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                        ;
++-----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
+; Name                                    ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
+; PLL:inst3|altpll:altpll_component|_clk0 ; PLL_1    ; 25      ; Global Clock         ; GCLK3            ; --                        ;
++-----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                                    ;
-+------------------------------------------------------------------------------------------+---------+
-; Name                                                                                     ; Fan-Out ;
-+------------------------------------------------------------------------------------------+---------+
-; switch                                                                                   ; 4       ;
-; simple_counter:inst4|counter_out[21]                                                     ; 3       ;
-; simple_counter:inst4|counter_out[22]                                                     ; 3       ;
-; simple_counter:inst4|counter_out[23]                                                     ; 3       ;
-; simple_counter:inst4|counter_out[0]                                                      ; 2       ;
-; simple_counter:inst4|counter_out[20]                                                     ; 2       ;
-; simple_counter:inst4|counter_out[24]                                                     ; 2       ;
-; osc_clock                                                                                ; 1       ;
-; simple_counter:inst4|counter_out[0]~229                                                  ; 1       ;
-; counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[0]~51 ; 1       ;
-; counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[1]~50 ; 1       ;
-; counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[2]~49 ; 1       ;
-; counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[3]~48 ; 1       ;
-; simple_counter:inst4|counter_out[24]~227                                                 ; 1       ;
-; simple_counter:inst4|counter_out[23]~226                                                 ; 1       ;
-; simple_counter:inst4|counter_out[23]~225                                                 ; 1       ;
-; simple_counter:inst4|counter_out[22]~224                                                 ; 1       ;
-; simple_counter:inst4|counter_out[22]~223                                                 ; 1       ;
-; simple_counter:inst4|counter_out[21]~222                                                 ; 1       ;
-; simple_counter:inst4|counter_out[21]~221                                                 ; 1       ;
-; simple_counter:inst4|counter_out[20]~220                                                 ; 1       ;
-; simple_counter:inst4|counter_out[20]~219                                                 ; 1       ;
-; simple_counter:inst4|counter_out[19]~218                                                 ; 1       ;
-; simple_counter:inst4|counter_out[19]~217                                                 ; 1       ;
-; simple_counter:inst4|counter_out[18]~216                                                 ; 1       ;
-; simple_counter:inst4|counter_out[18]~215                                                 ; 1       ;
-; simple_counter:inst4|counter_out[17]~214                                                 ; 1       ;
-; simple_counter:inst4|counter_out[17]~213                                                 ; 1       ;
-; simple_counter:inst4|counter_out[16]~212                                                 ; 1       ;
-; simple_counter:inst4|counter_out[16]~211                                                 ; 1       ;
-; simple_counter:inst4|counter_out[15]~210                                                 ; 1       ;
-; simple_counter:inst4|counter_out[15]~209                                                 ; 1       ;
-; simple_counter:inst4|counter_out[14]~208                                                 ; 1       ;
-; simple_counter:inst4|counter_out[14]~207                                                 ; 1       ;
-; simple_counter:inst4|counter_out[13]~206                                                 ; 1       ;
-; simple_counter:inst4|counter_out[13]~205                                                 ; 1       ;
-; simple_counter:inst4|counter_out[12]~204                                                 ; 1       ;
-; simple_counter:inst4|counter_out[12]~203                                                 ; 1       ;
-; simple_counter:inst4|counter_out[11]~202                                                 ; 1       ;
-; simple_counter:inst4|counter_out[11]~201                                                 ; 1       ;
-; simple_counter:inst4|counter_out[10]~200                                                 ; 1       ;
-; simple_counter:inst4|counter_out[10]~199                                                 ; 1       ;
-; simple_counter:inst4|counter_out[9]~198                                                  ; 1       ;
-; simple_counter:inst4|counter_out[9]~197                                                  ; 1       ;
-; simple_counter:inst4|counter_out[8]~196                                                  ; 1       ;
-; simple_counter:inst4|counter_out[8]~195                                                  ; 1       ;
-; simple_counter:inst4|counter_out[7]~194                                                  ; 1       ;
-; simple_counter:inst4|counter_out[7]~193                                                  ; 1       ;
-; simple_counter:inst4|counter_out[6]~192                                                  ; 1       ;
-; simple_counter:inst4|counter_out[6]~191                                                  ; 1       ;
-+------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                  ;
++----------------------------------------------------------------------------------------+---------+
+; Name                                                                                   ; Fan-Out ;
++----------------------------------------------------------------------------------------+---------+
+; switch                                                                                 ; 4       ;
+; simple_counter:inst4|counter_out[21]                                                   ; 3       ;
+; simple_counter:inst4|counter_out[22]                                                   ; 3       ;
+; simple_counter:inst4|counter_out[23]                                                   ; 3       ;
+; simple_counter:inst4|counter_out[0]                                                    ; 2       ;
+; simple_counter:inst4|counter_out[20]                                                   ; 2       ;
+; simple_counter:inst4|counter_out[24]                                                   ; 2       ;
+; osc_clock                                                                              ; 1       ;
+; simple_counter:inst4|counter_out[0]~229                                                ; 1       ;
+; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[0]~51 ; 1       ;
+; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[1]~50 ; 1       ;
+; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[2]~49 ; 1       ;
+; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[3]~48 ; 1       ;
+; simple_counter:inst4|counter_out[24]~227                                               ; 1       ;
+; simple_counter:inst4|counter_out[23]~226                                               ; 1       ;
+; simple_counter:inst4|counter_out[23]~225                                               ; 1       ;
+; simple_counter:inst4|counter_out[22]~224                                               ; 1       ;
+; simple_counter:inst4|counter_out[22]~223                                               ; 1       ;
+; simple_counter:inst4|counter_out[21]~222                                               ; 1       ;
+; simple_counter:inst4|counter_out[21]~221                                               ; 1       ;
+; simple_counter:inst4|counter_out[20]~220                                               ; 1       ;
+; simple_counter:inst4|counter_out[20]~219                                               ; 1       ;
+; simple_counter:inst4|counter_out[19]~218                                               ; 1       ;
+; simple_counter:inst4|counter_out[19]~217                                               ; 1       ;
+; simple_counter:inst4|counter_out[18]~216                                               ; 1       ;
+; simple_counter:inst4|counter_out[18]~215                                               ; 1       ;
+; simple_counter:inst4|counter_out[17]~214                                               ; 1       ;
+; simple_counter:inst4|counter_out[17]~213                                               ; 1       ;
+; simple_counter:inst4|counter_out[16]~212                                               ; 1       ;
+; simple_counter:inst4|counter_out[16]~211                                               ; 1       ;
+; simple_counter:inst4|counter_out[15]~210                                               ; 1       ;
+; simple_counter:inst4|counter_out[15]~209                                               ; 1       ;
+; simple_counter:inst4|counter_out[14]~208                                               ; 1       ;
+; simple_counter:inst4|counter_out[14]~207                                               ; 1       ;
+; simple_counter:inst4|counter_out[13]~206                                               ; 1       ;
+; simple_counter:inst4|counter_out[13]~205                                               ; 1       ;
+; simple_counter:inst4|counter_out[12]~204                                               ; 1       ;
+; simple_counter:inst4|counter_out[12]~203                                               ; 1       ;
+; simple_counter:inst4|counter_out[11]~202                                               ; 1       ;
+; simple_counter:inst4|counter_out[11]~201                                               ; 1       ;
+; simple_counter:inst4|counter_out[10]~200                                               ; 1       ;
+; simple_counter:inst4|counter_out[10]~199                                               ; 1       ;
+; simple_counter:inst4|counter_out[9]~198                                                ; 1       ;
+; simple_counter:inst4|counter_out[9]~197                                                ; 1       ;
+; simple_counter:inst4|counter_out[8]~196                                                ; 1       ;
+; simple_counter:inst4|counter_out[8]~195                                                ; 1       ;
+; simple_counter:inst4|counter_out[7]~194                                                ; 1       ;
+; simple_counter:inst4|counter_out[7]~193                                                ; 1       ;
+; simple_counter:inst4|counter_out[6]~192                                                ; 1       ;
+; simple_counter:inst4|counter_out[6]~191                                                ; 1       ;
++----------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------+
@@ -1054,13 +1054,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Tue Oct 22 10:09:02 2013
+    Info: Processing started: Wed Oct 23 10:26:28 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off 1st_Project -c 1st_Project
 Info: Selected device EP2C20F484C7 for design "1st_Project"
 Warning: The high junction temperature operating condition is not set. Assuming a default value of '85'.
 Warning: The low junction temperature operating condition is not set. Assuming a default value of '0'.
-Info: Implemented PLL "PLL:inst|altpll:altpll_component|pll" as Cyclone II PLL type
-    Info: Implementing clock multiplication of 1, clock division of 5, and phase shift of 0 degrees (0 ps) for PLL:inst|altpll:altpll_component|_clk0 port
+Info: Implemented PLL "PLL:inst3|altpll:altpll_component|pll" as Cyclone II PLL type
+    Info: Implementing clock multiplication of 1, clock division of 5, and phase shift of 0 degrees (0 ps) for PLL:inst3|altpll:altpll_component|_clk0 port
 Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning: Feature LogicLock incremental compilation is not available with your current license
 Info: Fitter is using the Classic Timing Analyzer
@@ -1075,7 +1075,7 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~ASDO~ is reserved at location C4
     Info: Pin ~nCSO~ is reserved at location C3
     Info: Pin ~LVDS91p/nCEO~ is reserved at location W20
-Info: Automatically promoted node PLL:inst|altpll:altpll_component|_clk0 (placed in counter C0 of PLL_1)
+Info: Automatically promoted node PLL:inst3|altpll:altpll_component|_clk0 (placed in counter C0 of PLL_1)
     Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
 Info: Starting register packing
 Extra Info: Performing register packing on registers with non-logic cell location assignments
@@ -1137,7 +1137,7 @@ Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 5 warnings
     Info: Allocated 235 megabytes of memory during processing
-    Info: Processing ended: Tue Oct 22 10:09:08 2013
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Wed Oct 23 10:26:31 2013
+    Info: Elapsed time: 00:00:03
 
 

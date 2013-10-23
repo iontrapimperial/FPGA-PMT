@@ -22,7 +22,7 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-counter_bus_mux
+counterbusmux
 # storage
 db|1st_Project.(1).cnf
 db|1st_Project.(1).cnf
@@ -32,8 +32,8 @@ ON
 }
 # case_sensitive
 # source_file
-counter_bus_mux.v
-23eae96b2b31f327d235fbcd53caa8
+counterbusmux.v
+8c58d7aa6d3136e7b1ab7aa501a7ab0
 7
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -48,10 +48,10 @@ IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
 # hierarchies {
-counter_bus_mux:inst1
+counterbusmux:inst2
 }
 # lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
 d41d8cd98f0b24e980998ecf8427e
 # macro_sequence
 
@@ -63,7 +63,7 @@ db|1st_Project.(2).cnf
 db|1st_Project.(2).cnf
 # case_insensitive
 # source_file
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|lpm_mux.tdf
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|lpm_mux.tdf
 58f75cf5c2963ffeb4ea39e4a91f8e4
 6
 # user_parameter {
@@ -120,20 +120,20 @@ data
 3
 }
 # include_file {
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|aglobal72.inc
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|aglobal72.inc
 f39123b8592ab2dac019716e56b3ec18
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|muxlut.inc
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|muxlut.inc
 f172666ca13e5e31e17e3f6cb35af52
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|bypassff.inc
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|altshift.inc
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
 }
 # hierarchies {
-counter_bus_mux:inst1|lpm_mux:lpm_mux_component
+counterbusmux:inst2|lpm_mux:lpm_mux_component
 }
 # lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
 d41d8cd98f0b24e980998ecf8427e
 # macro_sequence
 
@@ -190,33 +190,10 @@ data0
 3
 }
 # hierarchies {
-counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated
+counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated
 }
 # lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
-d41d8cd98f0b24e980998ecf8427e
-# macro_sequence
-
-# end
-# entity
-1st_Project
-# storage
-db|1st_Project.(0).cnf
-db|1st_Project.(0).cnf
-# case_insensitive
-# source_file
-1st_Project.bdf
-d297a6be4a3cb467d046b13f6dade11d
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-OFF
-}
-# hierarchies {
-|
-}
-# lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
 d41d8cd98f0b24e980998ecf8427e
 # macro_sequence
 
@@ -251,7 +228,30 @@ OFF
 simple_counter:inst4
 }
 # lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+1st_Project
+# storage
+db|1st_Project.(0).cnf
+db|1st_Project.(0).cnf
+# case_insensitive
+# source_file
+1st_Project.bdf
+b2845a5ce61dc194fcb86e2d423b
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+OFF
+}
+# hierarchies {
+|
+}
+# lmf
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
 d41d8cd98f0b24e980998ecf8427e
 # macro_sequence
 
@@ -283,10 +283,10 @@ IGNORE_VERILOG_INITIAL_CONSTRUCTS
 OFF
 }
 # hierarchies {
-PLL:inst
+PLL:inst3
 }
 # lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
 d41d8cd98f0b24e980998ecf8427e
 # macro_sequence
 
@@ -298,7 +298,7 @@ db|1st_Project.(6).cnf
 db|1st_Project.(6).cnf
 # case_insensitive
 # source_file
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|altpll.tdf
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|altpll.tdf
 d4b92ea4fba4c49118598123ca13cf
 6
 # user_parameter {
@@ -1803,20 +1803,20 @@ clkena
 2
 }
 # include_file {
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|aglobal72.inc
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|aglobal72.inc
 f39123b8592ab2dac019716e56b3ec18
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|stratix_pll.inc
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|stratix_pll.inc
 5f8211898149ceae8264a0ea5036254f
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|stratixii_pll.inc
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|stratixii_pll.inc
 6d1985e16ab5f59a1fd6b0ae20978a4e
-..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|cycloneii_pll.inc
+..|..|..|..|..|..|..|altera|72|quartus|libraries|megafunctions|cycloneii_pll.inc
 39a0d9d1237d1db39c848c3f9faffc
 }
 # hierarchies {
-PLL:inst|altpll:altpll_component
+PLL:inst3|altpll:altpll_component
 }
 # lmf
-..|..|..|..|..|..|altera|72|quartus|lmf|
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
 d41d8cd98f0b24e980998ecf8427e
 # macro_sequence
 

@@ -1,13 +1,13 @@
 |1st_Project
-LED[0] <= counter_bus_mux:inst1.result[0]
-LED[1] <= counter_bus_mux:inst1.result[1]
-LED[2] <= counter_bus_mux:inst1.result[2]
-LED[3] <= counter_bus_mux:inst1.result[3]
-switch => counter_bus_mux:inst1.sel
-osc_clock => PLL:inst.inclk0
+LED[0] <= counterbusmux:inst2.result[0]
+LED[1] <= counterbusmux:inst2.result[1]
+LED[2] <= counterbusmux:inst2.result[2]
+LED[3] <= counterbusmux:inst2.result[3]
+switch => counterbusmux:inst2.sel
+osc_clock => PLL:inst3.inclk0
 
 
-|1st_Project|counter_bus_mux:inst1
+|1st_Project|counterbusmux:inst2
 data0x[0] => sub_wire4[0].IN1
 data0x[1] => sub_wire4[1].IN1
 data0x[2] => sub_wire4[2].IN1
@@ -23,7 +23,7 @@ result[2] <= lpm_mux:lpm_mux_component.result
 result[3] <= lpm_mux:lpm_mux_component.result
 
 
-|1st_Project|counter_bus_mux:inst1|lpm_mux:lpm_mux_component
+|1st_Project|counterbusmux:inst2|lpm_mux:lpm_mux_component
 data[0][0] => mux_omc:auto_generated.data[0]
 data[0][1] => mux_omc:auto_generated.data[1]
 data[0][2] => mux_omc:auto_generated.data[2]
@@ -42,7 +42,7 @@ result[2] <= mux_omc:auto_generated.result[2]
 result[3] <= mux_omc:auto_generated.result[3]
 
 
-|1st_Project|counter_bus_mux:inst1|lpm_mux:lpm_mux_component|mux_omc:auto_generated
+|1st_Project|counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
 result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
 result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -116,12 +116,12 @@ counter_out[30] <= counter_out[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 counter_out[31] <= counter_out[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|1st_Project|PLL:inst
+|1st_Project|PLL:inst3
 inclk0 => sub_wire3[0].IN1
 c0 <= altpll:altpll_component.clk
 
 
-|1st_Project|PLL:inst|altpll:altpll_component
+|1st_Project|PLL:inst3|altpll:altpll_component
 inclk[0] => pll.CLK
 inclk[1] => ~NO_FANOUT~
 fbin => ~NO_FANOUT~

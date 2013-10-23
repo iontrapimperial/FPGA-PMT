@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="1st_Project">
-		<CBX_INST_ENTRY INSTANCE_NAME="|1st_Project|counter_bus_mux:inst1|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_omc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|1st_Project|counterbusmux:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_omc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
