@@ -18,7 +18,7 @@ reset      // reset Input
 
    
 //-------------Code Starts Here-------
-always @(posedge enable or posedge reset)
+always @(posedge enable or posedge reset) 
 begin
 if (reset) 
   nIn <= 4'b0;

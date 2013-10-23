@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Up-Down-Counter
-Tue Oct 22 17:51:09 2013
+Wed Oct 23 15:46:36 2013
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 22 17:51:09 2013   ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 23 15:46:36 2013   ;
 ; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
 ; Revision Name                      ; Up-Down-Counter                         ;
 ; Top-level Entity Name              ; Block1                                  ;
 ; Family                             ; Cyclone II                              ;
-; Total logic elements               ; 50                                      ;
-;     Total combinational functions  ; 50                                      ;
+; Total logic elements               ; 41                                      ;
+;     Total combinational functions  ; 41                                      ;
 ;     Dedicated logic registers      ; 4                                       ;
 ; Total registers                    ; 4                                       ;
 ; Total pins                         ; 17                                      ;
@@ -148,33 +148,33 @@ applicable agreement for further details.
 +-----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                   ;
-+---------------------------------------------+-------------------------------------------------+
-; Resource                                    ; Usage                                           ;
-+---------------------------------------------+-------------------------------------------------+
-; Estimated Total logic elements              ; 50                                              ;
-;                                             ;                                                 ;
-; Total combinational functions               ; 50                                              ;
-; Logic element usage by number of LUT inputs ;                                                 ;
-;     -- 4 input functions                    ; 15                                              ;
-;     -- 3 input functions                    ; 16                                              ;
-;     -- <=2 input functions                  ; 19                                              ;
-;                                             ;                                                 ;
-; Logic elements by mode                      ;                                                 ;
-;     -- normal mode                          ; 44                                              ;
-;     -- arithmetic mode                      ; 6                                               ;
-;                                             ;                                                 ;
-; Total registers                             ; 4                                               ;
-;     -- Dedicated logic registers            ; 4                                               ;
-;     -- I/O registers                        ; 0                                               ;
-;                                             ;                                                 ;
-; I/O pins                                    ; 17                                              ;
-; Maximum fan-out node                        ; updown_counter_tut_noclock:inst|nIn[0]~head_lut ;
-; Maximum fan-out                             ; 15                                              ;
-; Total fan-out                               ; 165                                             ;
-; Average fan-out                             ; 2.32                                            ;
-+---------------------------------------------+-------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                        ;
++---------------------------------------------+--------------------------------------+
+; Resource                                    ; Usage                                ;
++---------------------------------------------+--------------------------------------+
+; Estimated Total logic elements              ; 41                                   ;
+;                                             ;                                      ;
+; Total combinational functions               ; 41                                   ;
+; Logic element usage by number of LUT inputs ;                                      ;
+;     -- 4 input functions                    ; 8                                    ;
+;     -- 3 input functions                    ; 21                                   ;
+;     -- <=2 input functions                  ; 12                                   ;
+;                                             ;                                      ;
+; Logic elements by mode                      ;                                      ;
+;     -- normal mode                          ; 32                                   ;
+;     -- arithmetic mode                      ; 9                                    ;
+;                                             ;                                      ;
+; Total registers                             ; 4                                    ;
+;     -- Dedicated logic registers            ; 4                                    ;
+;     -- I/O registers                        ; 0                                    ;
+;                                             ;                                      ;
+; I/O pins                                    ; 17                                   ;
+; Maximum fan-out node                        ; updown_counter_noclock:inst|nIn[3]~1 ;
+; Maximum fan-out                             ; 12                                   ;
+; Total fan-out                               ; 138                                  ;
+; Average fan-out                             ; 2.23                                 ;
++---------------------------------------------+--------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -182,7 +182,7 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
-; |Block1                                   ; 50 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |Block1                                                                                                                ; work         ;
+; |Block1                                   ; 41 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |Block1                                                                                                                ; work         ;
 ;    |sevenseg:inst1|                       ; 28 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|sevenseg:inst1                                                                                                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|sevenseg:inst1|lpm_divide:Div0                                                                                 ; work         ;
 ;          |lpm_divide_tcm:auto_generated|  ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|sevenseg:inst1|lpm_divide:Div0|lpm_divide_tcm:auto_generated                                                   ; work         ;
@@ -192,7 +192,7 @@ applicable agreement for further details.
 ;          |lpm_divide_05m:auto_generated|  ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_7kh:divider| ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider                       ; work         ;
 ;                |alt_u_div_gve:divider|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider ; work         ;
-;    |updown_counter_tut_noclock:inst|      ; 22 (22)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|updown_counter_tut_noclock:inst                                                                                ; work         ;
+;    |updown_counter_noclock:inst|          ; 13 (13)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|updown_counter_noclock:inst                                                                                    ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -281,7 +281,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Tue Oct 22 17:51:07 2013
+    Info: Processing started: Wed Oct 23 15:46:34 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Up-Down-Counter -c Up-Down-Counter
 Info: Found 1 design units, including 1 entities, in source file Block1.bdf
     Info: Found entity 1: Block1
@@ -296,7 +296,13 @@ Info: Found 1 design units, including 1 entities, in source file on_off.v
 Info: Found 1 design units, including 1 entities, in source file Double_SevenSeg.v
     Info: Found entity 1: sevenseg
 Info: Found 1 design units, including 1 entities, in source file UpDown_counter_Tutorial_noclock.v
-    Info: Found entity 1: updown_counter_tut_noclock
+    Info: Found entity 1: updown_counter_noclock
+Info: Found 1 design units, including 1 entities, in source file Frequency_Divider.v
+    Info: Found entity 1: oscillator_count
+Info: Found 1 design units, including 1 entities, in source file UpDown_counter_withclock.v
+    Info: Found entity 1: updown_counter_withclock
+Info: Found 1 design units, including 1 entities, in source file BlockClock.bdf
+    Info: Found entity 1: BlockClock
 Info: Elaborating entity "Block1" for the top level hierarchy
 Info: Elaborating entity "sevenseg" for hierarchy "sevenseg:inst1"
 Warning (10230): Verilog HDL assignment warning at Double_SevenSeg.v(16): truncated value with size 32 to match size of target (4)
@@ -321,9 +327,9 @@ Info (10041): Inferred latch for "ones[3]" at Double_SevenSeg.v(13)
 Info (10041): Inferred latch for "ones[4]" at Double_SevenSeg.v(13)
 Info (10041): Inferred latch for "ones[5]" at Double_SevenSeg.v(13)
 Info (10041): Inferred latch for "ones[6]" at Double_SevenSeg.v(13)
-Info: Elaborating entity "updown_counter_tut_noclock" for hierarchy "updown_counter_tut_noclock:inst"
+Info: Elaborating entity "updown_counter_noclock" for hierarchy "updown_counter_noclock:inst"
+Warning (10230): Verilog HDL assignment warning at UpDown_counter_Tutorial_noclock.v(25): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at UpDown_counter_Tutorial_noclock.v(27): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at UpDown_counter_Tutorial_noclock.v(29): truncated value with size 32 to match size of target (4)
 Info: Inferred 2 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevenseg:inst1|Mod0"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "sevenseg:inst1|Div0"
@@ -351,36 +357,36 @@ Warning: LATCH primitive "sevenseg:inst1|tens[2]" is permanently enabled
 Warning: LATCH primitive "sevenseg:inst1|tens[1]" is permanently enabled
 Warning: LATCH primitive "sevenseg:inst1|tens[0]" is permanently enabled
 Warning: Latch sevenseg:inst1|ones[6] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_tut_noclock:inst|nIn[1]
+    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_noclock:inst|nIn[1]
 Warning: Latch sevenseg:inst1|ones[5] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_tut_noclock:inst|nIn[1]
+    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_noclock:inst|nIn[1]
 Warning: Latch sevenseg:inst1|ones[4] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_tut_noclock:inst|nIn[1]
+    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_noclock:inst|nIn[1]
 Warning: Latch sevenseg:inst1|ones[3] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_tut_noclock:inst|nIn[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_noclock:inst|nIn[2]
 Warning: Latch sevenseg:inst1|ones[2] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_tut_noclock:inst|nIn[1]
+    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_noclock:inst|nIn[1]
 Warning: Latch sevenseg:inst1|ones[1] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_tut_noclock:inst|nIn[2]
+    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_noclock:inst|nIn[2]
 Warning: Latch sevenseg:inst1|ones[0] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_tut_noclock:inst|nIn[1]
+    Warning: Ports D and ENA on the latch are fed by the same signal updown_counter_noclock:inst|nIn[1]
 Warning: Converted presettable and clearable register to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "updown_counter_tut_noclock:inst|nIn[3]" converted into equivalent circuit using register "updown_counter_tut_noclock:inst|nIn[3]~_emulated" and latch "updown_counter_tut_noclock:inst|nIn[3]~latch"
-    Warning (13310): Register "updown_counter_tut_noclock:inst|nIn[2]" converted into equivalent circuit using register "updown_counter_tut_noclock:inst|nIn[2]~_emulated" and latch "updown_counter_tut_noclock:inst|nIn[2]~latch"
-    Warning (13310): Register "updown_counter_tut_noclock:inst|nIn[1]" converted into equivalent circuit using register "updown_counter_tut_noclock:inst|nIn[1]~_emulated" and latch "updown_counter_tut_noclock:inst|nIn[1]~latch"
-    Warning (13310): Register "updown_counter_tut_noclock:inst|nIn[0]" converted into equivalent circuit using register "updown_counter_tut_noclock:inst|nIn[0]~_emulated" and latch "updown_counter_tut_noclock:inst|nIn[0]~latch"
+    Warning (13310): Register "updown_counter_noclock:inst|nIn[3]" converted into equivalent circuit using register "updown_counter_noclock:inst|nIn[3]~_emulated" and latch "updown_counter_noclock:inst|nIn[3]~latch"
+    Warning (13310): Register "updown_counter_noclock:inst|nIn[2]" converted into equivalent circuit using register "updown_counter_noclock:inst|nIn[2]~_emulated" and latch "updown_counter_noclock:inst|nIn[2]~latch"
+    Warning (13310): Register "updown_counter_noclock:inst|nIn[1]" converted into equivalent circuit using register "updown_counter_noclock:inst|nIn[1]~_emulated" and latch "updown_counter_noclock:inst|nIn[1]~latch"
+    Warning (13310): Register "updown_counter_noclock:inst|nIn[0]" converted into equivalent circuit using register "updown_counter_noclock:inst|nIn[0]~_emulated" and latch "updown_counter_noclock:inst|nIn[0]~latch"
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "ssOut2[6]" stuck at VCC
     Warning (13410): Pin "ssOut2[2]" stuck at GND
     Warning (13410): Pin "ssOut2[1]" stuck at GND
 Info: Generated suppressed messages file C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/Up Down counter/Up-Down-Counter.map.smsg
-Info: Implemented 67 device resources after synthesis - the final resource count might be different
+Info: Implemented 62 device resources after synthesis - the final resource count might be different
     Info: Implemented 3 input pins
     Info: Implemented 14 output pins
-    Info: Implemented 50 logic cells
+    Info: Implemented 45 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Allocated 191 megabytes of memory during processing
-    Info: Processing ended: Tue Oct 22 17:51:09 2013
+    Info: Allocated 189 megabytes of memory during processing
+    Info: Processing ended: Wed Oct 23 15:46:36 2013
     Info: Elapsed time: 00:00:02
 
 

@@ -58,4 +58,8 @@ set_location_assignment PIN_D1 -to ssOut2[6]
 set_global_assignment -name VERILOG_FILE Double_SevenSeg.v
 set_global_assignment -name VERILOG_FILE UpDown_counter_Tutorial_noclock.v
 set_location_assignment PIN_R22 -to up
-set_location_assignment PIN_T22 -to down
+set_location_assignment PIN_T21 -to down
+set_global_assignment -name VERILOG_FILE Frequency_Divider.v
+set_location_assignment PIN_L1 -to clk
+set_global_assignment -name VERILOG_FILE UpDown_counter_withclock.v
+set_global_assignment -name BDF_FILE BlockClock.bdf

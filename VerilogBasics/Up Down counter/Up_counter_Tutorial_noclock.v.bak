@@ -24,7 +24,7 @@ if (reset)
   nIn <= 4'b0;
  
 else if (enable) 
-  nIn <= count + 1;
+  nIn <= nIn + 1;
 end
 
 

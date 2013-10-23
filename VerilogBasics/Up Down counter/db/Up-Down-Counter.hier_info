@@ -8,7 +8,7 @@ ssOut1[5] <= sevenseg:inst1.ones[5]
 ssOut1[6] <= sevenseg:inst1.ones[6]
 up => inst4.IN0
 down => inst2.IN0
-reset => inst5.IN0
+reset => inst6.IN0
 ssOut2[0] <= sevenseg:inst1.tens[0]
 ssOut2[1] <= sevenseg:inst1.tens[1]
 ssOut2[2] <= sevenseg:inst1.tens[2]
@@ -43,20 +43,20 @@ ones[5] <= ones[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
 ones[6] <= ones[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|updown_counter_tut_noclock:inst
+|Block1|updown_counter_noclock:inst
 nIn[0] <= nIn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nIn[1] <= nIn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nIn[2] <= nIn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nIn[3] <= nIn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-up => nIn[3]~0.IN1
-down => nIn[3]~reg0.CLK
-down => nIn[2]~reg0.CLK
-down => nIn[1]~reg0.CLK
-down => nIn[0]~reg0.CLK
-reset => nIn[3]~reg0.ACLR
-reset => nIn[2]~reg0.ACLR
-reset => nIn[1]~reg0.ACLR
-reset => nIn[0]~reg0.ACLR
-reset => nIn[3]~0.IN0
+up => nIn[3]~0.OUTPUTSELECT
+up => nIn[3]~1.IN0
+up => nIn[2]~2.OUTPUTSELECT
+up => nIn[1]~3.OUTPUTSELECT
+up => nIn[0]~4.OUTPUTSELECT
+down => nIn[3]~1.IN1
+reset => nIn[3]~reg0.CLK
+reset => nIn[2]~reg0.CLK
+reset => nIn[1]~reg0.CLK
+reset => nIn[0]~reg0.CLK
 
 

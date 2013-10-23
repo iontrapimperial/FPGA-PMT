@@ -5,28 +5,28 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.150 ns
-From           : up
-To             : updown_counter_tut_noclock:inst|nIn[3]~_emulated
+Actual Time    : 7.737 ns
+From           : down
+To             : updown_counter_noclock:inst|nIn[3]~latch
 From Clock     : --
-To Clock       : down
+To Clock       : up
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 20.748 ns
-From           : sevenseg:inst1|ones[4]
-To             : ssOut1[4]
-From Clock     : up
+Actual Time    : 22.930 ns
+From           : sevenseg:inst1|ones[6]
+To             : ssOut1[6]
+From Clock     : down
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 15.773 ns
-From           : up
+Actual Time    : 18.937 ns
+From           : down
 To             : ssOut2[5]
 From Clock     : --
 To Clock       : --
@@ -35,19 +35,19 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.426 ns
-From           : reset
-To             : sevenseg:inst1|ones[6]
+Actual Time    : 10.885 ns
+From           : up
+To             : sevenseg:inst1|ones[4]
 From Clock     : --
-To Clock       : up
+To Clock       : down
 Failed Paths   : 0
 
 Type           : Clock Setup: 'down'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 151.95 MHz ( period = 6.581 ns )
-From           : updown_counter_tut_noclock:inst|nIn[0]~_emulated
-To             : updown_counter_tut_noclock:inst|nIn[3]~_emulated
+Actual Time    : 129.23 MHz ( period = 7.738 ns )
+From           : updown_counter_noclock:inst|nIn[0]~latch
+To             : updown_counter_noclock:inst|nIn[3]~latch
 From Clock     : down
 To Clock       : down
 Failed Paths   : 0
@@ -55,9 +55,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'up'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 154.34 MHz ( period = 6.479 ns )
-From           : updown_counter_tut_noclock:inst|nIn[0]~latch
-To             : updown_counter_tut_noclock:inst|nIn[3]~latch
+Actual Time    : 129.23 MHz ( period = 7.738 ns )
+From           : updown_counter_noclock:inst|nIn[0]~latch
+To             : updown_counter_noclock:inst|nIn[3]~latch
 From Clock     : up
 To Clock       : up
 Failed Paths   : 0
@@ -65,29 +65,19 @@ Failed Paths   : 0
 Type           : Clock Setup: 'reset'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 154.34 MHz ( period = 6.479 ns )
-From           : updown_counter_tut_noclock:inst|nIn[0]~latch
-To             : updown_counter_tut_noclock:inst|nIn[3]~latch
+Actual Time    : 150.88 MHz ( period = 6.628 ns )
+From           : updown_counter_noclock:inst|nIn[0]~_emulated
+To             : sevenseg:inst1|ones[4]
 From Clock     : reset
 To Clock       : reset
 Failed Paths   : 0
-
-Type           : Clock Hold: 'down'
-Slack          : Not operational: Clock Skew > Data Delay
-Required Time  : None
-Actual Time    : N/A
-From           : updown_counter_tut_noclock:inst|nIn[0]~_emulated
-To             : sevenseg:inst1|ones[6]
-From Clock     : down
-To Clock       : down
-Failed Paths   : 28
 
 Type           : Clock Hold: 'reset'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : updown_counter_tut_noclock:inst|nIn[0]~latch
-To             : sevenseg:inst1|ones[6]
+From           : updown_counter_noclock:inst|nIn[0]~_emulated
+To             : sevenseg:inst1|ones[4]
 From Clock     : reset
 To Clock       : reset
 Failed Paths   : 28
@@ -96,10 +86,20 @@ Type           : Clock Hold: 'up'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : updown_counter_tut_noclock:inst|nIn[0]~latch
-To             : sevenseg:inst1|ones[6]
+From           : updown_counter_noclock:inst|nIn[0]~latch
+To             : sevenseg:inst1|ones[4]
 From Clock     : up
 To Clock       : up
+Failed Paths   : 28
+
+Type           : Clock Hold: 'down'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : updown_counter_noclock:inst|nIn[0]~latch
+To             : sevenseg:inst1|ones[4]
+From Clock     : down
+To Clock       : down
 Failed Paths   : 28
 
 Type           : Total number of failed paths
