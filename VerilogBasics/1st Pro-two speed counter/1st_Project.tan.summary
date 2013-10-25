@@ -5,8 +5,8 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.364 ns
-From           : simple_counter:inst4|counter_out[23]
+Actual Time    : 5.361 ns
+From           : simple_counter:inst4|counter_out[21]
 To             : LED[3]
 From Clock     : osc_clock
 To Clock       : --

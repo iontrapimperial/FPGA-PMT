@@ -196,12 +196,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "counter[23..20]" (rect 242 408 316 420)(font "Arial" ))
-	(pt 264 424)
-	(pt 320 424)
-	(bus)
-)
-(connector
 	(text "counter[24..21]" (rect 226 424 300 436)(font "Arial" ))
 	(pt 320 440)
 	(pt 216 440)
@@ -231,6 +225,12 @@ applicable agreement for further details.
 (connector
 	(pt 368 144)
 	(pt 472 144)
+)
+(connector
+	(text "counter[21..18]" (rect 242 408 316 420)(font "Arial" ))
+	(pt 264 424)
+	(pt 320 424)
+	(bus)
 )
 (junction (pt 472 144))
 (junction (pt 368 144))

@@ -234,29 +234,6 @@ d41d8cd98f0b24e980998ecf8427e
 
 # end
 # entity
-1st_Project
-# storage
-db|1st_Project.(0).cnf
-db|1st_Project.(0).cnf
-# case_insensitive
-# source_file
-1st_Project.bdf
-b2845a5ce61dc194fcb86e2d423b
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-OFF
-}
-# hierarchies {
-|
-}
-# lmf
-..|..|..|..|..|..|..|altera|72|quartus|lmf|
-d41d8cd98f0b24e980998ecf8427e
-# macro_sequence
-
-# end
-# entity
 PLL
 # storage
 db|1st_Project.(5).cnf
@@ -1814,6 +1791,29 @@ f39123b8592ab2dac019716e56b3ec18
 }
 # hierarchies {
 PLL:inst3|altpll:altpll_component
+}
+# lmf
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+1st_Project
+# storage
+db|1st_Project.(0).cnf
+db|1st_Project.(0).cnf
+# case_insensitive
+# source_file
+1st_Project.bdf
+f432b9dd20ed13cca5885e4cbfb51aa
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+OFF
+}
+# hierarchies {
+|
 }
 # lmf
 ..|..|..|..|..|..|..|altera|72|quartus|lmf|
