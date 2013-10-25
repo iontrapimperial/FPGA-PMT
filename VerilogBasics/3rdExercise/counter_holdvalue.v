@@ -1,4 +1,4 @@
-module (sw_count, clock, sw_out);
+module count_holdval (sw_count, clock, sw_out);
 
 input clock, sw_count;
 output reg [5:0] sw_out;
