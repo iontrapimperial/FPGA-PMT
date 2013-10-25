@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Oct 23 15:46:36 2013
+Analysis & Synthesis Status : Successful - Fri Oct 25 16:43:43 2013
 Quartus II Version : 7.2 Build 151 09/26/2007 SJ Web Edition
 Revision Name : Up-Down-Counter
-Top-level Entity Name : Block1
+Top-level Entity Name : BlockNoclock
 Family : Cyclone II
-Total logic elements : 41
-    Total combinational functions : 41
+Total logic elements : 50
+    Total combinational functions : 50
     Dedicated logic registers : 4
 Total registers : 4
 Total pins : 17

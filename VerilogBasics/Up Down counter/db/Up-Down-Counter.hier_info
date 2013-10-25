@@ -1,4 +1,4 @@
-|Block1
+|BlockNoclock
 ssOut1[0] <= sevenseg:inst1.ones[0]
 ssOut1[1] <= sevenseg:inst1.ones[1]
 ssOut1[2] <= sevenseg:inst1.ones[2]
@@ -18,7 +18,7 @@ ssOut2[5] <= sevenseg:inst1.tens[5]
 ssOut2[6] <= sevenseg:inst1.tens[6]
 
 
-|Block1|sevenseg:inst1
+|BlockNoclock|sevenseg:inst1
 s1[0] => Div0.IN7
 s1[0] => Mod0.IN7
 s1[1] => Div0.IN6
@@ -43,20 +43,20 @@ ones[5] <= ones[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
 ones[6] <= ones[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|updown_counter_noclock:inst
+|BlockNoclock|updown_counter_noclock:inst
 nIn[0] <= nIn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nIn[1] <= nIn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nIn[2] <= nIn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nIn[3] <= nIn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-up => nIn[3]~0.OUTPUTSELECT
-up => nIn[3]~1.IN0
-up => nIn[2]~2.OUTPUTSELECT
-up => nIn[1]~3.OUTPUTSELECT
-up => nIn[0]~4.OUTPUTSELECT
-down => nIn[3]~1.IN1
-reset => nIn[3]~reg0.CLK
-reset => nIn[2]~reg0.CLK
-reset => nIn[1]~reg0.CLK
-reset => nIn[0]~reg0.CLK
+up => nIn[3]~reg0.ALOAD
+up => nIn[2]~reg0.ALOAD
+up => nIn[1]~reg0.ALOAD
+up => nIn[0]~reg0.ALOAD
+up => nIn[3]~0.IN0
+down => nIn[3]~reg0.CLK
+down => nIn[2]~reg0.CLK
+down => nIn[1]~reg0.CLK
+down => nIn[0]~reg0.CLK
+reset => nIn[3]~0.IN1
 
 

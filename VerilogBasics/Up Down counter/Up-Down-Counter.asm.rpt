@@ -1,5 +1,5 @@
 Assembler report for Up-Down-Counter
-Wed Oct 23 15:46:46 2013
+Fri Oct 25 16:43:53 2013
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -38,9 +38,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Oct 23 15:46:46 2013 ;
+; Assembler Status      ; Successful - Fri Oct 25 16:43:53 2013 ;
 ; Revision Name         ; Up-Down-Counter                       ;
-; Top-level Entity Name ; Block1                                ;
+; Top-level Entity Name ; BlockNoclock                          ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C20F484C7                          ;
 +-----------------------+---------------------------------------+
@@ -95,7 +95,7 @@ applicable agreement for further details.
 +----------------+----------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP2C20F484C7                                                                                                   ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                                                                     ;
-; Checksum       ; 0x001B7814                                                                                                     ;
+; Checksum       ; 0x001B8E69                                                                                                     ;
 +----------------+----------------------------------------------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+------------------------------------------------------------------------------------------------------------+
 ; Device             ; EPCS16                                                                                                     ;
 ; JTAG usercode      ; 0x00000000                                                                                                 ;
-; Checksum           ; 0x1DD8EACC                                                                                                 ;
+; Checksum           ; 0x1DD8F0F7                                                                                                 ;
 ; Compression Ratio  ; 3                                                                                                          ;
 +--------------------+------------------------------------------------------------------------------------------------------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Wed Oct 23 15:46:42 2013
+    Info: Processing started: Fri Oct 25 16:43:49 2013
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Up-Down-Counter -c Up-Down-Counter
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Allocated 211 megabytes of memory during processing
-    Info: Processing ended: Wed Oct 23 15:46:46 2013
+    Info: Processing ended: Fri Oct 25 16:43:53 2013
     Info: Elapsed time: 00:00:04
 
 

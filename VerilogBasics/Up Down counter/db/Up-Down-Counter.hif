@@ -2197,14 +2197,98 @@ d41d8cd98f0b24e980998ecf8427e
 
 # end
 # entity
-Block1
+updown_counter_withclock
+# storage
+db|Up-Down-Counter.(14).cnf
+db|Up-Down-Counter.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+UpDown_counter_withclock.v
+b4b62b9bf738a99521193e6fab5289
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# lmf
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+slow_clock
+# storage
+db|Up-Down-Counter.(15).cnf
+db|Up-Down-Counter.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+slow_clock.v
+1169c7ca5810b0ff72259668e8b9bd88
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# lmf
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+BlockClock
 # storage
 db|Up-Down-Counter.(0).cnf
 db|Up-Down-Counter.(0).cnf
 # case_insensitive
 # source_file
-Block1.bdf
-461f246a19dc4b44daeb8d87d15c484b
+BlockClock.bdf
+8d9a18f21b7bd679c3a368642fcde7
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+OFF
+}
+# lmf
+..|..|..|..|..|..|..|altera|72|quartus|lmf|
+d41d8cd98f0b24e980998ecf8427e
+# macro_sequence
+
+# end
+# entity
+BlockNoclock
+# storage
+db|Up-Down-Counter.(2).cnf
+db|Up-Down-Counter.(2).cnf
+# case_insensitive
+# source_file
+BlockNoclock.bdf
+d1fff45cff1f9a25f5425be15f409a
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -2222,8 +2306,8 @@ d41d8cd98f0b24e980998ecf8427e
 # entity
 updown_counter_noclock
 # storage
-db|Up-Down-Counter.(2).cnf
-db|Up-Down-Counter.(2).cnf
+db|Up-Down-Counter.(16).cnf
+db|Up-Down-Counter.(16).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2231,7 +2315,7 @@ ON
 # case_sensitive
 # source_file
 UpDown_counter_Tutorial_noclock.v
-351a185b041bbddb7c3e8edfd76dbd1
+34733b61b7191b938f8dbdcc399381
 7
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

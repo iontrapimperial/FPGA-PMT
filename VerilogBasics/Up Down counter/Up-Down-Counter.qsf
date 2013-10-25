@@ -25,17 +25,11 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY Block1
+set_global_assignment -name TOP_LEVEL_ENTITY BlockNoclock
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 7.2
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:41:29  OCTOBER 16, 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION 7.2
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_palace
-set_global_assignment -name BDF_FILE Block1.bdf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top
 set_location_assignment PIN_R21 -to reset
 set_global_assignment -name VERILOG_FILE Up_counter_Tutorial.v
 set_global_assignment -name VERILOG_FILE Up_counter_Tutorial_noclock.v
@@ -63,3 +57,11 @@ set_global_assignment -name VERILOG_FILE Frequency_Divider.v
 set_location_assignment PIN_L1 -to clk
 set_global_assignment -name VERILOG_FILE UpDown_counter_withclock.v
 set_global_assignment -name BDF_FILE BlockClock.bdf
+set_location_assignment PIN_U22 -to test_LED
+set_global_assignment -name BDF_FILE BlockNoclock.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 2147039 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top
+set_location_assignment PIN_L22 -to switch
