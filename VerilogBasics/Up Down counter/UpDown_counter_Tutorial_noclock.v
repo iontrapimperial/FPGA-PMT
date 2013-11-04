@@ -1,18 +1,11 @@
-//-----------------------------------------------------
-// Design Name : up_counter
-// File Name   : up_counter.v
-// Function    : Up counter
-// Coder      : Deepak
-//-----------------------------------------------------
-module updown_counter_noclock    (
+module updown_count_noclock   (
 nIn     ,  // Output of the counter
 up  ,  
 down,  
 reset   // reset Input
 );
 //----------Output Ports--------------
-    output reg [3:0] nIn;
-//------------Input Ports--------------
+    output reg [3:0] nIn;//------------Input Ports--------------
      input up, down, reset;
 //------------Internal Variables--------
 
@@ -29,9 +22,5 @@ else if (down)
   nIn = nIn -1;
 
 end
-
-
-
-
 
 endmodule

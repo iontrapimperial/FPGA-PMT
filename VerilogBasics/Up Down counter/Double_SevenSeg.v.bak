@@ -10,7 +10,7 @@ reg [3:0] tensbcd;
 reg [3:0] onesbcd;
 
 
-always@ (edge s1) 
+always@ (s1) 
 begin
 
 onesbcd <= s1 % 10;
@@ -28,6 +28,7 @@ case (onesbcd)
 4'h7: ones = 7'b1111000;
 4'h8: ones = 7'b0000000;
 4'h9: ones = 7'b0011000;
+default: ones=7'b1110001;
 endcase
 
 
@@ -46,6 +47,7 @@ case (tensbcd)
 4'h7: tens = 7'b1111000;
 4'h8: tens = 7'b0000000;
 4'h9: tens = 7'b0011000;
+default: ones=7'b1110001;
 endcase
 
 end

@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for Up-Down-Counter
-Fri Oct 25 16:43:54 2013
+Tue Oct 29 11:07:05 2013
 Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
 
 
@@ -10,15 +10,12 @@ Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
   2. Timing Analyzer Summary
   3. Timing Analyzer Settings
   4. Clock Settings Summary
-  5. Clock Setup: 'down'
-  6. Clock Setup: 'up'
-  7. Clock Hold: 'down'
-  8. Clock Hold: 'up'
-  9. tsu
- 10. tco
- 11. tpd
- 12. th
- 13. Timing Analyzer Messages
+  5. Clock Setup: 'reset'
+  6. Clock Setup: 'down'
+  7. Clock Setup: 'up'
+  8. Clock Hold: 'reset'
+  9. tco
+ 10. Timing Analyzer Messages
 
 
 
@@ -41,21 +38,18 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                                                                                         ;
-+------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------------------+----------------------------------------------+------------+----------+--------------+
-; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                         ; To                                           ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------------------+----------------------------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A                                      ; None          ; 7.289 ns                         ; up                                           ; updown_counter_noclock:inst|nIn[3]~latch     ; --         ; up       ; 0            ;
-; Worst-case tco               ; N/A                                      ; None          ; 21.506 ns                        ; sevenseg:inst1|ones[5]                       ; ssOut1[5]                                    ; down       ; --       ; 0            ;
-; Worst-case tpd               ; N/A                                      ; None          ; 16.996 ns                        ; up                                           ; ssOut2[0]                                    ; --         ; --       ; 0            ;
-; Worst-case th                ; N/A                                      ; None          ; 10.553 ns                        ; up                                           ; sevenseg:inst1|ones[2]                       ; --         ; down     ; 0            ;
-; Clock Setup: 'up'            ; N/A                                      ; None          ; 96.39 MHz ( period = 10.374 ns ) ; updown_counter_noclock:inst|nIn[0]~latch     ; sevenseg:inst1|ones[0]                       ; up         ; up       ; 0            ;
-; Clock Setup: 'down'          ; N/A                                      ; None          ; 144.95 MHz ( period = 6.899 ns ) ; updown_counter_noclock:inst|nIn[0]~_emulated ; updown_counter_noclock:inst|nIn[3]~_emulated ; down       ; down     ; 0            ;
-; Clock Hold: 'up'             ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; updown_counter_noclock:inst|nIn[0]~latch     ; sevenseg:inst1|ones[2]                       ; up         ; up       ; 28           ;
-; Clock Hold: 'down'           ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[2]                       ; down       ; down     ; 28           ;
-; Total number of failed paths ;                                          ;               ;                                  ;                                              ;                                              ;            ;          ; 56           ;
-+------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------------------+----------------------------------------------+------------+----------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                               ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                    ; To                                      ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A                                      ; None          ; 13.500 ns                        ; updown_counter_precount:inst3|numout[1] ; ssOut1[5]                               ; reset      ; --       ; 0            ;
+; Clock Setup: 'up'            ; N/A                                      ; None          ; 335.46 MHz ( period = 2.981 ns ) ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[2] ; up         ; up       ; 0            ;
+; Clock Setup: 'down'          ; N/A                                      ; None          ; 335.46 MHz ( period = 2.981 ns ) ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[2] ; down       ; down     ; 0            ;
+; Clock Setup: 'reset'         ; N/A                                      ; None          ; 335.46 MHz ( period = 2.981 ns ) ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[2] ; reset      ; reset    ; 0            ;
+; Clock Hold: 'reset'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; precount:inst|outnum[1]                 ; updown_counter_precount:inst3|numout[3] ; reset      ; reset    ; 4            ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                         ;                                         ;            ;          ; 4            ;
++------------------------------+------------------------------------------+---------------+----------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+--------------+
 
 
 +---------------------------------------------------------------------------------------------------------------+
@@ -91,383 +85,208 @@ applicable agreement for further details.
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 ; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; reset           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 ; down            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 ; up              ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
-; reset           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
 +-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'down'                                                                                                                                                                                                                                              ;
-+-------+------------------------------------------------+----------------------------------------------+----------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)                           ; From                                         ; To                                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+------------------------------------------------+----------------------------------------------+----------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 144.95 MHz ( period = 6.899 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; updown_counter_noclock:inst|nIn[3]~_emulated ; down       ; down     ; None                        ; None                      ; 6.674 ns                ;
-; N/A   ; 172.98 MHz ( period = 5.781 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; updown_counter_noclock:inst|nIn[2]~_emulated ; down       ; down     ; None                        ; None                      ; 5.542 ns                ;
-; N/A   ; 200.40 MHz ( period = 4.990 ns )               ; updown_counter_noclock:inst|nIn[1]~_emulated ; updown_counter_noclock:inst|nIn[3]~_emulated ; down       ; down     ; None                        ; None                      ; 4.765 ns                ;
-; N/A   ; 218.29 MHz ( period = 4.581 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[0]                       ; down       ; down     ; None                        ; None                      ; 9.375 ns                ;
-; N/A   ; 227.17 MHz ( period = 4.402 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[6]                       ; down       ; down     ; None                        ; None                      ; 9.379 ns                ;
-; N/A   ; 227.53 MHz ( period = 4.395 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[4]                       ; down       ; down     ; None                        ; None                      ; 9.364 ns                ;
-; N/A   ; 227.69 MHz ( period = 4.392 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[5]                       ; down       ; down     ; None                        ; None                      ; 9.372 ns                ;
-; N/A   ; 228.89 MHz ( period = 4.369 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[1]                       ; down       ; down     ; None                        ; None                      ; 9.375 ns                ;
-; N/A   ; 229.25 MHz ( period = 4.362 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[2]                       ; down       ; down     ; None                        ; None                      ; 9.367 ns                ;
-; N/A   ; 229.62 MHz ( period = 4.355 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[3]                       ; down       ; down     ; None                        ; None                      ; 9.365 ns                ;
-; N/A   ; 237.30 MHz ( period = 4.214 ns )               ; updown_counter_noclock:inst|nIn[2]~_emulated ; updown_counter_noclock:inst|nIn[3]~_emulated ; down       ; down     ; None                        ; None                      ; 3.989 ns                ;
-; N/A   ; 258.26 MHz ( period = 3.872 ns )               ; updown_counter_noclock:inst|nIn[1]~_emulated ; updown_counter_noclock:inst|nIn[2]~_emulated ; down       ; down     ; None                        ; None                      ; 3.633 ns                ;
-; N/A   ; 275.33 MHz ( period = 3.632 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; updown_counter_noclock:inst|nIn[1]~_emulated ; down       ; down     ; None                        ; None                      ; 3.393 ns                ;
-; N/A   ; 313.19 MHz ( period = 3.193 ns )               ; updown_counter_noclock:inst|nIn[3]~_emulated ; updown_counter_noclock:inst|nIn[3]~_emulated ; down       ; down     ; None                        ; None                      ; 2.954 ns                ;
-; N/A   ; 323.00 MHz ( period = 3.096 ns )               ; updown_counter_noclock:inst|nIn[2]~_emulated ; updown_counter_noclock:inst|nIn[2]~_emulated ; down       ; down     ; None                        ; None                      ; 2.857 ns                ;
-; N/A   ; 346.74 MHz ( period = 2.884 ns )               ; updown_counter_noclock:inst|nIn[1]~_emulated ; updown_counter_noclock:inst|nIn[1]~_emulated ; down       ; down     ; None                        ; None                      ; 2.645 ns                ;
-; N/A   ; 363.64 MHz ( period = 2.750 ns )               ; updown_counter_noclock:inst|nIn[0]~_emulated ; updown_counter_noclock:inst|nIn[0]~_emulated ; down       ; down     ; None                        ; None                      ; 2.511 ns                ;
-; N/A   ; 374.25 MHz ( period = 2.672 ns )               ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[0]                       ; down       ; down     ; None                        ; None                      ; 7.466 ns                ;
-; N/A   ; 401.12 MHz ( period = 2.493 ns )               ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[6]                       ; down       ; down     ; None                        ; None                      ; 7.470 ns                ;
-; N/A   ; 402.25 MHz ( period = 2.486 ns )               ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[4]                       ; down       ; down     ; None                        ; None                      ; 7.455 ns                ;
-; N/A   ; 402.74 MHz ( period = 2.483 ns )               ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[5]                       ; down       ; down     ; None                        ; None                      ; 7.463 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[1]                       ; down       ; down     ; None                        ; None                      ; 7.466 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[2]                       ; down       ; down     ; None                        ; None                      ; 7.458 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[3]                       ; down       ; down     ; None                        ; None                      ; 7.456 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[0]                       ; down       ; down     ; None                        ; None                      ; 6.690 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[6]                       ; down       ; down     ; None                        ; None                      ; 6.694 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[4]                       ; down       ; down     ; None                        ; None                      ; 6.679 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[5]                       ; down       ; down     ; None                        ; None                      ; 6.687 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[1]                       ; down       ; down     ; None                        ; None                      ; 6.690 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[2]                       ; down       ; down     ; None                        ; None                      ; 6.682 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[3]                       ; down       ; down     ; None                        ; None                      ; 6.680 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[0]                       ; down       ; down     ; None                        ; None                      ; 5.655 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[6]                       ; down       ; down     ; None                        ; None                      ; 5.659 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[4]                       ; down       ; down     ; None                        ; None                      ; 5.644 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[5]                       ; down       ; down     ; None                        ; None                      ; 5.652 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[1]                       ; down       ; down     ; None                        ; None                      ; 5.655 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[2]                       ; down       ; down     ; None                        ; None                      ; 5.647 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[3]                       ; down       ; down     ; None                        ; None                      ; 5.645 ns                ;
-+-------+------------------------------------------------+----------------------------------------------+----------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'reset'                                                                                                                                                                                                                                   ;
++-------+------------------------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                    ; To                                      ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 335.46 MHz ( period = 2.981 ns )               ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[2] ; reset      ; reset    ; None                        ; None                      ; 1.820 ns                ;
+; N/A   ; 338.41 MHz ( period = 2.955 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[0] ; reset      ; reset    ; None                        ; None                      ; 1.318 ns                ;
+; N/A   ; 346.50 MHz ( period = 2.886 ns )               ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[3] ; reset      ; reset    ; None                        ; None                      ; 1.734 ns                ;
+; N/A   ; 363.50 MHz ( period = 2.751 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[1] ; reset      ; reset    ; None                        ; None                      ; 1.594 ns                ;
+; N/A   ; 363.77 MHz ( period = 2.749 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[3] ; reset      ; reset    ; None                        ; None                      ; 1.595 ns                ;
+; N/A   ; 368.73 MHz ( period = 2.712 ns )               ; updown_counter_precount:inst3|numout[3] ; updown_counter_precount:inst3|numout[3] ; reset      ; reset    ; None                        ; None                      ; 1.557 ns                ;
+; N/A   ; 393.70 MHz ( period = 2.540 ns )               ; precount:inst|outnum[1]                 ; updown_counter_precount:inst3|numout[0] ; reset      ; reset    ; None                        ; None                      ; 1.025 ns                ;
+; N/A   ; 399.36 MHz ( period = 2.504 ns )               ; updown_counter_precount:inst3|numout[2] ; updown_counter_precount:inst3|numout[3] ; reset      ; reset    ; None                        ; None                      ; 1.350 ns                ;
+; N/A   ; 402.90 MHz ( period = 2.482 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[2] ; reset      ; reset    ; None                        ; None                      ; 1.319 ns                ;
+; N/A   ; 404.86 MHz ( period = 2.470 ns )               ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[1] ; reset      ; reset    ; None                        ; None                      ; 1.315 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_precount:inst3|numout[2] ; updown_counter_precount:inst3|numout[2] ; reset      ; reset    ; None                        ; None                      ; 1.118 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; precount:inst|outnum[1]                 ; updown_counter_precount:inst3|numout[1] ; reset      ; reset    ; None                        ; None                      ; 1.037 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; precount:inst|outnum[1]                 ; updown_counter_precount:inst3|numout[2] ; reset      ; reset    ; None                        ; None                      ; 1.022 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; precount:inst|outnum[1]                 ; updown_counter_precount:inst3|numout[3] ; reset      ; reset    ; None                        ; None                      ; 1.020 ns                ;
++-------+------------------------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'up'                                                                                                                                                                                                                                        ;
-+-------+------------------------------------------------+------------------------------------------+------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)                           ; From                                     ; To                                       ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+------------------------------------------------+------------------------------------------+------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 96.39 MHz ( period = 10.374 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[0]                   ; up         ; up       ; None                        ; None                      ; 8.981 ns                ;
-; N/A   ; 99.84 MHz ( period = 10.016 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[6]                   ; up         ; up       ; None                        ; None                      ; 8.985 ns                ;
-; N/A   ; 99.98 MHz ( period = 10.002 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[4]                   ; up         ; up       ; None                        ; None                      ; 8.970 ns                ;
-; N/A   ; 100.04 MHz ( period = 9.996 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[5]                   ; up         ; up       ; None                        ; None                      ; 8.978 ns                ;
-; N/A   ; 100.50 MHz ( period = 9.950 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[1]                   ; up         ; up       ; None                        ; None                      ; 8.981 ns                ;
-; N/A   ; 100.64 MHz ( period = 9.936 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[2]                   ; up         ; up       ; None                        ; None                      ; 8.973 ns                ;
-; N/A   ; 100.79 MHz ( period = 9.922 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[3]                   ; up         ; up       ; None                        ; None                      ; 8.971 ns                ;
-; N/A   ; 132.21 MHz ( period = 7.564 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[0]                   ; up         ; up       ; None                        ; None                      ; 7.568 ns                ;
-; N/A   ; 138.77 MHz ( period = 7.206 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[6]                   ; up         ; up       ; None                        ; None                      ; 7.572 ns                ;
-; N/A   ; 139.04 MHz ( period = 7.192 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[4]                   ; up         ; up       ; None                        ; None                      ; 7.557 ns                ;
-; N/A   ; 139.16 MHz ( period = 7.186 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[5]                   ; up         ; up       ; None                        ; None                      ; 7.565 ns                ;
-; N/A   ; 140.06 MHz ( period = 7.140 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[1]                   ; up         ; up       ; None                        ; None                      ; 7.568 ns                ;
-; N/A   ; 140.33 MHz ( period = 7.126 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[2]                   ; up         ; up       ; None                        ; None                      ; 7.560 ns                ;
-; N/A   ; 140.61 MHz ( period = 7.112 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[3]                   ; up         ; up       ; None                        ; None                      ; 7.558 ns                ;
-; N/A   ; 153.16 MHz ( period = 6.529 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; updown_counter_noclock:inst|nIn[3]~latch ; up         ; up       ; None                        ; None                      ; 5.458 ns                ;
-; N/A   ; 175.47 MHz ( period = 5.699 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; updown_counter_noclock:inst|nIn[2]~latch ; up         ; up       ; None                        ; None                      ; 4.671 ns                ;
-; N/A   ; 184.84 MHz ( period = 5.410 ns )               ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[0]                   ; up         ; up       ; None                        ; None                      ; 6.492 ns                ;
-; N/A   ; 195.16 MHz ( period = 5.124 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; updown_counter_noclock:inst|nIn[3]~latch ; up         ; up       ; None                        ; None                      ; 4.045 ns                ;
-; N/A   ; 197.94 MHz ( period = 5.052 ns )               ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[6]                   ; up         ; up       ; None                        ; None                      ; 6.496 ns                ;
-; N/A   ; 198.49 MHz ( period = 5.038 ns )               ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[4]                   ; up         ; up       ; None                        ; None                      ; 6.481 ns                ;
-; N/A   ; 198.73 MHz ( period = 5.032 ns )               ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[5]                   ; up         ; up       ; None                        ; None                      ; 6.489 ns                ;
-; N/A   ; 199.60 MHz ( period = 5.010 ns )               ; updown_counter_noclock:inst|nIn[2]~latch ; updown_counter_noclock:inst|nIn[2]~latch ; up         ; up       ; None                        ; None                      ; 3.975 ns                ;
-; N/A   ; 200.56 MHz ( period = 4.986 ns )               ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[1]                   ; up         ; up       ; None                        ; None                      ; 6.492 ns                ;
-; N/A   ; 201.13 MHz ( period = 4.972 ns )               ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[2]                   ; up         ; up       ; None                        ; None                      ; 6.484 ns                ;
-; N/A   ; 201.69 MHz ( period = 4.958 ns )               ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[3]                   ; up         ; up       ; None                        ; None                      ; 6.482 ns                ;
-; N/A   ; 226.76 MHz ( period = 4.410 ns )               ; updown_counter_noclock:inst|nIn[3]~latch ; updown_counter_noclock:inst|nIn[3]~latch ; up         ; up       ; None                        ; None                      ; 3.336 ns                ;
-; N/A   ; 232.88 MHz ( period = 4.294 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; updown_counter_noclock:inst|nIn[2]~latch ; up         ; up       ; None                        ; None                      ; 3.258 ns                ;
-; N/A   ; 247.10 MHz ( period = 4.047 ns )               ; updown_counter_noclock:inst|nIn[2]~latch ; updown_counter_noclock:inst|nIn[3]~latch ; up         ; up       ; None                        ; None                      ; 2.969 ns                ;
-; N/A   ; 247.22 MHz ( period = 4.045 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; updown_counter_noclock:inst|nIn[1]~latch ; up         ; up       ; None                        ; None                      ; 3.242 ns                ;
-; N/A   ; 263.09 MHz ( period = 3.801 ns )               ; updown_counter_noclock:inst|nIn[1]~latch ; updown_counter_noclock:inst|nIn[1]~latch ; up         ; up       ; None                        ; None                      ; 2.990 ns                ;
-; N/A   ; 297.71 MHz ( period = 3.359 ns )               ; updown_counter_noclock:inst|nIn[0]~latch ; updown_counter_noclock:inst|nIn[0]~latch ; up         ; up       ; None                        ; None                      ; 2.327 ns                ;
-; N/A   ; 371.20 MHz ( period = 2.694 ns )               ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[0]                   ; up         ; up       ; None                        ; None                      ; 5.138 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[6]                   ; up         ; up       ; None                        ; None                      ; 5.142 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[4]                   ; up         ; up       ; None                        ; None                      ; 5.127 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[5]                   ; up         ; up       ; None                        ; None                      ; 5.135 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[1]                   ; up         ; up       ; None                        ; None                      ; 5.138 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[2]                   ; up         ; up       ; None                        ; None                      ; 5.130 ns                ;
-; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[3]                   ; up         ; up       ; None                        ; None                      ; 5.128 ns                ;
-+-------+------------------------------------------------+------------------------------------------+------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'down'                                                                                                                                                                                                                                    ;
++-------+------------------------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                    ; To                                      ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 335.46 MHz ( period = 2.981 ns )               ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[2] ; down       ; down     ; None                        ; None                      ; 1.820 ns                ;
+; N/A   ; 338.41 MHz ( period = 2.955 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[0] ; down       ; down     ; None                        ; None                      ; 1.318 ns                ;
+; N/A   ; 346.50 MHz ( period = 2.886 ns )               ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[3] ; down       ; down     ; None                        ; None                      ; 1.734 ns                ;
+; N/A   ; 363.50 MHz ( period = 2.751 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[1] ; down       ; down     ; None                        ; None                      ; 1.594 ns                ;
+; N/A   ; 363.77 MHz ( period = 2.749 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[3] ; down       ; down     ; None                        ; None                      ; 1.595 ns                ;
+; N/A   ; 368.73 MHz ( period = 2.712 ns )               ; updown_counter_precount:inst3|numout[3] ; updown_counter_precount:inst3|numout[3] ; down       ; down     ; None                        ; None                      ; 1.557 ns                ;
+; N/A   ; 399.36 MHz ( period = 2.504 ns )               ; updown_counter_precount:inst3|numout[2] ; updown_counter_precount:inst3|numout[3] ; down       ; down     ; None                        ; None                      ; 1.350 ns                ;
+; N/A   ; 402.90 MHz ( period = 2.482 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[2] ; down       ; down     ; None                        ; None                      ; 1.319 ns                ;
+; N/A   ; 404.86 MHz ( period = 2.470 ns )               ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[1] ; down       ; down     ; None                        ; None                      ; 1.315 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_precount:inst3|numout[2] ; updown_counter_precount:inst3|numout[2] ; down       ; down     ; None                        ; None                      ; 1.118 ns                ;
++-------+------------------------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Hold: 'down'                                                                                                                                                                                                            ;
-+------------------------------------------+----------------------------------------------+------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
-; Minimum Slack                            ; From                                         ; To                     ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
-+------------------------------------------+----------------------------------------------+------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[2] ; down       ; down     ; None                       ; None                       ; 3.111 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[4] ; down       ; down     ; None                       ; None                       ; 3.129 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[3] ; down       ; down     ; None                       ; None                       ; 3.130 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[2] ; down       ; down     ; None                       ; None                       ; 3.132 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[1] ; down       ; down     ; None                       ; None                       ; 3.141 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[3] ; down       ; down     ; None                       ; None                       ; 3.207 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[4] ; down       ; down     ; None                       ; None                       ; 3.210 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[1] ; down       ; down     ; None                       ; None                       ; 3.217 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[0] ; down       ; down     ; None                       ; None                       ; 3.237 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[5] ; down       ; down     ; None                       ; None                       ; 3.263 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[0] ; down       ; down     ; None                       ; None                       ; 3.265 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~_emulated ; sevenseg:inst1|ones[6] ; down       ; down     ; None                       ; None                       ; 3.270 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[5] ; down       ; down     ; None                       ; None                       ; 3.296 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~_emulated ; sevenseg:inst1|ones[6] ; down       ; down     ; None                       ; None                       ; 3.305 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[5] ; down       ; down     ; None                       ; None                       ; 3.690 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[4] ; down       ; down     ; None                       ; None                       ; 3.682 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[3] ; down       ; down     ; None                       ; None                       ; 3.683 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[6] ; down       ; down     ; None                       ; None                       ; 3.697 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[2] ; down       ; down     ; None                       ; None                       ; 3.685 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[0] ; down       ; down     ; None                       ; None                       ; 3.693 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~_emulated ; sevenseg:inst1|ones[1] ; down       ; down     ; None                       ; None                       ; 3.693 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[5] ; down       ; down     ; None                       ; None                       ; 4.173 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[0] ; down       ; down     ; None                       ; None                       ; 4.175 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[6] ; down       ; down     ; None                       ; None                       ; 4.185 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[4] ; down       ; down     ; None                       ; None                       ; 5.436 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[3] ; down       ; down     ; None                       ; None                       ; 5.437 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[2] ; down       ; down     ; None                       ; None                       ; 5.439 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~_emulated ; sevenseg:inst1|ones[1] ; down       ; down     ; None                       ; None                       ; 5.448 ns                 ;
-+------------------------------------------+----------------------------------------------+------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'up'                                                                                                                                                                                                                                      ;
++-------+------------------------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                    ; To                                      ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 335.46 MHz ( period = 2.981 ns )               ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[2] ; up         ; up       ; None                        ; None                      ; 1.820 ns                ;
+; N/A   ; 338.41 MHz ( period = 2.955 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[0] ; up         ; up       ; None                        ; None                      ; 1.318 ns                ;
+; N/A   ; 346.50 MHz ( period = 2.886 ns )               ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[3] ; up         ; up       ; None                        ; None                      ; 1.734 ns                ;
+; N/A   ; 363.50 MHz ( period = 2.751 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[1] ; up         ; up       ; None                        ; None                      ; 1.594 ns                ;
+; N/A   ; 363.77 MHz ( period = 2.749 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[3] ; up         ; up       ; None                        ; None                      ; 1.595 ns                ;
+; N/A   ; 368.73 MHz ( period = 2.712 ns )               ; updown_counter_precount:inst3|numout[3] ; updown_counter_precount:inst3|numout[3] ; up         ; up       ; None                        ; None                      ; 1.557 ns                ;
+; N/A   ; 399.36 MHz ( period = 2.504 ns )               ; updown_counter_precount:inst3|numout[2] ; updown_counter_precount:inst3|numout[3] ; up         ; up       ; None                        ; None                      ; 1.350 ns                ;
+; N/A   ; 402.90 MHz ( period = 2.482 ns )               ; updown_counter_precount:inst3|numout[0] ; updown_counter_precount:inst3|numout[2] ; up         ; up       ; None                        ; None                      ; 1.319 ns                ;
+; N/A   ; 404.86 MHz ( period = 2.470 ns )               ; updown_counter_precount:inst3|numout[1] ; updown_counter_precount:inst3|numout[1] ; up         ; up       ; None                        ; None                      ; 1.315 ns                ;
+; N/A   ; Restricted to 405.02 MHz ( period = 2.469 ns ) ; updown_counter_precount:inst3|numout[2] ; updown_counter_precount:inst3|numout[2] ; up         ; up       ; None                        ; None                      ; 1.118 ns                ;
++-------+------------------------------------------------+-----------------------------------------+-----------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Hold: 'up'                                                                                                                                                                                                          ;
-+------------------------------------------+------------------------------------------+------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
-; Minimum Slack                            ; From                                     ; To                     ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
-+------------------------------------------+------------------------------------------+------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[2] ; up         ; up       ; None                       ; None                       ; 2.717 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[3] ; up         ; up       ; None                       ; None                       ; 2.813 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[4] ; up         ; up       ; None                       ; None                       ; 2.816 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[1] ; up         ; up       ; None                       ; None                       ; 2.823 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[5] ; up         ; up       ; None                       ; None                       ; 2.869 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[0] ; up         ; up       ; None                       ; None                       ; 2.871 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[0]~latch ; sevenseg:inst1|ones[6] ; up         ; up       ; None                       ; None                       ; 2.876 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[4] ; up         ; up       ; None                       ; None                       ; 3.231 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[3] ; up         ; up       ; None                       ; None                       ; 3.232 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[2] ; up         ; up       ; None                       ; None                       ; 3.234 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[1] ; up         ; up       ; None                       ; None                       ; 3.243 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[0] ; up         ; up       ; None                       ; None                       ; 3.339 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[5] ; up         ; up       ; None                       ; None                       ; 3.398 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[1]~latch ; sevenseg:inst1|ones[6] ; up         ; up       ; None                       ; None                       ; 3.407 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[5] ; up         ; up       ; None                       ; None                       ; 3.492 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[4] ; up         ; up       ; None                       ; None                       ; 3.484 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[3] ; up         ; up       ; None                       ; None                       ; 3.485 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[6] ; up         ; up       ; None                       ; None                       ; 3.499 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[2] ; up         ; up       ; None                       ; None                       ; 3.487 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[0] ; up         ; up       ; None                       ; None                       ; 3.495 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[2]~latch ; sevenseg:inst1|ones[1] ; up         ; up       ; None                       ; None                       ; 3.495 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[5] ; up         ; up       ; None                       ; None                       ; 3.656 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[0] ; up         ; up       ; None                       ; None                       ; 3.658 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[6] ; up         ; up       ; None                       ; None                       ; 3.668 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[4] ; up         ; up       ; None                       ; None                       ; 4.919 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[3] ; up         ; up       ; None                       ; None                       ; 4.920 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[2] ; up         ; up       ; None                       ; None                       ; 4.922 ns                 ;
-; Not operational: Clock Skew > Data Delay ; updown_counter_noclock:inst|nIn[3]~latch ; sevenseg:inst1|ones[1] ; up         ; up       ; None                       ; None                       ; 4.931 ns                 ;
-+------------------------------------------+------------------------------------------+------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Clock Hold: 'reset'                                                                                                                                                                                                       ;
++------------------------------------------+-------------------------+-----------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                    ; To                                      ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+-------------------------+-----------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; precount:inst|outnum[1] ; updown_counter_precount:inst3|numout[3] ; reset      ; reset    ; None                       ; None                       ; 1.020 ns                 ;
+; Not operational: Clock Skew > Data Delay ; precount:inst|outnum[1] ; updown_counter_precount:inst3|numout[2] ; reset      ; reset    ; None                       ; None                       ; 1.022 ns                 ;
+; Not operational: Clock Skew > Data Delay ; precount:inst|outnum[1] ; updown_counter_precount:inst3|numout[0] ; reset      ; reset    ; None                       ; None                       ; 1.025 ns                 ;
+; Not operational: Clock Skew > Data Delay ; precount:inst|outnum[1] ; updown_counter_precount:inst3|numout[1] ; reset      ; reset    ; None                       ; None                       ; 1.037 ns                 ;
++------------------------------------------+-------------------------+-----------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; tsu                                                                                                 ;
-+-------+--------------+------------+-------+----------------------------------------------+----------+
-; Slack ; Required tsu ; Actual tsu ; From  ; To                                           ; To Clock ;
-+-------+--------------+------------+-------+----------------------------------------------+----------+
-; N/A   ; None         ; 7.289 ns   ; up    ; updown_counter_noclock:inst|nIn[3]~latch     ; up       ;
-; N/A   ; None         ; 7.115 ns   ; reset ; updown_counter_noclock:inst|nIn[3]~latch     ; up       ;
-; N/A   ; None         ; 6.634 ns   ; up    ; updown_counter_noclock:inst|nIn[3]~_emulated ; down     ;
-; N/A   ; None         ; 6.460 ns   ; reset ; updown_counter_noclock:inst|nIn[3]~_emulated ; down     ;
-; N/A   ; None         ; 6.459 ns   ; up    ; updown_counter_noclock:inst|nIn[2]~latch     ; up       ;
-; N/A   ; None         ; 6.285 ns   ; reset ; updown_counter_noclock:inst|nIn[2]~latch     ; up       ;
-; N/A   ; None         ; 5.947 ns   ; up    ; sevenseg:inst1|ones[0]                       ; up       ;
-; N/A   ; None         ; 5.773 ns   ; reset ; sevenseg:inst1|ones[0]                       ; up       ;
-; N/A   ; None         ; 5.768 ns   ; up    ; sevenseg:inst1|ones[6]                       ; up       ;
-; N/A   ; None         ; 5.761 ns   ; up    ; sevenseg:inst1|ones[4]                       ; up       ;
-; N/A   ; None         ; 5.758 ns   ; up    ; sevenseg:inst1|ones[5]                       ; up       ;
-; N/A   ; None         ; 5.735 ns   ; up    ; sevenseg:inst1|ones[1]                       ; up       ;
-; N/A   ; None         ; 5.728 ns   ; up    ; sevenseg:inst1|ones[2]                       ; up       ;
-; N/A   ; None         ; 5.721 ns   ; up    ; sevenseg:inst1|ones[3]                       ; up       ;
-; N/A   ; None         ; 5.594 ns   ; reset ; sevenseg:inst1|ones[6]                       ; up       ;
-; N/A   ; None         ; 5.587 ns   ; reset ; sevenseg:inst1|ones[4]                       ; up       ;
-; N/A   ; None         ; 5.584 ns   ; reset ; sevenseg:inst1|ones[5]                       ; up       ;
-; N/A   ; None         ; 5.561 ns   ; reset ; sevenseg:inst1|ones[1]                       ; up       ;
-; N/A   ; None         ; 5.554 ns   ; reset ; sevenseg:inst1|ones[2]                       ; up       ;
-; N/A   ; None         ; 5.547 ns   ; reset ; sevenseg:inst1|ones[3]                       ; up       ;
-; N/A   ; None         ; 5.516 ns   ; up    ; updown_counter_noclock:inst|nIn[2]~_emulated ; down     ;
-; N/A   ; None         ; 5.342 ns   ; reset ; updown_counter_noclock:inst|nIn[2]~_emulated ; down     ;
-; N/A   ; None         ; 4.805 ns   ; up    ; updown_counter_noclock:inst|nIn[1]~latch     ; up       ;
-; N/A   ; None         ; 4.764 ns   ; up    ; sevenseg:inst1|ones[0]                       ; reset    ;
-; N/A   ; None         ; 4.631 ns   ; reset ; updown_counter_noclock:inst|nIn[1]~latch     ; up       ;
-; N/A   ; None         ; 4.590 ns   ; reset ; sevenseg:inst1|ones[0]                       ; reset    ;
-; N/A   ; None         ; 4.585 ns   ; up    ; sevenseg:inst1|ones[6]                       ; reset    ;
-; N/A   ; None         ; 4.578 ns   ; up    ; sevenseg:inst1|ones[4]                       ; reset    ;
-; N/A   ; None         ; 4.575 ns   ; up    ; sevenseg:inst1|ones[5]                       ; reset    ;
-; N/A   ; None         ; 4.552 ns   ; up    ; sevenseg:inst1|ones[1]                       ; reset    ;
-; N/A   ; None         ; 4.545 ns   ; up    ; sevenseg:inst1|ones[2]                       ; reset    ;
-; N/A   ; None         ; 4.538 ns   ; up    ; sevenseg:inst1|ones[3]                       ; reset    ;
-; N/A   ; None         ; 4.411 ns   ; reset ; sevenseg:inst1|ones[6]                       ; reset    ;
-; N/A   ; None         ; 4.404 ns   ; reset ; sevenseg:inst1|ones[4]                       ; reset    ;
-; N/A   ; None         ; 4.401 ns   ; reset ; sevenseg:inst1|ones[5]                       ; reset    ;
-; N/A   ; None         ; 4.378 ns   ; reset ; sevenseg:inst1|ones[1]                       ; reset    ;
-; N/A   ; None         ; 4.371 ns   ; reset ; sevenseg:inst1|ones[2]                       ; reset    ;
-; N/A   ; None         ; 4.364 ns   ; reset ; sevenseg:inst1|ones[3]                       ; reset    ;
-; N/A   ; None         ; 4.316 ns   ; up    ; sevenseg:inst1|ones[0]                       ; down     ;
-; N/A   ; None         ; 4.142 ns   ; reset ; sevenseg:inst1|ones[0]                       ; down     ;
-; N/A   ; None         ; 4.137 ns   ; up    ; sevenseg:inst1|ones[6]                       ; down     ;
-; N/A   ; None         ; 4.130 ns   ; up    ; sevenseg:inst1|ones[4]                       ; down     ;
-; N/A   ; None         ; 4.127 ns   ; up    ; sevenseg:inst1|ones[5]                       ; down     ;
-; N/A   ; None         ; 4.119 ns   ; up    ; updown_counter_noclock:inst|nIn[0]~latch     ; up       ;
-; N/A   ; None         ; 4.104 ns   ; up    ; sevenseg:inst1|ones[1]                       ; down     ;
-; N/A   ; None         ; 4.097 ns   ; up    ; sevenseg:inst1|ones[2]                       ; down     ;
-; N/A   ; None         ; 4.090 ns   ; up    ; sevenseg:inst1|ones[3]                       ; down     ;
-; N/A   ; None         ; 3.963 ns   ; reset ; sevenseg:inst1|ones[6]                       ; down     ;
-; N/A   ; None         ; 3.956 ns   ; reset ; sevenseg:inst1|ones[4]                       ; down     ;
-; N/A   ; None         ; 3.953 ns   ; reset ; sevenseg:inst1|ones[5]                       ; down     ;
-; N/A   ; None         ; 3.945 ns   ; reset ; updown_counter_noclock:inst|nIn[0]~latch     ; up       ;
-; N/A   ; None         ; 3.930 ns   ; reset ; sevenseg:inst1|ones[1]                       ; down     ;
-; N/A   ; None         ; 3.923 ns   ; reset ; sevenseg:inst1|ones[2]                       ; down     ;
-; N/A   ; None         ; 3.916 ns   ; reset ; sevenseg:inst1|ones[3]                       ; down     ;
-; N/A   ; None         ; 3.367 ns   ; up    ; updown_counter_noclock:inst|nIn[1]~_emulated ; down     ;
-; N/A   ; None         ; 3.193 ns   ; reset ; updown_counter_noclock:inst|nIn[1]~_emulated ; down     ;
-; N/A   ; None         ; 2.485 ns   ; up    ; updown_counter_noclock:inst|nIn[0]~_emulated ; down     ;
-; N/A   ; None         ; 2.311 ns   ; reset ; updown_counter_noclock:inst|nIn[0]~_emulated ; down     ;
-+-------+--------------+------------+-------+----------------------------------------------+----------+
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; tco                                                                                                       ;
-+-------+--------------+------------+----------------------------------------------+-----------+------------+
-; Slack ; Required tco ; Actual tco ; From                                         ; To        ; From Clock ;
-+-------+--------------+------------+----------------------------------------------+-----------+------------+
-; N/A   ; None         ; 21.506 ns  ; sevenseg:inst1|ones[5]                       ; ssOut1[5] ; down       ;
-; N/A   ; None         ; 21.396 ns  ; sevenseg:inst1|ones[6]                       ; ssOut1[6] ; down       ;
-; N/A   ; None         ; 21.241 ns  ; sevenseg:inst1|ones[5]                       ; ssOut1[5] ; up         ;
-; N/A   ; None         ; 21.131 ns  ; sevenseg:inst1|ones[6]                       ; ssOut1[6] ; up         ;
-; N/A   ; None         ; 21.067 ns  ; sevenseg:inst1|ones[5]                       ; ssOut1[5] ; reset      ;
-; N/A   ; None         ; 20.957 ns  ; sevenseg:inst1|ones[6]                       ; ssOut1[6] ; reset      ;
-; N/A   ; None         ; 20.924 ns  ; sevenseg:inst1|ones[4]                       ; ssOut1[4] ; down       ;
-; N/A   ; None         ; 20.920 ns  ; sevenseg:inst1|ones[0]                       ; ssOut1[0] ; down       ;
-; N/A   ; None         ; 20.659 ns  ; sevenseg:inst1|ones[4]                       ; ssOut1[4] ; up         ;
-; N/A   ; None         ; 20.655 ns  ; sevenseg:inst1|ones[0]                       ; ssOut1[0] ; up         ;
-; N/A   ; None         ; 20.591 ns  ; sevenseg:inst1|ones[1]                       ; ssOut1[1] ; down       ;
-; N/A   ; None         ; 20.581 ns  ; sevenseg:inst1|ones[2]                       ; ssOut1[2] ; down       ;
-; N/A   ; None         ; 20.565 ns  ; sevenseg:inst1|ones[3]                       ; ssOut1[3] ; down       ;
-; N/A   ; None         ; 20.485 ns  ; sevenseg:inst1|ones[4]                       ; ssOut1[4] ; reset      ;
-; N/A   ; None         ; 20.481 ns  ; sevenseg:inst1|ones[0]                       ; ssOut1[0] ; reset      ;
-; N/A   ; None         ; 20.326 ns  ; sevenseg:inst1|ones[1]                       ; ssOut1[1] ; up         ;
-; N/A   ; None         ; 20.316 ns  ; sevenseg:inst1|ones[2]                       ; ssOut1[2] ; up         ;
-; N/A   ; None         ; 20.300 ns  ; sevenseg:inst1|ones[3]                       ; ssOut1[3] ; up         ;
-; N/A   ; None         ; 20.152 ns  ; sevenseg:inst1|ones[1]                       ; ssOut1[1] ; reset      ;
-; N/A   ; None         ; 20.142 ns  ; sevenseg:inst1|ones[2]                       ; ssOut1[2] ; reset      ;
-; N/A   ; None         ; 20.126 ns  ; sevenseg:inst1|ones[3]                       ; ssOut1[3] ; reset      ;
-; N/A   ; None         ; 17.261 ns  ; updown_counter_noclock:inst|nIn[0]~_emulated ; ssOut2[0] ; down       ;
-; N/A   ; None         ; 17.255 ns  ; updown_counter_noclock:inst|nIn[0]~_emulated ; ssOut2[5] ; down       ;
-; N/A   ; None         ; 16.896 ns  ; updown_counter_noclock:inst|nIn[0]~_emulated ; ssOut2[4] ; down       ;
-; N/A   ; None         ; 16.886 ns  ; updown_counter_noclock:inst|nIn[0]~_emulated ; ssOut2[3] ; down       ;
-; N/A   ; None         ; 16.236 ns  ; updown_counter_noclock:inst|nIn[0]~latch     ; ssOut2[0] ; up         ;
-; N/A   ; None         ; 16.230 ns  ; updown_counter_noclock:inst|nIn[0]~latch     ; ssOut2[5] ; up         ;
-; N/A   ; None         ; 15.871 ns  ; updown_counter_noclock:inst|nIn[0]~latch     ; ssOut2[4] ; up         ;
-; N/A   ; None         ; 15.861 ns  ; updown_counter_noclock:inst|nIn[0]~latch     ; ssOut2[3] ; up         ;
-; N/A   ; None         ; 15.352 ns  ; updown_counter_noclock:inst|nIn[1]~_emulated ; ssOut2[0] ; down       ;
-; N/A   ; None         ; 15.346 ns  ; updown_counter_noclock:inst|nIn[1]~_emulated ; ssOut2[5] ; down       ;
-; N/A   ; None         ; 14.987 ns  ; updown_counter_noclock:inst|nIn[1]~_emulated ; ssOut2[4] ; down       ;
-; N/A   ; None         ; 14.977 ns  ; updown_counter_noclock:inst|nIn[1]~_emulated ; ssOut2[3] ; down       ;
-; N/A   ; None         ; 14.831 ns  ; updown_counter_noclock:inst|nIn[1]~latch     ; ssOut2[0] ; up         ;
-; N/A   ; None         ; 14.825 ns  ; updown_counter_noclock:inst|nIn[1]~latch     ; ssOut2[5] ; up         ;
-; N/A   ; None         ; 14.576 ns  ; updown_counter_noclock:inst|nIn[2]~_emulated ; ssOut2[0] ; down       ;
-; N/A   ; None         ; 14.570 ns  ; updown_counter_noclock:inst|nIn[2]~_emulated ; ssOut2[5] ; down       ;
-; N/A   ; None         ; 14.466 ns  ; updown_counter_noclock:inst|nIn[1]~latch     ; ssOut2[4] ; up         ;
-; N/A   ; None         ; 14.456 ns  ; updown_counter_noclock:inst|nIn[1]~latch     ; ssOut2[3] ; up         ;
-; N/A   ; None         ; 14.211 ns  ; updown_counter_noclock:inst|nIn[2]~_emulated ; ssOut2[4] ; down       ;
-; N/A   ; None         ; 14.201 ns  ; updown_counter_noclock:inst|nIn[2]~_emulated ; ssOut2[3] ; down       ;
-; N/A   ; None         ; 13.754 ns  ; updown_counter_noclock:inst|nIn[2]~latch     ; ssOut2[0] ; up         ;
-; N/A   ; None         ; 13.748 ns  ; updown_counter_noclock:inst|nIn[2]~latch     ; ssOut2[5] ; up         ;
-; N/A   ; None         ; 13.555 ns  ; updown_counter_noclock:inst|nIn[3]~_emulated ; ssOut2[0] ; down       ;
-; N/A   ; None         ; 13.549 ns  ; updown_counter_noclock:inst|nIn[3]~_emulated ; ssOut2[5] ; down       ;
-; N/A   ; None         ; 13.389 ns  ; updown_counter_noclock:inst|nIn[2]~latch     ; ssOut2[4] ; up         ;
-; N/A   ; None         ; 13.379 ns  ; updown_counter_noclock:inst|nIn[2]~latch     ; ssOut2[3] ; up         ;
-; N/A   ; None         ; 13.190 ns  ; updown_counter_noclock:inst|nIn[3]~_emulated ; ssOut2[4] ; down       ;
-; N/A   ; None         ; 13.180 ns  ; updown_counter_noclock:inst|nIn[3]~_emulated ; ssOut2[3] ; down       ;
-; N/A   ; None         ; 12.396 ns  ; updown_counter_noclock:inst|nIn[3]~latch     ; ssOut2[0] ; up         ;
-; N/A   ; None         ; 12.390 ns  ; updown_counter_noclock:inst|nIn[3]~latch     ; ssOut2[5] ; up         ;
-; N/A   ; None         ; 12.031 ns  ; updown_counter_noclock:inst|nIn[3]~latch     ; ssOut2[4] ; up         ;
-; N/A   ; None         ; 12.021 ns  ; updown_counter_noclock:inst|nIn[3]~latch     ; ssOut2[3] ; up         ;
-+-------+--------------+------------+----------------------------------------------+-----------+------------+
-
-
-+-----------------------------------------------------------------+
-; tpd                                                             ;
-+-------+-------------------+-----------------+-------+-----------+
-; Slack ; Required P2P Time ; Actual P2P Time ; From  ; To        ;
-+-------+-------------------+-----------------+-------+-----------+
-; N/A   ; None              ; 16.996 ns       ; up    ; ssOut2[0] ;
-; N/A   ; None              ; 16.990 ns       ; up    ; ssOut2[5] ;
-; N/A   ; None              ; 16.822 ns       ; reset ; ssOut2[0] ;
-; N/A   ; None              ; 16.816 ns       ; reset ; ssOut2[5] ;
-; N/A   ; None              ; 16.631 ns       ; up    ; ssOut2[4] ;
-; N/A   ; None              ; 16.621 ns       ; up    ; ssOut2[3] ;
-; N/A   ; None              ; 16.457 ns       ; reset ; ssOut2[4] ;
-; N/A   ; None              ; 16.447 ns       ; reset ; ssOut2[3] ;
-+-------+-------------------+-----------------+-------+-----------+
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; th                                                                                                        ;
-+---------------+-------------+-----------+-------+----------------------------------------------+----------+
-; Minimum Slack ; Required th ; Actual th ; From  ; To                                           ; To Clock ;
-+---------------+-------------+-----------+-------+----------------------------------------------+----------+
-; N/A           ; None        ; 10.553 ns ; up    ; sevenseg:inst1|ones[2]                       ; down     ;
-; N/A           ; None        ; 10.533 ns ; up    ; sevenseg:inst1|ones[5]                       ; down     ;
-; N/A           ; None        ; 10.530 ns ; up    ; sevenseg:inst1|ones[0]                       ; down     ;
-; N/A           ; None        ; 10.524 ns ; up    ; sevenseg:inst1|ones[6]                       ; down     ;
-; N/A           ; None        ; 10.457 ns ; up    ; sevenseg:inst1|ones[3]                       ; down     ;
-; N/A           ; None        ; 10.453 ns ; up    ; sevenseg:inst1|ones[4]                       ; down     ;
-; N/A           ; None        ; 10.450 ns ; up    ; sevenseg:inst1|ones[1]                       ; down     ;
-; N/A           ; None        ; 10.288 ns ; up    ; sevenseg:inst1|ones[2]                       ; up       ;
-; N/A           ; None        ; 10.268 ns ; up    ; sevenseg:inst1|ones[5]                       ; up       ;
-; N/A           ; None        ; 10.265 ns ; up    ; sevenseg:inst1|ones[0]                       ; up       ;
-; N/A           ; None        ; 10.259 ns ; up    ; sevenseg:inst1|ones[6]                       ; up       ;
-; N/A           ; None        ; 10.192 ns ; up    ; sevenseg:inst1|ones[3]                       ; up       ;
-; N/A           ; None        ; 10.188 ns ; up    ; sevenseg:inst1|ones[4]                       ; up       ;
-; N/A           ; None        ; 10.185 ns ; up    ; sevenseg:inst1|ones[1]                       ; up       ;
-; N/A           ; None        ; 10.114 ns ; up    ; sevenseg:inst1|ones[2]                       ; reset    ;
-; N/A           ; None        ; 10.094 ns ; up    ; sevenseg:inst1|ones[5]                       ; reset    ;
-; N/A           ; None        ; 10.091 ns ; up    ; sevenseg:inst1|ones[0]                       ; reset    ;
-; N/A           ; None        ; 10.085 ns ; up    ; sevenseg:inst1|ones[6]                       ; reset    ;
-; N/A           ; None        ; 10.018 ns ; up    ; sevenseg:inst1|ones[3]                       ; reset    ;
-; N/A           ; None        ; 10.014 ns ; up    ; sevenseg:inst1|ones[4]                       ; reset    ;
-; N/A           ; None        ; 10.011 ns ; up    ; sevenseg:inst1|ones[1]                       ; reset    ;
-; N/A           ; None        ; 9.360 ns  ; reset ; sevenseg:inst1|ones[2]                       ; down     ;
-; N/A           ; None        ; 9.326 ns  ; reset ; sevenseg:inst1|ones[5]                       ; down     ;
-; N/A           ; None        ; 9.323 ns  ; reset ; sevenseg:inst1|ones[0]                       ; down     ;
-; N/A           ; None        ; 9.317 ns  ; reset ; sevenseg:inst1|ones[6]                       ; down     ;
-; N/A           ; None        ; 9.264 ns  ; reset ; sevenseg:inst1|ones[3]                       ; down     ;
-; N/A           ; None        ; 9.260 ns  ; reset ; sevenseg:inst1|ones[4]                       ; down     ;
-; N/A           ; None        ; 9.257 ns  ; reset ; sevenseg:inst1|ones[1]                       ; down     ;
-; N/A           ; None        ; 9.095 ns  ; reset ; sevenseg:inst1|ones[2]                       ; up       ;
-; N/A           ; None        ; 9.061 ns  ; reset ; sevenseg:inst1|ones[5]                       ; up       ;
-; N/A           ; None        ; 9.058 ns  ; reset ; sevenseg:inst1|ones[0]                       ; up       ;
-; N/A           ; None        ; 9.052 ns  ; reset ; sevenseg:inst1|ones[6]                       ; up       ;
-; N/A           ; None        ; 8.999 ns  ; reset ; sevenseg:inst1|ones[3]                       ; up       ;
-; N/A           ; None        ; 8.995 ns  ; reset ; sevenseg:inst1|ones[4]                       ; up       ;
-; N/A           ; None        ; 8.992 ns  ; reset ; sevenseg:inst1|ones[1]                       ; up       ;
-; N/A           ; None        ; 8.921 ns  ; reset ; sevenseg:inst1|ones[2]                       ; reset    ;
-; N/A           ; None        ; 8.887 ns  ; reset ; sevenseg:inst1|ones[5]                       ; reset    ;
-; N/A           ; None        ; 8.884 ns  ; reset ; sevenseg:inst1|ones[0]                       ; reset    ;
-; N/A           ; None        ; 8.878 ns  ; reset ; sevenseg:inst1|ones[6]                       ; reset    ;
-; N/A           ; None        ; 8.825 ns  ; reset ; sevenseg:inst1|ones[3]                       ; reset    ;
-; N/A           ; None        ; 8.821 ns  ; reset ; sevenseg:inst1|ones[4]                       ; reset    ;
-; N/A           ; None        ; 8.818 ns  ; reset ; sevenseg:inst1|ones[1]                       ; reset    ;
-; N/A           ; None        ; -0.266 ns ; up    ; updown_counter_noclock:inst|nIn[3]~_emulated ; down     ;
-; N/A           ; None        ; -0.700 ns ; up    ; updown_counter_noclock:inst|nIn[2]~_emulated ; down     ;
-; N/A           ; None        ; -0.870 ns ; up    ; updown_counter_noclock:inst|nIn[0]~_emulated ; down     ;
-; N/A           ; None        ; -1.368 ns ; up    ; updown_counter_noclock:inst|nIn[1]~_emulated ; down     ;
-; N/A           ; None        ; -1.473 ns ; reset ; updown_counter_noclock:inst|nIn[3]~_emulated ; down     ;
-; N/A           ; None        ; -1.505 ns ; up    ; updown_counter_noclock:inst|nIn[3]~latch     ; up       ;
-; N/A           ; None        ; -1.720 ns ; up    ; updown_counter_noclock:inst|nIn[0]~latch     ; up       ;
-; N/A           ; None        ; -1.895 ns ; reset ; updown_counter_noclock:inst|nIn[2]~_emulated ; down     ;
-; N/A           ; None        ; -2.063 ns ; reset ; updown_counter_noclock:inst|nIn[0]~_emulated ; down     ;
-; N/A           ; None        ; -2.243 ns ; up    ; updown_counter_noclock:inst|nIn[1]~latch     ; up       ;
-; N/A           ; None        ; -2.512 ns ; up    ; updown_counter_noclock:inst|nIn[2]~latch     ; up       ;
-; N/A           ; None        ; -2.563 ns ; reset ; updown_counter_noclock:inst|nIn[1]~_emulated ; down     ;
-; N/A           ; None        ; -2.700 ns ; reset ; updown_counter_noclock:inst|nIn[3]~latch     ; up       ;
-; N/A           ; None        ; -2.913 ns ; reset ; updown_counter_noclock:inst|nIn[0]~latch     ; up       ;
-; N/A           ; None        ; -3.438 ns ; reset ; updown_counter_noclock:inst|nIn[1]~latch     ; up       ;
-; N/A           ; None        ; -3.707 ns ; reset ; updown_counter_noclock:inst|nIn[2]~latch     ; up       ;
-+---------------+-------------+-----------+-------+----------------------------------------------+----------+
++------------------------------------------------------------------------------------------------------+
+; tco                                                                                                  ;
++-------+--------------+------------+-----------------------------------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From                                    ; To        ; From Clock ;
++-------+--------------+------------+-----------------------------------------+-----------+------------+
+; N/A   ; None         ; 13.500 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[5] ; reset      ;
+; N/A   ; None         ; 13.477 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[6] ; reset      ;
+; N/A   ; None         ; 13.473 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[4] ; reset      ;
+; N/A   ; None         ; 13.472 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[5] ; reset      ;
+; N/A   ; None         ; 13.460 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[2] ; reset      ;
+; N/A   ; None         ; 13.449 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[6] ; reset      ;
+; N/A   ; None         ; 13.445 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[4] ; reset      ;
+; N/A   ; None         ; 13.432 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[2] ; reset      ;
+; N/A   ; None         ; 13.344 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[3] ; reset      ;
+; N/A   ; None         ; 13.316 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[3] ; reset      ;
+; N/A   ; None         ; 13.125 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[5] ; reset      ;
+; N/A   ; None         ; 13.124 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[1] ; reset      ;
+; N/A   ; None         ; 13.102 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[6] ; reset      ;
+; N/A   ; None         ; 13.098 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[4] ; reset      ;
+; N/A   ; None         ; 13.096 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[1] ; reset      ;
+; N/A   ; None         ; 13.085 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[0] ; reset      ;
+; N/A   ; None         ; 13.085 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[2] ; reset      ;
+; N/A   ; None         ; 13.057 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[0] ; reset      ;
+; N/A   ; None         ; 12.969 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[3] ; reset      ;
+; N/A   ; None         ; 12.844 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[5] ; down       ;
+; N/A   ; None         ; 12.826 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[5] ; up         ;
+; N/A   ; None         ; 12.821 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[6] ; down       ;
+; N/A   ; None         ; 12.817 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[4] ; down       ;
+; N/A   ; None         ; 12.816 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[5] ; down       ;
+; N/A   ; None         ; 12.804 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[2] ; down       ;
+; N/A   ; None         ; 12.803 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[6] ; up         ;
+; N/A   ; None         ; 12.799 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[4] ; up         ;
+; N/A   ; None         ; 12.798 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[5] ; up         ;
+; N/A   ; None         ; 12.793 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[6] ; down       ;
+; N/A   ; None         ; 12.789 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[4] ; down       ;
+; N/A   ; None         ; 12.786 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[2] ; up         ;
+; N/A   ; None         ; 12.776 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[2] ; down       ;
+; N/A   ; None         ; 12.775 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[6] ; up         ;
+; N/A   ; None         ; 12.771 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[4] ; up         ;
+; N/A   ; None         ; 12.758 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[2] ; up         ;
+; N/A   ; None         ; 12.749 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[1] ; reset      ;
+; N/A   ; None         ; 12.710 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[0] ; reset      ;
+; N/A   ; None         ; 12.688 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[3] ; down       ;
+; N/A   ; None         ; 12.670 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[3] ; up         ;
+; N/A   ; None         ; 12.660 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[3] ; down       ;
+; N/A   ; None         ; 12.642 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[3] ; up         ;
+; N/A   ; None         ; 12.469 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[5] ; down       ;
+; N/A   ; None         ; 12.468 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[1] ; down       ;
+; N/A   ; None         ; 12.451 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[5] ; up         ;
+; N/A   ; None         ; 12.450 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[1] ; up         ;
+; N/A   ; None         ; 12.446 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[6] ; down       ;
+; N/A   ; None         ; 12.442 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[4] ; down       ;
+; N/A   ; None         ; 12.440 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[1] ; down       ;
+; N/A   ; None         ; 12.429 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[0] ; down       ;
+; N/A   ; None         ; 12.429 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[2] ; down       ;
+; N/A   ; None         ; 12.428 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[6] ; up         ;
+; N/A   ; None         ; 12.424 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[4] ; up         ;
+; N/A   ; None         ; 12.422 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[1] ; up         ;
+; N/A   ; None         ; 12.411 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut1[0] ; up         ;
+; N/A   ; None         ; 12.411 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[2] ; up         ;
+; N/A   ; None         ; 12.401 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[0] ; down       ;
+; N/A   ; None         ; 12.383 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut1[0] ; up         ;
+; N/A   ; None         ; 12.313 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[3] ; down       ;
+; N/A   ; None         ; 12.295 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[3] ; up         ;
+; N/A   ; None         ; 12.093 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[1] ; down       ;
+; N/A   ; None         ; 12.075 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[1] ; up         ;
+; N/A   ; None         ; 12.054 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[0] ; down       ;
+; N/A   ; None         ; 12.036 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut1[0] ; up         ;
+; N/A   ; None         ; 11.509 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[5] ; reset      ;
+; N/A   ; None         ; 11.493 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[0] ; reset      ;
+; N/A   ; None         ; 11.484 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[4] ; reset      ;
+; N/A   ; None         ; 11.474 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[3] ; reset      ;
+; N/A   ; None         ; 11.448 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[5] ; reset      ;
+; N/A   ; None         ; 11.432 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[0] ; reset      ;
+; N/A   ; None         ; 11.423 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[4] ; reset      ;
+; N/A   ; None         ; 11.413 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[3] ; reset      ;
+; N/A   ; None         ; 11.156 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[5] ; reset      ;
+; N/A   ; None         ; 11.140 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[0] ; reset      ;
+; N/A   ; None         ; 11.131 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[4] ; reset      ;
+; N/A   ; None         ; 11.121 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[3] ; reset      ;
+; N/A   ; None         ; 10.853 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[5] ; down       ;
+; N/A   ; None         ; 10.837 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[0] ; down       ;
+; N/A   ; None         ; 10.835 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[5] ; up         ;
+; N/A   ; None         ; 10.828 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[4] ; down       ;
+; N/A   ; None         ; 10.819 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[0] ; up         ;
+; N/A   ; None         ; 10.818 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[3] ; down       ;
+; N/A   ; None         ; 10.810 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[4] ; up         ;
+; N/A   ; None         ; 10.800 ns  ; updown_counter_precount:inst3|numout[1] ; ssOut2[3] ; up         ;
+; N/A   ; None         ; 10.792 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[5] ; down       ;
+; N/A   ; None         ; 10.776 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[0] ; down       ;
+; N/A   ; None         ; 10.774 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[5] ; up         ;
+; N/A   ; None         ; 10.767 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[4] ; down       ;
+; N/A   ; None         ; 10.758 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[0] ; up         ;
+; N/A   ; None         ; 10.757 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[3] ; down       ;
+; N/A   ; None         ; 10.749 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[4] ; up         ;
+; N/A   ; None         ; 10.739 ns  ; updown_counter_precount:inst3|numout[2] ; ssOut2[3] ; up         ;
+; N/A   ; None         ; 10.691 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[5] ; reset      ;
+; N/A   ; None         ; 10.666 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[6] ; reset      ;
+; N/A   ; None         ; 10.663 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[4] ; reset      ;
+; N/A   ; None         ; 10.577 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[2] ; reset      ;
+; N/A   ; None         ; 10.532 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[3] ; reset      ;
+; N/A   ; None         ; 10.500 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[5] ; down       ;
+; N/A   ; None         ; 10.484 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[0] ; down       ;
+; N/A   ; None         ; 10.482 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[5] ; up         ;
+; N/A   ; None         ; 10.475 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[4] ; down       ;
+; N/A   ; None         ; 10.466 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[0] ; up         ;
+; N/A   ; None         ; 10.465 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[3] ; down       ;
+; N/A   ; None         ; 10.457 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[4] ; up         ;
+; N/A   ; None         ; 10.447 ns  ; updown_counter_precount:inst3|numout[3] ; ssOut2[3] ; up         ;
+; N/A   ; None         ; 10.312 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[1] ; reset      ;
+; N/A   ; None         ; 10.270 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[0] ; reset      ;
+; N/A   ; None         ; 10.035 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[5] ; down       ;
+; N/A   ; None         ; 10.017 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[5] ; up         ;
+; N/A   ; None         ; 10.010 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[6] ; down       ;
+; N/A   ; None         ; 10.007 ns  ; updown_counter_precount:inst3|numout[0] ; ssOut1[4] ; down       ;
+; N/A   ; None         ; 9.992 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[6] ; up         ;
+; N/A   ; None         ; 9.989 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[4] ; up         ;
+; N/A   ; None         ; 9.921 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[2] ; down       ;
+; N/A   ; None         ; 9.903 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[2] ; up         ;
+; N/A   ; None         ; 9.876 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[3] ; down       ;
+; N/A   ; None         ; 9.858 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[3] ; up         ;
+; N/A   ; None         ; 9.656 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[1] ; down       ;
+; N/A   ; None         ; 9.638 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[1] ; up         ;
+; N/A   ; None         ; 9.614 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[0] ; down       ;
+; N/A   ; None         ; 9.596 ns   ; updown_counter_precount:inst3|numout[0] ; ssOut1[0] ; up         ;
++-------+--------------+------------+-----------------------------------------+-----------+------------+
 
 
 +--------------------------+
@@ -476,397 +295,145 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Fri Oct 25 16:43:54 2013
+    Info: Processing started: Tue Oct 29 11:07:04 2013
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Up-Down-Counter -c Up-Down-Counter --timing_analysis_only
 Warning: Timing Analysis is analyzing one or more combinational loops as latches
-    Warning: Node "updown_counter_noclock:inst|nIn[1]~latch" is a latch
-    Warning: Node "updown_counter_noclock:inst|nIn[0]~latch" is a latch
-    Warning: Node "updown_counter_noclock:inst|nIn[2]~latch" is a latch
-    Warning: Node "updown_counter_noclock:inst|nIn[3]~latch" is a latch
-    Warning: Node "sevenseg:inst1|ones[6]" is a latch
-    Warning: Node "sevenseg:inst1|ones[5]" is a latch
-    Warning: Node "sevenseg:inst1|ones[4]" is a latch
-    Warning: Node "sevenseg:inst1|ones[3]" is a latch
-    Warning: Node "sevenseg:inst1|ones[2]" is a latch
-    Warning: Node "sevenseg:inst1|ones[1]" is a latch
-    Warning: Node "sevenseg:inst1|ones[0]" is a latch
-Warning: Found combinational loop of 2 nodes
-    Warning: Node "updown_counter_noclock:inst|nIn[3]~head_lut"
-    Warning: Node "updown_counter_noclock:inst|Add0~96"
-Warning: Found combinational loop of 2 nodes
-    Warning: Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-    Warning: Node "updown_counter_noclock:inst|Add0~97"
-Warning: Found combinational loop of 2 nodes
-    Warning: Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-    Warning: Node "updown_counter_noclock:inst|Add1~73"
-Warning: Found combinational loop of 1 nodes
-    Warning: Node "updown_counter_noclock:inst|nIn[0]~head_lut"
+    Warning: Node "updown_counter_precount:inst3|numout[1]" is a latch
+    Warning: Node "updown_counter_precount:inst3|numout[0]" is a latch
+    Warning: Node "precount:inst|outnum[0]~latch" is a latch
+    Warning: Node "updown_counter_precount:inst3|numout[2]" is a latch
+    Warning: Node "updown_counter_precount:inst3|numout[3]" is a latch
 Warning: Found pins functioning as undefined clocks and/or memory enables
-    Info: Assuming node "down" is an undefined clock
+    Info: Assuming node "reset" is an undefined clock
+    Info: Assuming node "down" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
     Info: Assuming node "up" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
-    Info: Assuming node "reset" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
-Warning: Found 23 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
-    Info: Detected ripple clock "updown_counter_noclock:inst|nIn[3]~latch" as buffer
-    Info: Detected ripple clock "updown_counter_noclock:inst|nIn[2]~latch" as buffer
-    Info: Detected ripple clock "updown_counter_noclock:inst|nIn[0]~latch" as buffer
-    Info: Detected ripple clock "updown_counter_noclock:inst|nIn[1]~latch" as buffer
-    Info: Detected gated clock "sevenseg:inst1|Mux15~68" as buffer
-    Info: Detected gated clock "sevenseg:inst1|Mux15~67" as buffer
-    Info: Detected gated clock "sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15" as buffer
-    Info: Detected gated clock "sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~14" as buffer
-    Info: Detected gated clock "sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[2]~13" as buffer
-    Info: Detected gated clock "sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[2]~12" as buffer
-    Info: Detected ripple clock "updown_counter_noclock:inst|nIn[3]~_emulated" as buffer
-    Info: Detected gated clock "updown_counter_noclock:inst|nIn[3]~tail_lut" as buffer
-    Info: Detected gated clock "updown_counter_noclock:inst|nIn[3]~head_lut" as buffer
-    Info: Detected ripple clock "updown_counter_noclock:inst|nIn[2]~_emulated" as buffer
-    Info: Detected gated clock "updown_counter_noclock:inst|nIn[2]~tail_lut" as buffer
-    Info: Detected gated clock "updown_counter_noclock:inst|nIn[2]~head_lut" as buffer
-    Info: Detected ripple clock "updown_counter_noclock:inst|nIn[0]~_emulated" as buffer
-    Info: Detected gated clock "updown_counter_noclock:inst|nIn[0]~tail_lut" as buffer
-    Info: Detected ripple clock "updown_counter_noclock:inst|nIn[1]~_emulated" as buffer
-    Info: Detected gated clock "updown_counter_noclock:inst|nIn[0]~head_lut" as buffer
-    Info: Detected gated clock "updown_counter_noclock:inst|nIn[1]~tail_lut" as buffer
-    Info: Detected gated clock "updown_counter_noclock:inst|nIn[3]~0" as buffer
-    Info: Detected gated clock "updown_counter_noclock:inst|nIn[1]~head_lut" as buffer
-Info: Clock "down" has Internal fmax of 144.95 MHz between source register "updown_counter_noclock:inst|nIn[0]~_emulated" and destination register "updown_counter_noclock:inst|nIn[3]~_emulated" (period= 6.899 ns)
-    Info: + Longest register to register delay is 6.674 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X7_Y7_N19; Fanout = 1; REG Node = 'updown_counter_noclock:inst|nIn[0]~_emulated'
-        Info: 2: + IC(0.365 ns) + CELL(0.521 ns) = 0.886 ns; Loc. = LCCOMB_X7_Y7_N22; Fanout = 2; COMB Node = 'updown_counter_noclock:inst|nIn[0]~tail_lut'
-        Info: 3: + IC(0.000 ns) + CELL(0.478 ns) = 1.364 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 4: + IC(0.000 ns) + CELL(1.544 ns) = 2.908 ns; Loc. = LCCOMB_X7_Y7_N10; Fanout = 14; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[1]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 5: + IC(0.000 ns) + CELL(1.250 ns) = 4.158 ns; Loc. = LCCOMB_X6_Y7_N4; Fanout = 11; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[2]~head_lut'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 6: + IC(0.000 ns) + CELL(1.925 ns) = 6.083 ns; Loc. = LCCOMB_X6_Y7_N0; Fanout = 7; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[3]~head_lut'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N8; Node "updown_counter_noclock:inst|Add0~96"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: Loc. = LCCOMB_X6_Y7_N0; Node "updown_counter_noclock:inst|nIn[3]~head_lut"
-        Info: 7: + IC(0.317 ns) + CELL(0.178 ns) = 6.578 ns; Loc. = LCCOMB_X6_Y7_N6; Fanout = 1; COMB Node = 'updown_counter_noclock:inst|nIn[3]~data_lut'
-        Info: 8: + IC(0.000 ns) + CELL(0.096 ns) = 6.674 ns; Loc. = LCFF_X6_Y7_N7; Fanout = 1; REG Node = 'updown_counter_noclock:inst|nIn[3]~_emulated'
-        Info: Total cell delay = 5.992 ns ( 89.78 % )
-        Info: Total interconnect delay = 0.682 ns ( 10.22 % )
-    Info: - Smallest clock skew is 0.014 ns
-        Info: + Shortest clock path from clock "down" to destination register is 3.693 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.874 ns) = 0.874 ns; Loc. = PIN_T21; Fanout = 4; CLK Node = 'down'
-            Info: 2: + IC(2.217 ns) + CELL(0.602 ns) = 3.693 ns; Loc. = LCFF_X6_Y7_N7; Fanout = 1; REG Node = 'updown_counter_noclock:inst|nIn[3]~_emulated'
-            Info: Total cell delay = 1.476 ns ( 39.97 % )
-            Info: Total interconnect delay = 2.217 ns ( 60.03 % )
-        Info: - Longest clock path from clock "down" to source register is 3.679 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.874 ns) = 0.874 ns; Loc. = PIN_T21; Fanout = 4; CLK Node = 'down'
-            Info: 2: + IC(2.203 ns) + CELL(0.602 ns) = 3.679 ns; Loc. = LCFF_X7_Y7_N19; Fanout = 1; REG Node = 'updown_counter_noclock:inst|nIn[0]~_emulated'
-            Info: Total cell delay = 1.476 ns ( 40.12 % )
-            Info: Total interconnect delay = 2.203 ns ( 59.88 % )
-    Info: + Micro clock to output delay of source is 0.277 ns
-    Info: + Micro setup delay of destination is -0.038 ns
-Info: Clock "up" has Internal fmax of 96.39 MHz between source register "updown_counter_noclock:inst|nIn[0]~latch" and destination register "sevenseg:inst1|ones[0]" (period= 10.374 ns)
-    Info: + Longest register to register delay is 8.981 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X7_Y7_N2; Fanout = 2; REG Node = 'updown_counter_noclock:inst|nIn[0]~latch'
-        Info: 2: + IC(0.314 ns) + CELL(0.178 ns) = 0.492 ns; Loc. = LCCOMB_X7_Y7_N22; Fanout = 2; COMB Node = 'updown_counter_noclock:inst|nIn[0]~tail_lut'
-        Info: 3: + IC(0.000 ns) + CELL(0.478 ns) = 0.970 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 4: + IC(0.000 ns) + CELL(1.544 ns) = 2.514 ns; Loc. = LCCOMB_X7_Y7_N10; Fanout = 14; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[1]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 5: + IC(0.000 ns) + CELL(1.250 ns) = 3.764 ns; Loc. = LCCOMB_X6_Y7_N4; Fanout = 11; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[2]~head_lut'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 6: + IC(0.000 ns) + CELL(1.925 ns) = 5.689 ns; Loc. = LCCOMB_X6_Y7_N0; Fanout = 7; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[3]~head_lut'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N8; Node "updown_counter_noclock:inst|Add0~96"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: Loc. = LCCOMB_X6_Y7_N0; Node "updown_counter_noclock:inst|nIn[3]~head_lut"
-        Info: 7: + IC(0.324 ns) + CELL(0.495 ns) = 6.508 ns; Loc. = LCCOMB_X6_Y7_N12; Fanout = 1; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15'
-        Info: 8: + IC(0.000 ns) + CELL(0.458 ns) = 6.966 ns; Loc. = LCCOMB_X6_Y7_N14; Fanout = 4; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[4]~16'
-        Info: 9: + IC(0.331 ns) + CELL(0.322 ns) = 7.619 ns; Loc. = LCCOMB_X6_Y7_N26; Fanout = 7; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|StageOut[14]~76'
-        Info: 10: + IC(0.560 ns) + CELL(0.322 ns) = 8.501 ns; Loc. = LCCOMB_X6_Y7_N18; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux8~15'
-        Info: 11: + IC(0.302 ns) + CELL(0.178 ns) = 8.981 ns; Loc. = LCCOMB_X6_Y7_N24; Fanout = 1; REG Node = 'sevenseg:inst1|ones[0]'
-        Info: Total cell delay = 7.150 ns ( 79.61 % )
-        Info: Total interconnect delay = 1.831 ns ( 20.39 % )
-    Info: - Smallest clock skew is 5.159 ns
-        Info: + Shortest clock path from clock "up" to destination register is 8.484 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 17; CLK Node = 'up'
-            Info: 2: + IC(0.000 ns) + CELL(2.823 ns) = 3.687 ns; Loc. = LCCOMB_X6_Y7_N4; Fanout = 11; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[2]~head_lut'
-                Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-                Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-                Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: 3: + IC(0.903 ns) + CELL(0.178 ns) = 4.768 ns; Loc. = LCCOMB_X6_Y9_N2; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux15~67'
-            Info: 4: + IC(0.287 ns) + CELL(0.178 ns) = 5.233 ns; Loc. = LCCOMB_X6_Y9_N28; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux15~69'
-            Info: 5: + IC(1.528 ns) + CELL(0.000 ns) = 6.761 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'sevenseg:inst1|Mux15~69clkctrl'
-            Info: 6: + IC(1.404 ns) + CELL(0.319 ns) = 8.484 ns; Loc. = LCCOMB_X6_Y7_N24; Fanout = 1; REG Node = 'sevenseg:inst1|ones[0]'
-            Info: Total cell delay = 4.362 ns ( 51.41 % )
-            Info: Total interconnect delay = 4.122 ns ( 48.59 % )
-        Info: - Longest clock path from clock "up" to source register is 3.325 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 17; CLK Node = 'up'
-            Info: 2: + IC(2.283 ns) + CELL(0.178 ns) = 3.325 ns; Loc. = LCCOMB_X7_Y7_N2; Fanout = 2; REG Node = 'updown_counter_noclock:inst|nIn[0]~latch'
-            Info: Total cell delay = 1.042 ns ( 31.34 % )
-            Info: Total interconnect delay = 2.283 ns ( 68.66 % )
+Warning: Found 3 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "precount:inst|outnum[0]~latch" as buffer
+    Info: Detected ripple clock "precount:inst|outnum[0]~_emulated" as buffer
+    Info: Detected gated clock "precount:inst|outnum[0]~head_lut" as buffer
+Info: Clock "reset" has Internal fmax of 335.46 MHz between source register "updown_counter_precount:inst3|numout[1]" and destination register "updown_counter_precount:inst3|numout[2]" (period= 2.981 ns)
+    Info: + Longest register to register delay is 1.820 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X2_Y18_N14; Fanout = 7; REG Node = 'updown_counter_precount:inst3|numout[1]'
+        Info: 2: + IC(0.806 ns) + CELL(0.545 ns) = 1.351 ns; Loc. = LCCOMB_X2_Y18_N10; Fanout = 1; COMB Node = 'updown_counter_precount:inst3|numout[2]~100'
+        Info: 3: + IC(0.291 ns) + CELL(0.178 ns) = 1.820 ns; Loc. = LCCOMB_X2_Y18_N24; Fanout = 6; REG Node = 'updown_counter_precount:inst3|numout[2]'
+        Info: Total cell delay = 0.723 ns ( 39.73 % )
+        Info: Total interconnect delay = 1.097 ns ( 60.27 % )
+    Info: - Smallest clock skew is 0.002 ns
+        Info: + Shortest clock path from clock "reset" to destination register is 5.820 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R21; Fanout = 2; CLK Node = 'reset'
+            Info: 2: + IC(0.763 ns) + CELL(0.879 ns) = 2.506 ns; Loc. = LCFF_X49_Y10_N21; Fanout = 1; REG Node = 'precount:inst|outnum[0]~_emulated'
+            Info: 3: + IC(0.000 ns) + CELL(0.358 ns) = 2.864 ns; Loc. = LCCOMB_X49_Y10_N20; Fanout = 1; COMB Node = 'precount:inst|outnum[0]~head_lut'
+            Info: 4: + IC(1.025 ns) + CELL(0.000 ns) = 3.889 ns; Loc. = CLKCTRL_G4; Fanout = 4; COMB Node = 'precount:inst|outnum[0]~head_lutclkctrl'
+            Info: 5: + IC(1.410 ns) + CELL(0.521 ns) = 5.820 ns; Loc. = LCCOMB_X2_Y18_N24; Fanout = 6; REG Node = 'updown_counter_precount:inst3|numout[2]'
+            Info: Total cell delay = 2.622 ns ( 45.05 % )
+            Info: Total interconnect delay = 3.198 ns ( 54.95 % )
+        Info: - Longest clock path from clock "reset" to source register is 5.818 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R21; Fanout = 2; CLK Node = 'reset'
+            Info: 2: + IC(0.763 ns) + CELL(0.879 ns) = 2.506 ns; Loc. = LCFF_X49_Y10_N21; Fanout = 1; REG Node = 'precount:inst|outnum[0]~_emulated'
+            Info: 3: + IC(0.000 ns) + CELL(0.358 ns) = 2.864 ns; Loc. = LCCOMB_X49_Y10_N20; Fanout = 1; COMB Node = 'precount:inst|outnum[0]~head_lut'
+            Info: 4: + IC(1.025 ns) + CELL(0.000 ns) = 3.889 ns; Loc. = CLKCTRL_G4; Fanout = 4; COMB Node = 'precount:inst|outnum[0]~head_lutclkctrl'
+            Info: 5: + IC(1.408 ns) + CELL(0.521 ns) = 5.818 ns; Loc. = LCCOMB_X2_Y18_N14; Fanout = 7; REG Node = 'updown_counter_precount:inst3|numout[1]'
+            Info: Total cell delay = 2.622 ns ( 45.07 % )
+            Info: Total interconnect delay = 3.196 ns ( 54.93 % )
     Info: + Micro clock to output delay of source is 0.000 ns
-    Info: + Micro setup delay of destination is 1.365 ns
-    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
-Warning: Circuit may not operate. Detected 28 non-operational path(s) clocked by clock "down" with clock skew larger than data delay. See Compilation Report for details.
-Info: Found hold time violation between source  pin or register "updown_counter_noclock:inst|nIn[0]~_emulated" and destination pin or register "sevenseg:inst1|ones[2]" for clock "down" (Hold time is 8.921 ns)
-    Info: + Largest clock skew is 12.309 ns
-        Info: + Longest clock path from clock "down" to destination register is 15.988 ns
+    Info: + Micro setup delay of destination is 1.163 ns
+Info: Clock "down" has Internal fmax of 335.46 MHz between source register "updown_counter_precount:inst3|numout[1]" and destination register "updown_counter_precount:inst3|numout[2]" (period= 2.981 ns)
+    Info: + Longest register to register delay is 1.820 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X2_Y18_N14; Fanout = 7; REG Node = 'updown_counter_precount:inst3|numout[1]'
+        Info: 2: + IC(0.806 ns) + CELL(0.545 ns) = 1.351 ns; Loc. = LCCOMB_X2_Y18_N10; Fanout = 1; COMB Node = 'updown_counter_precount:inst3|numout[2]~100'
+        Info: 3: + IC(0.291 ns) + CELL(0.178 ns) = 1.820 ns; Loc. = LCCOMB_X2_Y18_N24; Fanout = 6; REG Node = 'updown_counter_precount:inst3|numout[2]'
+        Info: Total cell delay = 0.723 ns ( 39.73 % )
+        Info: Total interconnect delay = 1.097 ns ( 60.27 % )
+    Info: - Smallest clock skew is 0.002 ns
+        Info: + Shortest clock path from clock "down" to destination register is 5.164 ns
             Info: 1: + IC(0.000 ns) + CELL(0.874 ns) = 0.874 ns; Loc. = PIN_T21; Fanout = 4; CLK Node = 'down'
-            Info: 2: + IC(2.203 ns) + CELL(0.879 ns) = 3.956 ns; Loc. = LCFF_X7_Y7_N19; Fanout = 1; REG Node = 'updown_counter_noclock:inst|nIn[0]~_emulated'
-            Info: 3: + IC(0.365 ns) + CELL(0.521 ns) = 4.842 ns; Loc. = LCCOMB_X7_Y7_N22; Fanout = 2; COMB Node = 'updown_counter_noclock:inst|nIn[0]~tail_lut'
-            Info: 4: + IC(0.000 ns) + CELL(0.478 ns) = 5.320 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-                Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: 5: + IC(0.000 ns) + CELL(1.544 ns) = 6.864 ns; Loc. = LCCOMB_X7_Y7_N10; Fanout = 14; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[1]~head_lut'
-                Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-                Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: 6: + IC(0.000 ns) + CELL(1.250 ns) = 8.114 ns; Loc. = LCCOMB_X6_Y7_N4; Fanout = 11; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[2]~head_lut'
-                Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-                Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-                Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: 7: + IC(0.000 ns) + CELL(1.925 ns) = 10.039 ns; Loc. = LCCOMB_X6_Y7_N0; Fanout = 7; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[3]~head_lut'
-                Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-                Info: Loc. = LCCOMB_X7_Y7_N8; Node "updown_counter_noclock:inst|Add0~96"
-                Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-                Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-                Info: Loc. = LCCOMB_X6_Y7_N0; Node "updown_counter_noclock:inst|nIn[3]~head_lut"
-            Info: 8: + IC(0.324 ns) + CELL(0.495 ns) = 10.858 ns; Loc. = LCCOMB_X6_Y7_N12; Fanout = 1; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15'
-            Info: 9: + IC(0.000 ns) + CELL(0.458 ns) = 11.316 ns; Loc. = LCCOMB_X6_Y7_N14; Fanout = 4; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[4]~16'
-            Info: 10: + IC(0.916 ns) + CELL(0.513 ns) = 12.745 ns; Loc. = LCCOMB_X6_Y9_N28; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux15~69'
-            Info: 11: + IC(1.528 ns) + CELL(0.000 ns) = 14.273 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'sevenseg:inst1|Mux15~69clkctrl'
-            Info: 12: + IC(1.396 ns) + CELL(0.319 ns) = 15.988 ns; Loc. = LCCOMB_X5_Y7_N22; Fanout = 1; REG Node = 'sevenseg:inst1|ones[2]'
-            Info: Total cell delay = 9.256 ns ( 57.89 % )
-            Info: Total interconnect delay = 6.732 ns ( 42.11 % )
-        Info: - Shortest clock path from clock "down" to source register is 3.679 ns
+            Info: 2: + IC(1.156 ns) + CELL(0.178 ns) = 2.208 ns; Loc. = LCCOMB_X49_Y10_N20; Fanout = 1; COMB Node = 'precount:inst|outnum[0]~head_lut'
+            Info: 3: + IC(1.025 ns) + CELL(0.000 ns) = 3.233 ns; Loc. = CLKCTRL_G4; Fanout = 4; COMB Node = 'precount:inst|outnum[0]~head_lutclkctrl'
+            Info: 4: + IC(1.410 ns) + CELL(0.521 ns) = 5.164 ns; Loc. = LCCOMB_X2_Y18_N24; Fanout = 6; REG Node = 'updown_counter_precount:inst3|numout[2]'
+            Info: Total cell delay = 1.573 ns ( 30.46 % )
+            Info: Total interconnect delay = 3.591 ns ( 69.54 % )
+        Info: - Longest clock path from clock "down" to source register is 5.162 ns
             Info: 1: + IC(0.000 ns) + CELL(0.874 ns) = 0.874 ns; Loc. = PIN_T21; Fanout = 4; CLK Node = 'down'
-            Info: 2: + IC(2.203 ns) + CELL(0.602 ns) = 3.679 ns; Loc. = LCFF_X7_Y7_N19; Fanout = 1; REG Node = 'updown_counter_noclock:inst|nIn[0]~_emulated'
-            Info: Total cell delay = 1.476 ns ( 40.12 % )
-            Info: Total interconnect delay = 2.203 ns ( 59.88 % )
+            Info: 2: + IC(1.156 ns) + CELL(0.178 ns) = 2.208 ns; Loc. = LCCOMB_X49_Y10_N20; Fanout = 1; COMB Node = 'precount:inst|outnum[0]~head_lut'
+            Info: 3: + IC(1.025 ns) + CELL(0.000 ns) = 3.233 ns; Loc. = CLKCTRL_G4; Fanout = 4; COMB Node = 'precount:inst|outnum[0]~head_lutclkctrl'
+            Info: 4: + IC(1.408 ns) + CELL(0.521 ns) = 5.162 ns; Loc. = LCCOMB_X2_Y18_N14; Fanout = 7; REG Node = 'updown_counter_precount:inst3|numout[1]'
+            Info: Total cell delay = 1.573 ns ( 30.47 % )
+            Info: Total interconnect delay = 3.589 ns ( 69.53 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Micro setup delay of destination is 1.163 ns
+Info: Clock "up" has Internal fmax of 335.46 MHz between source register "updown_counter_precount:inst3|numout[1]" and destination register "updown_counter_precount:inst3|numout[2]" (period= 2.981 ns)
+    Info: + Longest register to register delay is 1.820 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X2_Y18_N14; Fanout = 7; REG Node = 'updown_counter_precount:inst3|numout[1]'
+        Info: 2: + IC(0.806 ns) + CELL(0.545 ns) = 1.351 ns; Loc. = LCCOMB_X2_Y18_N10; Fanout = 1; COMB Node = 'updown_counter_precount:inst3|numout[2]~100'
+        Info: 3: + IC(0.291 ns) + CELL(0.178 ns) = 1.820 ns; Loc. = LCCOMB_X2_Y18_N24; Fanout = 6; REG Node = 'updown_counter_precount:inst3|numout[2]'
+        Info: Total cell delay = 0.723 ns ( 39.73 % )
+        Info: Total interconnect delay = 1.097 ns ( 60.27 % )
+    Info: - Smallest clock skew is 0.002 ns
+        Info: + Shortest clock path from clock "up" to destination register is 5.146 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 4; CLK Node = 'up'
+            Info: 2: + IC(0.805 ns) + CELL(0.521 ns) = 2.190 ns; Loc. = LCCOMB_X49_Y10_N20; Fanout = 1; COMB Node = 'precount:inst|outnum[0]~head_lut'
+            Info: 3: + IC(1.025 ns) + CELL(0.000 ns) = 3.215 ns; Loc. = CLKCTRL_G4; Fanout = 4; COMB Node = 'precount:inst|outnum[0]~head_lutclkctrl'
+            Info: 4: + IC(1.410 ns) + CELL(0.521 ns) = 5.146 ns; Loc. = LCCOMB_X2_Y18_N24; Fanout = 6; REG Node = 'updown_counter_precount:inst3|numout[2]'
+            Info: Total cell delay = 1.906 ns ( 37.04 % )
+            Info: Total interconnect delay = 3.240 ns ( 62.96 % )
+        Info: - Longest clock path from clock "up" to source register is 5.144 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 4; CLK Node = 'up'
+            Info: 2: + IC(0.805 ns) + CELL(0.521 ns) = 2.190 ns; Loc. = LCCOMB_X49_Y10_N20; Fanout = 1; COMB Node = 'precount:inst|outnum[0]~head_lut'
+            Info: 3: + IC(1.025 ns) + CELL(0.000 ns) = 3.215 ns; Loc. = CLKCTRL_G4; Fanout = 4; COMB Node = 'precount:inst|outnum[0]~head_lutclkctrl'
+            Info: 4: + IC(1.408 ns) + CELL(0.521 ns) = 5.144 ns; Loc. = LCCOMB_X2_Y18_N14; Fanout = 7; REG Node = 'updown_counter_precount:inst3|numout[1]'
+            Info: Total cell delay = 1.906 ns ( 37.05 % )
+            Info: Total interconnect delay = 3.238 ns ( 62.95 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Micro setup delay of destination is 1.163 ns
+Warning: Circuit may not operate. Detected 4 non-operational path(s) clocked by clock "reset" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "precount:inst|outnum[1]" and destination pin or register "updown_counter_precount:inst3|numout[3]" for clock "reset" (Hold time is 373 ps)
+    Info: + Largest clock skew is 1.670 ns
+        Info: + Longest clock path from clock "reset" to destination register is 5.821 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R21; Fanout = 2; CLK Node = 'reset'
+            Info: 2: + IC(0.763 ns) + CELL(0.879 ns) = 2.506 ns; Loc. = LCFF_X49_Y10_N21; Fanout = 1; REG Node = 'precount:inst|outnum[0]~_emulated'
+            Info: 3: + IC(0.000 ns) + CELL(0.358 ns) = 2.864 ns; Loc. = LCCOMB_X49_Y10_N20; Fanout = 1; COMB Node = 'precount:inst|outnum[0]~head_lut'
+            Info: 4: + IC(1.025 ns) + CELL(0.000 ns) = 3.889 ns; Loc. = CLKCTRL_G4; Fanout = 4; COMB Node = 'precount:inst|outnum[0]~head_lutclkctrl'
+            Info: 5: + IC(1.411 ns) + CELL(0.521 ns) = 5.821 ns; Loc. = LCCOMB_X2_Y18_N16; Fanout = 5; REG Node = 'updown_counter_precount:inst3|numout[3]'
+            Info: Total cell delay = 2.622 ns ( 45.04 % )
+            Info: Total interconnect delay = 3.199 ns ( 54.96 % )
+        Info: - Shortest clock path from clock "reset" to source register is 4.151 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R21; Fanout = 2; CLK Node = 'reset'
+            Info: 2: + IC(2.685 ns) + CELL(0.602 ns) = 4.151 ns; Loc. = LCFF_X2_Y18_N1; Fanout = 4; REG Node = 'precount:inst|outnum[1]'
+            Info: Total cell delay = 1.466 ns ( 35.32 % )
+            Info: Total interconnect delay = 2.685 ns ( 64.68 % )
     Info: - Micro clock to output delay of source is 0.277 ns
-    Info: - Shortest register to register delay is 3.111 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X7_Y7_N19; Fanout = 1; REG Node = 'updown_counter_noclock:inst|nIn[0]~_emulated'
-        Info: 2: + IC(0.365 ns) + CELL(0.521 ns) = 0.886 ns; Loc. = LCCOMB_X7_Y7_N22; Fanout = 2; COMB Node = 'updown_counter_noclock:inst|nIn[0]~tail_lut'
-        Info: 3: + IC(0.000 ns) + CELL(0.478 ns) = 1.364 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 4: + IC(0.856 ns) + CELL(0.422 ns) = 2.642 ns; Loc. = LCCOMB_X5_Y7_N10; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux10~41'
-        Info: 5: + IC(0.291 ns) + CELL(0.178 ns) = 3.111 ns; Loc. = LCCOMB_X5_Y7_N22; Fanout = 1; REG Node = 'sevenseg:inst1|ones[2]'
-        Info: Total cell delay = 1.599 ns ( 51.40 % )
-        Info: Total interconnect delay = 1.512 ns ( 48.60 % )
-    Info: + Micro hold delay of destination is 0.000 ns
-Warning: Circuit may not operate. Detected 28 non-operational path(s) clocked by clock "up" with clock skew larger than data delay. See Compilation Report for details.
-Info: Found hold time violation between source  pin or register "updown_counter_noclock:inst|nIn[0]~latch" and destination pin or register "sevenseg:inst1|ones[2]" for clock "up" (Hold time is 9.681 ns)
-    Info: + Largest clock skew is 12.398 ns
-        Info: + Longest clock path from clock "up" to destination register is 15.723 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 17; CLK Node = 'up'
-            Info: 2: + IC(1.619 ns) + CELL(0.322 ns) = 2.805 ns; Loc. = LCCOMB_X27_Y10_N24; Fanout = 16; COMB Node = 'updown_counter_noclock:inst|nIn[3]~0'
-            Info: 3: + IC(0.000 ns) + CELL(2.250 ns) = 5.055 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-                Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: 4: + IC(0.000 ns) + CELL(1.544 ns) = 6.599 ns; Loc. = LCCOMB_X7_Y7_N10; Fanout = 14; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[1]~head_lut'
-                Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-                Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: 5: + IC(0.000 ns) + CELL(1.250 ns) = 7.849 ns; Loc. = LCCOMB_X6_Y7_N4; Fanout = 11; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[2]~head_lut'
-                Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-                Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-                Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: 6: + IC(0.000 ns) + CELL(1.925 ns) = 9.774 ns; Loc. = LCCOMB_X6_Y7_N0; Fanout = 7; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[3]~head_lut'
-                Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-                Info: Loc. = LCCOMB_X7_Y7_N8; Node "updown_counter_noclock:inst|Add0~96"
-                Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-                Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-                Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-                Info: Loc. = LCCOMB_X6_Y7_N0; Node "updown_counter_noclock:inst|nIn[3]~head_lut"
-            Info: 7: + IC(0.324 ns) + CELL(0.495 ns) = 10.593 ns; Loc. = LCCOMB_X6_Y7_N12; Fanout = 1; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15'
-            Info: 8: + IC(0.000 ns) + CELL(0.458 ns) = 11.051 ns; Loc. = LCCOMB_X6_Y7_N14; Fanout = 4; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[4]~16'
-            Info: 9: + IC(0.916 ns) + CELL(0.513 ns) = 12.480 ns; Loc. = LCCOMB_X6_Y9_N28; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux15~69'
-            Info: 10: + IC(1.528 ns) + CELL(0.000 ns) = 14.008 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'sevenseg:inst1|Mux15~69clkctrl'
-            Info: 11: + IC(1.396 ns) + CELL(0.319 ns) = 15.723 ns; Loc. = LCCOMB_X5_Y7_N22; Fanout = 1; REG Node = 'sevenseg:inst1|ones[2]'
-            Info: Total cell delay = 9.940 ns ( 63.22 % )
-            Info: Total interconnect delay = 5.783 ns ( 36.78 % )
-        Info: - Shortest clock path from clock "up" to source register is 3.325 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 17; CLK Node = 'up'
-            Info: 2: + IC(2.283 ns) + CELL(0.178 ns) = 3.325 ns; Loc. = LCCOMB_X7_Y7_N2; Fanout = 2; REG Node = 'updown_counter_noclock:inst|nIn[0]~latch'
-            Info: Total cell delay = 1.042 ns ( 31.34 % )
-            Info: Total interconnect delay = 2.283 ns ( 68.66 % )
-    Info: - Micro clock to output delay of source is 0.000 ns
-    Info: - Shortest register to register delay is 2.717 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X7_Y7_N2; Fanout = 2; REG Node = 'updown_counter_noclock:inst|nIn[0]~latch'
-        Info: 2: + IC(0.314 ns) + CELL(0.178 ns) = 0.492 ns; Loc. = LCCOMB_X7_Y7_N22; Fanout = 2; COMB Node = 'updown_counter_noclock:inst|nIn[0]~tail_lut'
-        Info: 3: + IC(0.000 ns) + CELL(0.478 ns) = 0.970 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 4: + IC(0.856 ns) + CELL(0.422 ns) = 2.248 ns; Loc. = LCCOMB_X5_Y7_N10; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux10~41'
-        Info: 5: + IC(0.291 ns) + CELL(0.178 ns) = 2.717 ns; Loc. = LCCOMB_X5_Y7_N22; Fanout = 1; REG Node = 'sevenseg:inst1|ones[2]'
-        Info: Total cell delay = 1.256 ns ( 46.23 % )
-        Info: Total interconnect delay = 1.461 ns ( 53.77 % )
+    Info: - Shortest register to register delay is 1.020 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X2_Y18_N1; Fanout = 4; REG Node = 'precount:inst|outnum[1]'
+        Info: 2: + IC(0.379 ns) + CELL(0.177 ns) = 0.556 ns; Loc. = LCCOMB_X2_Y18_N30; Fanout = 1; COMB Node = 'updown_counter_precount:inst3|numout[3]~99'
+        Info: 3: + IC(0.286 ns) + CELL(0.178 ns) = 1.020 ns; Loc. = LCCOMB_X2_Y18_N16; Fanout = 5; REG Node = 'updown_counter_precount:inst3|numout[3]'
+        Info: Total cell delay = 0.355 ns ( 34.80 % )
+        Info: Total interconnect delay = 0.665 ns ( 65.20 % )
     Info: + Micro hold delay of destination is 0.000 ns
     Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
-Info: tsu for register "updown_counter_noclock:inst|nIn[3]~latch" (data pin = "up", clock pin = "up") is 7.289 ns
-    Info: + Longest pin to register delay is 9.543 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 17; CLK Node = 'up'
-        Info: 2: + IC(1.619 ns) + CELL(0.322 ns) = 2.805 ns; Loc. = LCCOMB_X27_Y10_N24; Fanout = 16; COMB Node = 'updown_counter_noclock:inst|nIn[3]~0'
-        Info: 3: + IC(0.000 ns) + CELL(2.250 ns) = 5.055 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 4: + IC(0.000 ns) + CELL(1.544 ns) = 6.599 ns; Loc. = LCCOMB_X7_Y7_N10; Fanout = 14; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[1]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 5: + IC(0.000 ns) + CELL(1.250 ns) = 7.849 ns; Loc. = LCCOMB_X6_Y7_N4; Fanout = 11; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[2]~head_lut'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 6: + IC(0.000 ns) + CELL(1.068 ns) = 8.917 ns; Loc. = LCCOMB_X7_Y7_N8; Fanout = 2; COMB LOOP Node = 'updown_counter_noclock:inst|Add0~96'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N8; Node "updown_counter_noclock:inst|Add0~96"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: Loc. = LCCOMB_X6_Y7_N0; Node "updown_counter_noclock:inst|nIn[3]~head_lut"
-        Info: 7: + IC(0.304 ns) + CELL(0.322 ns) = 9.543 ns; Loc. = LCCOMB_X7_Y7_N6; Fanout = 2; REG Node = 'updown_counter_noclock:inst|nIn[3]~latch'
-        Info: Total cell delay = 7.620 ns ( 79.85 % )
-        Info: Total interconnect delay = 1.923 ns ( 20.15 % )
-    Info: + Micro setup delay of destination is 1.074 ns
-    Info: - Shortest clock path from clock "up" to destination register is 3.328 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 17; CLK Node = 'up'
-        Info: 2: + IC(2.286 ns) + CELL(0.178 ns) = 3.328 ns; Loc. = LCCOMB_X7_Y7_N6; Fanout = 2; REG Node = 'updown_counter_noclock:inst|nIn[3]~latch'
-        Info: Total cell delay = 1.042 ns ( 31.31 % )
-        Info: Total interconnect delay = 2.286 ns ( 68.69 % )
-Info: tco from clock "down" to destination pin "ssOut1[5]" through register "sevenseg:inst1|ones[5]" is 21.506 ns
-    Info: + Longest clock path from clock "down" to source register is 15.997 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.874 ns) = 0.874 ns; Loc. = PIN_T21; Fanout = 4; CLK Node = 'down'
-        Info: 2: + IC(2.203 ns) + CELL(0.879 ns) = 3.956 ns; Loc. = LCFF_X7_Y7_N19; Fanout = 1; REG Node = 'updown_counter_noclock:inst|nIn[0]~_emulated'
-        Info: 3: + IC(0.365 ns) + CELL(0.521 ns) = 4.842 ns; Loc. = LCCOMB_X7_Y7_N22; Fanout = 2; COMB Node = 'updown_counter_noclock:inst|nIn[0]~tail_lut'
-        Info: 4: + IC(0.000 ns) + CELL(0.478 ns) = 5.320 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 5: + IC(0.000 ns) + CELL(1.544 ns) = 6.864 ns; Loc. = LCCOMB_X7_Y7_N10; Fanout = 14; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[1]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 6: + IC(0.000 ns) + CELL(1.250 ns) = 8.114 ns; Loc. = LCCOMB_X6_Y7_N4; Fanout = 11; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[2]~head_lut'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 7: + IC(0.000 ns) + CELL(1.925 ns) = 10.039 ns; Loc. = LCCOMB_X6_Y7_N0; Fanout = 7; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[3]~head_lut'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N8; Node "updown_counter_noclock:inst|Add0~96"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: Loc. = LCCOMB_X6_Y7_N0; Node "updown_counter_noclock:inst|nIn[3]~head_lut"
-        Info: 8: + IC(0.324 ns) + CELL(0.495 ns) = 10.858 ns; Loc. = LCCOMB_X6_Y7_N12; Fanout = 1; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15'
-        Info: 9: + IC(0.000 ns) + CELL(0.458 ns) = 11.316 ns; Loc. = LCCOMB_X6_Y7_N14; Fanout = 4; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[4]~16'
-        Info: 10: + IC(0.916 ns) + CELL(0.513 ns) = 12.745 ns; Loc. = LCCOMB_X6_Y9_N28; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux15~69'
-        Info: 11: + IC(1.528 ns) + CELL(0.000 ns) = 14.273 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'sevenseg:inst1|Mux15~69clkctrl'
-        Info: 12: + IC(1.405 ns) + CELL(0.319 ns) = 15.997 ns; Loc. = LCCOMB_X6_Y7_N20; Fanout = 1; REG Node = 'sevenseg:inst1|ones[5]'
-        Info: Total cell delay = 9.256 ns ( 57.86 % )
-        Info: Total interconnect delay = 6.741 ns ( 42.14 % )
+Info: tco from clock "reset" to destination pin "ssOut1[5]" through register "updown_counter_precount:inst3|numout[1]" is 13.500 ns
+    Info: + Longest clock path from clock "reset" to source register is 5.818 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R21; Fanout = 2; CLK Node = 'reset'
+        Info: 2: + IC(0.763 ns) + CELL(0.879 ns) = 2.506 ns; Loc. = LCFF_X49_Y10_N21; Fanout = 1; REG Node = 'precount:inst|outnum[0]~_emulated'
+        Info: 3: + IC(0.000 ns) + CELL(0.358 ns) = 2.864 ns; Loc. = LCCOMB_X49_Y10_N20; Fanout = 1; COMB Node = 'precount:inst|outnum[0]~head_lut'
+        Info: 4: + IC(1.025 ns) + CELL(0.000 ns) = 3.889 ns; Loc. = CLKCTRL_G4; Fanout = 4; COMB Node = 'precount:inst|outnum[0]~head_lutclkctrl'
+        Info: 5: + IC(1.408 ns) + CELL(0.521 ns) = 5.818 ns; Loc. = LCCOMB_X2_Y18_N14; Fanout = 7; REG Node = 'updown_counter_precount:inst3|numout[1]'
+        Info: Total cell delay = 2.622 ns ( 45.07 % )
+        Info: Total interconnect delay = 3.196 ns ( 54.93 % )
     Info: + Micro clock to output delay of source is 0.000 ns
-    Info: + Longest register to pin delay is 5.509 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X6_Y7_N20; Fanout = 1; REG Node = 'sevenseg:inst1|ones[5]'
-        Info: 2: + IC(2.659 ns) + CELL(2.850 ns) = 5.509 ns; Loc. = PIN_F1; Fanout = 0; PIN Node = 'ssOut1[5]'
-        Info: Total cell delay = 2.850 ns ( 51.73 % )
-        Info: Total interconnect delay = 2.659 ns ( 48.27 % )
-Info: Longest tpd from source pin "up" to destination pin "ssOut2[0]" is 16.996 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 17; CLK Node = 'up'
-    Info: 2: + IC(1.619 ns) + CELL(0.322 ns) = 2.805 ns; Loc. = LCCOMB_X27_Y10_N24; Fanout = 16; COMB Node = 'updown_counter_noclock:inst|nIn[3]~0'
-    Info: 3: + IC(0.000 ns) + CELL(2.250 ns) = 5.055 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-        Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-    Info: 4: + IC(0.000 ns) + CELL(1.544 ns) = 6.599 ns; Loc. = LCCOMB_X7_Y7_N10; Fanout = 14; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[1]~head_lut'
-        Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-        Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-        Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-    Info: 5: + IC(0.000 ns) + CELL(1.250 ns) = 7.849 ns; Loc. = LCCOMB_X6_Y7_N4; Fanout = 11; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[2]~head_lut'
-        Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-        Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-        Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-        Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-        Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-    Info: 6: + IC(0.000 ns) + CELL(1.925 ns) = 9.774 ns; Loc. = LCCOMB_X6_Y7_N0; Fanout = 7; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[3]~head_lut'
-        Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-        Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-        Info: Loc. = LCCOMB_X7_Y7_N8; Node "updown_counter_noclock:inst|Add0~96"
-        Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-        Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-        Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: Loc. = LCCOMB_X6_Y7_N0; Node "updown_counter_noclock:inst|nIn[3]~head_lut"
-    Info: 7: + IC(0.907 ns) + CELL(0.517 ns) = 11.198 ns; Loc. = LCCOMB_X6_Y9_N20; Fanout = 1; COMB Node = 'sevenseg:inst1|lpm_divide:Div0|lpm_divide_tcm:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15'
-    Info: 8: + IC(0.000 ns) + CELL(0.458 ns) = 11.656 ns; Loc. = LCCOMB_X6_Y9_N22; Fanout = 4; COMB Node = 'sevenseg:inst1|lpm_divide:Div0|lpm_divide_tcm:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[4]~16'
-    Info: 9: + IC(2.480 ns) + CELL(2.860 ns) = 16.996 ns; Loc. = PIN_E1; Fanout = 0; PIN Node = 'ssOut2[0]'
-    Info: Total cell delay = 11.990 ns ( 70.55 % )
-    Info: Total interconnect delay = 5.006 ns ( 29.45 % )
-Info: th for register "sevenseg:inst1|ones[2]" (data pin = "up", clock pin = "down") is 10.553 ns
-    Info: + Longest clock path from clock "down" to destination register is 15.988 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.874 ns) = 0.874 ns; Loc. = PIN_T21; Fanout = 4; CLK Node = 'down'
-        Info: 2: + IC(2.203 ns) + CELL(0.879 ns) = 3.956 ns; Loc. = LCFF_X7_Y7_N19; Fanout = 1; REG Node = 'updown_counter_noclock:inst|nIn[0]~_emulated'
-        Info: 3: + IC(0.365 ns) + CELL(0.521 ns) = 4.842 ns; Loc. = LCCOMB_X7_Y7_N22; Fanout = 2; COMB Node = 'updown_counter_noclock:inst|nIn[0]~tail_lut'
-        Info: 4: + IC(0.000 ns) + CELL(0.478 ns) = 5.320 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 5: + IC(0.000 ns) + CELL(1.544 ns) = 6.864 ns; Loc. = LCCOMB_X7_Y7_N10; Fanout = 14; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[1]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 6: + IC(0.000 ns) + CELL(1.250 ns) = 8.114 ns; Loc. = LCCOMB_X6_Y7_N4; Fanout = 11; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[2]~head_lut'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 7: + IC(0.000 ns) + CELL(1.925 ns) = 10.039 ns; Loc. = LCCOMB_X6_Y7_N0; Fanout = 7; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[3]~head_lut'
-            Info: Loc. = LCCOMB_X6_Y7_N4; Node "updown_counter_noclock:inst|nIn[2]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N24; Node "updown_counter_noclock:inst|Add0~97"
-            Info: Loc. = LCCOMB_X7_Y7_N8; Node "updown_counter_noclock:inst|Add0~96"
-            Info: Loc. = LCCOMB_X7_Y7_N10; Node "updown_counter_noclock:inst|nIn[1]~head_lut"
-            Info: Loc. = LCCOMB_X7_Y7_N16; Node "updown_counter_noclock:inst|Add1~73"
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-            Info: Loc. = LCCOMB_X6_Y7_N0; Node "updown_counter_noclock:inst|nIn[3]~head_lut"
-        Info: 8: + IC(0.324 ns) + CELL(0.495 ns) = 10.858 ns; Loc. = LCCOMB_X6_Y7_N12; Fanout = 1; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15'
-        Info: 9: + IC(0.000 ns) + CELL(0.458 ns) = 11.316 ns; Loc. = LCCOMB_X6_Y7_N14; Fanout = 4; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[4]~16'
-        Info: 10: + IC(0.916 ns) + CELL(0.513 ns) = 12.745 ns; Loc. = LCCOMB_X6_Y9_N28; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux15~69'
-        Info: 11: + IC(1.528 ns) + CELL(0.000 ns) = 14.273 ns; Loc. = CLKCTRL_G3; Fanout = 7; COMB Node = 'sevenseg:inst1|Mux15~69clkctrl'
-        Info: 12: + IC(1.396 ns) + CELL(0.319 ns) = 15.988 ns; Loc. = LCCOMB_X5_Y7_N22; Fanout = 1; REG Node = 'sevenseg:inst1|ones[2]'
-        Info: Total cell delay = 9.256 ns ( 57.89 % )
-        Info: Total interconnect delay = 6.732 ns ( 42.11 % )
-    Info: + Micro hold delay of destination is 0.000 ns
-    Info: - Shortest pin to register delay is 5.435 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_R22; Fanout = 17; CLK Node = 'up'
-        Info: 2: + IC(0.000 ns) + CELL(2.824 ns) = 3.688 ns; Loc. = LCCOMB_X7_Y7_N12; Fanout = 21; COMB LOOP Node = 'updown_counter_noclock:inst|nIn[0]~head_lut'
-            Info: Loc. = LCCOMB_X7_Y7_N12; Node "updown_counter_noclock:inst|nIn[0]~head_lut"
-        Info: 3: + IC(0.856 ns) + CELL(0.422 ns) = 4.966 ns; Loc. = LCCOMB_X5_Y7_N10; Fanout = 1; COMB Node = 'sevenseg:inst1|Mux10~41'
-        Info: 4: + IC(0.291 ns) + CELL(0.178 ns) = 5.435 ns; Loc. = LCCOMB_X5_Y7_N22; Fanout = 1; REG Node = 'sevenseg:inst1|ones[2]'
-        Info: Total cell delay = 4.288 ns ( 78.90 % )
-        Info: Total interconnect delay = 1.147 ns ( 21.10 % )
-Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 27 warnings
-    Info: Allocated 160 megabytes of memory during processing
-    Info: Processing ended: Fri Oct 25 16:43:54 2013
-    Info: Elapsed time: 00:00:00
+    Info: + Longest register to pin delay is 7.682 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X2_Y18_N14; Fanout = 7; REG Node = 'updown_counter_precount:inst3|numout[1]'
+        Info: 2: + IC(0.791 ns) + CELL(0.495 ns) = 1.286 ns; Loc. = LCCOMB_X2_Y18_N2; Fanout = 2; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[1]~11'
+        Info: 3: + IC(0.000 ns) + CELL(0.080 ns) = 1.366 ns; Loc. = LCCOMB_X2_Y18_N4; Fanout = 2; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[2]~13'
+        Info: 4: + IC(0.000 ns) + CELL(0.080 ns) = 1.446 ns; Loc. = LCCOMB_X2_Y18_N6; Fanout = 1; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[3]~15'
+        Info: 5: + IC(0.000 ns) + CELL(0.458 ns) = 1.904 ns; Loc. = LCCOMB_X2_Y18_N8; Fanout = 3; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|add_sub_3_result_int[4]~16'
+        Info: 6: + IC(0.787 ns) + CELL(0.322 ns) = 3.013 ns; Loc. = LCCOMB_X2_Y18_N26; Fanout = 7; COMB Node = 'sevenseg:inst1|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider|StageOut[13]~48'
+        Info: 7: + IC(0.604 ns) + CELL(0.319 ns) = 3.936 ns; Loc. = LCCOMB_X1_Y18_N30; Fanout = 1; COMB Node = 'sevenseg:inst1|WideOr1~23'
+        Info: 8: + IC(0.896 ns) + CELL(2.850 ns) = 7.682 ns; Loc. = PIN_F1; Fanout = 0; PIN Node = 'ssOut1[5]'
+        Info: Total cell delay = 4.604 ns ( 59.93 % )
+        Info: Total interconnect delay = 3.078 ns ( 40.07 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 9 warnings
+    Info: Allocated 158 megabytes of memory during processing
+    Info: Processing ended: Tue Oct 29 11:07:05 2013
+    Info: Elapsed time: 00:00:01
 
 

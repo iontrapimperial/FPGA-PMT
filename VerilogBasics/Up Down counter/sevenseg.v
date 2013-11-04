@@ -1,4 +1,4 @@
-module SevenSegmentDisplayDecoder(ssOut, nIn);
+module (ssOut, nIn);
   output reg [13:0] ssOut; 
 
   input [3:0] nIn;

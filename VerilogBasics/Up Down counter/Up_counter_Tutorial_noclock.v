@@ -4,7 +4,7 @@
 // Function    : Up counter
 // Coder      : Deepak
 //-----------------------------------------------------
-module up_counter_tut_noclock    (
+module up_counter_tutorial_noclock    (
 nIn     ,  // Output of the counter
 enable  ,  // enable for counter
   // clock Input
@@ -14,7 +14,6 @@ reset      // reset Input
     output reg [3:0] nIn;
 //------------Input Ports--------------
      input enable, reset;
-//------------Internal Variables--------
 
    
 //-------------Code Starts Here-------

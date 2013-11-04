@@ -1,4 +1,4 @@
-module oscillator_count(clock, on_off);
+module Frequency_Divider(clock, on_off);
 
 
 input clock;

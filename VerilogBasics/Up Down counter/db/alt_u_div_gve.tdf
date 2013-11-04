@@ -1,8 +1,8 @@
 --alt_u_div DEVICE_FAMILY="Cyclone II" LPM_PIPELINE=0 MAXIMIZE_SPEED=5 SKIP_BITS=0 WIDTH_D=4 WIDTH_N=4 WIDTH_Q=4 WIDTH_R=4 denominator numerator quotient remainder
---VERSION_BEGIN 7.2 cbx_cycloneii 2007:06:13:15:47:32:SJ cbx_lpm_abs 2006:04:25:14:52:42:SJ cbx_lpm_add_sub 2007:08:06:16:01:34:SJ cbx_lpm_divide 2007:01:30:03:58:02:SJ cbx_mgl 2007:08:03:15:48:12:SJ cbx_stratix 2007:05:02:16:27:14:SJ cbx_stratixii 2007:06:28:17:26:26:SJ cbx_util_mgl 2007:06:01:06:37:30:SJ  VERSION_END
+--VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_abs 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_divide 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ cbx_util_mgl 2013:06:12:18:03:43:SJ  VERSION_END
 
 
--- Copyright (C) 1991-2007 Altera Corporation
+-- Copyright (C) 1991-2013 Altera Corporation
 --  Your use of Altera Corporation's design tools, logic functions 
 --  and other software and tools, and its AMPP partner logic 
 --  functions, and any output files from any of the foregoing 
@@ -25,7 +25,6 @@ RETURNS ( cout, result[1..0]);
 --synthesis_resources = lut 9 
 SUBDESIGN alt_u_div_gve
 ( 
-	den_out[3..0]	:	output;
 	denominator[3..0]	:	input;
 	numerator[3..0]	:	input;
 	quotient[3..0]	:	output;
@@ -73,20 +72,19 @@ BEGIN
 	add_sub_3_cout = !add_sub_3_result_int[4];
 	add_sub_3_dataa[] = ( StageIn[14..12], NumeratorIn[12..12]);
 	add_sub_3_datab[] = DenominatorIn[18..15];
-	den_out[3..0] = DenominatorIn[18..15];
-	DenominatorIn[] = (gnd_wire # DenominatorIn_tmp[]);
+	DenominatorIn[] = DenominatorIn_tmp[];
 	DenominatorIn_tmp[] = ( DenominatorIn[19..0], ( gnd_wire, denominator[]));
 	gnd_wire = B"0";
-	nose[] = ( B"0000", (add_sub_3_cout # gnd_wire), B"0000", (add_sub_2_cout # gnd_wire), B"0000", (add_sub_1.cout # gnd_wire), B"0000", (add_sub_0.cout # gnd_wire));
-	NumeratorIn[] = (gnd_wire # NumeratorIn_tmp[]);
+	nose[] = ( B"0000", add_sub_3_cout, B"0000", add_sub_2_cout, B"0000", add_sub_1.cout, B"0000", add_sub_0.cout);
+	NumeratorIn[] = NumeratorIn_tmp[];
 	NumeratorIn_tmp[] = ( NumeratorIn[15..0], numerator[]);
 	prestg[] = ( add_sub_3_result[], GND, add_sub_2_result[], B"00", add_sub_1.result[], B"000", add_sub_0.result[]);
 	quotient[] = quotient_tmp[];
 	quotient_tmp[] = ( (! selnose[0..0]), (! selnose[5..5]), (! selnose[10..10]), (! selnose[15..15]));
 	remainder[3..0] = StageIn[19..16];
-	sel[] = ( gnd_wire, (gnd_wire # (sel[19..19] # DenominatorIn[23..23])), (gnd_wire # (sel[18..18] # DenominatorIn[22..22])), (gnd_wire # (sel[17..17] # DenominatorIn[21..21])), gnd_wire, (gnd_wire # (sel[15..15] # DenominatorIn[18..18])), (gnd_wire # (sel[14..14] # DenominatorIn[17..17])), (gnd_wire # (sel[13..13] # DenominatorIn[16..16])), gnd_wire, (gnd_wire # (sel[11..11] # DenominatorIn[13..13])), (gnd_wire # (sel[10..10] # DenominatorIn[12..12])), (gnd_wire # (sel[9..9] # DenominatorIn[11..11])), gnd_wire, (gnd_wire # (sel[7..7] # DenominatorIn[8..8])), (gnd_wire # (sel[6..6] # DenominatorIn[7..7])), (gnd_wire # (sel[5..5] # DenominatorIn[6..6])), gnd_wire, (gnd_wire # (sel[3..3] # DenominatorIn[3..3])), (gnd_wire # (sel[2..2] # DenominatorIn[2..2])), (gnd_wire # (sel[1..1] # DenominatorIn[1..1])));
-	selnose[] = ( ((gnd_wire # (! nose[19..19])) # sel[19..19]), ((gnd_wire # (! nose[18..18])) # sel[18..18]), ((gnd_wire # (! nose[17..17])) # sel[17..17]), ((gnd_wire # (! nose[16..16])) # sel[16..16]), ((gnd_wire # (! nose[15..15])) # sel[15..15]), ((gnd_wire # (! nose[14..14])) # sel[14..14]), ((gnd_wire # (! nose[13..13])) # sel[13..13]), ((gnd_wire # (! nose[12..12])) # sel[12..12]), ((gnd_wire # (! nose[11..11])) # sel[11..11]), ((gnd_wire # (! nose[10..10])) # sel[10..10]), ((gnd_wire # (! nose[9..9])) # sel[9..9]), ((gnd_wire # (! nose[8..8])) # sel[8..8]), ((gnd_wire # (! nose[7..7])) # sel[7..7]), ((gnd_wire # (! nose[6..6])) # sel[6..6]), ((gnd_wire # (! nose[5..5])) # sel[5..5]), ((gnd_wire # (! nose[4..4])) # sel[4..4]), ((gnd_wire # (! nose[3..3])) # sel[3..3]), ((gnd_wire # (! nose[2..2])) # sel[2..2]), ((gnd_wire # (! nose[1..1])) # sel[1..1]), ((gnd_wire # (! nose[0..0])) # sel[0..0]));
-	StageIn[] = (gnd_wire # StageIn_tmp[]);
+	sel[] = ( gnd_wire, (sel[19..19] # DenominatorIn[23..23]), (sel[18..18] # DenominatorIn[22..22]), (sel[17..17] # DenominatorIn[21..21]), gnd_wire, (sel[15..15] # DenominatorIn[18..18]), (sel[14..14] # DenominatorIn[17..17]), (sel[13..13] # DenominatorIn[16..16]), gnd_wire, (sel[11..11] # DenominatorIn[13..13]), (sel[10..10] # DenominatorIn[12..12]), (sel[9..9] # DenominatorIn[11..11]), gnd_wire, (sel[7..7] # DenominatorIn[8..8]), (sel[6..6] # DenominatorIn[7..7]), (sel[5..5] # DenominatorIn[6..6]), gnd_wire, (sel[3..3] # DenominatorIn[3..3]), (sel[2..2] # DenominatorIn[2..2]), (sel[1..1] # DenominatorIn[1..1]));
+	selnose[] = ( ((! nose[19..19]) # sel[19..19]), ((! nose[18..18]) # sel[18..18]), ((! nose[17..17]) # sel[17..17]), ((! nose[16..16]) # sel[16..16]), ((! nose[15..15]) # sel[15..15]), ((! nose[14..14]) # sel[14..14]), ((! nose[13..13]) # sel[13..13]), ((! nose[12..12]) # sel[12..12]), ((! nose[11..11]) # sel[11..11]), ((! nose[10..10]) # sel[10..10]), ((! nose[9..9]) # sel[9..9]), ((! nose[8..8]) # sel[8..8]), ((! nose[7..7]) # sel[7..7]), ((! nose[6..6]) # sel[6..6]), ((! nose[5..5]) # sel[5..5]), ((! nose[4..4]) # sel[4..4]), ((! nose[3..3]) # sel[3..3]), ((! nose[2..2]) # sel[2..2]), ((! nose[1..1]) # sel[1..1]), ((! nose[0..0]) # sel[0..0]));
+	StageIn[] = StageIn_tmp[];
 	StageIn_tmp[] = ( StageOut[15..0], B"0000");
 	StageOut[] = ( ((( StageIn[14..12], NumeratorIn[12..12]) & selnose[15..15]) # (prestg[15..12] & (! selnose[15..15]))), ((( StageIn[10..8], NumeratorIn[9..9]) & selnose[10..10]) # (prestg[11..8] & (! selnose[10..10]))), ((( StageIn[6..4], NumeratorIn[6..6]) & selnose[5..5]) # (prestg[7..4] & (! selnose[5..5]))), ((( StageIn[2..0], NumeratorIn[3..3]) & selnose[0..0]) # (prestg[3..0] & (! selnose[0..0]))));
 END;

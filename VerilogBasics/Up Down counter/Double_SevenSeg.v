@@ -1,4 +1,4 @@
-module sevenseg(s1, tens, ones);
+module Double_SevenSeg(s1, tens, ones);
 
 
 input wire [3:0] s1;
@@ -28,13 +28,11 @@ case (onesbcd)
 4'h7: ones = 7'b1111000;
 4'h8: ones = 7'b0000000;
 4'h9: ones = 7'b0011000;
+default: ones=7'b1110001;
 endcase
 
 
 case (tensbcd)
-
-
-
 
 4'h0: tens = 7'b1000000;
 4'h1: tens = 7'b1111001;
@@ -46,6 +44,7 @@ case (tensbcd)
 4'h7: tens = 7'b1111000;
 4'h8: tens = 7'b0000000;
 4'h9: tens = 7'b0011000;
+default: tens=7'b1110001;
 endcase
 
 end
