@@ -1,4 +1,4 @@
-module display_switch (num, switch, out1, out2);
+module switch_display (num, switch, out1, out2);
 
 input [5:0] num;
 input switch;
@@ -13,7 +13,7 @@ out1<=num;
 out2<=6'b0;
 end
 
-else 
+else if (!switch)
 begin
 out2<=num;
 out1<=6'b0;

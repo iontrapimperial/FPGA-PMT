@@ -1,22 +1,22 @@
-module slow_clock(osc, clock);
+module slow_clock(osc, clock, LED);
 
 input osc;
-output reg clock;
+output reg clock, LED;
 reg [31:0] keep;
 
 always@(posedge osc)
 begin
 
-if (keep<32'd5000000)
+if (keep==32'd4000000)
 begin
-keep<=keep+1;
-clock<=1'b0;
+clock=!clock;
+LED=!LED;
+keep=32'b0;
 end
 
 else
 begin
-clock=1'b1;
-keep=32'b0;
+keep=keep+1;
 end
 
 end
