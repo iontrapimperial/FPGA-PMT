@@ -1,6 +1,6 @@
 Fitter report for 1st_Project
-Fri Oct 25 14:45:39 2013
-Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
+Wed Oct 30 10:30:42 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -9,37 +9,43 @@ Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
   1. Legal Notice
   2. Fitter Summary
   3. Fitter Settings
-  4. Pin-Out File
-  5. Fitter Resource Usage Summary
-  6. Input Pins
-  7. Output Pins
-  8. I/O Bank Usage
-  9. All Package Pins
- 10. PLL Summary
- 11. PLL Usage
- 12. Output Pin Default Load For Reported TCO
- 13. Fitter Resource Utilization by Entity
- 14. Delay Chain Summary
- 15. Pad To Core Delay Chain Fanout
- 16. Control Signals
- 17. Global & Other Fast Signals
- 18. Non-Global High Fan-Out Signals
- 19. Interconnect Usage Summary
- 20. LAB Logic Elements
- 21. LAB-wide Signals
- 22. LAB Signals Sourced
- 23. LAB Signals Sourced Out
- 24. LAB Distinct Inputs
- 25. Fitter Device Options
- 26. Operating Settings and Conditions
- 27. Fitter Messages
+  4. Parallel Compilation
+  5. Incremental Compilation Preservation Summary
+  6. Incremental Compilation Partition Settings
+  7. Incremental Compilation Placement Preservation
+  8. Pin-Out File
+  9. Fitter Resource Usage Summary
+ 10. Fitter Partition Statistics
+ 11. Input Pins
+ 12. Output Pins
+ 13. I/O Bank Usage
+ 14. All Package Pins
+ 15. PLL Summary
+ 16. PLL Usage
+ 17. Output Pin Default Load For Reported TCO
+ 18. Fitter Resource Utilization by Entity
+ 19. Delay Chain Summary
+ 20. Pad To Core Delay Chain Fanout
+ 21. Control Signals
+ 22. Global & Other Fast Signals
+ 23. Non-Global High Fan-Out Signals
+ 24. Other Routing Usage Summary
+ 25. LAB Logic Elements
+ 26. LAB-wide Signals
+ 27. LAB Signals Sourced
+ 28. LAB Signals Sourced Out
+ 29. LAB Distinct Inputs
+ 30. Fitter Device Options
+ 31. Operating Settings and Conditions
+ 32. Fitter Messages
+ 33. Fitter Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2007 Altera Corporation
+Copyright (C) 1991-2013 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -55,73 +61,120 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Fitter Summary                                                               ;
-+------------------------------------+-----------------------------------------+
-; Fitter Status                      ; Successful - Fri Oct 25 14:45:39 2013   ;
-; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
-; Revision Name                      ; 1st_Project                             ;
-; Top-level Entity Name              ; 1st_Project                             ;
-; Family                             ; Cyclone II                              ;
-; Device                             ; EP2C20F484C7                            ;
-; Timing Models                      ; Final                                   ;
-; Total logic elements               ; 29 / 18,752 ( < 1 % )                   ;
-;     Total combinational functions  ; 29 / 18,752 ( < 1 % )                   ;
-;     Dedicated logic registers      ; 25 / 18,752 ( < 1 % )                   ;
-; Total registers                    ; 25                                      ;
-; Total pins                         ; 6 / 315 ( 2 % )                         ;
-; Total virtual pins                 ; 0                                       ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                     ;
-; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                          ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                          ;
-+------------------------------------+-----------------------------------------+
++--------------------------------------------------------------------------------------+
+; Fitter Summary                                                                       ;
++------------------------------------+-------------------------------------------------+
+; Fitter Status                      ; Successful - Wed Oct 30 10:30:42 2013           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; 1st_Project                                     ;
+; Top-level Entity Name              ; 1st_Project                                     ;
+; Family                             ; Cyclone II                                      ;
+; Device                             ; EP2C20F484C7                                    ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 29 / 18,752 ( < 1 % )                           ;
+;     Total combinational functions  ; 29 / 18,752 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 25 / 18,752 ( < 1 % )                           ;
+; Total registers                    ; 25                                              ;
+; Total pins                         ; 6 / 315 ( 2 % )                                 ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                  ;
++------------------------------------+-------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Settings                                                                                                                         ;
-+-----------------------------------------------------------------------+--------------------------------+--------------------------------+
-; Option                                                                ; Setting                        ; Default Value                  ;
-+-----------------------------------------------------------------------+--------------------------------+--------------------------------+
-; Device                                                                ; EP2C20F484C7                   ;                                ;
-; Fit Attempts to Skip                                                  ; 0                              ; 0.0                            ;
-; Use smart compilation                                                 ; Off                            ; Off                            ;
-; Maximum processors allowed for parallel compilation                   ; 1                              ; 1                              ;
-; Use TimeQuest Timing Analyzer                                         ; Off                            ; Off                            ;
-; Router Timing Optimization Level                                      ; Normal                         ; Normal                         ;
-; Placement Effort Multiplier                                           ; 1.0                            ; 1.0                            ;
-; Router Effort Multiplier                                              ; 1.0                            ; 1.0                            ;
-; Always Enable Input Buffers                                           ; Off                            ; Off                            ;
-; Optimize Hold Timing                                                  ; IO Paths and Minimum TPD Paths ; IO Paths and Minimum TPD Paths ;
-; Optimize Fast-Corner Timing                                           ; Off                            ; Off                            ;
-; Equivalent RAM and MLAB Paused Read Capabilities                      ; Care                           ; Care                           ;
-; PowerPlay Power Optimization                                          ; Normal compilation             ; Normal compilation             ;
-; Optimize Timing                                                       ; Normal compilation             ; Normal compilation             ;
-; Optimize IOC Register Placement for Timing                            ; On                             ; On                             ;
-; Limit to One Fitting Attempt                                          ; Off                            ; Off                            ;
-; Final Placement Optimizations                                         ; Automatically                  ; Automatically                  ;
-; Fitter Aggressive Routability Optimizations                           ; Automatically                  ; Automatically                  ;
-; Fitter Initial Placement Seed                                         ; 1                              ; 1                              ;
-; PCI I/O                                                               ; Off                            ; Off                            ;
-; Weak Pull-Up Resistor                                                 ; Off                            ; Off                            ;
-; Enable Bus-Hold Circuitry                                             ; Off                            ; Off                            ;
-; Auto Global Memory Control Signals                                    ; Off                            ; Off                            ;
-; Auto Packed Registers -- Stratix II/II GX/III Cyclone II/III Arria GX ; Auto                           ; Auto                           ;
-; Auto Delay Chains                                                     ; On                             ; On                             ;
-; Auto Merge PLLs                                                       ; On                             ; On                             ;
-; Ignore PLL Mode When Merging PLLs                                     ; Off                            ; Off                            ;
-; Perform Physical Synthesis for Combinational Logic for Fitting        ; Off                            ; Off                            ;
-; Perform Physical Synthesis for Combinational Logic for Performance    ; Off                            ; Off                            ;
-; Perform Register Duplication for Performance                          ; Off                            ; Off                            ;
-; Perform Logic to Memory Mapping for Fitting                           ; Off                            ; Off                            ;
-; Perform Register Retiming for Performance                             ; Off                            ; Off                            ;
-; Perform Asynchronous Signal Pipelining                                ; Off                            ; Off                            ;
-; Fitter Effort                                                         ; Auto Fit                       ; Auto Fit                       ;
-; Physical Synthesis Effort Level                                       ; Normal                         ; Normal                         ;
-; Auto Global Clock                                                     ; On                             ; On                             ;
-; Auto Global Register Control Signals                                  ; On                             ; On                             ;
-; Stop After Congestion Map Generation                                  ; Off                            ; Off                            ;
-; Save Intermediate Fitting Results                                     ; Off                            ; Off                            ;
-+-----------------------------------------------------------------------+--------------------------------+--------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                              ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Option                                                                     ; Setting                        ; Default Value                  ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Device                                                                     ; EP2C20F484C7                   ;                                ;
+; Fit Attempts to Skip                                                       ; 0                              ; 0.0                            ;
+; Use smart compilation                                                      ; Off                            ; Off                            ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                             ; On                             ;
+; Enable compact report table                                                ; Off                            ; Off                            ;
+; Auto Merge PLLs                                                            ; On                             ; On                             ;
+; Ignore PLL Mode When Merging PLLs                                          ; Off                            ; Off                            ;
+; Router Timing Optimization Level                                           ; Normal                         ; Normal                         ;
+; Placement Effort Multiplier                                                ; 1.0                            ; 1.0                            ;
+; Router Effort Multiplier                                                   ; 1.0                            ; 1.0                            ;
+; Always Enable Input Buffers                                                ; Off                            ; Off                            ;
+; Optimize Hold Timing                                                       ; IO Paths and Minimum TPD Paths ; IO Paths and Minimum TPD Paths ;
+; Optimize Multi-Corner Timing                                               ; On                             ; On                             ;
+; PowerPlay Power Optimization                                               ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing                                                            ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing for ECOs                                                   ; Off                            ; Off                            ;
+; Regenerate full fit report during ECO compiles                             ; Off                            ; Off                            ;
+; Optimize IOC Register Placement for Timing                                 ; Normal                         ; Normal                         ;
+; Limit to One Fitting Attempt                                               ; Off                            ; Off                            ;
+; Final Placement Optimizations                                              ; Automatically                  ; Automatically                  ;
+; Fitter Aggressive Routability Optimizations                                ; Automatically                  ; Automatically                  ;
+; Fitter Initial Placement Seed                                              ; 1                              ; 1                              ;
+; PCI I/O                                                                    ; Off                            ; Off                            ;
+; Weak Pull-Up Resistor                                                      ; Off                            ; Off                            ;
+; Enable Bus-Hold Circuitry                                                  ; Off                            ; Off                            ;
+; Auto Global Memory Control Signals                                         ; Off                            ; Off                            ;
+; Auto Packed Registers                                                      ; Auto                           ; Auto                           ;
+; Auto Delay Chains                                                          ; On                             ; On                             ;
+; Auto Delay Chains for High Fanout Input Pins                               ; Off                            ; Off                            ;
+; Perform Physical Synthesis for Combinational Logic for Fitting             ; Off                            ; Off                            ;
+; Perform Physical Synthesis for Combinational Logic for Performance         ; Off                            ; Off                            ;
+; Perform Register Duplication for Performance                               ; Off                            ; Off                            ;
+; Perform Logic to Memory Mapping for Fitting                                ; Off                            ; Off                            ;
+; Perform Register Retiming for Performance                                  ; Off                            ; Off                            ;
+; Perform Asynchronous Signal Pipelining                                     ; Off                            ; Off                            ;
+; Fitter Effort                                                              ; Auto Fit                       ; Auto Fit                       ;
+; Physical Synthesis Effort Level                                            ; Normal                         ; Normal                         ;
+; Auto Global Clock                                                          ; On                             ; On                             ;
+; Auto Global Register Control Signals                                       ; On                             ; On                             ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off                            ; Off                            ;
++----------------------------------------------------------------------------+--------------------------------+--------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------+
+; Incremental Compilation Preservation Summary ;
++---------------------+------------------------+
+; Type                ; Value                  ;
++---------------------+------------------------+
+; Placement (by node) ;                        ;
+;     -- Requested    ; 0 / 66 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 66 ( 0.00 % )      ;
+;                     ;                        ;
+; Routing (by net)    ;                        ;
+;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
+;     -- Achieved     ; 0 / 0 ( 0.00 % )       ;
++---------------------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Incremental Compilation Partition Settings                                                                                                                                             ;
++--------------------------------+----------------+-------------------+-------------------------+------------------------+------------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Preservation Level Used ; Netlist Type Requested ; Preservation Level Requested ; Contents                       ;
++--------------------------------+----------------+-------------------+-------------------------+------------------------+------------------------------+--------------------------------+
+; Top                            ; User-created   ; Source File       ; N/A                     ; Source File            ; N/A                          ;                                ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; N/A                     ; Source File            ; N/A                          ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+-------------------------+------------------------+------------------------------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Incremental Compilation Placement Preservation                                                             ;
++--------------------------------+---------+-------------------+-------------------------+-------------------+
+; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
++--------------------------------+---------+-------------------+-------------------------+-------------------+
+; Top                            ; 61      ; 0                 ; N/A                     ; Source File       ;
+; hard_block:auto_generated_inst ; 5       ; 0                 ; N/A                     ; Source File       ;
++--------------------------------+---------+-------------------+-------------------------+-------------------+
 
 
 +--------------+
@@ -130,53 +183,124 @@ applicable agreement for further details.
 The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/1st Pro-two speed counter/1st_Project.pin.
 
 
-+-----------------------------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                                                 ;
-+---------------------------------------------+-------------------------------------------------+
-; Resource                                    ; Usage                                           ;
-+---------------------------------------------+-------------------------------------------------+
-; Total logic elements                        ; 29 / 18,752 ( < 1 % )                           ;
-;     -- Combinational with no register       ; 4                                               ;
-;     -- Register only                        ; 0                                               ;
-;     -- Combinational with a register        ; 25                                              ;
-;                                             ;                                                 ;
-; Logic element usage by number of LUT inputs ;                                                 ;
-;     -- 4 input functions                    ; 0                                               ;
-;     -- 3 input functions                    ; 5                                               ;
-;     -- <=2 input functions                  ; 24                                              ;
-;     -- Register only                        ; 0                                               ;
-;                                             ;                                                 ;
-; Logic elements by mode                      ;                                                 ;
-;     -- normal mode                          ; 6                                               ;
-;     -- arithmetic mode                      ; 23                                              ;
-;                                             ;                                                 ;
-; Total registers*                            ; 25 / 19,649 ( < 1 % )                           ;
-;     -- Dedicated logic registers            ; 25 / 18,752 ( < 1 % )                           ;
-;     -- I/O registers                        ; 0 / 897 ( 0 % )                                 ;
-;                                             ;                                                 ;
-; Total LABs:  partially or completely used   ; 2 / 1,172 ( < 1 % )                             ;
-; User inserted logic elements                ; 0                                               ;
-; Virtual pins                                ; 0                                               ;
-; I/O pins                                    ; 6 / 315 ( 2 % )                                 ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )                                  ;
-; Global signals                              ; 1                                               ;
-; M4Ks                                        ; 0 / 52 ( 0 % )                                  ;
-; Total memory bits                           ; 0 / 239,616 ( 0 % )                             ;
-; Total RAM block bits                        ; 0 / 239,616 ( 0 % )                             ;
-; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )                                  ;
-; PLLs                                        ; 1 / 4 ( 25 % )                                  ;
-; Global clocks                               ; 1 / 16 ( 6 % )                                  ;
-; Average interconnect usage                  ; 0%                                              ;
-; Peak interconnect usage                     ; 0%                                              ;
-; Maximum fan-out node                        ; PLL:inst3|altpll:altpll_component|_clk0~clkctrl ;
-; Maximum fan-out                             ; 25                                              ;
-; Highest non-global fan-out signal           ; switch                                          ;
-; Highest non-global fan-out                  ; 4                                               ;
-; Total fan-out                               ; 117                                             ;
-; Average fan-out                             ; 1.80                                            ;
-+---------------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                       ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Total logic elements                        ; 29 / 18,752 ( < 1 % ) ;
+;     -- Combinational with no register       ; 4                     ;
+;     -- Register only                        ; 0                     ;
+;     -- Combinational with a register        ; 25                    ;
+;                                             ;                       ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 0                     ;
+;     -- 3 input functions                    ; 5                     ;
+;     -- <=2 input functions                  ; 24                    ;
+;     -- Register only                        ; 0                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 6                     ;
+;     -- arithmetic mode                      ; 23                    ;
+;                                             ;                       ;
+; Total registers*                            ; 25 / 19,649 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 25 / 18,752 ( < 1 % ) ;
+;     -- I/O registers                        ; 0 / 897 ( 0 % )       ;
+;                                             ;                       ;
+; Total LABs:  partially or completely used   ; 2 / 1,172 ( < 1 % )   ;
+; Virtual pins                                ; 0                     ;
+; I/O pins                                    ; 6 / 315 ( 2 % )       ;
+;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
+;                                             ;                       ;
+; Global signals                              ; 1                     ;
+; M4Ks                                        ; 0 / 52 ( 0 % )        ;
+; Total block memory bits                     ; 0 / 239,616 ( 0 % )   ;
+; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )   ;
+; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )        ;
+; PLLs                                        ; 1 / 4 ( 25 % )        ;
+; Global clocks                               ; 1 / 16 ( 6 % )        ;
+; JTAGs                                       ; 0 / 1 ( 0 % )         ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
+; Maximum fan-out                             ; 25                    ;
+; Highest non-global fan-out                  ; 4                     ;
+; Total fan-out                               ; 117                   ;
+; Average fan-out                             ; 1.80                  ;
++---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
+
+
++-----------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                         ;
++---------------------------------------------+----------------------+--------------------------------+
+; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
++---------------------------------------------+----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                  ; Low                            ;
+;                                             ;                      ;                                ;
+; Total logic elements                        ; 29 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 4                    ; 0                              ;
+;     -- Register only                        ; 0                    ; 0                              ;
+;     -- Combinational with a register        ; 25                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic element usage by number of LUT inputs ;                      ;                                ;
+;     -- 4 input functions                    ; 0                    ; 0                              ;
+;     -- 3 input functions                    ; 5                    ; 0                              ;
+;     -- <=2 input functions                  ; 24                   ; 0                              ;
+;     -- Register only                        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic elements by mode                      ;                      ;                                ;
+;     -- normal mode                          ; 6                    ; 0                              ;
+;     -- arithmetic mode                      ; 23                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Total registers                             ; 25                   ; 0                              ;
+;     -- Dedicated logic registers            ; 25 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
+;                                             ;                      ;                                ;
+; Total LABs:  partially or completely used   ; 2 / 1172 ( < 1 % )   ; 0 / 1172 ( 0 % )               ;
+;                                             ;                      ;                                ;
+; Virtual pins                                ; 0                    ; 0                              ;
+; I/O pins                                    ; 6                    ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )       ; 0 / 52 ( 0 % )                 ;
+; Total memory bits                           ; 0                    ; 0                              ;
+; Total RAM block bits                        ; 0                    ; 0                              ;
+; PLL                                         ; 0 / 4 ( 0 % )        ; 1 / 4 ( 25 % )                 ;
+; Clock control block                         ; 0 / 20 ( 0 % )       ; 1 / 20 ( 5 % )                 ;
+;                                             ;                      ;                                ;
+; Connections                                 ;                      ;                                ;
+;     -- Input Connections                    ; 25                   ; 1                              ;
+;     -- Registered Input Connections         ; 25                   ; 0                              ;
+;     -- Output Connections                   ; 1                    ; 25                             ;
+;     -- Registered Output Connections        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Internal Connections                        ;                      ;                                ;
+;     -- Total Connections                    ; 116                  ; 27                             ;
+;     -- Registered Connections               ; 59                   ; 0                              ;
+;                                             ;                      ;                                ;
+; External Connections                        ;                      ;                                ;
+;     -- Top                                  ; 0                    ; 26                             ;
+;     -- hard_block:auto_generated_inst       ; 26                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Partition Interface                         ;                      ;                                ;
+;     -- Input Ports                          ; 2                    ; 1                              ;
+;     -- Output Ports                         ; 4                    ; 1                              ;
+;     -- Bidir Ports                          ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Registered Ports                            ;                      ;                                ;
+;     -- Registered Input Ports               ; 0                    ; 0                              ;
+;     -- Registered Output Ports              ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Port Connectivity                           ;                      ;                                ;
+;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
+;     -- Input Ports with no Source           ; 0                    ; 0                              ;
+;     -- Output Ports with no Source          ; 0                    ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
++---------------------------------------------+----------------------+--------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -189,16 +313,16 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                             ;
-+--------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+
-; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ;
-+--------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+
-; LED[0] ; R20   ; 6        ; 50           ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ;
-; LED[1] ; R19   ; 6        ; 50           ; 8            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ;
-; LED[2] ; U19   ; 6        ; 50           ; 4            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ;
-; LED[3] ; Y19   ; 6        ; 50           ; 2            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ;
-+--------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                          ;
++--------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
++--------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; LED[0] ; R20   ; 6        ; 50           ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LED[1] ; R19   ; 6        ; 50           ; 8            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LED[2] ; U19   ; 6        ; 50           ; 4            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; LED[3] ; Y19   ; 6        ; 50           ; 2            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
++--------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
 +-----------------------------------------------------------+
@@ -316,16 +440,16 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; C4       ; 0          ; 2        ; ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; C5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C6       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C7       ; 315        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C7       ; 315        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C9       ; 310        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C10      ; 296        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C10      ; 296        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; C12      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C13      ; 275        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C13      ; 275        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C14      ; 260        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C15      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C16      ; 254        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C16      ; 254        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C17      ; 245        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C18      ; 244        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C19      ; 238        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -379,7 +503,7 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; F1       ; 22         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 23         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F3       ; 13         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F4       ; 10         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F4       ; 10         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; F5       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F6       ;            ;          ; GND_PLL3                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F7       ;            ;          ; GNDA_PLL3                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -417,12 +541,12 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; G17      ; 231        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G18      ; 232        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G19      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; G20      ; 233        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G20      ; 233        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; G21      ; 221        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G22      ; 222        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H1       ; 24         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H2       ; 25         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; H3       ; 27         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H3       ; 27         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; H4       ; 17         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H5       ; 18         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H6       ; 19         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -483,7 +607,7 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; K17      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K18      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; K19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; K20      ; 215        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K20      ; 215        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; K21      ; 209        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K22      ; 210        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L1       ; 38         ; 2        ; osc_clock                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -554,7 +678,7 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; N22      ; 200        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P1       ; 47         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P2       ; 48         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P3       ; 50         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P3       ; 50         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P4       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P5       ; 55         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P6       ; 56         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -620,7 +744,7 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; T22      ; 189        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U1       ; 61         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U2       ; 62         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U3       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U3       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; U4       ; 80         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U5       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; U6       ;            ;          ; VCCD_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -637,7 +761,7 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; U17      ;            ;          ; VCCD_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U18      ; 170        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U19      ; 172        ; 6        ; LED[2]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; U20      ; 176        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U20      ; 176        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; U21      ; 182        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U22      ; 183        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V1       ; 65         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -690,16 +814,16 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; Y4       ; 78         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y5       ; 86         ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y6       ; 87         ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; Y7       ; 93         ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; Y7       ; 93         ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; Y8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y9       ; 104        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; Y10      ; 112        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; Y10      ; 112        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; Y11      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; Y12      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; Y13      ; 133        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; Y13      ; 133        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; Y14      ; 148        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y15      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; Y16      ; 154        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; Y16      ; 154        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; Y17      ; 159        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y18      ; 165        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y19      ; 168        ; 6        ; LED[3]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -715,15 +839,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------+---------------------------------------+
 ; Name                             ; PLL:inst3|altpll:altpll_component|pll ;
 +----------------------------------+---------------------------------------+
+; SDC pin name                     ; inst3|altpll_component|pll            ;
 ; PLL mode                         ; Normal                                ;
 ; Compensate clock                 ; clock0                                ;
+; Compensated input/output pins    ; --                                    ;
 ; Self reset on gated loss of lock ; Off                                   ;
 ; Gate lock counter                ; --                                    ;
 ; Input frequency 0                ; 50.0 MHz                              ;
 ; Input frequency 1                ; --                                    ;
 ; Nominal PFD frequency            ; 50.0 MHz                              ;
 ; Nominal VCO frequency            ; 300.0 MHz                             ;
-; VCO post scale                   ; 2                                     ;
+; VCO post scale K counter         ; 2                                     ;
 ; VCO multiply                     ; --                                    ;
 ; VCO divide                       ; --                                    ;
 ; Freq min lock                    ; 50.01 MHz                             ;
@@ -732,7 +858,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; M Initial                        ; 1                                     ;
 ; M value                          ; 6                                     ;
 ; N value                          ; 1                                     ;
-; Preserve counter order           ; Off                                   ;
+; Preserve PLL counter order       ; Off                                   ;
 ; PLL location                     ; PLL_1                                 ;
 ; Inclk0 signal                    ; osc_clock                             ;
 ; Inclk1 signal                    ; --                                    ;
@@ -741,13 +867,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------+---------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; PLL Usage                                                                                                                                                                    ;
-+-----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+
-; Name                                    ; Output Clock ; Mult ; Div ; Output Frequency ; Phase Shift ; Duty Cycle ; Counter ; Counter Value ; High / Low ; Initial ; VCO Tap ;
-+-----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+
-; PLL:inst3|altpll:altpll_component|_clk0 ; clock0       ; 1    ; 5   ; 10.0 MHz         ; 0 (0 ps)    ; 50/50      ; C0      ; 30            ; 15/15 Even ; 1       ; 0       ;
-+-----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; PLL Usage                                                                                                                                                                                                        ;
++-----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+-----------------------------------+
+; Name                                    ; Output Clock ; Mult ; Div ; Output Frequency ; Phase Shift ; Duty Cycle ; Counter ; Counter Value ; High / Low ; Initial ; VCO Tap ; SDC Pin Name                      ;
++-----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+-----------------------------------+
+; PLL:inst3|altpll:altpll_component|_clk0 ; clock0       ; 1    ; 5   ; 10.0 MHz         ; 0 (0 ps)    ; 50/50      ; C0      ; 30            ; 15/15 Even ; 1       ; 0       ; inst3|altpll_component|pll|clk[0] ;
++-----------------------------------------+--------------+------+-----+------------------+-------------+------------+---------+---------------+------------+---------+---------+-----------------------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -812,23 +938,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LED[2]    ; Output   ; --            ; --            ; --                    ; --  ;
 ; LED[1]    ; Output   ; --            ; --            ; --                    ; --  ;
 ; LED[0]    ; Output   ; --            ; --            ; --                    ; --  ;
-; switch    ; Input    ; 6             ; 6             ; --                    ; --  ;
+; switch    ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; osc_clock ; Input    ; --            ; --            ; --                    ; --  ;
 +-----------+----------+---------------+---------------+-----------------------+-----+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                                              ;
-+-----------------------------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                                           ; Pad To Core Index ; Setting ;
-+-----------------------------------------------------------------------------------------------+-------------------+---------+
-; switch                                                                                        ;                   ;         ;
-;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[3]~48 ; 1                 ; 6       ;
-;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[2]~49 ; 1                 ; 6       ;
-;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[1]~50 ; 1                 ; 6       ;
-;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[0]~51 ; 1                 ; 6       ;
-; osc_clock                                                                                     ;                   ;         ;
-+-----------------------------------------------------------------------------------------------+-------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                             ;
++----------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                          ; Pad To Core Index ; Setting ;
++----------------------------------------------------------------------------------------------+-------------------+---------+
+; switch                                                                                       ;                   ;         ;
+;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[3]~0 ; 1                 ; 6       ;
+;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[2]~1 ; 1                 ; 6       ;
+;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[1]~2 ; 1                 ; 6       ;
+;      - counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[0]~3 ; 1                 ; 6       ;
+; osc_clock                                                                                    ;                   ;         ;
++----------------------------------------------------------------------------------------------+-------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -850,78 +976,107 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                                  ;
-+----------------------------------------------------------------------------------------+---------+
-; Name                                                                                   ; Fan-Out ;
-+----------------------------------------------------------------------------------------+---------+
-; switch                                                                                 ; 4       ;
-; simple_counter:inst4|counter_out[21]                                                   ; 3       ;
-; simple_counter:inst4|counter_out[0]                                                    ; 2       ;
-; simple_counter:inst4|counter_out[18]                                                   ; 2       ;
-; simple_counter:inst4|counter_out[22]                                                   ; 2       ;
-; simple_counter:inst4|counter_out[19]                                                   ; 2       ;
-; simple_counter:inst4|counter_out[23]                                                   ; 2       ;
-; simple_counter:inst4|counter_out[20]                                                   ; 2       ;
-; simple_counter:inst4|counter_out[24]                                                   ; 2       ;
-; osc_clock                                                                              ; 1       ;
-; simple_counter:inst4|counter_out[0]~229                                                ; 1       ;
-; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[0]~51 ; 1       ;
-; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[1]~50 ; 1       ;
-; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[2]~49 ; 1       ;
-; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[3]~48 ; 1       ;
-; simple_counter:inst4|counter_out[24]~227                                               ; 1       ;
-; simple_counter:inst4|counter_out[23]~226                                               ; 1       ;
-; simple_counter:inst4|counter_out[23]~225                                               ; 1       ;
-; simple_counter:inst4|counter_out[22]~224                                               ; 1       ;
-; simple_counter:inst4|counter_out[22]~223                                               ; 1       ;
-; simple_counter:inst4|counter_out[21]~222                                               ; 1       ;
-; simple_counter:inst4|counter_out[21]~221                                               ; 1       ;
-; simple_counter:inst4|counter_out[20]~220                                               ; 1       ;
-; simple_counter:inst4|counter_out[20]~219                                               ; 1       ;
-; simple_counter:inst4|counter_out[19]~218                                               ; 1       ;
-; simple_counter:inst4|counter_out[19]~217                                               ; 1       ;
-; simple_counter:inst4|counter_out[18]~216                                               ; 1       ;
-; simple_counter:inst4|counter_out[18]~215                                               ; 1       ;
-; simple_counter:inst4|counter_out[17]~214                                               ; 1       ;
-; simple_counter:inst4|counter_out[17]~213                                               ; 1       ;
-; simple_counter:inst4|counter_out[16]~212                                               ; 1       ;
-; simple_counter:inst4|counter_out[16]~211                                               ; 1       ;
-; simple_counter:inst4|counter_out[15]~210                                               ; 1       ;
-; simple_counter:inst4|counter_out[15]~209                                               ; 1       ;
-; simple_counter:inst4|counter_out[14]~208                                               ; 1       ;
-; simple_counter:inst4|counter_out[14]~207                                               ; 1       ;
-; simple_counter:inst4|counter_out[13]~206                                               ; 1       ;
-; simple_counter:inst4|counter_out[13]~205                                               ; 1       ;
-; simple_counter:inst4|counter_out[12]~204                                               ; 1       ;
-; simple_counter:inst4|counter_out[12]~203                                               ; 1       ;
-; simple_counter:inst4|counter_out[11]~202                                               ; 1       ;
-; simple_counter:inst4|counter_out[11]~201                                               ; 1       ;
-; simple_counter:inst4|counter_out[10]~200                                               ; 1       ;
-; simple_counter:inst4|counter_out[10]~199                                               ; 1       ;
-; simple_counter:inst4|counter_out[9]~198                                                ; 1       ;
-; simple_counter:inst4|counter_out[9]~197                                                ; 1       ;
-; simple_counter:inst4|counter_out[8]~196                                                ; 1       ;
-; simple_counter:inst4|counter_out[8]~195                                                ; 1       ;
-; simple_counter:inst4|counter_out[7]~194                                                ; 1       ;
-; simple_counter:inst4|counter_out[7]~193                                                ; 1       ;
-+----------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                 ;
++---------------------------------------------------------------------------------------+---------+
+; Name                                                                                  ; Fan-Out ;
++---------------------------------------------------------------------------------------+---------+
+; switch                                                                                ; 4       ;
+; simple_counter:inst4|counter_out[21]                                                  ; 3       ;
+; simple_counter:inst4|counter_out[0]                                                   ; 2       ;
+; simple_counter:inst4|counter_out[18]                                                  ; 2       ;
+; simple_counter:inst4|counter_out[22]                                                  ; 2       ;
+; simple_counter:inst4|counter_out[19]                                                  ; 2       ;
+; simple_counter:inst4|counter_out[23]                                                  ; 2       ;
+; simple_counter:inst4|counter_out[20]                                                  ; 2       ;
+; simple_counter:inst4|counter_out[24]                                                  ; 2       ;
+; osc_clock                                                                             ; 1       ;
+; simple_counter:inst4|counter_out[0]~72                                                ; 1       ;
+; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[0]~3 ; 1       ;
+; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[1]~2 ; 1       ;
+; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[2]~1 ; 1       ;
+; counterbusmux:inst2|lpm_mux:lpm_mux_component|mux_omc:auto_generated|result_node[3]~0 ; 1       ;
+; simple_counter:inst4|counter_out[24]~70                                               ; 1       ;
+; simple_counter:inst4|counter_out[23]~69                                               ; 1       ;
+; simple_counter:inst4|counter_out[23]~68                                               ; 1       ;
+; simple_counter:inst4|counter_out[22]~67                                               ; 1       ;
+; simple_counter:inst4|counter_out[22]~66                                               ; 1       ;
+; simple_counter:inst4|counter_out[21]~65                                               ; 1       ;
+; simple_counter:inst4|counter_out[21]~64                                               ; 1       ;
+; simple_counter:inst4|counter_out[20]~63                                               ; 1       ;
+; simple_counter:inst4|counter_out[20]~62                                               ; 1       ;
+; simple_counter:inst4|counter_out[19]~61                                               ; 1       ;
+; simple_counter:inst4|counter_out[19]~60                                               ; 1       ;
+; simple_counter:inst4|counter_out[18]~59                                               ; 1       ;
+; simple_counter:inst4|counter_out[18]~58                                               ; 1       ;
+; simple_counter:inst4|counter_out[17]~57                                               ; 1       ;
+; simple_counter:inst4|counter_out[17]~56                                               ; 1       ;
+; simple_counter:inst4|counter_out[16]~55                                               ; 1       ;
+; simple_counter:inst4|counter_out[16]~54                                               ; 1       ;
+; simple_counter:inst4|counter_out[15]~53                                               ; 1       ;
+; simple_counter:inst4|counter_out[15]~52                                               ; 1       ;
+; simple_counter:inst4|counter_out[14]~51                                               ; 1       ;
+; simple_counter:inst4|counter_out[14]~50                                               ; 1       ;
+; simple_counter:inst4|counter_out[13]~49                                               ; 1       ;
+; simple_counter:inst4|counter_out[13]~48                                               ; 1       ;
+; simple_counter:inst4|counter_out[12]~47                                               ; 1       ;
+; simple_counter:inst4|counter_out[12]~46                                               ; 1       ;
+; simple_counter:inst4|counter_out[11]~45                                               ; 1       ;
+; simple_counter:inst4|counter_out[11]~44                                               ; 1       ;
+; simple_counter:inst4|counter_out[10]~43                                               ; 1       ;
+; simple_counter:inst4|counter_out[10]~42                                               ; 1       ;
+; simple_counter:inst4|counter_out[9]~41                                                ; 1       ;
+; simple_counter:inst4|counter_out[9]~40                                                ; 1       ;
+; simple_counter:inst4|counter_out[8]~39                                                ; 1       ;
+; simple_counter:inst4|counter_out[8]~38                                                ; 1       ;
+; simple_counter:inst4|counter_out[7]~37                                                ; 1       ;
+; simple_counter:inst4|counter_out[7]~36                                                ; 1       ;
+; simple_counter:inst4|counter_out[6]~35                                                ; 1       ;
+; simple_counter:inst4|counter_out[6]~34                                                ; 1       ;
+; simple_counter:inst4|counter_out[5]~33                                                ; 1       ;
+; simple_counter:inst4|counter_out[5]~32                                                ; 1       ;
+; simple_counter:inst4|counter_out[4]~31                                                ; 1       ;
+; simple_counter:inst4|counter_out[4]~30                                                ; 1       ;
+; simple_counter:inst4|counter_out[3]~29                                                ; 1       ;
+; simple_counter:inst4|counter_out[3]~28                                                ; 1       ;
+; simple_counter:inst4|counter_out[2]~27                                                ; 1       ;
+; simple_counter:inst4|counter_out[2]~26                                                ; 1       ;
+; simple_counter:inst4|counter_out[1]~25                                                ; 1       ;
+; simple_counter:inst4|counter_out[1]~24                                                ; 1       ;
+; simple_counter:inst4|counter_out[1]                                                   ; 1       ;
+; simple_counter:inst4|counter_out[2]                                                   ; 1       ;
+; simple_counter:inst4|counter_out[3]                                                   ; 1       ;
+; simple_counter:inst4|counter_out[4]                                                   ; 1       ;
+; simple_counter:inst4|counter_out[5]                                                   ; 1       ;
+; simple_counter:inst4|counter_out[6]                                                   ; 1       ;
+; simple_counter:inst4|counter_out[7]                                                   ; 1       ;
+; simple_counter:inst4|counter_out[8]                                                   ; 1       ;
+; simple_counter:inst4|counter_out[9]                                                   ; 1       ;
+; simple_counter:inst4|counter_out[10]                                                  ; 1       ;
+; simple_counter:inst4|counter_out[11]                                                  ; 1       ;
+; simple_counter:inst4|counter_out[12]                                                  ; 1       ;
+; simple_counter:inst4|counter_out[13]                                                  ; 1       ;
+; simple_counter:inst4|counter_out[14]                                                  ; 1       ;
+; simple_counter:inst4|counter_out[15]                                                  ; 1       ;
+; simple_counter:inst4|counter_out[16]                                                  ; 1       ;
+; simple_counter:inst4|counter_out[17]                                                  ; 1       ;
++---------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------+
-; Interconnect Usage Summary                         ;
-+----------------------------+-----------------------+
-; Interconnect Resource Type ; Usage                 ;
-+----------------------------+-----------------------+
-; Block interconnects        ; 5 / 54,004 ( < 1 % )  ;
-; C16 interconnects          ; 0 / 2,100 ( 0 % )     ;
-; C4 interconnects           ; 5 / 36,000 ( < 1 % )  ;
-; Direct links               ; 1 / 54,004 ( < 1 % )  ;
-; Global clocks              ; 1 / 16 ( 6 % )        ;
-; Local interconnects        ; 25 / 18,752 ( < 1 % ) ;
-; R24 interconnects          ; 0 / 1,900 ( 0 % )     ;
-; R4 interconnects           ; 0 / 46,920 ( 0 % )    ;
-+----------------------------+-----------------------+
++-----------------------------------------------------+
+; Other Routing Usage Summary                         ;
++-----------------------------+-----------------------+
+; Other Routing Resource Type ; Usage                 ;
++-----------------------------+-----------------------+
+; Block interconnects         ; 6 / 54,004 ( < 1 % )  ;
+; C16 interconnects           ; 0 / 2,100 ( 0 % )     ;
+; C4 interconnects            ; 5 / 36,000 ( < 1 % )  ;
+; Direct links                ; 2 / 54,004 ( < 1 % )  ;
+; Global clocks               ; 1 / 16 ( 6 % )        ;
+; Local interconnects         ; 24 / 18,752 ( < 1 % ) ;
+; R24 interconnects           ; 0 / 1,900 ( 0 % )     ;
+; R4 interconnects            ; 0 / 46,920 ( 0 % )    ;
++-----------------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
@@ -1051,93 +1206,66 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Info: *******************************************************************
-Info: Running Quartus II Fitter
-    Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
-    Info: Processing started: Fri Oct 25 14:45:35 2013
-Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off 1st_Project -c 1st_Project
-Info: Selected device EP2C20F484C7 for design "1st_Project"
-Warning: The high junction temperature operating condition is not set. Assuming a default value of '85'.
-Warning: The low junction temperature operating condition is not set. Assuming a default value of '0'.
-Info: Implemented PLL "PLL:inst3|altpll:altpll_component|pll" as Cyclone II PLL type
-    Info: Implementing clock multiplication of 1, clock division of 5, and phase shift of 0 degrees (0 ps) for PLL:inst3|altpll:altpll_component|_clk0 port
-Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
-Warning: Feature LogicLock incremental compilation is not available with your current license
-Info: Fitter is using the Classic Timing Analyzer
-Info: Detected fmax, tsu, tco, and/or tpd requirements -- optimizing circuit to achieve only the specified requirements
-Info: The Fitter has identified 1 logical partitions of which 0 have a previous placement to use
-    Info: Previous placement does not exist for 61 of 61 atoms in partition Top
-Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
-    Info: Device EP2C15AF484C7 is compatible
-    Info: Device EP2C35F484C7 is compatible
-    Info: Device EP2C50F484C7 is compatible
-Info: Fitter converted 3 user pins into dedicated programming pins
-    Info: Pin ~ASDO~ is reserved at location C4
-    Info: Pin ~nCSO~ is reserved at location C3
-    Info: Pin ~LVDS91p/nCEO~ is reserved at location W20
-Info: Automatically promoted node PLL:inst3|altpll:altpll_component|_clk0 (placed in counter C0 of PLL_1)
-    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
-Info: Starting register packing
-Extra Info: Performing register packing on registers with non-logic cell location assignments
-Extra Info: Completed register packing on registers with non-logic cell location assignments
-Extra Info: Started Fast Input/Output/OE register processing
-Extra Info: Finished Fast Input/Output/OE register processing
-Extra Info: Moving registers into I/O cells, Multiplier Blocks, and RAM blocks to improve timing and density
-Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM blocks
-Info: Finished register packing: elapsed time is 00:00:00
-    Extra Info: No registers were packed into other blocks
-Info: Fitter placement preparation operations beginning
-Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
-Info: Fitter placement operations beginning
-Info: Fitter placement was successful
-Info: Fitter placement operations ending: elapsed time is 00:00:00
-Info: Estimated most critical path is register to register delay of 3.467 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X49_Y9; Fanout = 3; REG Node = 'simple_counter:inst4|counter_out[0]'
-    Info: 2: + IC(0.560 ns) + CELL(0.495 ns) = 1.055 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[1]~182'
-    Info: 3: + IC(0.000 ns) + CELL(0.080 ns) = 1.135 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[2]~184'
-    Info: 4: + IC(0.000 ns) + CELL(0.080 ns) = 1.215 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[3]~186'
-    Info: 5: + IC(0.000 ns) + CELL(0.080 ns) = 1.295 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[4]~188'
-    Info: 6: + IC(0.000 ns) + CELL(0.080 ns) = 1.375 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[5]~190'
-    Info: 7: + IC(0.000 ns) + CELL(0.080 ns) = 1.455 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[6]~192'
-    Info: 8: + IC(0.000 ns) + CELL(0.080 ns) = 1.535 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[7]~194'
-    Info: 9: + IC(0.000 ns) + CELL(0.080 ns) = 1.615 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[8]~196'
-    Info: 10: + IC(0.000 ns) + CELL(0.080 ns) = 1.695 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[9]~198'
-    Info: 11: + IC(0.000 ns) + CELL(0.080 ns) = 1.775 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[10]~200'
-    Info: 12: + IC(0.000 ns) + CELL(0.080 ns) = 1.855 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[11]~202'
-    Info: 13: + IC(0.000 ns) + CELL(0.080 ns) = 1.935 ns; Loc. = LAB_X49_Y9; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[12]~204'
-    Info: 14: + IC(0.098 ns) + CELL(0.080 ns) = 2.113 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[13]~206'
-    Info: 15: + IC(0.000 ns) + CELL(0.080 ns) = 2.193 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[14]~208'
-    Info: 16: + IC(0.000 ns) + CELL(0.080 ns) = 2.273 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[15]~210'
-    Info: 17: + IC(0.000 ns) + CELL(0.080 ns) = 2.353 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[16]~212'
-    Info: 18: + IC(0.000 ns) + CELL(0.080 ns) = 2.433 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[17]~214'
-    Info: 19: + IC(0.000 ns) + CELL(0.080 ns) = 2.513 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[18]~216'
-    Info: 20: + IC(0.000 ns) + CELL(0.080 ns) = 2.593 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[19]~218'
-    Info: 21: + IC(0.000 ns) + CELL(0.080 ns) = 2.673 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[20]~220'
-    Info: 22: + IC(0.000 ns) + CELL(0.080 ns) = 2.753 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[21]~222'
-    Info: 23: + IC(0.000 ns) + CELL(0.080 ns) = 2.833 ns; Loc. = LAB_X49_Y8; Fanout = 2; COMB Node = 'simple_counter:inst4|counter_out[22]~224'
-    Info: 24: + IC(0.000 ns) + CELL(0.080 ns) = 2.913 ns; Loc. = LAB_X49_Y8; Fanout = 1; COMB Node = 'simple_counter:inst4|counter_out[23]~226'
-    Info: 25: + IC(0.000 ns) + CELL(0.458 ns) = 3.371 ns; Loc. = LAB_X49_Y8; Fanout = 1; COMB Node = 'simple_counter:inst4|counter_out[24]~227'
-    Info: 26: + IC(0.000 ns) + CELL(0.096 ns) = 3.467 ns; Loc. = LAB_X49_Y8; Fanout = 2; REG Node = 'simple_counter:inst4|counter_out[24]'
-    Info: Total cell delay = 2.809 ns ( 81.02 % )
-    Info: Total interconnect delay = 0.658 ns ( 18.98 % )
-Info: Fitter routing operations beginning
-Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X38_Y0 to location X50_Y13
-Info: Fitter routing operations ending: elapsed time is 00:00:00
-Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
-    Info: Optimizations that may affect the design's routability were skipped
-    Info: Optimizations that may affect the design's timing were skipped
-Info: Started post-fitting delay annotation
-Warning: Found 4 output pins without output pin load capacitance assignment
-    Info: Pin "LED[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "LED[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "LED[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info: Pin "LED[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-Info: Delay annotation completed successfully
-Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info: Quartus II Fitter was successful. 0 errors, 5 warnings
-    Info: Allocated 235 megabytes of memory during processing
-    Info: Processing ended: Fri Oct 25 14:45:39 2013
-    Info: Elapsed time: 00:00:04
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (119006): Selected device EP2C20F484C7 for design "1st_Project"
+Info (15535): Implemented PLL "PLL:inst3|altpll:altpll_component|pll" as Cyclone II PLL type
+    Info (15099): Implementing clock multiplication of 1, clock division of 5, and phase shift of 0 degrees (0 ps) for PLL:inst3|altpll:altpll_component|_clk0 port
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info (176445): Device EP2C15AF484C7 is compatible
+    Info (176445): Device EP2C35F484C7 is compatible
+    Info (176445): Device EP2C50F484C7 is compatible
+Info (169124): Fitter converted 3 user pins into dedicated programming pins
+    Info (169125): Pin ~ASDO~ is reserved at location C4
+    Info (169125): Pin ~nCSO~ is reserved at location C3
+    Info (169125): Pin ~LVDS91p/nCEO~ is reserved at location W20
+Info (176353): Automatically promoted node PLL:inst3|altpll:altpll_component|_clk0 (placed in counter C0 of PLL_1)
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+Critical Warning (332012): Synopsys Design Constraints File file not found: '1st_Project.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained generated clocks found in the design
+Info (332144): No user constrained base clocks found in the design
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (176233): Starting register packing
+Info (176235): Finished register packing
+    Extra Info (176219): No registers were packed into other blocks
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (170189): Fitter placement preparation operations beginning
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 0% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X38_Y0 to location X50_Y13
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info (170201): Optimizations that may affect the design's routability were skipped
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
+Info (306004): Started post-fitting delay annotation
+Warning (306006): Found 4 output pins without output pin load capacitance assignment
+    Info (306007): Pin "LED[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LED[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LED[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "LED[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info (306005): Delay annotation completed successfully
+Info (306004): Started post-fitting delay annotation
+Info (306005): Delay annotation completed successfully
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
+Info (144001): Generated suppressed messages file C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/1st Pro-two speed counter/1st_Project.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 622 megabytes
+    Info: Processing ended: Wed Oct 30 10:30:42 2013
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
+
+
++----------------------------+
+; Fitter Suppressed Messages ;
++----------------------------+
+The suppressed messages can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/1st Pro-two speed counter/1st_Project.fit.smsg.
 
 
