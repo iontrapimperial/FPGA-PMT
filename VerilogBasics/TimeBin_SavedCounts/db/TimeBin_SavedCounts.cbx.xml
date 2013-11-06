@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="TimeBin_SavedCounts">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TimeBin_SavedCounts|countselecta:inst6|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_rmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TimeBin_SavedCounts|single_sevenseg:inst3|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_05m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
