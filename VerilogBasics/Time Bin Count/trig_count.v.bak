@@ -1,0 +1,22 @@
+module trig_count (j, switch, out)
+
+input j, switch;
+reg [7:0] intr;
+output reg [7:0] out;
+
+always @(posedge switch or j)
+begin
+
+if (j)
+begin
+out=intr;
+intr=0;
+end
+
+else if (switch)
+intr=intr+1;
+
+else 
+
+end
+endmodule 

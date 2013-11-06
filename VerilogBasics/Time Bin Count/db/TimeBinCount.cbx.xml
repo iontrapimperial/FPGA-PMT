@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="TimeBinCount">
+		<CBX_INST_ENTRY INSTANCE_NAME="|TimeBinCount_Separate|single_sevenseg:inst1|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_05m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TimeBinCount_Separate|single_sevenseg:inst2|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_05m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TimeBinCount_Separate|single_sevenseg:inst4|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_05m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|TimeBinCount_Separate|single_sevenseg:inst|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_05m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
