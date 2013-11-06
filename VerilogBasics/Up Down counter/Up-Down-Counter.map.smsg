@@ -1,1 +1,2 @@
 Warning (10268): Verilog HDL information at Double_SevenSeg.v(13): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at updown_count_noclock.v(14): always construct contains both blocking and non-blocking assignments
