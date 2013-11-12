@@ -33,6 +33,7 @@ zero => out.OUTPUTSELECT
 zero => out.OUTPUTSELECT
 zero => out.OUTPUTSELECT
 zero => out.OUTPUTSELECT
+zero => i[29].ENA
 zero => i[28].ENA
 zero => i[27].ENA
 zero => i[26].ENA
@@ -64,7 +65,6 @@ zero => i[11].ENA
 zero => i[10].ENA
 zero => i[9].ENA
 zero => i[8].ENA
-zero => i[29].ENA
 zero => i[30].ENA
 zero => i[31].ENA
 zero => LED~reg0.ENA
@@ -421,40 +421,5 @@ sel[1] => _.IN0
 sel[1] => _.IN0
 sel[1] => _.IN0
 sel[1] => _.IN0
-
-
-|TimeBin_SavedCounts|bit_downshift:inst4
-in[0] => out0[0].DATAIN
-in[1] => out0[1].DATAIN
-in[2] => out0[2].DATAIN
-in[3] => out0[3].DATAIN
-in[4] => out1[0].DATAIN
-in[5] => out1[1].DATAIN
-in[6] => out1[2].DATAIN
-in[7] => out1[3].DATAIN
-in[8] => out2[0].DATAIN
-in[9] => out2[1].DATAIN
-in[10] => out2[2].DATAIN
-in[11] => out2[3].DATAIN
-in[12] => out3[0].DATAIN
-in[13] => out3[1].DATAIN
-in[14] => out3[2].DATAIN
-in[15] => out3[3].DATAIN
-out3[0] <= in[12].DB_MAX_OUTPUT_PORT_TYPE
-out3[1] <= in[13].DB_MAX_OUTPUT_PORT_TYPE
-out3[2] <= in[14].DB_MAX_OUTPUT_PORT_TYPE
-out3[3] <= in[15].DB_MAX_OUTPUT_PORT_TYPE
-out2[0] <= in[8].DB_MAX_OUTPUT_PORT_TYPE
-out2[1] <= in[9].DB_MAX_OUTPUT_PORT_TYPE
-out2[2] <= in[10].DB_MAX_OUTPUT_PORT_TYPE
-out2[3] <= in[11].DB_MAX_OUTPUT_PORT_TYPE
-out1[0] <= in[4].DB_MAX_OUTPUT_PORT_TYPE
-out1[1] <= in[5].DB_MAX_OUTPUT_PORT_TYPE
-out1[2] <= in[6].DB_MAX_OUTPUT_PORT_TYPE
-out1[3] <= in[7].DB_MAX_OUTPUT_PORT_TYPE
-out0[0] <= in[0].DB_MAX_OUTPUT_PORT_TYPE
-out0[1] <= in[1].DB_MAX_OUTPUT_PORT_TYPE
-out0[2] <= in[2].DB_MAX_OUTPUT_PORT_TYPE
-out0[3] <= in[3].DB_MAX_OUTPUT_PORT_TYPE
 
 

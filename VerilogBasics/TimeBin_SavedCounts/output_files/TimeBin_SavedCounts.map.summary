@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Nov 06 17:13:15 2013
+Analysis & Synthesis Status : Successful - Tue Nov 12 12:18:55 2013
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : TimeBin_SavedCounts
 Top-level Entity Name : TimeBin_SavedCounts
 Family : Cyclone II
-Total logic elements : 137
-    Total combinational functions : 137
+Total logic elements : 160
+    Total combinational functions : 160
     Dedicated logic registers : 67
 Total registers : 67
 Total pins : 15

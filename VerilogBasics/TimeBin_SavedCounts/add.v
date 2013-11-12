@@ -1,3 +1,4 @@
+// Adds values of switches to select between time bins (which to display)
 module add (in1, in2, select, test);
 
 input in1, in2;
