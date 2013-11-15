@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TimeBinCount
-Wed Nov 06 15:42:01 2013
+Tue Nov 12 16:18:26 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -49,13 +49,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 06 15:42:01 2013           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 12 16:18:25 2013           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; TimeBinCount                                    ;
 ; Top-level Entity Name              ; TimeBinCount_Separate                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 133                                             ;
-;     Total combinational functions  ; 117                                             ;
+; Total logic elements               ; 128                                             ;
+;     Total combinational functions  ; 112                                             ;
 ;     Dedicated logic registers      ; 54                                              ;
 ; Total registers                    ; 54                                              ;
 ; Total pins                         ; 31                                              ;
@@ -193,16 +193,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------------------------+
 ; Resource                                    ; Usage                                   ;
 +---------------------------------------------+-----------------------------------------+
-; Estimated Total logic elements              ; 133                                     ;
+; Estimated Total logic elements              ; 128                                     ;
 ;                                             ;                                         ;
-; Total combinational functions               ; 117                                     ;
+; Total combinational functions               ; 112                                     ;
 ; Logic element usage by number of LUT inputs ;                                         ;
 ;     -- 4 input functions                    ; 39                                      ;
-;     -- 3 input functions                    ; 13                                      ;
-;     -- <=2 input functions                  ; 65                                      ;
+;     -- 3 input functions                    ; 21                                      ;
+;     -- <=2 input functions                  ; 52                                      ;
 ;                                             ;                                         ;
 ; Logic elements by mode                      ;                                         ;
-;     -- normal mode                          ; 74                                      ;
+;     -- normal mode                          ; 69                                      ;
 ;     -- arithmetic mode                      ; 43                                      ;
 ;                                             ;                                         ;
 ; Total registers                             ; 54                                      ;
@@ -216,8 +216,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                                         ;
 ; Maximum fan-out node                        ; PLL:inst6|altpll:altpll_component|_clk0 ;
 ; Maximum fan-out                             ; 50                                      ;
-; Total fan-out                               ; 473                                     ;
-; Average fan-out                             ; 2.33                                    ;
+; Total fan-out                               ; 471                                     ;
+; Average fan-out                             ; 2.38                                    ;
 +---------------------------------------------+-----------------------------------------+
 
 
@@ -226,7 +226,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                          ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |TimeBinCount_Separate                    ; 117 (0)           ; 54 (0)       ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |TimeBinCount_Separate                                                                                                                       ; work         ;
+; |TimeBinCount_Separate                    ; 112 (0)           ; 54 (0)       ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |TimeBinCount_Separate                                                                                                                       ; work         ;
 ;    |PLL:inst6|                            ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TimeBinCount_Separate|PLL:inst6                                                                                                             ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TimeBinCount_Separate|PLL:inst6|altpll:altpll_component                                                                                     ; work         ;
 ;    |count:inst3|                          ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TimeBinCount_Separate|count:inst3                                                                                                           ; work         ;
@@ -250,7 +250,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_divide_05m:auto_generated|  ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TimeBinCount_Separate|single_sevenseg:inst|lpm_divide:Mod0|lpm_divide_05m:auto_generated                                                    ; work         ;
 ;             |sign_div_unsign_7kh:divider| ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TimeBinCount_Separate|single_sevenseg:inst|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider                        ; work         ;
 ;                |alt_u_div_gve:divider|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TimeBinCount_Separate|single_sevenseg:inst|lpm_divide:Mod0|lpm_divide_05m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_gve:divider  ; work         ;
-;    |trigger_clock:inst7|                  ; 57 (57)           ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TimeBinCount_Separate|trigger_clock:inst7                                                                                                   ; work         ;
+;    |trigger_clock:inst7|                  ; 52 (52)           ; 50 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TimeBinCount_Separate|trigger_clock:inst7                                                                                                   ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -767,7 +767,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -777,7 +777,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Nov 06 15:41:58 2013
+    Info: Processing started: Tue Nov 12 16:18:22 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TimeBinCount -c TimeBinCount
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file slow_clock.v
@@ -889,15 +889,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
 Info (144001): Generated suppressed messages file C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/Time Bin Count/output_files/TimeBinCount.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 166 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 161 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 134 logic cells
+    Info (21061): Implemented 129 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 456 megabytes
-    Info: Processing ended: Wed Nov 06 15:42:01 2013
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Tue Nov 12 16:18:26 2013
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

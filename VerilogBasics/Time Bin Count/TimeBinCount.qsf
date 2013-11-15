@@ -48,7 +48,7 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_L1 -to osc
-set_location_assignment PIN_R22 -to switch
+set_location_assignment PIN_H13 -to switch
 set_location_assignment PIN_R20 -to LED
 set_global_assignment -name VERILOG_FILE slow_clock.v
 set_global_assignment -name VERILOG_FILE timing.v

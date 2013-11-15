@@ -9,7 +9,7 @@ reg [31:0] i;
 always @(posedge clk)
 begin
 
-if (i==32'd50000000)
+if (i==32'd250000)
 begin
 out4=out3;
 out3=out2;
