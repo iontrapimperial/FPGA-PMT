@@ -1,0 +1,64 @@
+|BlockNoclock
+ssOut1[0] <= Double_SevenSeg:inst12.ones[0]
+ssOut1[1] <= Double_SevenSeg:inst12.ones[1]
+ssOut1[2] <= Double_SevenSeg:inst12.ones[2]
+ssOut1[3] <= Double_SevenSeg:inst12.ones[3]
+ssOut1[4] <= Double_SevenSeg:inst12.ones[4]
+ssOut1[5] <= Double_SevenSeg:inst12.ones[5]
+ssOut1[6] <= Double_SevenSeg:inst12.ones[6]
+up => inst4.IN0
+down => inst2.IN0
+reset => inst6.IN0
+clock => updown_count_noclock:inst.clock
+ssOut2[0] <= Double_SevenSeg:inst12.tens[0]
+ssOut2[1] <= Double_SevenSeg:inst12.tens[1]
+ssOut2[2] <= Double_SevenSeg:inst12.tens[2]
+ssOut2[3] <= Double_SevenSeg:inst12.tens[3]
+ssOut2[4] <= Double_SevenSeg:inst12.tens[4]
+ssOut2[5] <= Double_SevenSeg:inst12.tens[5]
+ssOut2[6] <= Double_SevenSeg:inst12.tens[6]
+
+
+|BlockNoclock|Double_SevenSeg:inst12
+s1[0] => Mod0.IN7
+s1[0] => Div0.IN7
+s1[1] => Mod0.IN6
+s1[1] => Div0.IN6
+s1[2] => Mod0.IN5
+s1[2] => Div0.IN5
+s1[3] => Mod0.IN4
+s1[3] => Div0.IN4
+tens[0] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+tens[1] <= tens.DB_MAX_OUTPUT_PORT_TYPE
+tens[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+tens[3] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+tens[4] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+tens[5] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+tens[6] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ones[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ones[1] <= ones.DB_MAX_OUTPUT_PORT_TYPE
+ones[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+ones[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ones[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ones[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ones[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|BlockNoclock|updown_count_noclock:inst
+nIn[0] <= nIn[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[1] <= nIn[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[2] <= nIn[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nIn[3] <= nIn[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+up => nIn[0]~reg0.CLK
+up => nIn[1]~reg0.CLK
+up => nIn[2]~reg0.CLK
+up => nIn[3]~reg0.CLK
+down => nIn[3].IN0
+reset => nIn[0]~reg0.ACLR
+reset => nIn[1]~reg0.ACLR
+reset => nIn[2]~reg0.ACLR
+reset => nIn[3]~reg0.ACLR
+reset => nIn[3].IN1
+clock => ~NO_FANOUT~
+
+

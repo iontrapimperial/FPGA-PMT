@@ -1,0 +1,11 @@
+|DelayPractice
+LED <= onoff:inst.LED
+switch => inst2.IN0
+
+
+|DelayPractice|onoff:inst
+switch => LED~reg0.CLK
+LED <= LED~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock1 => ~NO_FANOUT~
+
+

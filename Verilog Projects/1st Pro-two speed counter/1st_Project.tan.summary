@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.361 ns
+From           : simple_counter:inst4|counter_out[21]
+To             : LED[3]
+From Clock     : osc_clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.454 ns
+From           : switch
+To             : LED[3]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'PLL:inst3|altpll:altpll_component|_clk0'
+Slack          : 96.276 ns
+Required Time  : 10.00 MHz ( period = 100.000 ns )
+Actual Time    : 268.53 MHz ( period = 3.724 ns )
+From           : simple_counter:inst4|counter_out[0]
+To             : simple_counter:inst4|counter_out[24]
+From Clock     : PLL:inst3|altpll:altpll_component|_clk0
+To Clock       : PLL:inst3|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'PLL:inst3|altpll:altpll_component|_clk0'
+Slack          : 0.445 ns
+Required Time  : 10.00 MHz ( period = 100.000 ns )
+Actual Time    : N/A
+From           : simple_counter:inst4|counter_out[0]
+To             : simple_counter:inst4|counter_out[0]
+From Clock     : PLL:inst3|altpll:altpll_component|_clk0
+To Clock       : PLL:inst3|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

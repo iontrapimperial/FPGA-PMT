@@ -1,0 +1,13 @@
+module onoff (switch, LED);
+
+input switch
+output reg LED
+
+always @(posedge switch
+begin
+
+LED=!LED;
+
+end
+
+endmodule
