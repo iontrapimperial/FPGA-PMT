@@ -58,6 +58,13 @@ applicable agreement for further details.
 		(text "LED" (rect 119 59 139 71)(font "Arial" ))
 		(line (pt 160 64)(pt 144 64)(line_width 1))
 	)
+	(port
+		(pt 160 80)
+		(output)
+		(text "PIN" (rect 0 0 15 12)(font "Arial" ))
+		(text "PIN" (rect 124 75 139 87)(font "Arial" ))
+		(line (pt 160 80)(pt 144 80)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 144 96)(line_width 1))
 	)

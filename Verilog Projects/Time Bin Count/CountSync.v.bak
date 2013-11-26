@@ -1,0 +1,25 @@
+module countV2 (clk,switch, out, reset);
+
+input switch, clk;
+input reset;
+output reg [7:0] out=0;
+reg edgeAdd, edgeZero;
+
+always @(posedge clk)// Always trigger always blocks with clock
+begin
+
+edgeAdd<=switch; // internal regs used to detect posedge of counts and switch
+edgeZero<=reset;
+ 
+if (edgeAdd && ~switch) // sensitivity condition of if() equivilant to 'posedge'
+begin
+ out<=out+1;
+end
+ 
+else if(edgeZero && ~reset)
+ out<=8'b00000000;
+ 
+
+end
+
+endmodule

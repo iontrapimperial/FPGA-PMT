@@ -170,6 +170,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 936 408 984 424))
 )
 (symbol
 	(rect 88 56 328 208)
@@ -220,35 +221,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 264 232 424 312)
-	(text "count" (rect 5 0 32 12)(font "Arial" ))
-	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "switch" (rect 0 0 30 12)(font "Arial" ))
-		(text "switch" (rect 21 27 51 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "reset" (rect 0 0 24 12)(font "Arial" ))
-		(text "reset" (rect 21 43 45 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "out[31..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "out[31..0]" (rect 100 27 139 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
-	)
-)
-(symbol
 	(rect 504 72 672 184)
 	(text "trigger_clock" (rect 5 0 67 12)(font "Arial" ))
 	(text "inst5" (rect 8 96 31 108)(font "Arial" ))
@@ -277,21 +249,21 @@ applicable agreement for further details.
 		(pt 168 32)
 		(output)
 		(text "out[31..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "out[31..0]" (rect 108 27 147 39)(font "Arial" ))
+		(text "out[31..0]" (rect 108 27 155 39)(font "Arial" ))
 		(line (pt 168 32)(pt 152 32)(line_width 3))
 	)
 	(port
 		(pt 168 48)
 		(output)
 		(text "reset" (rect 0 0 24 12)(font "Arial" ))
-		(text "reset" (rect 127 43 147 55)(font "Arial" ))
+		(text "reset" (rect 127 43 151 55)(font "Arial" ))
 		(line (pt 168 48)(pt 152 48))
 	)
 	(port
 		(pt 168 64)
 		(output)
 		(text "LED" (rect 0 0 21 12)(font "Arial" ))
-		(text "LED" (rect 130 59 147 71)(font "Arial" ))
+		(text "LED" (rect 130 59 151 71)(font "Arial" ))
 		(line (pt 168 64)(pt 152 64))
 	)
 	(drawing
@@ -320,14 +292,14 @@ applicable agreement for further details.
 		(pt 152 32)
 		(output)
 		(text "select[1..0]" (rect 0 0 55 12)(font "Arial" ))
-		(text "select[1..0]" (rect 85 27 131 39)(font "Arial" ))
+		(text "select[1..0]" (rect 85 27 140 39)(font "Arial" ))
 		(line (pt 152 32)(pt 136 32)(line_width 3))
 	)
 	(port
 		(pt 152 48)
 		(output)
 		(text "test[1..0]" (rect 0 0 44 12)(font "Arial" ))
-		(text "test[1..0]" (rect 94 43 131 55)(font "Arial" ))
+		(text "test[1..0]" (rect 94 43 138 55)(font "Arial" ))
 		(line (pt 152 48)(pt 136 48)(line_width 3))
 	)
 	(drawing
@@ -349,7 +321,7 @@ applicable agreement for further details.
 		(pt 48 16)
 		(output)
 		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 46 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
 		(line (pt 39 16)(pt 48 16))
 	)
 	(drawing
@@ -374,7 +346,7 @@ applicable agreement for further details.
 		(pt 48 16)
 		(output)
 		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 46 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
 		(line (pt 39 16)(pt 48 16))
 	)
 	(drawing
@@ -460,18 +432,47 @@ applicable agreement for further details.
 		(pt 168 32)
 		(output)
 		(text "tens[6..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "tens[6..0]" (rect 108 27 147 39)(font "Arial" ))
+		(text "tens[6..0]" (rect 108 27 155 39)(font "Arial" ))
 		(line (pt 168 32)(pt 152 32)(line_width 3))
 	)
 	(port
 		(pt 168 48)
 		(output)
 		(text "ones[6..0]" (rect 0 0 49 12)(font "Arial" ))
-		(text "ones[6..0]" (rect 106 43 147 55)(font "Arial" ))
+		(text "ones[6..0]" (rect 106 43 155 55)(font "Arial" ))
 		(line (pt 168 48)(pt 152 48)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 152 64))
+	)
+)
+(symbol
+	(rect 264 232 424 312)
+	(text "count" (rect 5 0 32 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "switch" (rect 0 0 30 12)(font "Arial" ))
+		(text "switch" (rect 21 27 51 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 43 45 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "out[31..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "out[31..0]" (rect 100 27 147 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
 	)
 )
 (connector
@@ -509,11 +510,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 424 264)
-	(pt 504 264)
-	(bus)
-)
-(connector
 	(pt 696 120)
 	(pt 672 120)
 )
@@ -532,11 +528,6 @@ applicable agreement for further details.
 (connector
 	(pt 328 120)
 	(pt 504 120)
-)
-(connector
-	(pt 504 136)
-	(pt 504 264)
-	(bus)
 )
 (connector
 	(pt 504 104)
@@ -646,6 +637,16 @@ applicable agreement for further details.
 	(text "out[31..0]" (rect 682 88 729 100)(font "Arial" ))
 	(pt 672 104)
 	(pt 752 104)
+	(bus)
+)
+(connector
+	(pt 504 136)
+	(pt 504 264)
+	(bus)
+)
+(connector
+	(pt 424 264)
+	(pt 504 264)
 	(bus)
 )
 (junction (pt 216 568))

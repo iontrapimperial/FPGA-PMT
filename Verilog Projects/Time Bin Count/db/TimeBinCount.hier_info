@@ -2,6 +2,7 @@
 LED <= trigger_clock_hundreds:inst3.LED
 osc => PLL:inst.inclk0
 switch => count:inst2.switch
+LED2 <= <GND>
 out1[0] <= Triple_SevenSeg:inst5.ones[0]
 out1[1] <= Triple_SevenSeg:inst5.ones[1]
 out1[2] <= Triple_SevenSeg:inst5.ones[2]
@@ -86,6 +87,7 @@ out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 reset <= reset~reg0.DB_MAX_OUTPUT_PORT_TYPE
 LED <= LED~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PIN <= <GND>
 
 
 |TimeBinHundreds|PLL:inst
@@ -155,18 +157,22 @@ icdrclk <= <GND>
 
 
 |TimeBinHundreds|count:inst2
-clk => out[0]~reg0.CLK
-clk => out[1]~reg0.CLK
-clk => out[2]~reg0.CLK
-clk => out[3]~reg0.CLK
-clk => out[4]~reg0.CLK
-clk => out[5]~reg0.CLK
-clk => out[6]~reg0.CLK
-clk => out[7]~reg0.CLK
-clk => edgeZero.CLK
-clk => edgeAdd.CLK
-switch => edgeAdd.DATAIN
-switch => always0.IN1
+switch => out[0]~reg0.CLK
+switch => out[1]~reg0.CLK
+switch => out[2]~reg0.CLK
+switch => out[3]~reg0.CLK
+switch => out[4]~reg0.CLK
+switch => out[5]~reg0.CLK
+switch => out[6]~reg0.CLK
+switch => out[7]~reg0.CLK
+reset => out[0]~reg0.ACLR
+reset => out[1]~reg0.ACLR
+reset => out[2]~reg0.ACLR
+reset => out[3]~reg0.ACLR
+reset => out[4]~reg0.ACLR
+reset => out[5]~reg0.ACLR
+reset => out[6]~reg0.ACLR
+reset => out[7]~reg0.ACLR
 out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -175,8 +181,6 @@ out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-reset => edgeZero.DATAIN
-reset => always0.IN1
 
 
 |TimeBinHundreds|Triple_SevenSeg:inst5

@@ -60,7 +60,7 @@ endmodule
 // Retrieval info: PRIVATE: CUR_DEDICATED_CLK STRING "c0"
 // Retrieval info: PRIVATE: CUR_FBIN_CLK STRING "c0"
 // Retrieval info: PRIVATE: DEVICE_SPEED_GRADE STRING "8"
-// Retrieval info: PRIVATE: DIV_FACTOR0 NUMERIC "5"
+// Retrieval info: PRIVATE: DIV_FACTOR0 NUMERIC "10"
 // Retrieval info: PRIVATE: DUTY_CYCLE0 STRING "50.00000000"
 // Retrieval info: PRIVATE: EFF_OUTPUT_FREQ_VALUE0 STRING "50.000000"
 // Retrieval info: PRIVATE: EXPLICIT_SWITCHOVER_COUNTER STRING "0"
@@ -187,7 +187,7 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL PLL.ppf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL PLL.inc FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL PLL.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL PLL.bsf TRUE FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL PLL.bsf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL PLL_inst.v FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL PLL_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf

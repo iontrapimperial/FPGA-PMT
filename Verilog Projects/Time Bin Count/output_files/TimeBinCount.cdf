@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/Time Bin Count/output_files/") File("TimeBinCount.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C20F484) Path("C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/Time Bin Count/output_files/") File("TimeBinCount.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
