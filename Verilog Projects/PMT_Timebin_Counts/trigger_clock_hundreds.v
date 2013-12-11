@@ -9,7 +9,7 @@ reg [31:0] i;
 always @(posedge clk)
 begin
 
-if (i==32'd250000)//5ms time bin
+if (i==32'd50000000)//1s time bin
 begin
 out<=in;
 reset<=1;

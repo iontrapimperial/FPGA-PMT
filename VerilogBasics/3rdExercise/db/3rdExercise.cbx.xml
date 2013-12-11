@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="3rdExercise">
-		<CBX_INST_ENTRY INSTANCE_NAME="|3rdExercise_doublecount|Double_SevenSeg:inst10|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_25m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|3rdExercise_doublecount|Double_SevenSeg:inst9|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_25m.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

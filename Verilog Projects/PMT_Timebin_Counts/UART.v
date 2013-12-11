@@ -39,11 +39,14 @@ module uart(
 	 
     output recv_error, // Indicates error in receiving packet.
 	 
-	 output ClearToSend
+	 output ClearToSend,
+	 
+	 output reg test,
+	 output reg test2
 	 
     );
  
-parameter CLOCK_DIVIDE 		= 3;//1302 = clock rate (50Mhz) / (baud rate (9600) * 4)
+parameter CLOCK_DIVIDE 		= 1302;//1302 = clock rate (50Mhz) / (baud rate (9600) * 4)
  
 // States for the receiving state machine.
 // These are just constants, not parameters to override.
@@ -217,25 +220,34 @@ always @(posedge clk) begin
 				// to signal the start, followed by the data
 				tx_clk_divider = CLOCK_DIVIDE;
 				tx_countdown = 4;
-				tx_out = 0;
-				tx_bits_remaining = 8;
+			   tx_out=0;//should be tx_out 0
+				tx_bits_remaining = 4'd8;
 				tx_state = TX_SENDING;
+				test=!test;
 			end
 		end
 		TX_SENDING: begin
 			if (!tx_countdown) begin
-				if (tx_bits_remaining) begin
+			   
+				if (!tx_bits_remaining) begin
+					// Set delay to send out 2 stop bits.
+					tx_out =1;
+					tx_countdown = 8;
+					
+					tx_state = TX_DELAY_RESTART;
+					end
+			
+				else begin
 					tx_bits_remaining = tx_bits_remaining - 1;
 					tx_out = tx_data[0];
 					tx_data = {1'b0, tx_data[7:1]};
 					tx_countdown = 4;
+					test2=!test2;
 					tx_state = TX_SENDING;
-				end else begin
-					// Set delay to send out 2 stop bits.
-					tx_out = 1;
-					tx_countdown = 8;
-					tx_state = TX_DELAY_RESTART;
 				end
+			end 
+			else begin
+			
 			end
 		end
 		TX_DELAY_RESTART: begin

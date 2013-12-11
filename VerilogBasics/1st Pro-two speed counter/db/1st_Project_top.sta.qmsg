@@ -1,8 +1,0 @@
-{ "Info" "0" "" "Info: qsta_default_script.tcl version: 25.0.1.4" {  } {  } 0 0 "qsta_default_script.tcl version: 25.0.1.4" 0 0 "" 0}
-{ "Info" "0" "" "Info: Migrating assignments from quartus_tan" {  } {  } 0 0 "Migrating assignments from quartus_tan" 0 0 "" 0}
-{ "Info" "0" "" "Info: ----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0}
-{ "Info" "0" "" "Info: ----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0}
-{ "Info" "0" "" "Info: qtan_qsf2sdc_script.tcl version: 25.0.1.1" {  } {  } 0 0 "qtan_qsf2sdc_script.tcl version: 25.0.1.1" 0 0 "" 0}
-{ "Info" "0" "" "Info: ----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0}
-{ "Info" "0" "" "Info: ----------------------------------------------------------" {  } {  } 0 0 "----------------------------------------------------------" 0 0 "" 0}
-{ "Error" "0" "" "Error: Partition Merge (quartus_cdb --merge) failed or was not run. Run a partition merge (quartus_cdb --merge) successfully before running the Timing Analyzer (quartus_tan).\n" {  } {  } 0 0 "Partition Merge (quartus_cdb --merge) failed or was not run. Run a partition merge (quartus_cdb --merge) successfully before running the Timing Analyzer (quartus_tan).\n" 0 0 "" 0}

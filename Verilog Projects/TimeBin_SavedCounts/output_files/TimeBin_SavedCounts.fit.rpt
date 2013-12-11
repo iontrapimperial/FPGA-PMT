@@ -1,5 +1,5 @@
 Fitter report for TimeBin_SavedCounts
-Fri Nov 15 14:03:28 2013
+Wed Nov 27 11:26:09 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Nov 15 14:03:28 2013           ;
+; Fitter Status                      ; Successful - Wed Nov 27 11:26:08 2013           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; TimeBin_SavedCounts                             ;
 ; Top-level Entity Name              ; TimeBin_SavedCounts                             ;
@@ -183,7 +183,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/TimeBin_SavedCounts/output_files/TimeBin_SavedCounts.pin.
+The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/TimeBin_SavedCounts/output_files/TimeBin_SavedCounts.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1898,7 +1898,7 @@ Info (176353): Automatically promoted node PLL:inst|altpll:altpll_component|_clk
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1935,17 +1935,17 @@ Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/TimeBin_SavedCounts/output_files/TimeBin_SavedCounts.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/TimeBin_SavedCounts/output_files/TimeBin_SavedCounts.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 630 megabytes
-    Info: Processing ended: Fri Nov 15 14:03:28 2013
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 622 megabytes
+    Info: Processing ended: Wed Nov 27 11:26:09 2013
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:08
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/VerilogBasics/TimeBin_SavedCounts/output_files/TimeBin_SavedCounts.fit.smsg.
+The suppressed messages can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/TimeBin_SavedCounts/output_files/TimeBin_SavedCounts.fit.smsg.
 
 
