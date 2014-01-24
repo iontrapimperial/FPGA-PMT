@@ -18,26 +18,29 @@ programming logic devices manufactured by Altera and sold by
 Altera or its authorized distributors.  Please refer to the 
 applicable agreement for further details.
 */
-(header "symbol" (version "1.1"))
+(header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 152 96)
-	(text "PLL" (rect 5 0 22 12)(font "Arial" ))
-	(text "inst" (rect 8 64 20 76)(font "Arial" ))
+	(rect 64 64 304 216)
+	(text "PLL" (rect 109 0 136 16)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 136 25 148)(font "Arial" ))
 	(port
-		(pt 0 32)
+		(pt 0 64)
 		(input)
-		(text "inclk0" (rect 0 0 21 12)(font "Arial" ))
-		(text "inclk0" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 1))
+		(text "inclk0" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "inclk0" (rect 4 50 35 64)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 8 64))
 	)
 	(port
-		(pt 136 32)
+		(pt 240 64)
 		(output)
-		(text "c0" (rect 0 0 9 12)(font "Arial" ))
-		(text "c0" (rect 106 27 115 39)(font "Arial" ))
-		(line (pt 136 32)(pt 120 32)(line_width 1))
+		(text "c0" (rect 0 0 14 14)(font "Arial" (font_size 8)))
+		(text "c0" (rect 224 50 238 64)(font "Arial" (font_size 8)))
 	)
 	(drawing
-		(rectangle (rect 16 16 120 64)(line_width 1))
+		(text "Cyclone II" (rect 182 136 233 148)(font "Arial" ))
+		(line (pt 0 0)(pt 241 0))
+		(line (pt 241 0)(pt 241 153))
+		(line (pt 0 153)(pt 241 153))
+		(line (pt 0 0)(pt 0 153))
 	)
 )

@@ -103,34 +103,44 @@ applicable agreement for further details.
 	(port
 		(pt 208 128)
 		(output)
-		(text "recv_error" (rect 0 0 44 12)(font "Arial" ))
-		(text "recv_error" (rect 143 123 187 135)(font "Arial" ))
+		(text "tx_test" (rect 0 0 27 12)(font "Arial" ))
+		(text "tx_test" (rect 160 123 187 135)(font "Arial" ))
 		(line (pt 208 128)(pt 192 128)(line_width 1))
 	)
 	(port
 		(pt 208 144)
 		(output)
-		(text "ClearToSend" (rect 0 0 51 12)(font "Arial" ))
-		(text "ClearToSend" (rect 136 139 187 151)(font "Arial" ))
+		(text "recv_error" (rect 0 0 44 12)(font "Arial" ))
+		(text "recv_error" (rect 143 139 187 151)(font "Arial" ))
 		(line (pt 208 144)(pt 192 144)(line_width 1))
 	)
 	(port
 		(pt 208 160)
 		(output)
-		(text "test" (rect 0 0 14 12)(font "Arial" ))
-		(text "test" (rect 173 155 187 167)(font "Arial" ))
+		(text "ClearToSend" (rect 0 0 51 12)(font "Arial" ))
+		(text "ClearToSend" (rect 136 155 187 167)(font "Arial" ))
 		(line (pt 208 160)(pt 192 160)(line_width 1))
 	)
 	(port
 		(pt 208 176)
 		(output)
-		(text "test2" (rect 0 0 18 12)(font "Arial" ))
-		(text "test2" (rect 169 171 187 183)(font "Arial" ))
+		(text "LED" (rect 0 0 20 12)(font "Arial" ))
+		(text "LED" (rect 167 171 187 183)(font "Arial" ))
 		(line (pt 208 176)(pt 192 176)(line_width 1))
 	)
 	(parameter
 		"CLOCK_DIVIDE"
+		"3"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"CLOCK_DIVIDE2"
 		"1302"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"CLOCK_DIVIDE3"
+		"868"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter

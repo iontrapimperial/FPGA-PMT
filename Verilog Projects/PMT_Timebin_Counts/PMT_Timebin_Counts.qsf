@@ -61,7 +61,6 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name BDF_FILE PMT_Timebin_Counts.bdf
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_A13 -to tx
 set_location_assignment PIN_L1 -to osc
 set_location_assignment PIN_H13 -to signal
 set_location_assignment PIN_J2 -to ones[0]
@@ -87,10 +86,18 @@ set_location_assignment PIN_E4 -to huns[5]
 set_location_assignment PIN_D3 -to huns[6]
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name STRATIX_CONFIGURATION_DEVICE EPCS4
-set_location_assignment PIN_A12 -to rx_line
+set_location_assignment PIN_B18 -to rx_line
 set_location_assignment PIN_A14 -to ClearToSend
-set_location_assignment PIN_A15 -to rts
-set_location_assignment PIN_R19 -to tx_LED
+set_location_assignment PIN_B19 -to rts
 set_location_assignment PIN_R20 -to test
 set_location_assignment PIN_U22 -to test2
+set_location_assignment PIN_R21 -to transmit_switch
+set_global_assignment -name VERILOG_FILE pulse.v
+set_location_assignment PIN_A13 -to pulse_detect
+set_global_assignment -name VERILOG_FILE "G:/FPGA Verilog/pulse.v"
+set_global_assignment -name VERILOG_FILE "G:/FPGA Verilog/trigger_clock_hundreds.v"
+set_location_assignment PIN_C22 -to tx
+set_location_assignment PIN_B20 -to cts
+set_location_assignment PIN_A15 -to tx_test
+set_global_assignment -name VERILOG_FILE TEST.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

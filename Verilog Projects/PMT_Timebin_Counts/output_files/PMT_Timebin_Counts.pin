@@ -79,10 +79,10 @@ GND*                         : A8        :        :                   :         
 GND*                         : A9        :        :                   :         : 3         :                
 GND*                         : A10       :        :                   :         : 3         :                
 GND*                         : A11       :        :                   :         : 3         :                
-rx_line                      : A12       : input  : 3.3-V LVTTL       :         : 4         : Y              
-tx                           : A13       : output : 3.3-V LVTTL       :         : 4         : Y              
-ClearToSend                  : A14       : input  : 3.3-V LVTTL       :         : 4         : Y              
-rts                          : A15       : output : 3.3-V LVTTL       :         : 4         : Y              
+GND+                         : A12       :        :                   :         : 4         :                
+pulse_detect                 : A13       : output : 3.3-V LVTTL       :         : 4         : Y              
+GND*                         : A14       :        :                   :         : 4         :                
+tx_test                      : A15       : output : 3.3-V LVTTL       :         : 4         : Y              
 GND*                         : A16       :        :                   :         : 4         :                
 GND*                         : A17       :        :                   :         : 4         :                
 GND*                         : A18       :        :                   :         : 4         :                
@@ -147,13 +147,13 @@ GND*                         : B10       :        :                   :         
 GND*                         : B11       :        :                   :         : 3         :                
 GND+                         : B12       :        :                   :         : 4         :                
 GND*                         : B13       :        :                   :         : 4         :                
-LED                          : B14       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : B14       :        :                   :         : 4         :                
 GND*                         : B15       :        :                   :         : 4         :                
 GND*                         : B16       :        :                   :         : 4         :                
 GND*                         : B17       :        :                   :         : 4         :                
-GND*                         : B18       :        :                   :         : 4         :                
-GND*                         : B19       :        :                   :         : 4         :                
-GND*                         : B20       :        :                   :         : 4         :                
+rx_line                      : B18       : input  : 3.3-V LVTTL       :         : 4         : Y              
+rts                          : B19       : input  : 3.3-V LVTTL       :         : 4         : Y              
+cts                          : B20       : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : B21       : gnd    :                   :         :           :                
 VCCIO5                       : B22       : power  :                   : 3.3V    : 5         :                
 huns[3]                      : C1        : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -177,7 +177,7 @@ GND*                         : C18       :        :                   :         
 GND*                         : C19       :        :                   :         : 5         :                
 GND*                         : C20       :        :                   :         : 5         :                
 GND*                         : C21       :        :                   :         : 5         :                
-GND*                         : C22       :        :                   :         : 5         :                
+tx                           : C22       : output : 3.3-V LVTTL       :         : 5         : Y              
 tens[6]                      : D1        : output : 3.3-V LVTTL       :         : 2         : Y              
 tens[5]                      : D2        : output : 3.3-V LVTTL       :         : 2         : Y              
 huns[6]                      : D3        : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -235,7 +235,7 @@ GND*                         : F10       :        :                   :         
 GND*                         : F11       :        :                   :         : 3         :                
 GND*                         : F12       :        :                   :         : 4         :                
 GND*                         : F13       :        :                   :         : 4         :                
-GND*                         : F14       :        :                   :         : 4         :                
+LED                          : F14       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : F15       :        :                   :         : 4         :                
 VCCA_PLL2                    : F16       : power  :                   : 1.2V    :           :                
 VCCD_PLL2                    : F17       : power  :                   : 1.2V    :           :                
@@ -438,9 +438,9 @@ GND*                         : R15       :        :                   :         
 GND*                         : R16       :        :                   :         : 7         :                
 GND*                         : R17       :        :                   :         : 6         :                
 GND*                         : R18       :        :                   :         : 6         :                
-tx_LED                       : R19       : output : 3.3-V LVTTL       :         : 6         : Y              
-test                         : R20       : output : 3.3-V LVTTL       :         : 6         : Y              
-GND*                         : R21       :        :                   :         : 6         :                
+GND*                         : R19       :        :                   :         : 6         :                
+GND*                         : R20       :        :                   :         : 6         :                
+transmit_switch              : R21       : input  : 3.3-V LVTTL       :         : 6         : Y              
 GND*                         : R22       :        :                   :         : 6         :                
 GND*                         : T1        :        :                   :         : 1         :                
 GND*                         : T2        :        :                   :         : 1         :                
