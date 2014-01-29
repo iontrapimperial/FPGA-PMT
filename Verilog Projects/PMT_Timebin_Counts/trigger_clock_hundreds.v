@@ -14,7 +14,7 @@ assign constant = 8;
 always @(posedge clk)
 begin
 
-if (i==32'd5000000)//0.1s time bin
+if (i==32'd50000)//0.1ms time bin
 begin
 out<=in;
 reset<=1;

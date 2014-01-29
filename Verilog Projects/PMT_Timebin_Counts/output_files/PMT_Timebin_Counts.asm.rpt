@@ -1,5 +1,5 @@
 Assembler report for PMT_Timebin_Counts
-Tue Jan 21 12:58:05 2014
+Wed Jan 29 11:40:52 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jan 21 12:58:05 2014 ;
+; Assembler Status      ; Successful - Wed Jan 29 11:40:52 2014 ;
 ; Revision Name         ; PMT_Timebin_Counts                    ;
 ; Top-level Entity Name ; PMT_Timebin_Counts                    ;
 ; Family                ; Cyclone II                            ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                                              ;
 +----------------+--------------------------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP2C20F484C7                                                                                                                         ;
-; JTAG usercode  ; 0x001EBBA0                                                                                                                           ;
-; Checksum       ; 0x001EBBA0                                                                                                                           ;
+; JTAG usercode  ; 0x001EC4E4                                                                                                                           ;
+; Checksum       ; 0x001EC4E4                                                                                                                           ;
 +----------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+----------------------------------------------------------------------------------------------------------------------------------+
 ; Device             ; EPCS4                                                                                                                            ;
 ; JTAG usercode      ; 0x00000000                                                                                                                       ;
-; Checksum           ; 0x05E9E57E                                                                                                                       ;
+; Checksum           ; 0x05E6FB63                                                                                                                       ;
 ; Compression Ratio  ; 3                                                                                                                                ;
 +--------------------+----------------------------------------------------------------------------------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 21 12:58:03 2014
+    Info: Processing started: Wed Jan 29 11:40:50 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off PMT_Timebin_Counts -c PMT_Timebin_Counts
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 408 megabytes
-    Info: Processing ended: Tue Jan 21 12:58:06 2014
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Wed Jan 29 11:40:52 2014
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

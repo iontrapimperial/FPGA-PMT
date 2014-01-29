@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PMT_Timebin_Counts
-Tue Jan 21 12:57:43 2014
+Wed Jan 29 11:40:37 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -54,13 +54,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 21 12:57:42 2014           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 29 11:40:36 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; PMT_Timebin_Counts                              ;
 ; Top-level Entity Name              ; PMT_Timebin_Counts                              ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 393                                             ;
-;     Total combinational functions  ; 382                                             ;
+; Total logic elements               ; 391                                             ;
+;     Total combinational functions  ; 380                                             ;
 ;     Dedicated logic registers      ; 127                                             ;
 ; Total registers                    ; 127                                             ;
 ; Total pins                         ; 32                                              ;
@@ -204,16 +204,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------------------------------+
 ; Resource                                    ; Usage                                  ;
 +---------------------------------------------+----------------------------------------+
-; Estimated Total logic elements              ; 393                                    ;
+; Estimated Total logic elements              ; 391                                    ;
 ;                                             ;                                        ;
-; Total combinational functions               ; 382                                    ;
+; Total combinational functions               ; 380                                    ;
 ; Logic element usage by number of LUT inputs ;                                        ;
 ;     -- 4 input functions                    ; 173                                    ;
 ;     -- 3 input functions                    ; 70                                     ;
-;     -- <=2 input functions                  ; 139                                    ;
+;     -- <=2 input functions                  ; 137                                    ;
 ;                                             ;                                        ;
 ; Logic elements by mode                      ;                                        ;
-;     -- normal mode                          ; 279                                    ;
+;     -- normal mode                          ; 277                                    ;
 ;     -- arithmetic mode                      ; 103                                    ;
 ;                                             ;                                        ;
 ; Total registers                             ; 127                                    ;
@@ -227,7 +227,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                                        ;
 ; Maximum fan-out node                        ; PLL:inst|altpll:altpll_component|_clk0 ;
 ; Maximum fan-out                             ; 119                                    ;
-; Total fan-out                               ; 1468                                   ;
+; Total fan-out                               ; 1464                                   ;
 ; Average fan-out                             ; 2.71                                   ;
 +---------------------------------------------+----------------------------------------+
 
@@ -237,7 +237,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                       ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |PMT_Timebin_Counts                       ; 382 (0)           ; 127 (0)      ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |PMT_Timebin_Counts                                                                                                                       ; work         ;
+; |PMT_Timebin_Counts                       ; 380 (0)           ; 127 (0)      ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |PMT_Timebin_Counts                                                                                                                       ; work         ;
 ;    |PLL:inst|                             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|PLL:inst                                                                                                              ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|PLL:inst|altpll:altpll_component                                                                                      ; work         ;
 ;    |Triple_SevenSeg:inst3|                ; 170 (83)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3                                                                                                 ; work         ;
@@ -251,7 +251,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |alt_u_div_uve:divider|    ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ; work         ;
 ;    |count:inst2|                          ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|count:inst2                                                                                                           ; work         ;
 ;    |test:inst1|                           ; 20 (20)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|test:inst1                                                                                                            ; work         ;
-;    |trigger_clock_hundreds:inst5|         ; 53 (53)           ; 42 (42)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5                                                                                          ; work         ;
+;    |trigger_clock_hundreds:inst5|         ; 51 (51)           ; 42 (42)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5                                                                                          ; work         ;
 ;    |uart:inst4|                           ; 131 (131)         ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|uart:inst4                                                                                                            ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -327,16 +327,16 @@ Encoding Type:  One-Hot
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
 ; uart:inst4|tx_out                       ; 2       ;
+; uart:inst4|tx_clk_divider[0]            ; 1       ;
 ; uart:inst4|tx_clk_divider[2]            ; 1       ;
+; uart:inst4|tx_clk_divider[3]            ; 1       ;
 ; uart:inst4|tx_clk_divider[5]            ; 1       ;
 ; uart:inst4|tx_clk_divider[6]            ; 1       ;
-; uart:inst4|tx_clk_divider[8]            ; 1       ;
-; uart:inst4|tx_clk_divider[9]            ; 1       ;
+; uart:inst4|rx_clk_divider[0]            ; 1       ;
 ; uart:inst4|rx_clk_divider[2]            ; 1       ;
+; uart:inst4|rx_clk_divider[3]            ; 1       ;
 ; uart:inst4|rx_clk_divider[5]            ; 1       ;
 ; uart:inst4|rx_clk_divider[6]            ; 1       ;
-; uart:inst4|rx_clk_divider[8]            ; 1       ;
-; uart:inst4|rx_clk_divider[9]            ; 1       ;
 ; uart:inst4|rx                           ; 22      ;
 ; test:inst1|tx_clk_divider[1]            ; 1       ;
 ; test:inst1|tx_clk_divider[2]            ; 1       ;
@@ -353,15 +353,15 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_clk_divider[10]   ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_clk_divider[3]    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_clk_divider[4]    ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_countdown[4]      ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_bits_remaining[1] ;
 ; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_data[2]           ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_bits_remaining[3] ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_countdown[2]      ;
 ; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_countdown[4]      ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_clk_divider[5]    ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_clk_divider[9]    ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_clk_divider[2]    ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_clk_divider[6]    ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |PMT_Timebin_Counts|uart:inst4|Selector10           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
@@ -374,6 +374,7 @@ Encoding Type:  One-Hot
 ; CLOCK_DIVIDE     ; 3     ; Signed Integer               ;
 ; CLOCK_DIVIDE2    ; 1302  ; Signed Integer               ;
 ; CLOCK_DIVIDE3    ; 868   ; Signed Integer               ;
+; CLOCK_DIVIDE4    ; 109   ; Signed Integer               ;
 ; RX_IDLE          ; 0     ; Signed Integer               ;
 ; RX_CHECK_START   ; 1     ; Signed Integer               ;
 ; RX_READ_BITS     ; 2     ; Signed Integer               ;
@@ -841,7 +842,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -851,7 +852,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Jan 21 12:57:30 2014
+    Info: Processing started: Wed Jan 29 11:40:31 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PMT_Timebin_Counts -c PMT_Timebin_Counts
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file uart.v
@@ -884,18 +885,18 @@ Warning (275043): Pin "pulse_detect" is missing source
 Warning (275009): Pin "transmit_switch" not connected
 Warning (275009): Pin "rts" not connected
 Info (12128): Elaborating entity "uart" for hierarchy "uart:inst4"
-Warning (10230): Verilog HDL assignment warning at UART.v(67): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(68): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(130): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(69): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(70): truncated value with size 32 to match size of target (11)
 Warning (10230): Verilog HDL assignment warning at UART.v(132): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(133): truncated value with size 32 to match size of target (6)
-Warning (10230): Verilog HDL assignment warning at UART.v(135): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(138): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(139): truncated value with size 32 to match size of target (6)
-Warning (10230): Verilog HDL assignment warning at UART.v(150): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(179): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at UART.v(223): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(234): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at UART.v(134): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(135): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at UART.v(137): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(140): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(141): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at UART.v(152): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(181): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at UART.v(225): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(236): truncated value with size 32 to match size of target (4)
 Warning (10034): Output port "LED" at UART.v(46) has no driver
 Info (12128): Elaborating entity "PLL" for hierarchy "PLL:inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "PLL:inst|altpll:altpll_component"
@@ -1013,15 +1014,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "transmit_switch"
     Warning (15610): No output dependent on input pin "rts"
-Info (21057): Implemented 433 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 431 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 400 logic cells
+    Info (21061): Implemented 398 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 41 warnings
     Info: Peak virtual memory: 472 megabytes
-    Info: Processing ended: Tue Jan 21 12:57:43 2014
-    Info: Elapsed time: 00:00:13
+    Info: Processing ended: Wed Jan 29 11:40:37 2014
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 
 

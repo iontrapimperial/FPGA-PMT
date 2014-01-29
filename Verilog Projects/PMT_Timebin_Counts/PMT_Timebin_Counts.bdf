@@ -399,6 +399,11 @@ applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
+		"CLOCK_DIVIDE4"
+		"109"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
 		"RX_IDLE"
 		"0"
 		""
@@ -451,7 +456,7 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 192 192))
 	)
-	(annotation_block (parameter)(rect 1096 344 1216 424))
+	(annotation_block (parameter)(rect 1096 344 1376 448))
 )
 (symbol
 	(rect 392 152 576 296)

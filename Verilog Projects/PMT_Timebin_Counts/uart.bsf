@@ -144,6 +144,11 @@ applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
+		"CLOCK_DIVIDE4"
+		"109"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
 		"RX_IDLE"
 		"0"
 		""

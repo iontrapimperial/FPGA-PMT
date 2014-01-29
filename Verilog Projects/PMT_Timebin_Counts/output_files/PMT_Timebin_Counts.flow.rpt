@@ -1,5 +1,5 @@
 Flow report for PMT_Timebin_Counts
-Tue Jan 21 12:58:10 2014
+Wed Jan 29 11:40:56 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Jan 21 12:58:05 2014           ;
+; Flow Status                        ; Successful - Wed Jan 29 11:40:52 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; PMT_Timebin_Counts                              ;
 ; Top-level Entity Name              ; PMT_Timebin_Counts                              ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 391 / 18,752 ( 2 % )                            ;
-;     Total combinational functions  ; 382 / 18,752 ( 2 % )                            ;
+; Total logic elements               ; 387 / 18,752 ( 2 % )                            ;
+;     Total combinational functions  ; 380 / 18,752 ( 2 % )                            ;
 ;     Dedicated logic registers      ; 127 / 18,752 ( < 1 % )                          ;
 ; Total registers                    ; 127                                             ;
 ; Total pins                         ; 32 / 315 ( 10 % )                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/21/2014 12:57:31 ;
+; Start date & time ; 01/29/2014 11:40:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PMT_Timebin_Counts  ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 147709847348.139030905100596          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 147709847348.139099563201788          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
@@ -92,11 +92,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 461 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:14     ; 1.0                     ; 626 MB              ; 00:00:09                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 461 MB              ; 00:00:04                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 625 MB              ; 00:00:08                           ;
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 408 MB              ; 00:00:02                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 394 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:17                           ;
+; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:16                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

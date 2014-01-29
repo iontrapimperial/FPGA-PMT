@@ -48,6 +48,7 @@ module uart(
 parameter CLOCK_DIVIDE 		= 3;
 parameter CLOCK_DIVIDE2	= 1302; //1302 = clock rate (50Mhz) / (baud rate (9600) * 4)
 parameter CLOCK_DIVIDE3 = 868;	
+parameter CLOCK_DIVIDE4 = 109; // baud rate 115200
 // States for the receiving state machine.
 // These are just constants, not parameters to override.
 parameter RX_IDLE 			= 0;
@@ -64,8 +65,9 @@ parameter TX_IDLE 			= 0;
 parameter TX_SENDING 		= 1;
 parameter TX_DELAY_RESTART = 2;
  
-reg [10:0] rx_clk_divider = CLOCK_DIVIDE3;
-reg [10:0] tx_clk_divider = CLOCK_DIVIDE3;
+
+reg [10:0] rx_clk_divider = CLOCK_DIVIDE4;
+reg [10:0] tx_clk_divider = CLOCK_DIVIDE4;
  
 
 reg [2:0] recv_state = RX_IDLE;
@@ -129,13 +131,13 @@ tx_Done<=0;
 	// state machines are decremented.
 	rx_clk_divider = rx_clk_divider - 1;
 	if (!rx_clk_divider) begin
-		rx_clk_divider = CLOCK_DIVIDE3;
+		rx_clk_divider = CLOCK_DIVIDE4;
 		rx_countdown = rx_countdown - 1;
 	end
 	tx_clk_divider = tx_clk_divider - 1;
 	if (!tx_clk_divider) begin
 		tx_test=!tx_test;
-		tx_clk_divider = CLOCK_DIVIDE3;
+		tx_clk_divider = CLOCK_DIVIDE4;
 		tx_countdown = tx_countdown - 1;
 	end
  
@@ -147,7 +149,7 @@ tx_Done<=0;
 			if (!rx) begin
 				// Wait half the period - should resume in the
 				// middle of this first pulse.
-				rx_clk_divider = CLOCK_DIVIDE3;
+				rx_clk_divider = CLOCK_DIVIDE4;
 				rx_countdown = 2;
 				recv_state = RX_CHECK_START;
 			end
@@ -220,7 +222,7 @@ tx_Done<=0;
 				tx_data = tx_byte;
 				// Send the initial, low pulse of 1 bit period
 				// to signal the start, followed by the data
-				tx_clk_divider = CLOCK_DIVIDE3;
+				tx_clk_divider = CLOCK_DIVIDE4;
 				tx_countdown = 4;
 				tx_out = 0;
 				tx_bits_remaining = 8;
