@@ -1,0 +1,19 @@
+module test (input clk, output reg tick);
+
+parameter CLOCK_DIVIDE = 2604;
+parameter CLOCK_DIVIDE2 = 2604;
+
+reg [10:0] tx_clk_divider=CLOCK_DIVIDE;
+reg [3:0] tx_countdown;
+
+
+always @ (posedge clk)
+begin 
+	tx_clk_divider = tx_clk_divider - 1;
+	if (!tx_clk_divider) begin
+		tick=!tick;
+		tx_clk_divider = CLOCK_DIVIDE;
+		tx_countdown = tx_countdown - 1;
+	end
+	end
+endmodule

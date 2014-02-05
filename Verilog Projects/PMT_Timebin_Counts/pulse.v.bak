@@ -1,0 +1,31 @@
+module pulse (switch, clock, out);
+
+input clock;
+input switch;
+output reg pulse;
+reg edgeDetect;
+reg trigger = 0;
+reg case1 = 0;
+
+always @(posedge clock)
+begin
+
+edgeDetect<=switch;
+if(edgeDetect && ~switch)
+trigger<=1;
+
+else trigger<=0;
+
+case(case1)
+0: begin 
+if (trigger) case1 <= 1;
+end
+1: begin 
+pulse<=1;
+case1<=1;
+end
+2: pulse<=0;
+	case1 <= 0;
+endcase
+
+end 

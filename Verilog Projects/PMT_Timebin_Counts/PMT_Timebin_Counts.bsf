@@ -1,0 +1,120 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 200 208)
+	(text "PMT_Timebin_Counts" (rect 5 0 125 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 176 25 188)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "rx_line" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "rx_line" (rect 21 27 58 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "ClearToSend" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "ClearToSend" (rect 21 43 94 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "osc" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "osc" (rect 21 59 42 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "signal" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "signal" (rect 21 75 54 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "LED" (rect 0 0 22 14)(font "Arial" (font_size 8)))
+		(text "LED" (rect 141 27 163 41)(font "Arial" (font_size 8)))
+		(line (pt 184 32)(pt 168 32))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "tx_LED" (rect 0 0 40 14)(font "Arial" (font_size 8)))
+		(text "tx_LED" (rect 123 43 163 57)(font "Arial" (font_size 8)))
+		(line (pt 184 48)(pt 168 48))
+	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "tx" (rect 0 0 10 14)(font "Arial" (font_size 8)))
+		(text "tx" (rect 153 59 163 73)(font "Arial" (font_size 8)))
+		(line (pt 184 64)(pt 168 64))
+	)
+	(port
+		(pt 184 80)
+		(output)
+		(text "rts" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "rts" (rect 148 75 163 89)(font "Arial" (font_size 8)))
+		(line (pt 184 80)(pt 168 80))
+	)
+	(port
+		(pt 184 96)
+		(output)
+		(text "test" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "test" (rect 142 91 163 105)(font "Arial" (font_size 8)))
+		(line (pt 184 96)(pt 168 96))
+	)
+	(port
+		(pt 184 112)
+		(output)
+		(text "test2" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "test2" (rect 135 107 163 121)(font "Arial" (font_size 8)))
+		(line (pt 184 112)(pt 168 112))
+	)
+	(port
+		(pt 184 128)
+		(output)
+		(text "huns[6..0]" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "huns[6..0]" (rect 107 123 163 137)(font "Arial" (font_size 8)))
+		(line (pt 184 128)(pt 168 128)(line_width 3))
+	)
+	(port
+		(pt 184 144)
+		(output)
+		(text "tens[6..0]" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "tens[6..0]" (rect 110 139 163 153)(font "Arial" (font_size 8)))
+		(line (pt 184 144)(pt 168 144)(line_width 3))
+	)
+	(port
+		(pt 184 160)
+		(output)
+		(text "ones[6..0]" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "ones[6..0]" (rect 107 155 163 169)(font "Arial" (font_size 8)))
+		(line (pt 184 160)(pt 168 160)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 176))
+	)
+)

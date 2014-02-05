@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Jan 29 11:40:36 2014
+Analysis & Synthesis Status : Successful - Wed Feb 05 14:47:35 2014
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : PMT_Timebin_Counts
 Top-level Entity Name : PMT_Timebin_Counts
 Family : Cyclone II
-Total logic elements : 391
-    Total combinational functions : 380
-    Dedicated logic registers : 127
-Total registers : 127
-Total pins : 32
+Total logic elements : 389
+    Total combinational functions : 378
+    Dedicated logic registers : 105
+Total registers : 105
+Total pins : 35
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

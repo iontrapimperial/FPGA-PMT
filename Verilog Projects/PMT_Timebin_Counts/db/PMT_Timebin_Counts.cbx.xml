@@ -3,5 +3,6 @@
 	<PROJECT NAME="PMT_Timebin_Counts">
 		<CBX_INST_ENTRY INSTANCE_NAME="|PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_35m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_75m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_8ch.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

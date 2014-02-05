@@ -1,13 +1,18 @@
 |PMT_Timebin_Counts
-LED <= <GND>
 tx <= uart:inst4.tx
 osc => PLL:inst.inclk0
 rx_line => uart:inst4.rx_line
+one_switch => trigger_clock_hundreds:inst5.one_switch
+two_switch => trigger_clock_hundreds:inst5.two_switch
+three_switch => trigger_clock_hundreds:inst5.three_switch
+four_switch => trigger_clock_hundreds:inst5.four_switch
+five_switch => trigger_clock_hundreds:inst5.five_switch
+six_switch => trigger_clock_hundreds:inst5.six_switch
+seven_switch => trigger_clock_hundreds:inst5.seven_switch
+eight_switch => trigger_clock_hundreds:inst5.eight_switch
 signal => count:inst2.switch
-test2 <= trigger_clock_hundreds:inst5.LED
-pulse_detect <= <GND>
 cts <= uart:inst4.ClearToSend
-tx_test <= test:inst1.tick
+test2 <= trigger_clock_hundreds:inst5.LED
 huns[0] <= Triple_SevenSeg:inst3.huns[0]
 huns[1] <= Triple_SevenSeg:inst3.huns[1]
 huns[2] <= Triple_SevenSeg:inst3.huns[2]
@@ -29,8 +34,6 @@ tens[3] <= Triple_SevenSeg:inst3.tens[3]
 tens[4] <= Triple_SevenSeg:inst3.tens[4]
 tens[5] <= Triple_SevenSeg:inst3.tens[5]
 tens[6] <= Triple_SevenSeg:inst3.tens[6]
-transmit_switch => ~NO_FANOUT~
-rts => ~NO_FANOUT~
 
 
 |PMT_Timebin_Counts|uart:inst4
@@ -239,6 +242,14 @@ icdrclk <= <GND>
 
 
 |PMT_Timebin_Counts|trigger_clock_hundreds:inst5
+one_switch => Mult0.IN20
+two_switch => Mult0.IN19
+three_switch => Mult0.IN18
+four_switch => Mult0.IN17
+five_switch => Mult0.IN16
+six_switch => Mult0.IN15
+seven_switch => Mult0.IN14
+eight_switch => Mult0.IN13
 clk => i[0].CLK
 clk => i[1].CLK
 clk => i[2].CLK
@@ -261,16 +272,6 @@ clk => i[18].CLK
 clk => i[19].CLK
 clk => i[20].CLK
 clk => i[21].CLK
-clk => i[22].CLK
-clk => i[23].CLK
-clk => i[24].CLK
-clk => i[25].CLK
-clk => i[26].CLK
-clk => i[27].CLK
-clk => i[28].CLK
-clk => i[29].CLK
-clk => i[30].CLK
-clk => i[31].CLK
 clk => LED~reg0.CLK
 clk => reset~reg0.CLK
 clk => out[0]~reg0.CLK
@@ -337,22 +338,6 @@ out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PMT_Timebin_Counts|test:inst1
-clk => tick~reg0.CLK
-clk => tx_clk_divider[0].CLK
-clk => tx_clk_divider[1].CLK
-clk => tx_clk_divider[2].CLK
-clk => tx_clk_divider[3].CLK
-clk => tx_clk_divider[4].CLK
-clk => tx_clk_divider[5].CLK
-clk => tx_clk_divider[6].CLK
-clk => tx_clk_divider[7].CLK
-clk => tx_clk_divider[8].CLK
-clk => tx_clk_divider[9].CLK
-clk => tx_clk_divider[10].CLK
-tick <= tick~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |PMT_Timebin_Counts|Triple_SevenSeg:inst3
 s1[0] => Mod1.IN14
 s1[0] => Div1.IN14
@@ -391,39 +376,5 @@ ones[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 ones[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 ones[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ones[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PMT_Timebin_Counts|count:inst6
-switch => out[0]~reg0.CLK
-switch => out[1]~reg0.CLK
-switch => out[2]~reg0.CLK
-switch => out[3]~reg0.CLK
-switch => out[4]~reg0.CLK
-switch => out[5]~reg0.CLK
-switch => out[6]~reg0.CLK
-switch => out[7]~reg0.CLK
-reset => out[0]~reg0.ACLR
-reset => out[1]~reg0.ACLR
-reset => out[2]~reg0.ACLR
-reset => out[3]~reg0.ACLR
-reset => out[4]~reg0.ACLR
-reset => out[5]~reg0.ACLR
-reset => out[6]~reg0.ACLR
-reset => out[7]~reg0.ACLR
-out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PMT_Timebin_Counts|pulse:inst7
-clock => ~NO_FANOUT~
-switch => ~NO_FANOUT~
-LED <= <GND>
-pulse <= <GND>
 
 

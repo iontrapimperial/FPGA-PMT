@@ -1,15 +1,15 @@
-Fitter Status : Successful - Wed Jan 29 11:40:48 2014
+Fitter Status : Successful - Wed Feb 05 14:47:45 2014
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : PMT_Timebin_Counts
 Top-level Entity Name : PMT_Timebin_Counts
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 387 / 18,752 ( 2 % )
-    Total combinational functions : 380 / 18,752 ( 2 % )
-    Dedicated logic registers : 127 / 18,752 ( < 1 % )
-Total registers : 127
-Total pins : 32 / 315 ( 10 % )
+Total logic elements : 381 / 18,752 ( 2 % )
+    Total combinational functions : 378 / 18,752 ( 2 % )
+    Dedicated logic registers : 105 / 18,752 ( < 1 % )
+Total registers : 105
+Total pins : 35 / 315 ( 11 % )
 Total virtual pins : 0
 Total memory bits : 0 / 239,616 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
