@@ -1,3 +1,4 @@
+//Counts photon signals from PMT
 module count(switch, reset, out);
 
 input switch, reset;
@@ -9,8 +10,9 @@ begin
 if (reset)
 out<=0;
 
-else if (switch)
+else if (switch && out<255)
 out<=out+1;
+
 
 end
 endmodule

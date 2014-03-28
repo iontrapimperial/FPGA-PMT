@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PMT_Timebin_Counts
-Wed Feb 05 14:47:35 2014
+Fri Mar 28 16:27:38 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,9 +14,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |PMT_Timebin_Counts|uart:inst4|tx_state
- 10. State Machine - |PMT_Timebin_Counts|uart:inst4|recv_state
- 11. Registers Removed During Synthesis
+  9. State Machine - |PMT_Timebin_Counts|uart:inst4|recv_state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -55,16 +55,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 05 14:47:35 2014           ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 28 16:27:38 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; PMT_Timebin_Counts                              ;
 ; Top-level Entity Name              ; PMT_Timebin_Counts                              ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 389                                             ;
-;     Total combinational functions  ; 378                                             ;
-;     Dedicated logic registers      ; 105                                             ;
-; Total registers                    ; 105                                             ;
-; Total pins                         ; 35                                              ;
+; Total logic elements               ; 436                                             ;
+;     Total combinational functions  ; 416                                             ;
+;     Dedicated logic registers      ; 138                                             ;
+; Total registers                    ; 138                                             ;
+; Total pins                         ; 40                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -179,6 +179,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; PLL.v                            ; yes             ; User Wizard-Generated File         ; C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/PMT_Timebin_Counts/PLL.v                      ;         ;
 ; count.v                          ; yes             ; User Verilog HDL File              ; C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/PMT_Timebin_Counts/count.v                    ;         ;
 ; PMT_Timebin_Counts.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/PMT_Timebin_Counts/PMT_Timebin_Counts.bdf     ;         ;
+; SumCounts.v                      ; yes             ; User Verilog HDL File              ; C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/PMT_Timebin_Counts/SumCounts.v                ;         ;
+; SumControl.v                     ; yes             ; User Verilog HDL File              ; C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/PMT_Timebin_Counts/SumControl.v               ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf                                                       ;         ;
 ; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                   ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc                                                  ;         ;
@@ -224,31 +226,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------------------------------+
 ; Resource                                    ; Usage                                  ;
 +---------------------------------------------+----------------------------------------+
-; Estimated Total logic elements              ; 389                                    ;
+; Estimated Total logic elements              ; 436                                    ;
 ;                                             ;                                        ;
-; Total combinational functions               ; 378                                    ;
+; Total combinational functions               ; 416                                    ;
 ; Logic element usage by number of LUT inputs ;                                        ;
-;     -- 4 input functions                    ; 182                                    ;
-;     -- 3 input functions                    ; 82                                     ;
-;     -- <=2 input functions                  ; 114                                    ;
+;     -- 4 input functions                    ; 180                                    ;
+;     -- 3 input functions                    ; 116                                    ;
+;     -- <=2 input functions                  ; 120                                    ;
 ;                                             ;                                        ;
 ; Logic elements by mode                      ;                                        ;
-;     -- normal mode                          ; 282                                    ;
-;     -- arithmetic mode                      ; 96                                     ;
+;     -- normal mode                          ; 307                                    ;
+;     -- arithmetic mode                      ; 109                                    ;
 ;                                             ;                                        ;
-; Total registers                             ; 105                                    ;
-;     -- Dedicated logic registers            ; 105                                    ;
+; Total registers                             ; 138                                    ;
+;     -- Dedicated logic registers            ; 138                                    ;
 ;     -- I/O registers                        ; 0                                      ;
 ;                                             ;                                        ;
-; I/O pins                                    ; 35                                     ;
+; I/O pins                                    ; 40                                     ;
 ; Embedded Multiplier 9-bit elements          ; 0                                      ;
 ; Total PLLs                                  ; 1                                      ;
 ;     -- PLLs                                 ; 1                                      ;
 ;                                             ;                                        ;
 ; Maximum fan-out node                        ; PLL:inst|altpll:altpll_component|_clk0 ;
-; Maximum fan-out                             ; 97                                     ;
-; Total fan-out                               ; 1468                                   ;
-; Average fan-out                             ; 2.83                                   ;
+; Maximum fan-out                             ; 122                                    ;
+; Total fan-out                               ; 1706                                   ;
+; Average fan-out                             ; 2.87                                   ;
 +---------------------------------------------+----------------------------------------+
 
 
@@ -257,9 +259,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |PMT_Timebin_Counts                            ; 378 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |PMT_Timebin_Counts                                                                                                                                ; work         ;
+; |PMT_Timebin_Counts                            ; 416 (0)           ; 138 (0)      ; 0           ; 0            ; 0       ; 0         ; 40   ; 0            ; |PMT_Timebin_Counts                                                                                                                                ; work         ;
 ;    |PLL:inst|                                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|PLL:inst                                                                                                                       ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|PLL:inst|altpll:altpll_component                                                                                               ; work         ;
+;    |SumControl:inst1|                          ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|SumControl:inst1                                                                                                               ; work         ;
+;    |SumCounts:inst7|                           ; 25 (25)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|SumCounts:inst7                                                                                                                ; work         ;
 ;    |Triple_SevenSeg:inst3|                     ; 170 (83)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3                                                                                                          ; work         ;
 ;       |lpm_divide:Mod0|                        ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod0                                                                                          ; work         ;
 ;          |lpm_divide_35m:auto_generated|       ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated                                                            ; work         ;
@@ -269,14 +273,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_divide_75m:auto_generated|       ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated                                                            ; work         ;
 ;             |sign_div_unsign_ekh:divider|      ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                                ; work         ;
 ;                |alt_u_div_uve:divider|         ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider          ; work         ;
-;    |count:inst2|                               ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|count:inst2                                                                                                                    ; work         ;
-;    |trigger_clock_hundreds:inst5|              ; 69 (36)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5                                                                                                   ; work         ;
+;    |count:inst2|                               ; 11 (11)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|count:inst2                                                                                                                    ; work         ;
+;    |count:inst6|                               ; 11 (11)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|count:inst6                                                                                                                    ; work         ;
+;    |trigger_clock_hundreds:inst5|              ; 69 (36)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5                                                                                                   ; work         ;
 ;       |lpm_mult:Mult0|                         ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0                                                                                    ; work         ;
 ;          |multcore:mult_core|                  ; 33 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core                                                                 ; work         ;
 ;             |mpar_add:padder|                  ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; work         ;
 ;                   |add_sub_8ch:auto_generated| ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_8ch:auto_generated ; work         ;
-;    |uart:inst4|                                ; 131 (131)         ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|uart:inst4                                                                                                                     ; work         ;
+;    |uart:inst4|                                ; 130 (130)         ; 62 (62)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PMT_Timebin_Counts|uart:inst4                                                                                                                     ; work         ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -288,18 +293,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------+-----------------------------------------------------------------------------------------------+
 ; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |PMT_Timebin_Counts|PLL:inst ; C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/PMT_Timebin_Counts/PLL.v ;
 +--------+--------------+---------+--------------+--------------+------------------------------+-----------------------------------------------------------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------+
-; State Machine - |PMT_Timebin_Counts|uart:inst4|tx_state                                        ;
-+---------------------------+------------------+---------------------------+---------------------+
-; Name                      ; tx_state.TX_IDLE ; tx_state.TX_DELAY_RESTART ; tx_state.TX_SENDING ;
-+---------------------------+------------------+---------------------------+---------------------+
-; tx_state.TX_IDLE          ; 0                ; 0                         ; 0                   ;
-; tx_state.TX_SENDING       ; 1                ; 0                         ; 1                   ;
-; tx_state.TX_DELAY_RESTART ; 1                ; 1                         ; 0                   ;
-+---------------------------+------------------+---------------------------+---------------------+
 
 
 Encoding Type:  One-Hot
@@ -318,16 +311,27 @@ Encoding Type:  One-Hot
 +-----------------------------+------------------------+---------------------+-----------------------------+--------------------------+-------------------------+---------------------------+--------------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; uart:inst4|recv_state~6               ; Lost fanout        ;
-; uart:inst4|recv_state~7               ; Lost fanout        ;
-; uart:inst4|recv_state~8               ; Lost fanout        ;
-; Total Number of Removed Registers = 3 ;                    ;
-+---------------------------------------+--------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; uart:inst4|Buffer[0..2]               ; Stuck at GND due to stuck port data_in ;
+; uart:inst4|recv_state~6               ; Lost fanout                            ;
+; uart:inst4|recv_state~7               ; Lost fanout                            ;
+; uart:inst4|recv_state~8               ; Lost fanout                            ;
+; Total Number of Removed Registers = 6 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                   ;
++----------------------+---------------------------+--------------------------------------------+
+; Register name        ; Reason for Removal        ; Registers Removed due to This Register     ;
++----------------------+---------------------------+--------------------------------------------+
+; uart:inst4|Buffer[2] ; Stuck at GND              ; uart:inst4|Buffer[1], uart:inst4|Buffer[0] ;
+;                      ; due to stuck port data_in ;                                            ;
++----------------------+---------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -335,35 +339,34 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 105   ;
+; Total registers                              ; 138   ;
 ; Number of registers using Synchronous Clear  ; 22    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Clock Enable       ; 43    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; uart:inst4|tx_out                       ; 2       ;
-; uart:inst4|tx_clk_divider[0]            ; 1       ;
-; uart:inst4|tx_clk_divider[2]            ; 1       ;
-; uart:inst4|tx_clk_divider[3]            ; 1       ;
-; uart:inst4|tx_clk_divider[5]            ; 1       ;
-; uart:inst4|tx_clk_divider[6]            ; 1       ;
-; uart:inst4|rx_clk_divider[0]            ; 1       ;
-; uart:inst4|rx_clk_divider[2]            ; 1       ;
-; uart:inst4|rx_clk_divider[3]            ; 1       ;
-; uart:inst4|rx_clk_divider[5]            ; 1       ;
-; uart:inst4|rx_clk_divider[6]            ; 1       ;
-; uart:inst4|rx                           ; 22      ;
-; Total number of inverted registers = 12 ;         ;
-+-----------------------------------------+---------+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; uart:inst4|tx_out                        ; 2       ;
+; trigger_clock_hundreds:inst5|StopRunning ; 3       ;
+; uart:inst4|tx_clk_divider[1]             ; 1       ;
+; uart:inst4|tx_clk_divider[2]             ; 1       ;
+; uart:inst4|tx_clk_divider[4]             ; 1       ;
+; uart:inst4|tx_clk_divider[5]             ; 1       ;
+; uart:inst4|rx_clk_divider[1]             ; 1       ;
+; uart:inst4|rx_clk_divider[2]             ; 1       ;
+; uart:inst4|rx_clk_divider[4]             ; 1       ;
+; uart:inst4|rx_clk_divider[5]             ; 1       ;
+; uart:inst4|rx                            ; 21      ;
+; Total number of inverted registers = 11  ;         ;
++------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -371,40 +374,49 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_clk_divider[1]    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_clk_divider[1]    ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_countdown[0]      ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_bits_remaining[3] ;
-; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_data[2]           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |PMT_Timebin_Counts|SumCounts:inst7|sumout[0]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_clk_divider[0]    ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_countdown[3]      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_clk_divider[0]    ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_bits_remaining[3] ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_data[0]           ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_bits_remaining[2] ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_countdown[2]      ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_countdown[3]      ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_clk_divider[6]    ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_clk_divider[6]    ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |PMT_Timebin_Counts|uart:inst4|Selector10           ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_countdown[0]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|rx_clk_divider[5]    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |PMT_Timebin_Counts|uart:inst4|tx_clk_divider[2]    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |PMT_Timebin_Counts|uart:inst4|Selector6            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +---------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: uart:inst4 ;
-+------------------+-------+------------------------------+
-; Parameter Name   ; Value ; Type                         ;
-+------------------+-------+------------------------------+
-; CLOCK_DIVIDE     ; 3     ; Signed Integer               ;
-; CLOCK_DIVIDE2    ; 1302  ; Signed Integer               ;
-; CLOCK_DIVIDE3    ; 868   ; Signed Integer               ;
-; CLOCK_DIVIDE4    ; 109   ; Signed Integer               ;
-; RX_IDLE          ; 0     ; Signed Integer               ;
-; RX_CHECK_START   ; 1     ; Signed Integer               ;
-; RX_READ_BITS     ; 2     ; Signed Integer               ;
-; RX_CHECK_STOP    ; 3     ; Signed Integer               ;
-; RX_DELAY_RESTART ; 4     ; Signed Integer               ;
-; RX_ERROR         ; 5     ; Signed Integer               ;
-; RX_RECEIVED      ; 6     ; Signed Integer               ;
-; TX_IDLE          ; 0     ; Signed Integer               ;
-; TX_SENDING       ; 1     ; Signed Integer               ;
-; TX_DELAY_RESTART ; 2     ; Signed Integer               ;
-+------------------+-------+------------------------------+
++-------------------+-------+-----------------------------+
+; Parameter Name    ; Value ; Type                        ;
++-------------------+-------+-----------------------------+
+; CLOCK_DIVIDE      ; 3     ; Signed Integer              ;
+; CLOCK_DIVIDE2     ; 1302  ; Signed Integer              ;
+; CLOCK_DIVIDE3     ; 868   ; Signed Integer              ;
+; CLOCK_DIVIDE4     ; 109   ; Signed Integer              ;
+; CLOCK_DIVIDE5     ; 54    ; Signed Integer              ;
+; RX_IDLE           ; 0     ; Signed Integer              ;
+; RX_CHECK_START    ; 1     ; Signed Integer              ;
+; RX_READ_BITS      ; 2     ; Signed Integer              ;
+; RX_CHECK_STOP     ; 3     ; Signed Integer              ;
+; RX_DELAY_RESTART  ; 4     ; Signed Integer              ;
+; RX_ERROR          ; 5     ; Signed Integer              ;
+; RX_RECEIVED       ; 6     ; Signed Integer              ;
+; TX_IDLE           ; 0     ; Signed Integer              ;
+; TX_IDLE2          ; 4     ; Signed Integer              ;
+; TX_SENDING1       ; 1     ; Signed Integer              ;
+; TX_SENDING2       ; 2     ; Signed Integer              ;
+; TX_DELAY_RESTART1 ; 3     ; Signed Integer              ;
+; TXIdle1           ; 0     ; Signed Integer              ;
+; TXSending1        ; 1     ; Signed Integer              ;
+; TXIdle2           ; 2     ; Signed Integer              ;
+; TXSending2        ; 3     ; Signed Integer              ;
+; TX_DELAYRESTART   ; 4     ; Signed Integer              ;
++-------------------+-------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -905,7 +917,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -915,7 +927,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Feb 05 14:47:29 2014
+    Info: Processing started: Fri Mar 28 16:27:26 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PMT_Timebin_Counts -c PMT_Timebin_Counts
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file uart.v
@@ -942,22 +954,37 @@ Warning (12019): Can't analyze file -- file G:/FPGA Verilog/pulse.v is missing
 Warning (12019): Can't analyze file -- file G:/FPGA Verilog/trigger_clock_hundreds.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file test.v
     Info (12023): Found entity 1: test
+Info (12021): Found 1 design units, including 1 entities, in source file sumcounts.v
+    Info (12023): Found entity 1: SumCounts
+Info (12021): Found 1 design units, including 1 entities, in source file sumcontrol.v
+    Info (12023): Found entity 1: SumControl
 Info (12127): Elaborating entity "PMT_Timebin_Counts" for the top level hierarchy
-Warning (275011): Block or symbol "count" of instance "inst2" overlaps another block or symbol
 Info (12128): Elaborating entity "uart" for hierarchy "uart:inst4"
-Warning (10230): Verilog HDL assignment warning at UART.v(69): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(70): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(132): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(134): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(135): truncated value with size 32 to match size of target (6)
-Warning (10230): Verilog HDL assignment warning at UART.v(137): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(140): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(141): truncated value with size 32 to match size of target (6)
-Warning (10230): Verilog HDL assignment warning at UART.v(152): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(181): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at UART.v(225): truncated value with size 32 to match size of target (11)
-Warning (10230): Verilog HDL assignment warning at UART.v(236): truncated value with size 32 to match size of target (4)
-Warning (10034): Output port "LED" at UART.v(46) has no driver
+Warning (10036): Verilog HDL or VHDL warning at UART.v(102): object "SendTimebinBool" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at UART.v(86): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(87): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(96): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at UART.v(152): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at UART.v(160): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(162): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(163): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at UART.v(165): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(168): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(169): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at UART.v(182): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(211): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at UART.v(255): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(259): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at UART.v(266): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at UART.v(271): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at UART.v(278): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at UART.v(282): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at UART.v(294): truncated value with size 32 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at UART.v(298): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at UART.v(309): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at UART.v(313): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at UART.v(318): truncated value with size 32 to match size of target (2)
+Warning (10199): Verilog HDL Case Statement warning at UART.v(325): case item expression never matches the case expression
 Info (12128): Elaborating entity "PLL" for hierarchy "PLL:inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "PLL:inst|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "PLL:inst|altpll:altpll_component"
@@ -1014,18 +1041,21 @@ Info (12133): Instantiated megafunction "PLL:inst|altpll:altpll_component" with 
     Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
 Info (12128): Elaborating entity "trigger_clock_hundreds" for hierarchy "trigger_clock_hundreds:inst5"
-Warning (10230): Verilog HDL assignment warning at trigger_clock_hundreds.v(37): truncated value with size 32 to match size of target (22)
-Warning (10230): Verilog HDL assignment warning at trigger_clock_hundreds.v(42): truncated value with size 32 to match size of target (22)
-Warning (10034): Output port "PIN" at trigger_clock_hundreds.v(10) has no driver
+Warning (10230): Verilog HDL assignment warning at trigger_clock_hundreds.v(56): truncated value with size 32 to match size of target (22)
+Warning (10230): Verilog HDL assignment warning at trigger_clock_hundreds.v(61): truncated value with size 32 to match size of target (22)
+Warning (10034): Output port "timebinfactorOut" at trigger_clock_hundreds.v(16) has no driver
+Warning (10034): Output port "PIN" at trigger_clock_hundreds.v(14) has no driver
+Info (12128): Elaborating entity "SumCounts" for hierarchy "SumCounts:inst7"
 Info (12128): Elaborating entity "count" for hierarchy "count:inst2"
-Warning (10230): Verilog HDL assignment warning at count.v(13): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at count.v(14): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "SumControl" for hierarchy "SumControl:inst1"
 Info (12128): Elaborating entity "Triple_SevenSeg" for hierarchy "Triple_SevenSeg:inst3"
-Warning (10230): Verilog HDL assignment warning at Triple_SevenSeg.v(17): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at Triple_SevenSeg.v(18): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at Triple_SevenSeg.v(19): truncated value with size 32 to match size of target (8)
-Warning (10235): Verilog HDL Always Construct warning at Triple_SevenSeg.v(21): variable "onesbcd" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Triple_SevenSeg.v(37): variable "tensbcd" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at Triple_SevenSeg.v(52): variable "hunsbcd" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at Triple_SevenSeg.v(20): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at Triple_SevenSeg.v(21): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at Triple_SevenSeg.v(22): truncated value with size 32 to match size of target (8)
+Warning (10235): Verilog HDL Always Construct warning at Triple_SevenSeg.v(24): variable "onesbcd" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Triple_SevenSeg.v(40): variable "tensbcd" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at Triple_SevenSeg.v(55): variable "hunsbcd" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info (278001): Inferred 3 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Triple_SevenSeg:inst3|Mod1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Triple_SevenSeg:inst3|Mod0"
@@ -1081,15 +1111,17 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/PMT_Timebin_Counts/output_files/PMT_Timebin_Counts.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 426 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 390 logic cells
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SendTimebinButton"
+Info (21057): Implemented 479 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 25 output pins
+    Info (21061): Implemented 438 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 29 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
     Info: Peak virtual memory: 473 megabytes
-    Info: Processing ended: Wed Feb 05 14:47:35 2014
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Fri Mar 28 16:27:38 2014
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -1,7 +1,9 @@
+/*This module displays a three digit number, usually the counts from one 
+(or both) of the PMTs for debugging communication issues.*/
 module Triple_SevenSeg(s1, huns, tens, ones);
 
 
-input wire [7:0] s1;
+input wire [15:0] s1;
 output reg [6:0] huns;
 output reg [6:0] tens;
 output reg [6:0] ones;
@@ -9,14 +11,15 @@ output reg [6:0] ones;
 reg [7:0] hunsbcd;
 reg [7:0] tensbcd;
 reg [7:0] onesbcd;
+reg [7:0] s;
 
+always@ (s1)
 
-always@ (s1) 
 begin
-
-onesbcd <= s1 % 100 % 10;
-tensbcd <= s1 % 100 /10;
-hunsbcd <= s1 /100;
+s=s1[15:8]; 
+onesbcd <= s % 100 % 10;
+tensbcd <= s % 100 /10;
+hunsbcd <= s /100;
 
 case (onesbcd)
 

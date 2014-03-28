@@ -21,6 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 // 
+
+/*UART Module takes byte (or 2 bytes) from PMT1, PMT2, their sum (or both PMT values). Sends one low start bit,
+followed by the byte as a bitstring and a high stop bit, this whole process is repeated if two bytes are sent. Finally 
+tx returns to the idle high state.*/ 
 module uart(
     input clk, // The master clock for this module
     input rst, // Synchronous reset.
@@ -28,12 +32,17 @@ module uart(
 	 
     output tx, // Outgoing serial line
     input transmit, // Indicate to transmit
-    input [7:0] tx_byte, // Byte to transmit
+    input [15:0] tx_byte, // Bytes to transmit
+	 input [7:0] timebinfactor,
+	 input StopUART,
+	 input SendTimebinButton,
+	 input TwoBytes,
 	 
     output received, // Indicated that a byte has been received.
     output [7:0] rx_byte, // Byte received
     output is_receiving, // Low when receive line is idle.
     output is_transmitting, // Low when transmit line is idle.
+	 output reg [7:0] timebinOUT,
 	 
 	 output reg tx_Done, //Goes high for one tick after stop bit transmission.
 	 output reg tx_test,
@@ -49,6 +58,7 @@ parameter CLOCK_DIVIDE 		= 3;
 parameter CLOCK_DIVIDE2	= 1302; //1302 = clock rate (50Mhz) / (baud rate (9600) * 4)
 parameter CLOCK_DIVIDE3 = 868;	
 parameter CLOCK_DIVIDE4 = 109; // baud rate 115200
+parameter CLOCK_DIVIDE5 = 54; //baud rate = 230400
 // States for the receiving state machine.
 // These are just constants, not parameters to override.
 parameter RX_IDLE 			= 0;
@@ -62,12 +72,19 @@ parameter RX_RECEIVED 		= 6;
 // States for the transmitting state machine.
 // Constants - do not override.
 parameter TX_IDLE 			= 0;
-parameter TX_SENDING 		= 1;
-parameter TX_DELAY_RESTART = 2;
- 
+parameter TX_IDLE2         =4;
+parameter TX_SENDING1      = 1;
+parameter TX_SENDING2      = 2;
+parameter TX_DELAY_RESTART1 = 3; 
 
-reg [10:0] rx_clk_divider = CLOCK_DIVIDE4;
-reg [10:0] tx_clk_divider = CLOCK_DIVIDE4;
+parameter TXIdle1 = 0;
+parameter TXSending1= 1;
+parameter TXIdle2=2;
+parameter TXSending2=3;
+parameter TX_DELAYRESTART=4;
+
+reg [10:0] rx_clk_divider = CLOCK_DIVIDE5;
+reg [10:0] tx_clk_divider = CLOCK_DIVIDE5;
  
 
 reg [2:0] recv_state = RX_IDLE;
@@ -80,7 +97,11 @@ reg [1:0] tx_state = TX_IDLE;
 reg [5:0] tx_countdown;
 reg [3:0] tx_bits_remaining;
 reg [7:0] tx_data;
- 
+
+
+reg SendTimebinBool=0;
+reg SendTimebin=0;
+
 assign received = recv_state == RX_RECEIVED;
 assign recv_error = recv_state == RX_ERROR;
 assign is_receiving = recv_state != RX_IDLE;
@@ -115,7 +136,14 @@ begin
 end
 
  
-always @(posedge clk) begin
+always @(posedge clk) 
+begin
+
+SendTimebin <= SendTimebinButton;
+if(~SendTimebin && SendTimebinButton)
+begin
+SendTimebinBool<=1;
+end
 
 tx_Done<=0;
 
@@ -131,25 +159,27 @@ tx_Done<=0;
 	// state machines are decremented.
 	rx_clk_divider = rx_clk_divider - 1;
 	if (!rx_clk_divider) begin
-		rx_clk_divider = CLOCK_DIVIDE4;
+		rx_clk_divider = CLOCK_DIVIDE5;
 		rx_countdown = rx_countdown - 1;
 	end
 	tx_clk_divider = tx_clk_divider - 1;
 	if (!tx_clk_divider) begin
 		tx_test=!tx_test;
-		tx_clk_divider = CLOCK_DIVIDE4;
+		tx_clk_divider = CLOCK_DIVIDE5;
 		tx_countdown = tx_countdown - 1;
 	end
+ timebinOUT=timebinfactor;
  
 	// Receive state machine
 	case (recv_state)
+	
 		RX_IDLE: begin
 			// A low pulse on the receive line indicates the
 			// start of data.
 			if (!rx) begin
 				// Wait half the period - should resume in the
 				// middle of this first pulse.
-				rx_clk_divider = CLOCK_DIVIDE4;
+				rx_clk_divider = CLOCK_DIVIDE5;
 				rx_countdown = 2;
 				recv_state = RX_CHECK_START;
 			end
@@ -214,43 +244,85 @@ tx_Done<=0;
  
 	// Transmit state machine
 	case (tx_state)
-		TX_IDLE: begin
-			if (transmit) begin
+		TXIdle1: begin
+			if (transmit && ~StopUART) begin
 				// If the transmit flag is raised in the idle
 				// state, start transmitting the current content
 				// of the tx_byte input.
-				tx_data = tx_byte;
+				tx_data = tx_byte[7:0];
 				// Send the initial, low pulse of 1 bit period
 				// to signal the start, followed by the data
-				tx_clk_divider = CLOCK_DIVIDE4;
+				tx_clk_divider = CLOCK_DIVIDE5;
 				tx_countdown = 4;
 				tx_out = 0;
 				tx_bits_remaining = 8;
-				tx_state = TX_SENDING;
+				tx_state = TXSending1;
 			end
 		end
-		TX_SENDING: begin
+		TXSending1: begin
 			if (!tx_countdown) begin
 				if (tx_bits_remaining) begin
-				
+				//Sends 1 bit per tx_countdown of 4
 					tx_bits_remaining = tx_bits_remaining - 1;
 					tx_out = tx_data[0];
+					//All bits in byte shifted down by 1 after bit sent
 					tx_data = {1'b0, tx_data[7:1]};
 					tx_countdown = 4;
-					tx_state = TX_SENDING;
-					
-				end else begin
-					// Set delay to send out 1 stop bit.
+					tx_state = TXSending1;
+				end else if (!tx_bits_remaining) begin
+					// Set delay to send out one stop bit.
 					tx_out = 1;
 					tx_countdown = 4;
-					tx_state = TX_DELAY_RESTART;
+					if(!TwoBytes)
+					begin
+					tx_state = TX_DELAYRESTART;
+					end
+					else if(TwoBytes)
+					begin
+					tx_state = TXIdle2;
+					end
 				end
 			end
 			else begin
 			//do nout
 			end
 		end
-		TX_DELAY_RESTART: begin
+		//Second Idle state to send one start bit before second byte
+		TXIdle2: 
+			if(!tx_countdown) begin
+			 begin
+			tx_clk_divider = CLOCK_DIVIDE5;
+				tx_countdown = 4;
+				tx_out = 0;
+				tx_bits_remaining = 8;
+				tx_state = TXSending2;
+				//Data to send set to second byte of tx_byte (counts from PMT2)
+				tx_data=tx_byte[15:8];
+				LED=!LED;
+			end
+			end
+		
+		//Sending PMT2 count
+		TXSending2: begin
+			if (!tx_countdown) begin
+				if (tx_bits_remaining) begin
+					tx_bits_remaining = tx_bits_remaining - 1;
+					tx_out = tx_data[0];
+					tx_data = {1'b0, tx_data[7:1]};
+					tx_countdown = 4;
+					tx_state = TXSending2;
+				end else if (!tx_bits_remaining) begin
+					// Set delay to send out 1 stop bit.
+					tx_out = 1;
+					tx_countdown = 4;
+					tx_state = TX_DELAYRESTART;
+				
+					
+					end
+					end
+					end
+
+		TX_DELAYRESTART: begin
 			// Wait until tx_countdown reaches the end before
 			// we send another transmission. This covers the
 			// "stop bit" delay.
@@ -258,12 +330,13 @@ tx_Done<=0;
 			//tx_state = tx_countdown ? TX_DELAY_RESTART : TX_IDLE;
 			if(tx_countdown)
 			begin
-				tx_state = TX_DELAY_RESTART;
-			end
+				tx_state = TX_DELAYRESTART;
+				end
 			else
 			begin
 				tx_Done <= 1;
-				tx_state = TX_IDLE;
+				tx_state = TXIdle1;
+				SendTimebinBool<=0;
 			end
 		end
 	endcase

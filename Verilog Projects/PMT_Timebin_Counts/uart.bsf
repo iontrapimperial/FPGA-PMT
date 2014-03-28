@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 224 224)
+	(rect 16 16 264 256)
 	(text "uart" (rect 5 0 20 12)(font "Arial" ))
-	(text "inst" (rect 8 192 20 204)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -54,79 +54,114 @@ applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "tx_byte[7..0]" (rect 0 0 50 12)(font "Arial" ))
-		(text "tx_byte[7..0]" (rect 21 91 71 103)(font "Arial" ))
+		(text "tx_byte[15..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "tx_byte[15..0]" (rect 21 91 75 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
-		(pt 208 32)
+		(pt 0 112)
+		(input)
+		(text "timebinfactor[7..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "timebinfactor[7..0]" (rect 21 107 91 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "StopUART" (rect 0 0 47 12)(font "Arial" ))
+		(text "StopUART" (rect 21 123 68 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "SendTimebinButton" (rect 0 0 75 12)(font "Arial" ))
+		(text "SendTimebinButton" (rect 21 139 96 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "TwoBytes" (rect 0 0 40 12)(font "Arial" ))
+		(text "TwoBytes" (rect 21 155 61 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 248 32)
 		(output)
 		(text "tx" (rect 0 0 7 12)(font "Arial" ))
-		(text "tx" (rect 180 27 187 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32)(line_width 1))
+		(text "tx" (rect 220 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 1))
 	)
 	(port
-		(pt 208 48)
+		(pt 248 48)
 		(output)
 		(text "received" (rect 0 0 34 12)(font "Arial" ))
-		(text "received" (rect 153 43 187 55)(font "Arial" ))
-		(line (pt 208 48)(pt 192 48)(line_width 1))
+		(text "received" (rect 193 43 227 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 1))
 	)
 	(port
-		(pt 208 64)
+		(pt 248 64)
 		(output)
 		(text "rx_byte[7..0]" (rect 0 0 51 12)(font "Arial" ))
-		(text "rx_byte[7..0]" (rect 136 59 187 71)(font "Arial" ))
-		(line (pt 208 64)(pt 192 64)(line_width 3))
+		(text "rx_byte[7..0]" (rect 176 59 227 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 3))
 	)
 	(port
-		(pt 208 80)
+		(pt 248 80)
 		(output)
 		(text "is_receiving" (rect 0 0 47 12)(font "Arial" ))
-		(text "is_receiving" (rect 140 75 187 87)(font "Arial" ))
-		(line (pt 208 80)(pt 192 80)(line_width 1))
+		(text "is_receiving" (rect 180 75 227 87)(font "Arial" ))
+		(line (pt 248 80)(pt 232 80)(line_width 1))
 	)
 	(port
-		(pt 208 96)
+		(pt 248 96)
 		(output)
 		(text "is_transmitting" (rect 0 0 56 12)(font "Arial" ))
-		(text "is_transmitting" (rect 131 91 187 103)(font "Arial" ))
-		(line (pt 208 96)(pt 192 96)(line_width 1))
+		(text "is_transmitting" (rect 171 91 227 103)(font "Arial" ))
+		(line (pt 248 96)(pt 232 96)(line_width 1))
 	)
 	(port
-		(pt 208 112)
+		(pt 248 112)
+		(output)
+		(text "timebinOUT[7..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "timebinOUT[7..0]" (rect 160 107 227 119)(font "Arial" ))
+		(line (pt 248 112)(pt 232 112)(line_width 3))
+	)
+	(port
+		(pt 248 128)
 		(output)
 		(text "tx_Done" (rect 0 0 34 12)(font "Arial" ))
-		(text "tx_Done" (rect 153 107 187 119)(font "Arial" ))
-		(line (pt 208 112)(pt 192 112)(line_width 1))
+		(text "tx_Done" (rect 193 123 227 135)(font "Arial" ))
+		(line (pt 248 128)(pt 232 128)(line_width 1))
 	)
 	(port
-		(pt 208 128)
+		(pt 248 144)
 		(output)
 		(text "tx_test" (rect 0 0 27 12)(font "Arial" ))
-		(text "tx_test" (rect 160 123 187 135)(font "Arial" ))
-		(line (pt 208 128)(pt 192 128)(line_width 1))
+		(text "tx_test" (rect 200 139 227 151)(font "Arial" ))
+		(line (pt 248 144)(pt 232 144)(line_width 1))
 	)
 	(port
-		(pt 208 144)
+		(pt 248 160)
 		(output)
 		(text "recv_error" (rect 0 0 44 12)(font "Arial" ))
-		(text "recv_error" (rect 143 139 187 151)(font "Arial" ))
-		(line (pt 208 144)(pt 192 144)(line_width 1))
+		(text "recv_error" (rect 183 155 227 167)(font "Arial" ))
+		(line (pt 248 160)(pt 232 160)(line_width 1))
 	)
 	(port
-		(pt 208 160)
+		(pt 248 176)
 		(output)
 		(text "ClearToSend" (rect 0 0 51 12)(font "Arial" ))
-		(text "ClearToSend" (rect 136 155 187 167)(font "Arial" ))
-		(line (pt 208 160)(pt 192 160)(line_width 1))
+		(text "ClearToSend" (rect 176 171 227 183)(font "Arial" ))
+		(line (pt 248 176)(pt 232 176)(line_width 1))
 	)
 	(port
-		(pt 208 176)
+		(pt 248 192)
 		(output)
 		(text "LED" (rect 0 0 20 12)(font "Arial" ))
-		(text "LED" (rect 167 171 187 183)(font "Arial" ))
-		(line (pt 208 176)(pt 192 176)(line_width 1))
+		(text "LED" (rect 207 187 227 199)(font "Arial" ))
+		(line (pt 248 192)(pt 232 192)(line_width 1))
 	)
 	(parameter
 		"CLOCK_DIVIDE"
@@ -146,6 +181,11 @@ applicable agreement for further details.
 	(parameter
 		"CLOCK_DIVIDE4"
 		"109"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"CLOCK_DIVIDE5"
+		"54"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
@@ -189,17 +229,52 @@ applicable agreement for further details.
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"TX_SENDING"
+		"TX_IDLE2"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TX_SENDING1"
 		"1"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
-		"TX_DELAY_RESTART"
+		"TX_SENDING2"
 		"2"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TX_DELAY_RESTART1"
+		"3"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TXIdle1"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TXSending1"
+		"1"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TXIdle2"
+		"2"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TXSending2"
+		"3"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TX_DELAYRESTART"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 192 192)(line_width 1))
+		(rectangle (rect 16 16 232 224)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 224 -64 324 16))
+	(annotation_block (parameter)(rect 264 -64 364 16))
 )

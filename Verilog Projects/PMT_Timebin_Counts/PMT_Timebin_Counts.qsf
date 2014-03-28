@@ -89,7 +89,6 @@ set_global_assignment -name STRATIX_CONFIGURATION_DEVICE EPCS4
 set_location_assignment PIN_B18 -to rx_line
 set_location_assignment PIN_A14 -to ClearToSend
 set_location_assignment PIN_B19 -to rts
-set_location_assignment PIN_R20 -to test
 set_location_assignment PIN_U22 -to test2
 set_location_assignment PIN_R21 -to transmit_switch
 set_global_assignment -name VERILOG_FILE pulse.v
@@ -109,4 +108,13 @@ set_location_assignment PIN_W12 -to five_switch
 set_location_assignment PIN_U12 -to six_switch
 set_location_assignment PIN_U11 -to seven_switch
 set_global_assignment -name BSF_FILE count.bsf
+set_location_assignment PIN_R22 -to StartButton
+set_location_assignment PIN_T22 -to SendTimebinButton
+set_global_assignment -name BSF_FILE count2.bsf
+set_global_assignment -name VERILOG_FILE SumCounts.v
+set_global_assignment -name VERILOG_FILE SumControl.v
+set_location_assignment PIN_P18 -to signal2
+set_location_assignment PIN_M1 -to in1
+set_location_assignment PIN_L2 -to in2
+set_location_assignment PIN_R20 -to led
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

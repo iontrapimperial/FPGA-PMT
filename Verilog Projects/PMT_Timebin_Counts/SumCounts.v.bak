@@ -1,0 +1,19 @@
+module SumCounts(count1, count2, select, sumout)
+
+input [7:0] count1;
+input [7:0] count2;
+input [1:0] select;
+output reg [7:0] sumout;
+
+begin
+
+case (select)
+
+2'b0: sumout = count1 + count2;
+2'b1: sumout = count1;
+2'b2: sumout = count2;
+2'b3: sumout = count1+count2;
+
+endcase
+end
+
