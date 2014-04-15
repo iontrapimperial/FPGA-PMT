@@ -14,7 +14,8 @@ output reg reset=0;
 output reg PIN;
 output reg LED=0;
 output reg [7:0] timebinfactorOut;
-reg [21:0] i=21'd0;
+reg [31:0] i=32'd0;
+reg [31:0] j=32'd0;
 wire [7:0] timebinfactor;
 reg[7:0] timebinChangeDetect;
 output reg StopRunning=1; // Changed how this is used. Now related to start button for whole thing.
@@ -45,15 +46,77 @@ StartRunning<=StartButton;
 if(StartRunning && !StartButton)
 begin
 StopRunning=0;
-LED=!LED;
+
 end
 
 
 if (i==timebinfactor*13'd5000)//timebinfactor*100us time bin
 begin
+// Stuff commented out used for further checking no bytes lost.
+j<=j+1;
+
+if(j==7000)
+begin
+out<=16'b0;
+reset<=1;
+i<=32'd0;	
+end
+
+else if(j==7001)
+begin
+out<=16'b0;
+reset<=1;
+i<=32'd0;
+	
+end
+
+else if(j==7002)
+begin
+out<=16'b0;
+reset<=1;
+i<=32'd0;	
+
+end
+
+else if(j==7003)
+begin
+out<=16'b0;
+reset<=1;
+i<=32'd0;	
+end
+
+else if(j==7004)
+begin
+out<=16'b0;
+reset<=1;
+i<=32'd0;
+j<=0;	
+LED=!LED;	
+end
+
+else if(j==7005)
+begin
+out<=16'b0;
+reset<=1;
+i<=32'd0;	
+end
+
+else if(j==7006)
+begin
+out<=16'b0;
+reset<=1;
+i<=32'd0;
+j<=0;	
+LED=!LED;
+end
+
+else
+begin
 out<=in;
 reset<=1;
 i<=32'd0;
+end
+
 end
 
 else 

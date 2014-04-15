@@ -4,6 +4,7 @@ module count(switch, reset, out);
 input switch, reset;
 output reg [7:0] out;
 
+
 always @(posedge switch, posedge reset)
 begin
 

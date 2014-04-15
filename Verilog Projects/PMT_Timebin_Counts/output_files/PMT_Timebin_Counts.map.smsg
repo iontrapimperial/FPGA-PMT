@@ -1,5 +1,5 @@
 Warning (10268): Verilog HDL information at UART.v(139): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at Triple_SevenSeg.v(16): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at trigger_clock_hundreds.v(34): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at trigger_clock_hundreds.v(35): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at single_sevenseg.v(9): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at Double_Sevenseg.v(13): always construct contains both blocking and non-blocking assignments

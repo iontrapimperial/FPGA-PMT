@@ -1,5 +1,5 @@
 Fitter report for PMT_Timebin_Counts
-Fri Mar 28 16:27:54 2014
+Sat Apr 12 11:35:43 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -65,18 +65,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Mar 28 16:27:54 2014           ;
+; Fitter Status                      ; Successful - Sat Apr 12 11:35:43 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; PMT_Timebin_Counts                              ;
 ; Top-level Entity Name              ; PMT_Timebin_Counts                              ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 431 / 18,752 ( 2 % )                            ;
-;     Total combinational functions  ; 417 / 18,752 ( 2 % )                            ;
-;     Dedicated logic registers      ; 138 / 18,752 ( < 1 % )                          ;
-; Total registers                    ; 138                                             ;
-; Total pins                         ; 40 / 315 ( 13 % )                               ;
+; Total logic elements               ; 496 / 18,752 ( 3 % )                            ;
+;     Total combinational functions  ; 493 / 18,752 ( 3 % )                            ;
+;     Dedicated logic registers      ; 181 / 18,752 ( < 1 % )                          ;
+; Total registers                    ; 181                                             ;
+; Total pins                         ; 42 / 315 ( 13 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
@@ -152,6 +152,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name     ; Ignored Entity ; Ignored From ; Ignored To      ; Ignored Value ; Ignored Source ;
 +----------+----------------+--------------+-----------------+---------------+----------------+
 ; Location ;                ;              ; ClearToSend     ; PIN_A14       ; QSF Assignment ;
+; Location ;                ;              ; oscilator       ; PIN_M18       ; QSF Assignment ;
 ; Location ;                ;              ; pulse_detect    ; PIN_A13       ; QSF Assignment ;
 ; Location ;                ;              ; rts             ; PIN_B19       ; QSF Assignment ;
 ; Location ;                ;              ; rx_line         ; PIN_B18       ; QSF Assignment ;
@@ -166,8 +167,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 600 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 600 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 722 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 722 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -190,7 +191,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 595     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 717     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 5       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -206,46 +207,46 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 431 / 18,752 ( 2 % )   ;
-;     -- Combinational with no register       ; 293                    ;
-;     -- Register only                        ; 14                     ;
-;     -- Combinational with a register        ; 124                    ;
+; Total logic elements                        ; 496 / 18,752 ( 3 % )   ;
+;     -- Combinational with no register       ; 315                    ;
+;     -- Register only                        ; 3                      ;
+;     -- Combinational with a register        ; 178                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 180                    ;
-;     -- 3 input functions                    ; 116                    ;
-;     -- <=2 input functions                  ; 121                    ;
-;     -- Register only                        ; 14                     ;
+;     -- 4 input functions                    ; 194                    ;
+;     -- 3 input functions                    ; 117                    ;
+;     -- <=2 input functions                  ; 182                    ;
+;     -- Register only                        ; 3                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 308                    ;
-;     -- arithmetic mode                      ; 109                    ;
+;     -- normal mode                          ; 343                    ;
+;     -- arithmetic mode                      ; 150                    ;
 ;                                             ;                        ;
-; Total registers*                            ; 138 / 19,649 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 138 / 18,752 ( < 1 % ) ;
+; Total registers*                            ; 181 / 19,649 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 181 / 18,752 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 897 ( 0 % )        ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 35 / 1,172 ( 3 % )     ;
+; Total LABs:  partially or completely used   ; 38 / 1,172 ( 3 % )     ;
 ; Virtual pins                                ; 0                      ;
-; I/O pins                                    ; 40 / 315 ( 13 % )      ;
+; I/O pins                                    ; 42 / 315 ( 13 % )      ;
 ;     -- Clock pins                           ; 6 / 8 ( 75 % )         ;
 ;                                             ;                        ;
-; Global signals                              ; 1                      ;
+; Global signals                              ; 2                      ;
 ; M4Ks                                        ; 0 / 52 ( 0 % )         ;
 ; Total block memory bits                     ; 0 / 239,616 ( 0 % )    ;
 ; Total block memory implementation bits      ; 0 / 239,616 ( 0 % )    ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )         ;
 ; PLLs                                        ; 1 / 4 ( 25 % )         ;
-; Global clocks                               ; 1 / 16 ( 6 % )         ;
+; Global clocks                               ; 2 / 16 ( 13 % )        ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )          ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 0%           ;
-; Maximum fan-out                             ; 122                    ;
-; Highest non-global fan-out                  ; 39                     ;
-; Total fan-out                               ; 1722                   ;
-; Average fan-out                             ; 2.80                   ;
+; Peak interconnect usage (total/H/V)         ; 2% / 2% / 2%           ;
+; Maximum fan-out                             ; 166                    ;
+; Highest non-global fan-out                  ; 82                     ;
+; Total fan-out                               ; 2053                   ;
+; Average fan-out                             ; 2.84                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -258,51 +259,51 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 431 / 18752 ( 2 % )   ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 293                   ; 0                              ;
-;     -- Register only                        ; 14                    ; 0                              ;
-;     -- Combinational with a register        ; 124                   ; 0                              ;
+; Total logic elements                        ; 496 / 18752 ( 3 % )   ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 315                   ; 0                              ;
+;     -- Register only                        ; 3                     ; 0                              ;
+;     -- Combinational with a register        ; 178                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 180                   ; 0                              ;
-;     -- 3 input functions                    ; 116                   ; 0                              ;
-;     -- <=2 input functions                  ; 121                   ; 0                              ;
-;     -- Register only                        ; 14                    ; 0                              ;
+;     -- 4 input functions                    ; 194                   ; 0                              ;
+;     -- 3 input functions                    ; 117                   ; 0                              ;
+;     -- <=2 input functions                  ; 182                   ; 0                              ;
+;     -- Register only                        ; 3                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 308                   ; 0                              ;
-;     -- arithmetic mode                      ; 109                   ; 0                              ;
+;     -- normal mode                          ; 343                   ; 0                              ;
+;     -- arithmetic mode                      ; 150                   ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 138                   ; 0                              ;
-;     -- Dedicated logic registers            ; 138 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
+; Total registers                             ; 181                   ; 0                              ;
+;     -- Dedicated logic registers            ; 181 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 35 / 1172 ( 3 % )     ; 0 / 1172 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 38 / 1172 ( 3 % )     ; 0 / 1172 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
-; I/O pins                                    ; 40                    ; 0                              ;
+; I/O pins                                    ; 42                    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 52 ( 0 % )        ; 0 / 52 ( 0 % )                 ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
 ; PLL                                         ; 0 / 4 ( 0 % )         ; 1 / 4 ( 25 % )                 ;
-; Clock control block                         ; 0 / 20 ( 0 % )        ; 1 / 20 ( 5 % )                 ;
+; Clock control block                         ; 1 / 20 ( 5 % )        ; 1 / 20 ( 5 % )                 ;
 ;                                             ;                       ;                                ;
 ; Connections                                 ;                       ;                                ;
-;     -- Input Connections                    ; 122                   ; 1                              ;
-;     -- Registered Input Connections         ; 122                   ; 0                              ;
-;     -- Output Connections                   ; 1                     ; 122                            ;
+;     -- Input Connections                    ; 166                   ; 1                              ;
+;     -- Registered Input Connections         ; 165                   ; 0                              ;
+;     -- Output Connections                   ; 1                     ; 166                            ;
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1721                  ; 124                            ;
-;     -- Registered Connections               ; 613                   ; 0                              ;
+;     -- Total Connections                    ; 2052                  ; 168                            ;
+;     -- Registered Connections               ; 729                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
-;     -- Top                                  ; 0                     ; 123                            ;
-;     -- hard_block:auto_generated_inst       ; 123                   ; 0                              ;
+;     -- Top                                  ; 0                     ; 167                            ;
+;     -- hard_block:auto_generated_inst       ; 167                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 15                    ; 1                              ;
-;     -- Output Ports                         ; 25                    ; 1                              ;
+;     -- Output Ports                         ; 27                    ; 1                              ;
 ;     -- Bidir Ports                          ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Registered Ports                            ;                       ;                                ;
@@ -334,7 +335,7 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; in1               ; M1    ; 1        ; 0            ; 13           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; in2               ; L2    ; 2        ; 0            ; 13           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; one_switch        ; L22   ; 5        ; 50           ; 14           ; 0           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; osc               ; L1    ; 2        ; 0            ; 13           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; osc               ; L1    ; 2        ; 0            ; 13           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; seven_switch      ; U11   ; 8        ; 26           ; 0            ; 3           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; signal            ; H13   ; 4        ; 37           ; 27           ; 0           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; signal2           ; P18   ; 6        ; 50           ; 9            ; 2           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
@@ -344,37 +345,39 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                           ;
-+---------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
-+---------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; cts     ; B20   ; 4        ; 48           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; huns[0] ; G5    ; 2        ; 0            ; 22           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; huns[1] ; G6    ; 2        ; 0            ; 23           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; huns[2] ; C2    ; 2        ; 0            ; 23           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; huns[3] ; C1    ; 2        ; 0            ; 23           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; huns[4] ; E3    ; 2        ; 0            ; 24           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; huns[5] ; E4    ; 2        ; 0            ; 24           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; huns[6] ; D3    ; 2        ; 0            ; 25           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; led     ; R20   ; 6        ; 50           ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ones[0] ; J2    ; 2        ; 0            ; 18           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ones[1] ; J1    ; 2        ; 0            ; 18           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ones[2] ; H2    ; 2        ; 0            ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ones[3] ; H1    ; 2        ; 0            ; 19           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ones[4] ; F2    ; 2        ; 0            ; 20           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ones[5] ; F1    ; 2        ; 0            ; 20           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; ones[6] ; E2    ; 2        ; 0            ; 20           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; tens[0] ; E1    ; 2        ; 0            ; 20           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; tens[1] ; H6    ; 2        ; 0            ; 21           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; tens[2] ; H5    ; 2        ; 0            ; 21           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; tens[3] ; H4    ; 2        ; 0            ; 21           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; tens[4] ; G3    ; 2        ; 0            ; 21           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; tens[5] ; D2    ; 2        ; 0            ; 22           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; tens[6] ; D1    ; 2        ; 0            ; 22           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; test2   ; U22   ; 6        ; 50           ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; tx      ; C22   ; 5        ; 50           ; 24           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-+---------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                             ;
++-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
++-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+; cts       ; B20   ; 4        ; 48           ; 27           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; huns[0]   ; G5    ; 2        ; 0            ; 22           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; huns[1]   ; G6    ; 2        ; 0            ; 23           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; huns[2]   ; C2    ; 2        ; 0            ; 23           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; huns[3]   ; C1    ; 2        ; 0            ; 23           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; huns[4]   ; E3    ; 2        ; 0            ; 24           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; huns[5]   ; E4    ; 2        ; 0            ; 24           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; huns[6]   ; D3    ; 2        ; 0            ; 25           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; led       ; R20   ; 6        ; 50           ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; ones[0]   ; J2    ; 2        ; 0            ; 18           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; ones[1]   ; J1    ; 2        ; 0            ; 18           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; ones[2]   ; H2    ; 2        ; 0            ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; ones[3]   ; H1    ; 2        ; 0            ; 19           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; ones[4]   ; F2    ; 2        ; 0            ; 20           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; ones[5]   ; F1    ; 2        ; 0            ; 20           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; ones[6]   ; E2    ; 2        ; 0            ; 20           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; pin_name1 ; L19   ; 5        ; 50           ; 15           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; pin_name2 ; L18   ; 5        ; 50           ; 15           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; tens[0]   ; E1    ; 2        ; 0            ; 20           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; tens[1]   ; H6    ; 2        ; 0            ; 21           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; tens[2]   ; H5    ; 2        ; 0            ; 21           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; tens[3]   ; H4    ; 2        ; 0            ; 21           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; tens[4]   ; G3    ; 2        ; 0            ; 21           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; tens[5]   ; D2    ; 2        ; 0            ; 22           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; tens[6]   ; D1    ; 2        ; 0            ; 22           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; test2     ; U22   ; 6        ; 50           ; 7            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; tx        ; C22   ; 5        ; 50           ; 24           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
++-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
 +------------------------------------------------------------+
@@ -386,7 +389,7 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; 2        ; 25 / 33 ( 76 % ) ; 3.3V          ; --           ;
 ; 3        ; 0 / 43 ( 0 % )   ; 3.3V          ; --           ;
 ; 4        ; 2 / 40 ( 5 % )   ; 3.3V          ; --           ;
-; 5        ; 3 / 39 ( 8 % )   ; 3.3V          ; --           ;
+; 5        ; 5 / 39 ( 13 % )  ; 3.3V          ; --           ;
 ; 6        ; 7 / 36 ( 19 % )  ; 3.3V          ; --           ;
 ; 7        ; 2 / 40 ( 5 % )   ; 3.3V          ; --           ;
 ; 8        ; 2 / 43 ( 5 % )   ; 3.3V          ; --           ;
@@ -679,8 +682,8 @@ The pin-out file can be found in C:/Users/localadmin/Desktop/FPGANewVersion/FPGA
 ; L15      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L16      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L17      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; L18      ; 208        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L19      ; 207        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; L18      ; 208        ; 5        ; pin_name2                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; L19      ; 207        ; 5        ; pin_name1                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L20      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; L21      ; 205        ; 5        ; two_switch                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L22      ; 206        ; 5        ; one_switch                               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -970,12 +973,12 @@ Note: User assignments will override these defaults. The user specified values a
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                ; Library Name ;
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |PMT_Timebin_Counts                            ; 431 (0)     ; 138 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 40   ; 0            ; 293 (0)      ; 14 (0)            ; 124 (0)          ; |PMT_Timebin_Counts                                                                                                                                ; work         ;
+; |PMT_Timebin_Counts                            ; 496 (0)     ; 181 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 42   ; 0            ; 315 (0)      ; 3 (0)             ; 178 (0)          ; |PMT_Timebin_Counts                                                                                                                                ; work         ;
 ;    |PLL:inst|                                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|PLL:inst                                                                                                                       ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|PLL:inst|altpll:altpll_component                                                                                               ; work         ;
 ;    |SumControl:inst1|                          ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; |PMT_Timebin_Counts|SumControl:inst1                                                                                                               ; work         ;
 ;    |SumCounts:inst7|                           ; 25 (25)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 17 (17)          ; |PMT_Timebin_Counts|SumCounts:inst7                                                                                                                ; work         ;
-;    |Triple_SevenSeg:inst3|                     ; 170 (83)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 163 (76)     ; 0 (0)             ; 7 (7)            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3                                                                                                          ; work         ;
+;    |Triple_SevenSeg:inst3|                     ; 170 (83)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 170 (83)     ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3                                                                                                          ; work         ;
 ;       |lpm_divide:Mod0|                        ; 46 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (0)       ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod0                                                                                          ; work         ;
 ;          |lpm_divide_35m:auto_generated|       ; 46 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (0)       ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated                                                            ; work         ;
 ;             |sign_div_unsign_akh:divider|      ; 46 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (0)       ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider                                ; work         ;
@@ -984,15 +987,15 @@ Note: User assignments will override these defaults. The user specified values a
 ;          |lpm_divide_75m:auto_generated|       ; 41 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (0)       ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated                                                            ; work         ;
 ;             |sign_div_unsign_ekh:divider|      ; 41 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (0)       ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                                ; work         ;
 ;                |alt_u_div_uve:divider|         ; 41 (41)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (41)      ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider          ; work         ;
-;    |count:inst2|                               ; 11 (11)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 8 (8)            ; |PMT_Timebin_Counts|count:inst2                                                                                                                    ; work         ;
 ;    |count:inst6|                               ; 11 (11)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 8 (8)            ; |PMT_Timebin_Counts|count:inst6                                                                                                                    ; work         ;
-;    |trigger_clock_hundreds:inst5|              ; 87 (54)     ; 41 (41)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (13)      ; 11 (11)           ; 30 (30)          ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5                                                                                                   ; work         ;
+;    |count:inst8|                               ; 11 (11)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 8 (8)            ; |PMT_Timebin_Counts|count:inst8                                                                                                                    ; work         ;
+;    |trigger_clock_hundreds:inst5|              ; 146 (113)   ; 84 (84)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 62 (29)      ; 1 (1)             ; 83 (83)          ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5                                                                                                   ; work         ;
 ;       |lpm_mult:Mult0|                         ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0                                                                                    ; work         ;
 ;          |multcore:mult_core|                  ; 33 (19)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (19)      ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core                                                                 ; work         ;
 ;             |mpar_add:padder|                  ; 14 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 14 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; work         ;
 ;                   |add_sub_8ch:auto_generated| ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; |PMT_Timebin_Counts|trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_8ch:auto_generated ; work         ;
-;    |uart:inst4|                                ; 132 (132)   ; 62 (62)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 70 (70)      ; 1 (1)             ; 61 (61)          ; |PMT_Timebin_Counts|uart:inst4                                                                                                                     ; work         ;
+;    |uart:inst4|                                ; 131 (131)   ; 62 (62)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 69 (69)      ; 0 (0)             ; 62 (62)          ; |PMT_Timebin_Counts|uart:inst4                                                                                                                     ; work         ;
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1007,6 +1010,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cts               ; Output   ; --            ; --            ; --                    ; --  ;
 ; test2             ; Output   ; --            ; --            ; --                    ; --  ;
 ; led               ; Output   ; --            ; --            ; --                    ; --  ;
+; pin_name1         ; Output   ; --            ; --            ; --                    ; --  ;
+; pin_name2         ; Output   ; --            ; --            ; --                    ; --  ;
 ; huns[6]           ; Output   ; --            ; --            ; --                    ; --  ;
 ; huns[5]           ; Output   ; --            ; --            ; --                    ; --  ;
 ; huns[4]           ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1028,7 +1033,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; tens[2]           ; Output   ; --            ; --            ; --                    ; --  ;
 ; tens[1]           ; Output   ; --            ; --            ; --                    ; --  ;
 ; tens[0]           ; Output   ; --            ; --            ; --                    ; --  ;
-; StartButton       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; osc               ; Input    ; --            ; --            ; --                    ; --  ;
 ; one_switch        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; two_switch        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; three_switch      ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
@@ -1037,7 +1042,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; five_switch       ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; eight_switch      ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; seven_switch      ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; osc               ; Input    ; --            ; --            ; --                    ; --  ;
+; StartButton       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; in1               ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; in2               ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; signal2           ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
@@ -1045,45 +1050,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+---------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                        ;
-+---------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                     ; Pad To Core Index ; Setting ;
-+---------------------------------------------------------+-------------------+---------+
-; SendTimebinButton                                       ;                   ;         ;
-; StartButton                                             ;                   ;         ;
-;      - trigger_clock_hundreds:inst5|StopRunning~0       ; 0                 ; 6       ;
-;      - trigger_clock_hundreds:inst5|StartRunning~feeder ; 0                 ; 6       ;
-; one_switch                                              ;                   ;         ;
-; two_switch                                              ;                   ;         ;
-; three_switch                                            ;                   ;         ;
-; four_switch                                             ;                   ;         ;
-; six_switch                                              ;                   ;         ;
-; five_switch                                             ;                   ;         ;
-; eight_switch                                            ;                   ;         ;
-; seven_switch                                            ;                   ;         ;
-; osc                                                     ;                   ;         ;
-; in1                                                     ;                   ;         ;
-; in2                                                     ;                   ;         ;
-; signal2                                                 ;                   ;         ;
-;      - count:inst6|out[0]                               ; 0                 ; 0       ;
-;      - count:inst6|out[1]                               ; 1                 ; 0       ;
-;      - count:inst6|out[2]                               ; 1                 ; 0       ;
-;      - count:inst6|out[3]                               ; 1                 ; 0       ;
-;      - count:inst6|out[4]                               ; 1                 ; 0       ;
-;      - count:inst6|out[6]                               ; 1                 ; 0       ;
-;      - count:inst6|out[7]                               ; 1                 ; 0       ;
-;      - count:inst6|out[5]                               ; 1                 ; 0       ;
-; signal                                                  ;                   ;         ;
-;      - count:inst2|out[0]                               ; 0                 ; 0       ;
-;      - count:inst2|out[1]                               ; 0                 ; 0       ;
-;      - count:inst2|out[2]                               ; 0                 ; 0       ;
-;      - count:inst2|out[3]                               ; 0                 ; 0       ;
-;      - count:inst2|out[4]                               ; 0                 ; 0       ;
-;      - count:inst2|out[5]                               ; 0                 ; 0       ;
-;      - count:inst2|out[6]                               ; 0                 ; 0       ;
-;      - count:inst2|out[7]                               ; 0                 ; 0       ;
-+---------------------------------------------------------+-------------------+---------+
++---------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                  ;
++---------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                               ; Pad To Core Index ; Setting ;
++---------------------------------------------------+-------------------+---------+
+; SendTimebinButton                                 ;                   ;         ;
+; osc                                               ;                   ;         ;
+; one_switch                                        ;                   ;         ;
+; two_switch                                        ;                   ;         ;
+; three_switch                                      ;                   ;         ;
+; four_switch                                       ;                   ;         ;
+; six_switch                                        ;                   ;         ;
+; five_switch                                       ;                   ;         ;
+; eight_switch                                      ;                   ;         ;
+; seven_switch                                      ;                   ;         ;
+; StartButton                                       ;                   ;         ;
+;      - trigger_clock_hundreds:inst5|StartRunning  ; 0                 ; 6       ;
+;      - trigger_clock_hundreds:inst5|StopRunning~0 ; 0                 ; 6       ;
+; in1                                               ;                   ;         ;
+; in2                                               ;                   ;         ;
+; signal2                                           ;                   ;         ;
+;      - count:inst6|out[0]                         ; 0                 ; 0       ;
+;      - count:inst6|out[1]                         ; 0                 ; 0       ;
+;      - count:inst6|out[2]                         ; 0                 ; 0       ;
+;      - count:inst6|out[3]                         ; 0                 ; 0       ;
+;      - count:inst6|out[4]                         ; 0                 ; 0       ;
+;      - count:inst6|out[6]                         ; 0                 ; 0       ;
+;      - count:inst6|out[7]                         ; 0                 ; 0       ;
+;      - count:inst6|out[5]                         ; 0                 ; 0       ;
+; signal                                            ;                   ;         ;
+;      - count:inst8|out[0]                         ; 0                 ; 0       ;
+;      - count:inst8|out[1]                         ; 0                 ; 0       ;
+;      - count:inst8|out[2]                         ; 0                 ; 0       ;
+;      - count:inst8|out[3]                         ; 0                 ; 0       ;
+;      - count:inst8|out[4]                         ; 0                 ; 0       ;
+;      - count:inst8|out[5]                         ; 0                 ; 0       ;
+;      - count:inst8|out[6]                         ; 0                 ; 0       ;
+;      - count:inst8|out[7]                         ; 0                 ; 0       ;
++---------------------------------------------------+-------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1091,29 +1096,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                   ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; PLL:inst|altpll:altpll_component|_clk0 ; PLL_1              ; 122     ; Clock                     ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; SumControl:inst1|sum[0]                ; LCFF_X36_Y23_N23   ; 17      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; count:inst2|LessThan0~2                ; LCCOMB_X36_Y25_N0  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; count:inst6|LessThan0~2                ; LCCOMB_X38_Y25_N6  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; osc                                    ; PIN_L1             ; 1       ; Clock                     ; no     ; --                   ; --               ; --                        ;
+; PLL:inst|altpll:altpll_component|_clk0 ; PLL_1              ; 166     ; Clock                     ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; SumControl:inst1|sum[0]                ; LCFF_X33_Y13_N5    ; 17      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; count:inst6|LessThan0~2                ; LCCOMB_X35_Y15_N28 ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; count:inst8|LessThan0~2                ; LCCOMB_X34_Y15_N6  ; 7       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; osc                                    ; PIN_L1             ; 2       ; Clock                     ; no     ; --                   ; --               ; --                        ;
 ; signal                                 ; PIN_H13            ; 8       ; Clock                     ; no     ; --                   ; --               ; --                        ;
 ; signal2                                ; PIN_P18            ; 8       ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; trigger_clock_hundreds:inst5|Equal0~12 ; LCCOMB_X37_Y17_N22 ; 39      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; trigger_clock_hundreds:inst5|reset     ; LCFF_X36_Y25_N31   ; 17      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; uart:inst4|Mux4~2                      ; LCCOMB_X37_Y23_N2  ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; uart:inst4|rx_bits_remaining[2]~0      ; LCCOMB_X46_Y26_N0  ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; uart:inst4|tx_data[0]~1                ; LCCOMB_X37_Y23_N4  ; 10      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; uart:inst4|tx_state[0]                 ; LCFF_X34_Y23_N13   ; 36      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
+; trigger_clock_hundreds:inst5|Equal0~16 ; LCCOMB_X16_Y16_N24 ; 82      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; trigger_clock_hundreds:inst5|LED~0     ; LCCOMB_X27_Y21_N20 ; 33      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; trigger_clock_hundreds:inst5|reset     ; LCFF_X16_Y16_N25   ; 16      ; Async. clear              ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; uart:inst4|Mux4~2                      ; LCCOMB_X35_Y13_N6  ; 2       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; uart:inst4|rx_bits_remaining[2]~0      ; LCCOMB_X11_Y22_N18 ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; uart:inst4|tx_data[0]~1                ; LCCOMB_X32_Y13_N10 ; 10      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; uart:inst4|tx_state[0]                 ; LCFF_X35_Y13_N1    ; 36      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                       ;
-+----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
-; Name                                   ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
-; PLL:inst|altpll:altpll_component|_clk0 ; PLL_1    ; 122     ; Global Clock         ; GCLK3            ; --                        ;
-+----------------------------------------+----------+---------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                               ;
++----------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
+; Name                                   ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
+; PLL:inst|altpll:altpll_component|_clk0 ; PLL_1            ; 166     ; Global Clock         ; GCLK3            ; --                        ;
+; trigger_clock_hundreds:inst5|reset     ; LCFF_X16_Y16_N25 ; 16      ; Global Clock         ; GCLK10           ; --                        ;
++----------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1121,8 +1128,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                                             ; Fan-Out ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; trigger_clock_hundreds:inst5|Equal0~12                                                                                                           ; 39      ;
+; trigger_clock_hundreds:inst5|Equal0~16                                                                                                           ; 82      ;
 ; uart:inst4|tx_state[0]                                                                                                                           ; 36      ;
+; trigger_clock_hundreds:inst5|LED~0                                                                                                               ; 33      ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider|add_sub_7_result_int[8]~12 ; 27      ;
 ; trigger_clock_hundreds:inst5|out[8]                                                                                                              ; 22      ;
 ; uart:inst4|rx                                                                                                                                    ; 21      ;
@@ -1134,10 +1142,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SumControl:inst1|sum[1]                                                                                                                          ; 17      ;
 ; SumControl:inst1|sum[0]                                                                                                                          ; 17      ;
 ; uart:inst4|WideNor0~3                                                                                                                            ; 17      ;
-; trigger_clock_hundreds:inst5|reset                                                                                                               ; 17      ;
 ; uart:inst4|WideNor1~3                                                                                                                            ; 17      ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider|StageOut[59]~53            ; 17      ;
 ; uart:inst4|recv_state.RX_IDLE                                                                                                                    ; 16      ;
+; trigger_clock_hundreds:inst5|out[2]~0                                                                                                            ; 16      ;
 ; trigger_clock_hundreds:inst5|out[10]                                                                                                             ; 16      ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider|StageOut[57]~51            ; 13      ;
 ; five_switch                                                                                                                                      ; 12      ;
@@ -1166,7 +1174,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; signal2                                                                                                                                          ; 8       ;
 ; four_switch                                                                                                                                      ; 8       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_5_result_int[5]~8  ; 8       ;
-; count:inst2|LessThan0~2                                                                                                                          ; 7       ;
+; count:inst8|LessThan0~2                                                                                                                          ; 7       ;
 ; count:inst6|LessThan0~2                                                                                                                          ; 7       ;
 ; uart:inst4|rx_bits_remaining[0]                                                                                                                  ; 7       ;
 ; uart:inst4|recv_state.RX_CHECK_START                                                                                                             ; 7       ;
@@ -1175,7 +1183,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[31]~52            ; 7       ;
 ; count:inst6|out[0]                                                                                                                               ; 6       ;
 ; uart:inst4|WideNor3                                                                                                                              ; 6       ;
-; count:inst2|out[0]                                                                                                                               ; 5       ;
+; count:inst8|out[0]                                                                                                                               ; 5       ;
 ; uart:inst4|WideNor4                                                                                                                              ; 5       ;
 ; uart:inst4|tx_bits_remaining[0]                                                                                                                  ; 5       ;
 ; Triple_SevenSeg:inst3|Decoder1~11                                                                                                                ; 5       ;
@@ -1190,24 +1198,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Triple_SevenSeg:inst3|Decoder1~50                                                                                                                ; 4       ;
 ; uart:inst4|rx_bits_remaining[2]~0                                                                                                                ; 4       ;
 ; uart:inst4|rx_bits_remaining[1]                                                                                                                  ; 4       ;
-; uart:inst4|rx_countdown[0]~1                                                                                                                     ; 4       ;
+; uart:inst4|rx_countdown[5]~1                                                                                                                     ; 4       ;
 ; uart:inst4|WideNor3~0                                                                                                                            ; 4       ;
 ; uart:inst4|tx_bits_remaining[1]                                                                                                                  ; 4       ;
 ; uart:inst4|tx_bits_remaining[2]                                                                                                                  ; 4       ;
 ; Triple_SevenSeg:inst3|Decoder1~35                                                                                                                ; 4       ;
 ; Triple_SevenSeg:inst3|Decoder1~17                                                                                                                ; 4       ;
-; count:inst2|out[7]                                                                                                                               ; 4       ;
-; count:inst2|out[6]                                                                                                                               ; 4       ;
-; count:inst2|out[5]                                                                                                                               ; 4       ;
-; count:inst2|out[4]                                                                                                                               ; 4       ;
-; count:inst2|out[3]                                                                                                                               ; 4       ;
-; count:inst2|out[2]                                                                                                                               ; 4       ;
-; count:inst2|out[1]                                                                                                                               ; 4       ;
+; count:inst8|out[7]                                                                                                                               ; 4       ;
+; count:inst8|out[6]                                                                                                                               ; 4       ;
+; count:inst8|out[5]                                                                                                                               ; 4       ;
+; count:inst8|out[4]                                                                                                                               ; 4       ;
+; count:inst8|out[3]                                                                                                                               ; 4       ;
+; count:inst8|out[2]                                                                                                                               ; 4       ;
+; count:inst8|out[1]                                                                                                                               ; 4       ;
+; trigger_clock_hundreds:inst5|j[2]                                                                                                                ; 4       ;
 ; uart:inst4|Add1~10                                                                                                                               ; 4       ;
 ; uart:inst4|Add3~4                                                                                                                                ; 4       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider|add_sub_7_result_int[1]~14 ; 4       ;
 ; Triple_SevenSeg:inst3|Decoder2~62                                                                                                                ; 3       ;
 ; uart:inst4|rx_bits_remaining[2]                                                                                                                  ; 3       ;
+; trigger_clock_hundreds:inst5|Equal1~9                                                                                                            ; 3       ;
 ; uart:inst4|recv_state.RX_CHECK_STOP                                                                                                              ; 3       ;
 ; uart:inst4|WideNor2~0                                                                                                                            ; 3       ;
 ; uart:inst4|tx_bits_remaining[3]                                                                                                                  ; 3       ;
@@ -1220,12 +1230,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Triple_SevenSeg:inst3|Decoder1~15                                                                                                                ; 3       ;
 ; Triple_SevenSeg:inst3|Decoder1~9                                                                                                                 ; 3       ;
 ; Triple_SevenSeg:inst3|Decoder1~8                                                                                                                 ; 3       ;
-; trigger_clock_hundreds:inst5|StopRunning                                                                                                         ; 3       ;
+; trigger_clock_hundreds:inst5|j[0]                                                                                                                ; 3       ;
 ; uart:inst4|Add1~4                                                                                                                                ; 3       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[5]~8  ; 3       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider|add_sub_7_result_int[4]~4  ; 3       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider|add_sub_7_result_int[3]~2  ; 3       ;
 ; StartButton                                                                                                                                      ; 2       ;
+; osc                                                                                                                                              ; 2       ;
 ; Triple_SevenSeg:inst3|Decoder2~63                                                                                                                ; 2       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~64            ; 2       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[20]~63            ; 2       ;
@@ -1237,8 +1248,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~57            ; 2       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[15]~56            ; 2       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[16]~55            ; 2       ;
-; count:inst2|LessThan0~1                                                                                                                          ; 2       ;
-; count:inst2|LessThan0~0                                                                                                                          ; 2       ;
+; count:inst8|LessThan0~1                                                                                                                          ; 2       ;
+; count:inst8|LessThan0~0                                                                                                                          ; 2       ;
 ; count:inst6|LessThan0~1                                                                                                                          ; 2       ;
 ; count:inst6|LessThan0~0                                                                                                                          ; 2       ;
 ; uart:inst4|recv_state.RX_DELAY_RESTART                                                                                                           ; 2       ;
@@ -1249,6 +1260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart:inst4|tx_state~1                                                                                                                            ; 2       ;
 ; uart:inst4|Mux4~2                                                                                                                                ; 2       ;
 ; uart:inst4|always1~0                                                                                                                             ; 2       ;
+; trigger_clock_hundreds:inst5|StopRunning                                                                                                         ; 2       ;
 ; Triple_SevenSeg:inst3|Decoder1~48                                                                                                                ; 2       ;
 ; Triple_SevenSeg:inst3|WideOr8~1                                                                                                                  ; 2       ;
 ; Triple_SevenSeg:inst3|WideOr5~1                                                                                                                  ; 2       ;
@@ -1278,15 +1290,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider|StageOut[53]~35            ; 2       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider|StageOut[53]~34            ; 2       ;
 ; Triple_SevenSeg:inst3|WideOr12                                                                                                                   ; 2       ;
+; trigger_clock_hundreds:inst5|LED                                                                                                                 ; 2       ;
 ; uart:inst4|LED                                                                                                                                   ; 2       ;
 ; uart:inst4|tx_out                                                                                                                                ; 2       ;
 ; uart:inst4|tx_data[7]                                                                                                                            ; 2       ;
+; trigger_clock_hundreds:inst5|j[1]                                                                                                                ; 2       ;
+; trigger_clock_hundreds:inst5|i[29]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|i[28]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|i[27]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|i[26]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|i[25]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|i[24]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|i[23]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|i[22]                                                                                                               ; 2       ;
 ; trigger_clock_hundreds:inst5|i[21]                                                                                                               ; 2       ;
 ; trigger_clock_hundreds:inst5|i[2]                                                                                                                ; 2       ;
 ; trigger_clock_hundreds:inst5|i[1]                                                                                                                ; 2       ;
 ; trigger_clock_hundreds:inst5|i[0]                                                                                                                ; 2       ;
 ; trigger_clock_hundreds:inst5|i[20]                                                                                                               ; 2       ;
 ; trigger_clock_hundreds:inst5|i[19]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|i[31]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|i[30]                                                                                                               ; 2       ;
 ; trigger_clock_hundreds:inst5|i[18]                                                                                                               ; 2       ;
 ; trigger_clock_hundreds:inst5|i[17]                                                                                                               ; 2       ;
 ; trigger_clock_hundreds:inst5|i[16]                                                                                                               ; 2       ;
@@ -1303,6 +1327,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; trigger_clock_hundreds:inst5|i[6]                                                                                                                ; 2       ;
 ; trigger_clock_hundreds:inst5|i[3]                                                                                                                ; 2       ;
 ; trigger_clock_hundreds:inst5|i[4]                                                                                                                ; 2       ;
+; trigger_clock_hundreds:inst5|j[31]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[30]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[29]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[28]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[27]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[26]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[25]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[24]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[23]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[22]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[21]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[20]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[19]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[18]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[17]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[16]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[15]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[14]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[13]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[12]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[11]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[10]                                                                                                               ; 2       ;
+; trigger_clock_hundreds:inst5|j[7]                                                                                                                ; 2       ;
+; trigger_clock_hundreds:inst5|j[9]                                                                                                                ; 2       ;
+; trigger_clock_hundreds:inst5|j[8]                                                                                                                ; 2       ;
+; trigger_clock_hundreds:inst5|j[5]                                                                                                                ; 2       ;
+; trigger_clock_hundreds:inst5|j[6]                                                                                                                ; 2       ;
+; trigger_clock_hundreds:inst5|j[4]                                                                                                                ; 2       ;
+; trigger_clock_hundreds:inst5|j[3]                                                                                                                ; 2       ;
 ; uart:inst4|Add1~8                                                                                                                                ; 2       ;
 ; uart:inst4|Add1~6                                                                                                                                ; 2       ;
 ; uart:inst4|Add1~2                                                                                                                                ; 2       ;
@@ -1346,7 +1399,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart:inst4|rx~feeder                                                                                                                             ; 1       ;
 ; in2                                                                                                                                              ; 1       ;
 ; in1                                                                                                                                              ; 1       ;
-; osc                                                                                                                                              ; 1       ;
 ; Triple_SevenSeg:inst3|Decoder2~68                                                                                                                ; 1       ;
 ; Triple_SevenSeg:inst3|Decoder2~67                                                                                                                ; 1       ;
 ; Triple_SevenSeg:inst3|WideOr8~7                                                                                                                  ; 1       ;
@@ -1378,21 +1430,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Triple_SevenSeg:inst3|Decoder1~52                                                                                                                ; 1       ;
 ; Triple_SevenSeg:inst3|Decoder1~51                                                                                                                ; 1       ;
 ; Triple_SevenSeg:inst3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|StageOut[28]~60            ; 1       ;
+; trigger_clock_hundreds:inst5|out~16                                                                                                              ; 1       ;
 ; uart:inst4|Mux5~0                                                                                                                                ; 1       ;
 ; trigger_clock_hundreds:inst5|out[7]                                                                                                              ; 1       ;
+; trigger_clock_hundreds:inst5|out~15                                                                                                              ; 1       ;
 ; uart:inst4|Mux6~0                                                                                                                                ; 1       ;
 ; trigger_clock_hundreds:inst5|out[6]                                                                                                              ; 1       ;
+; trigger_clock_hundreds:inst5|out~14                                                                                                              ; 1       ;
 ; uart:inst4|Mux7~0                                                                                                                                ; 1       ;
 ; trigger_clock_hundreds:inst5|out[5]                                                                                                              ; 1       ;
+; trigger_clock_hundreds:inst5|out~13                                                                                                              ; 1       ;
 ; uart:inst4|Mux8~0                                                                                                                                ; 1       ;
 ; trigger_clock_hundreds:inst5|out[4]                                                                                                              ; 1       ;
+; trigger_clock_hundreds:inst5|out~12                                                                                                              ; 1       ;
 ; uart:inst4|Mux9~0                                                                                                                                ; 1       ;
 ; trigger_clock_hundreds:inst5|out[3]                                                                                                              ; 1       ;
-; count:inst2|out[0]~7                                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|out~11                                                                                                              ; 1       ;
+; count:inst8|out[0]~7                                                                                                                             ; 1       ;
 ; uart:inst4|Selector10~0                                                                                                                          ; 1       ;
 ; uart:inst4|Selector12~0                                                                                                                          ; 1       ;
 ; uart:inst4|Mux10~0                                                                                                                               ; 1       ;
 ; trigger_clock_hundreds:inst5|out[2]                                                                                                              ; 1       ;
+; trigger_clock_hundreds:inst5|out~10                                                                                                              ; 1       ;
 ; count:inst6|out[0]~15                                                                                                                            ; 1       ;
 ; uart:inst4|Selector14~0                                                                                                                          ; 1       ;
 ; uart:inst4|Selector13~0                                                                                                                          ; 1       ;
@@ -1406,6 +1465,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SumCounts:inst7|Decoder0~0                                                                                                                       ; 1       ;
 ; uart:inst4|Mux11~0                                                                                                                               ; 1       ;
 ; trigger_clock_hundreds:inst5|out[1]                                                                                                              ; 1       ;
+; trigger_clock_hundreds:inst5|out~9                                                                                                               ; 1       ;
 ; SumCounts:inst7|sumout~15                                                                                                                        ; 1       ;
 ; SumCounts:inst7|sumout~14                                                                                                                        ; 1       ;
 ; SumCounts:inst7|sumout~13                                                                                                                        ; 1       ;
@@ -1425,9 +1485,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart:inst4|Selector4~1                                                                                                                           ; 1       ;
 ; uart:inst4|Selector4~0                                                                                                                           ; 1       ;
 ; uart:inst4|Selector5~0                                                                                                                           ; 1       ;
-; uart:inst4|rx_countdown[0]~0                                                                                                                     ; 1       ;
+; uart:inst4|rx_countdown[5]~0                                                                                                                     ; 1       ;
 ; uart:inst4|Mux19~0                                                                                                                               ; 1       ;
 ; SumCounts:inst7|TwoBytes                                                                                                                         ; 1       ;
+; trigger_clock_hundreds:inst5|StopRunning~0                                                                                                       ; 1       ;
+; trigger_clock_hundreds:inst5|StartRunning                                                                                                        ; 1       ;
 ; uart:inst4|Mux13~0                                                                                                                               ; 1       ;
 ; uart:inst4|Mux14~0                                                                                                                               ; 1       ;
 ; uart:inst4|Mux16~1                                                                                                                               ; 1       ;
@@ -1455,18 +1517,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart:inst4|Add5~1                                                                                                                                ; 1       ;
 ; uart:inst4|tx_bits_remaining[3]~0                                                                                                                ; 1       ;
 ; uart:inst4|Add5~0                                                                                                                                ; 1       ;
+; trigger_clock_hundreds:inst5|out~8                                                                                                               ; 1       ;
 ; SumCounts:inst7|sumout[15]                                                                                                                       ; 1       ;
+; trigger_clock_hundreds:inst5|out~7                                                                                                               ; 1       ;
 ; SumCounts:inst7|sumout[13]                                                                                                                       ; 1       ;
+; trigger_clock_hundreds:inst5|out~6                                                                                                               ; 1       ;
 ; SumCounts:inst7|sumout[14]                                                                                                                       ; 1       ;
+; trigger_clock_hundreds:inst5|out~5                                                                                                               ; 1       ;
 ; SumCounts:inst7|sumout[8]                                                                                                                        ; 1       ;
+; trigger_clock_hundreds:inst5|out~4                                                                                                               ; 1       ;
 ; SumCounts:inst7|sumout[9]                                                                                                                        ; 1       ;
+; trigger_clock_hundreds:inst5|out~3                                                                                                               ; 1       ;
 ; SumCounts:inst7|sumout[10]                                                                                                                       ; 1       ;
+; trigger_clock_hundreds:inst5|out~2                                                                                                               ; 1       ;
 ; SumCounts:inst7|sumout[11]                                                                                                                       ; 1       ;
+; trigger_clock_hundreds:inst5|out~1                                                                                                               ; 1       ;
+; SumCounts:inst7|sumout[12]                                                                                                                       ; 1       ;
+; trigger_clock_hundreds:inst5|LED~2                                                                                                               ; 1       ;
+; trigger_clock_hundreds:inst5|Equal0~15                                                                                                           ; 1       ;
+; trigger_clock_hundreds:inst5|Equal0~14                                                                                                           ; 1       ;
+; trigger_clock_hundreds:inst5|Equal0~13                                                                                                           ; 1       ;
+; trigger_clock_hundreds:inst5|Equal0~12                                                                                                           ; 1       ;
 ; trigger_clock_hundreds:inst5|Equal0~11                                                                                                           ; 1       ;
-; trigger_clock_hundreds:inst5|Equal0~10                                                                                                           ; 1       ;
 ; trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|romout[1][15]~15                                                                  ; 1       ;
 ; trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|_~2                                                                               ; 1       ;
 ; trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|_~1                                                                               ; 1       ;
+; trigger_clock_hundreds:inst5|Equal0~10                                                                                                           ; 1       ;
 ; trigger_clock_hundreds:inst5|Equal0~9                                                                                                            ; 1       ;
 ; trigger_clock_hundreds:inst5|Equal0~8                                                                                                            ; 1       ;
 ; trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|romout[1][13]~14                                                                  ; 1       ;
@@ -1493,9 +1569,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|romout[0][8]~0                                                                    ; 1       ;
 ; trigger_clock_hundreds:inst5|Equal0~1                                                                                                            ; 1       ;
 ; trigger_clock_hundreds:inst5|Equal0~0                                                                                                            ; 1       ;
-; SumCounts:inst7|sumout[12]                                                                                                                       ; 1       ;
-; trigger_clock_hundreds:inst5|StopRunning~0                                                                                                       ; 1       ;
-; trigger_clock_hundreds:inst5|StartRunning                                                                                                        ; 1       ;
+; trigger_clock_hundreds:inst5|LED~1                                                                                                               ; 1       ;
+; trigger_clock_hundreds:inst5|Equal1~8                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|Equal1~7                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|Equal1~6                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|Equal1~5                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|Equal1~4                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|Equal1~3                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|Equal1~2                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|Equal1~1                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|Equal1~0                                                                                                            ; 1       ;
 ; uart:inst4|LED~0                                                                                                                                 ; 1       ;
 ; uart:inst4|Selector11~0                                                                                                                          ; 1       ;
 ; uart:inst4|rx_countdown[5]                                                                                                                       ; 1       ;
@@ -1518,6 +1601,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart:inst4|rx_clk_divider[1]                                                                                                                     ; 1       ;
 ; uart:inst4|rx_clk_divider[0]                                                                                                                     ; 1       ;
 ; uart:inst4|rx_countdown[0]                                                                                                                       ; 1       ;
+; trigger_clock_hundreds:inst5|reset                                                                                                               ; 1       ;
 ; uart:inst4|Mux4~1                                                                                                                                ; 1       ;
 ; uart:inst4|tx_countdown[5]                                                                                                                       ; 1       ;
 ; uart:inst4|tx_countdown[4]                                                                                                                       ; 1       ;
@@ -1620,19 +1704,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SumCounts:inst7|sumout[2]~2                                                                                                                      ; 1       ;
 ; SumCounts:inst7|Add0~5                                                                                                                           ; 1       ;
 ; SumCounts:inst7|Add0~4                                                                                                                           ; 1       ;
-; count:inst2|out[7]~20                                                                                                                            ; 1       ;
-; count:inst2|out[6]~19                                                                                                                            ; 1       ;
-; count:inst2|out[6]~18                                                                                                                            ; 1       ;
-; count:inst2|out[5]~17                                                                                                                            ; 1       ;
-; count:inst2|out[5]~16                                                                                                                            ; 1       ;
-; count:inst2|out[4]~15                                                                                                                            ; 1       ;
-; count:inst2|out[4]~14                                                                                                                            ; 1       ;
-; count:inst2|out[3]~13                                                                                                                            ; 1       ;
-; count:inst2|out[3]~12                                                                                                                            ; 1       ;
-; count:inst2|out[2]~11                                                                                                                            ; 1       ;
-; count:inst2|out[2]~10                                                                                                                            ; 1       ;
-; count:inst2|out[1]~9                                                                                                                             ; 1       ;
-; count:inst2|out[1]~8                                                                                                                             ; 1       ;
+; count:inst8|out[7]~20                                                                                                                            ; 1       ;
+; count:inst8|out[6]~19                                                                                                                            ; 1       ;
+; count:inst8|out[6]~18                                                                                                                            ; 1       ;
+; count:inst8|out[5]~17                                                                                                                            ; 1       ;
+; count:inst8|out[5]~16                                                                                                                            ; 1       ;
+; count:inst8|out[4]~15                                                                                                                            ; 1       ;
+; count:inst8|out[4]~14                                                                                                                            ; 1       ;
+; count:inst8|out[3]~13                                                                                                                            ; 1       ;
+; count:inst8|out[3]~12                                                                                                                            ; 1       ;
+; count:inst8|out[2]~11                                                                                                                            ; 1       ;
+; count:inst8|out[2]~10                                                                                                                            ; 1       ;
+; count:inst8|out[1]~9                                                                                                                             ; 1       ;
+; count:inst8|out[1]~8                                                                                                                             ; 1       ;
 ; uart:inst4|tx_data[4]                                                                                                                            ; 1       ;
 ; SumCounts:inst7|sumout[2]                                                                                                                        ; 1       ;
 ; SumCounts:inst7|sumout[1]~1                                                                                                                      ; 1       ;
@@ -1658,49 +1742,132 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; count:inst6|out[1]~7                                                                                                                             ; 1       ;
 ; uart:inst4|tx_data[2]                                                                                                                            ; 1       ;
 ; SumCounts:inst7|sumout[0]                                                                                                                        ; 1       ;
-; trigger_clock_hundreds:inst5|i[21]~64                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[20]~63                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[20]~62                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[19]~61                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[19]~60                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[18]~59                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[18]~58                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[17]~57                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[17]~56                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[16]~55                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[16]~54                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[15]~53                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[15]~52                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[14]~51                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[14]~50                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[13]~49                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[13]~48                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[12]~47                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[12]~46                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[11]~45                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[11]~44                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[10]~43                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[10]~42                                                                                                            ; 1       ;
-; trigger_clock_hundreds:inst5|i[9]~41                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[9]~40                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[8]~39                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[8]~38                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[7]~37                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[7]~36                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[6]~35                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[6]~34                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[5]~33                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[5]~32                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[4]~31                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[4]~30                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[3]~29                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[3]~28                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[2]~27                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[2]~26                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[1]~25                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[1]~24                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[0]~23                                                                                                             ; 1       ;
-; trigger_clock_hundreds:inst5|i[0]~22                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[31]~94                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[30]~93                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[30]~92                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[29]~91                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[29]~90                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[28]~89                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[28]~88                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[27]~87                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[27]~86                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[26]~85                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[26]~84                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[25]~83                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[25]~82                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[24]~81                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[24]~80                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[23]~79                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[23]~78                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[22]~77                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[22]~76                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[21]~75                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[21]~74                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[20]~73                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[20]~72                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[19]~71                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[19]~70                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[18]~69                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[18]~68                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[17]~67                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[17]~66                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[16]~65                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[16]~64                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[15]~63                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[15]~62                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[14]~61                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[14]~60                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[13]~59                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[13]~58                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[12]~57                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[12]~56                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[11]~55                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[11]~54                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[10]~53                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[10]~52                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|i[9]~51                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[9]~50                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[8]~49                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[8]~48                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[7]~47                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[7]~46                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[6]~45                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[6]~44                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[5]~43                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[5]~42                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[4]~41                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[4]~40                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[3]~39                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[3]~38                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[2]~37                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[2]~36                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[1]~35                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[1]~34                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[0]~33                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|i[0]~32                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[31]~94                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[30]~93                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[30]~92                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[29]~91                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[29]~90                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[28]~89                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[28]~88                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[27]~87                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[27]~86                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[26]~85                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[26]~84                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[25]~83                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[25]~82                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[24]~81                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[24]~80                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[23]~79                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[23]~78                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[22]~77                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[22]~76                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[21]~75                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[21]~74                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[20]~73                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[20]~72                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[19]~71                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[19]~70                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[18]~69                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[18]~68                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[17]~67                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[17]~66                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[16]~65                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[16]~64                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[15]~63                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[15]~62                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[14]~61                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[14]~60                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[13]~59                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[13]~58                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[12]~57                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[12]~56                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[11]~55                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[11]~54                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[10]~53                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[10]~52                                                                                                            ; 1       ;
+; trigger_clock_hundreds:inst5|j[9]~51                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[9]~50                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[8]~49                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[8]~48                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[7]~47                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[7]~46                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[6]~45                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[6]~44                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[5]~43                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[5]~42                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[4]~41                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[4]~40                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[3]~39                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[3]~38                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[2]~37                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[2]~36                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[1]~35                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[1]~34                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[0]~33                                                                                                             ; 1       ;
+; trigger_clock_hundreds:inst5|j[0]~32                                                                                                             ; 1       ;
 ; uart:inst4|tx_data[1]                                                                                                                            ; 1       ;
 ; trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_8ch:auto_generated|op_1~26           ; 1       ;
 ; trigger_clock_hundreds:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_8ch:auto_generated|op_1~25           ; 1       ;
@@ -1803,149 +1970,157 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 456 / 54,004 ( < 1 % ) ;
+; Block interconnects         ; 489 / 54,004 ( < 1 % ) ;
 ; C16 interconnects           ; 9 / 2,100 ( < 1 % )    ;
-; C4 interconnects            ; 105 / 36,000 ( < 1 % ) ;
-; Direct links                ; 216 / 54,004 ( < 1 % ) ;
-; Global clocks               ; 1 / 16 ( 6 % )         ;
-; Local interconnects         ; 208 / 18,752 ( 1 % )   ;
-; R24 interconnects           ; 19 / 1,900 ( 1 % )     ;
-; R4 interconnects            ; 198 / 46,920 ( < 1 % ) ;
+; C4 interconnects            ; 171 / 36,000 ( < 1 % ) ;
+; Direct links                ; 160 / 54,004 ( < 1 % ) ;
+; Global clocks               ; 2 / 16 ( 13 % )        ;
+; Local interconnects         ; 296 / 18,752 ( 2 % )   ;
+; R24 interconnects           ; 33 / 1,900 ( 2 % )     ;
+; R4 interconnects            ; 262 / 46,920 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.31) ; Number of LABs  (Total = 35) ;
+; Number of Logic Elements  (Average = 13.05) ; Number of LABs  (Total = 38) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 3                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
+; 7                                           ; 2                            ;
 ; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 4                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 2                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 2                            ;
+; 11                                          ; 2                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 5                            ;
+; 14                                          ; 0                            ;
 ; 15                                          ; 3                            ;
-; 16                                          ; 16                           ;
+; 16                                          ; 19                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.77) ; Number of LABs  (Total = 35) ;
+; LAB-wide Signals  (Average = 0.87) ; Number of LABs  (Total = 38) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 1                            ;
-; 1 Clock                            ; 17                           ;
-; 1 Clock enable                     ; 3                            ;
-; 1 Sync. clear                      ; 1                            ;
-; 1 Sync. load                       ; 3                            ;
-; 2 Clocks                           ; 2                            ;
+; 1 Async. clear                     ; 2                            ;
+; 1 Clock                            ; 20                           ;
+; 1 Clock enable                     ; 5                            ;
+; 1 Sync. clear                      ; 4                            ;
+; 1 Sync. load                       ; 2                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.14) ; Number of LABs  (Total = 35) ;
+; Number of Signals Sourced  (Average = 17.68) ; Number of LABs  (Total = 38) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 2                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 1                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
 ; 8                                            ; 1                            ;
-; 9                                            ; 1                            ;
-; 10                                           ; 0                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
+; 12                                           ; 2                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 2                            ;
-; 15                                           ; 5                            ;
-; 16                                           ; 4                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 5                            ;
+; 15                                           ; 4                            ;
+; 16                                           ; 5                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 2                            ;
+; 20                                           ; 2                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 3                            ;
+; 22                                           ; 1                            ;
+; 23                                           ; 1                            ;
 ; 24                                           ; 1                            ;
 ; 25                                           ; 0                            ;
 ; 26                                           ; 2                            ;
-; 27                                           ; 1                            ;
+; 27                                           ; 0                            ;
 ; 28                                           ; 0                            ;
-; 29                                           ; 1                            ;
-; 30                                           ; 1                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 1                            ;
+; 32                                           ; 5                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.26) ; Number of LABs  (Total = 35) ;
+; Number of Signals Sourced Out  (Average = 8.34) ; Number of LABs  (Total = 38) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 5                            ;
-; 2                                               ; 0                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 0                            ;
-; 5                                               ; 4                            ;
-; 6                                               ; 0                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 4                            ;
-; 9                                               ; 5                            ;
+; 1                                               ; 3                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 3                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 4                            ;
+; 7                                               ; 2                            ;
+; 8                                               ; 6                            ;
+; 9                                               ; 3                            ;
 ; 10                                              ; 2                            ;
-; 11                                              ; 2                            ;
-; 12                                              ; 5                            ;
+; 11                                              ; 1                            ;
+; 12                                              ; 3                            ;
 ; 13                                              ; 0                            ;
-; 14                                              ; 4                            ;
-; 15                                              ; 0                            ;
-; 16                                              ; 1                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 1                            ;
+; 16                                              ; 5                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 11.03) ; Number of LABs  (Total = 35) ;
+; Number of Distinct Inputs  (Average = 11.34) ; Number of LABs  (Total = 38) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 3                            ;
+; 2                                            ; 4                            ;
 ; 3                                            ; 2                            ;
-; 4                                            ; 4                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 3                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 1                            ;
+; 4                                            ; 3                            ;
+; 5                                            ; 2                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 0                            ;
 ; 9                                            ; 3                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 3                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 2                            ;
 ; 12                                           ; 1                            ;
-; 13                                           ; 2                            ;
+; 13                                           ; 6                            ;
 ; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 4                            ;
+; 15                                           ; 3                            ;
+; 16                                           ; 1                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 1                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
+; 21                                           ; 1                            ;
 ; 22                                           ; 2                            ;
 ; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1997,41 +2172,58 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location C4
     Info (169125): Pin ~nCSO~ is reserved at location C3
     Info (169125): Pin ~LVDS91p/nCEO~ is reserved at location W20
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'PMT_Timebin_Counts.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332144): No user constrained generated clocks found in the design
-Info (332144): No user constrained base clocks found in the design
-Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (332104): Reading SDC File: 'PMT_Timebin_Counts.sdc'
+Info (332110): Deriving PLL clocks
+    Info (332110): create_clock -period 20.000 -waveform {0.000 10.000} -name osc osc
+    Info (332110): create_generated_clock -source {inst|altpll_component|pll|inclk[0]} -duty_cycle 50.00 -name {inst|altpll_component|pll|clk[0]} {inst|altpll_component|pll|clk[0]}
+Warning (332060): Node: signal2 was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: signal was determined to be a clock but was found without an associated clock assignment.
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 2 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):   20.000 inst|altpll_component|pll|clk[0]
+    Info (332111):   20.000          osc
 Info (176353): Automatically promoted node PLL:inst|altpll:altpll_component|_clk0 (placed in counter C0 of PLL_1)
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+Info (176353): Automatically promoted node trigger_clock_hundreds:inst5|reset 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node uart:inst4|always1~0
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
+Warning (15064): PLL "PLL:inst|altpll:altpll_component|pll" output port clk[0] feeds output pin "pin_name1" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "ClearToSend" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "oscilator" is assigned to location or region, but does not exist in design
     Warning (15706): Node "pulse_detect" is assigned to location or region, but does not exist in design
     Warning (15706): Node "rts" is assigned to location or region, but does not exist in design
     Warning (15706): Node "rx_line" is assigned to location or region, but does not exist in design
     Warning (15706): Node "transmit_switch" is assigned to location or region, but does not exist in design
     Warning (15706): Node "tx_test" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X0_Y14 to location X11_Y27
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X12_Y14 to location X24_Y27
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.76 seconds.
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (11888): Total time spent on timing analysis during the Fitter is 0.44 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 25 output pins without output pin load capacitance assignment
+Warning (306006): Found 27 output pins without output pin load capacitance assignment
     Info (306007): Pin "tx" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "cts" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "test2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "led" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "pin_name1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info (306007): Pin "pin_name2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "huns[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "huns[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "huns[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2060,11 +2252,11 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/localadmin/Desktop/FPGANewVersion/FPGA-PMT/Verilog Projects/PMT_Timebin_Counts/output_files/PMT_Timebin_Counts.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 631 megabytes
-    Info: Processing ended: Fri Mar 28 16:27:54 2014
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:10
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 629 megabytes
+    Info: Processing ended: Sat Apr 12 11:35:43 2014
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +----------------------------+
