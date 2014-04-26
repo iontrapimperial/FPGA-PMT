@@ -349,8 +349,8 @@ VCCINT                       : L14       : power  :                   : 1.2V    
 NC                           : L15       :        :                   :         :           :                
 NC                           : L16       :        :                   :         :           :                
 NC                           : L17       :        :                   :         :           :                
-pin_name2                    : L18       : output : 3.3-V LVTTL       :         : 5         : Y              
-pin_name1                    : L19       : output : 3.3-V LVTTL       :         : 5         : Y              
+GND*                         : L18       :        :                   :         : 5         :                
+GND*                         : L19       :        :                   :         : 5         :                
 VCCIO5                       : L20       : power  :                   : 3.3V    : 5         :                
 two_switch                   : L21       : input  : 3.3-V LVTTL       :         : 5         : Y              
 one_switch                   : L22       : input  : 3.3-V LVTTL       :         : 5         : Y              

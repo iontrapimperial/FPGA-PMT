@@ -3,27 +3,34 @@
 // Copyright (C) 2010 Timothy Goddard (tim@goddard.net.nz)
 // Distributed under the MIT licence.
 //
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
+// Permission is hereby granted, free of charge, 
+// to any person obtaining a copy
+// of this software and associated documentation files 
+// (the "Software"), to deal in the Software without 
+// restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, 
+// sublicense, and/or sell copies of the Software, and to 
+// permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 // 
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
 // 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY 
+// OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT 
+// NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS 
+// BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+// ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+// SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // 
 
-/*UART Module takes byte (or 2 bytes) from PMT1, PMT2, their sum (or both PMT values). Sends one low start bit,
-followed by the byte as a bitstring and a high stop bit, this whole process is repeated if two bytes are sent. Finally 
+/*UART Module takes byte (or 2 bytes) from PMT1, PMT2, their sum (
+or both PMT values). Sends one low start bit,
+followed by the byte as a bitstring and a high stop bit, this whole 
+process is repeated if two bytes are sent. Finally 
 tx returns to the idle high state.*/ 
 module uart(
     input clk, // The master clock for this module
@@ -44,7 +51,8 @@ module uart(
     output is_transmitting, // Low when transmit line is idle.
 	 output reg [7:0] timebinOUT,
 	 
-	 output reg tx_Done, //Goes high for one tick after stop bit transmission.
+	 //Goes high for one tick after stop bit transmission.
+	 output reg tx_Done, 
 	 output reg tx_test,
     output recv_error, // Indicates error in receiving packet.
 	 
@@ -55,7 +63,8 @@ module uart(
     );
  
 parameter CLOCK_DIVIDE 		= 3;
-parameter CLOCK_DIVIDE2	= 1302; //1302 = clock rate (50Mhz) / (baud rate (9600) * 4)
+//1302 = clock rate (50Mhz) / (baud rate (9600) * 4)
+parameter CLOCK_DIVIDE2	= 1302; 
 parameter CLOCK_DIVIDE3 = 868;	
 parameter CLOCK_DIVIDE4 = 109; // baud rate 115200
 parameter CLOCK_DIVIDE5 = 54; //baud rate = 230400
@@ -110,8 +119,8 @@ assign rx_byte = rx_data;
  
 assign tx = tx_out;
 assign is_transmitting = tx_state != TX_IDLE;
-
-assign ClearToSend = ~(recv_state == RX_IDLE); //CTS low to allow data. High to stop it.
+//CTS low to allow data. High to stop it.
+assign ClearToSend = ~(recv_state == RX_IDLE); 
 
 
 
@@ -170,78 +179,6 @@ tx_Done<=0;
 	end
  timebinOUT=timebinfactor;
  
-	// Receive state machine
-	case (recv_state)
-	
-		RX_IDLE: begin
-			// A low pulse on the receive line indicates the
-			// start of data.
-			if (!rx) begin
-				// Wait half the period - should resume in the
-				// middle of this first pulse.
-				rx_clk_divider = CLOCK_DIVIDE5;
-				rx_countdown = 2;
-				recv_state = RX_CHECK_START;
-			end
-		end
-		RX_CHECK_START: begin
-			if (!rx_countdown) begin
-				// Check the pulse is still there
-				if (!rx) begin
-					// Pulse still there - good
-					// Wait the bit period to resume half-way
-					// through the first bit.
-					rx_countdown = 4;
-					rx_bits_remaining = 8;
-					recv_state = RX_READ_BITS;
-				end else begin
-					// Pulse lasted less than half the period -
-					// not a valid transmission.
-					recv_state = RX_ERROR;
-				end
-			end
-		end
-		RX_READ_BITS: begin
-			if (!rx_countdown) begin
-				// Should be half-way through a bit pulse here.
-				// Read this bit in, wait for the next if we
-				// have more to get.
-				rx_data = {rx, rx_data[7:1]};
-				rx_countdown = 4;
-				rx_bits_remaining = rx_bits_remaining - 1;
-				recv_state = rx_bits_remaining ? RX_READ_BITS : RX_CHECK_STOP;
-			end
-		end
-		RX_CHECK_STOP: begin
-			if (!rx_countdown) begin
-				// Should resume half-way through the stop bit
-				// This should be high - if not, reject the
-				// transmission and signal an error.
-				recv_state = rx ? RX_RECEIVED : RX_ERROR;
-			end
-		end
-		RX_DELAY_RESTART: begin
-			// Waits a set number of cycles before accepting
-			// another transmission.
-			recv_state = rx_countdown ? RX_DELAY_RESTART : RX_IDLE;
-		end
-		RX_ERROR: begin
-			// There was an error receiving.
-			// Raises the recv_error flag for one clock
-			// cycle while in this state and then waits
-			// 2 bit periods before accepting another
-			// transmission.
-			rx_countdown = 8;
-			recv_state = RX_DELAY_RESTART;
-		end
-		RX_RECEIVED: begin
-			// Successfully received a byte.
-			// Raises the received flag for one clock
-			// cycle while in this state.
-			recv_state <= RX_IDLE;
-		end
-	endcase
- 
 	// Transmit state machine
 	case (tx_state)
 		TXIdle1: begin
@@ -262,15 +199,15 @@ tx_Done<=0;
 		TXSending1: begin
 			if (!tx_countdown) begin
 				if (tx_bits_remaining) begin
-				//Sends 1 bit per tx_countdown of 4
+		//Sends 1 bit per tx_countdown of 4
 					tx_bits_remaining = tx_bits_remaining - 1;
 					tx_out = tx_data[0];
-					//All bits in byte shifted down by 1 after bit sent
+		//All bits in byte shifted down by 1 after bit sent
 					tx_data = {1'b0, tx_data[7:1]};
 					tx_countdown = 4;
 					tx_state = TXSending1;
 				end else if (!tx_bits_remaining) begin
-					// Set delay to send out one stop bit.
+		// Set delay to send out one stop bit.
 					tx_out = 1;
 					tx_countdown = 4;
 					if(!TwoBytes)
@@ -287,7 +224,7 @@ tx_Done<=0;
 			//do nout
 			end
 		end
-		//Second Idle state to send one start bit before second byte
+   //Second Idle state to send one start bit before second byte
 		TXIdle2: 
 			if(!tx_countdown) begin
 			 begin
@@ -296,7 +233,8 @@ tx_Done<=0;
 				tx_out = 0;
 				tx_bits_remaining = 8;
 				tx_state = TXSending2;
-				//Data to send set to second byte of tx_byte (counts from PMT2)
+				//Data to send set to second byte of 
+				//tx_byte (counts from PMT2)
 				tx_data=tx_byte[15:8];
 				LED=!LED;
 			end

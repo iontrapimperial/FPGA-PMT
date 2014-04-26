@@ -1,5 +1,6 @@
-/*This module displays a three digit number, usually the counts from one 
-(or both) of the PMTs for debugging communication issues.*/
+/*This module displays a three digit number, 
+usually the counts from one (or both) of the 
+PMTs for debugging communication issues.*/
 module Triple_SevenSeg(s1, huns, tens, ones);
 
 

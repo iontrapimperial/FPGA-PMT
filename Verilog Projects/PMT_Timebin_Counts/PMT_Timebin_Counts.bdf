@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 872 432 888 608)
+	(rect 728 824 744 1000)
 	(text "INPUT" (rect 0 15 10 43)(font "Arial" (font_size 6))(vertical))
 	(text "SendTimebinButton" (rect 0 73 12 167)(font "Arial" )(vertical))
 	(pt 8 0)
@@ -38,7 +38,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -8 176 168 192)
+	(rect 16 176 192 192)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "osc" (rect 9 0 26 12)(font "Arial" ))
 	(pt 176 8)
@@ -54,7 +54,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -8 416 168 432)
+	(rect 8 416 184 432)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "signal" (rect 9 0 37 12)(font "Arial" ))
 	(pt 176 8)
@@ -223,7 +223,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -8 472 168 488)
+	(rect 16 472 192 488)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "signal2" (rect 9 0 43 12)(font "Arial" ))
 	(pt 176 8)
@@ -385,40 +385,8 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
-(pin
-	(output)
-	(rect 264 40 440 56)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "pin_name1" (rect 90 0 143 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 264 80 440 96)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "pin_name2" (rect 90 0 143 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
 (symbol
-	(rect 896 128 1144 368)
+	(rect 920 128 1168 368)
 	(text "uart" (rect 5 0 23 12)(font "Arial" ))
 	(text "inst4" (rect 8 224 31 236)(font "Arial" ))
 	(port
@@ -684,7 +652,7 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 232 224))
 	)
-	(annotation_block (parameter)(rect 1200 384 1480 752))
+	(annotation_block (parameter)(rect 1224 384 1504 752))
 )
 (symbol
 	(rect 632 144 872 384)
@@ -850,7 +818,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 208 120 448 272)
+	(rect 224 120 464 272)
 	(text "PLL" (rect 109 0 136 16)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 136 25 148)(font "Arial" ))
 	(port
@@ -1142,19 +1110,6 @@ applicable agreement for further details.
 	(pt 632 336)
 )
 (connector
-	(pt 880 272)
-	(pt 896 272)
-)
-(connector
-	(pt 872 240)
-	(pt 896 240)
-	(bus)
-)
-(connector
-	(pt 880 272)
-	(pt 880 432)
-)
-(connector
 	(pt 200 608)
 	(pt 192 608)
 )
@@ -1181,25 +1136,6 @@ applicable agreement for further details.
 	(pt 888 224)
 	(pt 888 400)
 	(bus)
-)
-(connector
-	(pt 872 224)
-	(pt 888 224)
-	(bus)
-)
-(connector
-	(pt 888 224)
-	(pt 896 224)
-	(bus)
-)
-(connector
-	(text "TwoBytes" (rect 896 405 908 453)(font "Arial" )(vertical))
-	(pt 896 464)
-	(pt 896 288)
-)
-(connector
-	(pt 896 464)
-	(pt 904 464)
 )
 (connector
 	(pt 192 608)
@@ -1244,14 +1180,6 @@ applicable agreement for further details.
 	(pt 152 504)
 )
 (connector
-	(pt 192 480)
-	(pt 192 488)
-)
-(connector
-	(pt 168 480)
-	(pt 192 480)
-)
-(connector
 	(pt 192 488)
 	(pt 200 488)
 )
@@ -1290,22 +1218,8 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "clk_UART" (rect 888 96 937 108)(font "Arial" ))
-	(pt 888 160)
-	(pt 896 160)
-)
-(connector
-	(pt 888 160)
-	(pt 888 112)
-)
-(connector
 	(pt 880 8)
 	(pt 888 8)
-)
-(connector
-	(text "clk_UART" (rect 248 32 297 44)(font "Arial" ))
-	(pt 264 48)
-	(pt 248 48)
 )
 (connector
 	(pt 560 144)
@@ -1314,19 +1228,6 @@ applicable agreement for further details.
 (connector
 	(pt 560 240)
 	(pt 632 240)
-)
-(connector
-	(pt 448 184)
-	(pt 496 184)
-)
-(connector
-	(pt 496 184)
-	(pt 496 304)
-)
-(connector
-	(text "clk_UART" (rect 480 132 492 181)(font "Arial" )(vertical))
-	(pt 496 168)
-	(pt 496 184)
 )
 (connector
 	(text "clk_UART" (rect 280 832 329 844)(font "Arial" ))
@@ -1343,14 +1244,6 @@ applicable agreement for further details.
 	(pt 200 432)
 )
 (connector
-	(pt 200 424)
-	(pt 168 424)
-)
-(connector
-	(pt 200 424)
-	(pt 200 416)
-)
-(connector
 	(pt 360 472)
 	(pt 360 416)
 	(bus)
@@ -1361,32 +1254,12 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 872 256)
-	(pt 896 256)
-)
-(connector
 	(pt 872 176)
 	(pt 880 176)
 )
 (connector
 	(pt 880 176)
 	(pt 880 8)
-)
-(connector
-	(pt 264 88)
-	(pt 184 88)
-)
-(connector
-	(pt 184 88)
-	(pt 184 184)
-)
-(connector
-	(pt 168 184)
-	(pt 184 184)
-)
-(connector
-	(pt 184 184)
-	(pt 208 184)
 )
 (connector
 	(text "reset" (rect 722 400 746 412)(font "Arial" ))
@@ -1406,14 +1279,91 @@ applicable agreement for further details.
 	(pt 864 208)
 )
 (connector
+	(pt 200 424)
+	(pt 184 424)
+)
+(connector
+	(pt 200 416)
+	(pt 200 424)
+)
+(connector
+	(pt 192 488)
+	(pt 192 480)
+)
+(connector
+	(pt 496 184)
+	(pt 464 184)
+)
+(connector
+	(text "clk_UART" (rect 480 132 492 181)(font "Arial" )(vertical))
+	(pt 496 168)
+	(pt 496 184)
+)
+(connector
+	(pt 496 184)
+	(pt 496 304)
+)
+(connector
+	(pt 192 184)
+	(pt 224 184)
+)
+(connector
+	(text "TwoBytes" (rect 920 405 932 453)(font "Arial" )(vertical))
+	(pt 920 464)
+	(pt 920 288)
+)
+(connector
+	(pt 904 464)
+	(pt 920 464)
+)
+(connector
+	(pt 888 112)
+	(pt 888 160)
+)
+(connector
+	(pt 872 224)
+	(pt 888 224)
+	(bus)
+)
+(connector
+	(text "clk_UART" (rect 912 96 961 108)(font "Arial" ))
+	(pt 888 160)
+	(pt 920 160)
+)
+(connector
+	(pt 888 224)
+	(pt 920 224)
+	(bus)
+)
+(connector
+	(pt 872 240)
+	(pt 920 240)
+	(bus)
+)
+(connector
+	(pt 872 256)
+	(pt 920 256)
+)
+(connector
+	(pt 1144 160)
+	(pt 1168 160)
+)
+(connector
+	(pt 1144 288)
+	(pt 1168 288)
+)
+(connector
+	(pt 1144 320)
+	(pt 1168 320)
+)
+(connector
 	(pt 864 208)
 	(pt 872 208)
 )
 (connector
 	(pt 872 208)
-	(pt 896 208)
+	(pt 920 208)
 )
 (junction (pt 888 224))
 (junction (pt 496 184))
-(junction (pt 184 184))
 (junction (pt 872 208))
